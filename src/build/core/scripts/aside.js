@@ -1,247 +1,140 @@
-(function(factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['jquery'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    module.exports = factory(require('jquery'));
-  } else {
-    factory(jQuery);
+import BaseComponent from "bootstrap/js/src/base-component"
+import { defineJQueryPlugin } from "bootstrap/js/src/util"
+
+/**
+ * Constants
+ */
+
+const NAME = 'aside'
+
+const BREAKPOINT = 1025
+const TRANSITION_DURATION = 200
+
+const SELECTOR_MAIN = '.aside'
+const SELECTOR_BACKDROP = '#aside-backdrop'
+const SELECTOR_TOGGLE = '[data-toggle="aside"]'
+
+const CLASS_DESKTOP_MINIMIZED = 'aside-desktop-minimized'
+const CLASS_DESKTOP_MAXIMIZED = 'aside-desktop-maximized'
+const CLASS_MOBILE_MINIMIZED = 'aside-mobile-minimized'
+const CLASS_MOBILE_MAXIMIZED = 'aside-mobile-maximized'
+const CLASS_HOVER = 'aside-hover'
+
+const STORAGE_IDENTIFIER = 'aside-state'
+
+/**
+ * Class definition
+ */
+
+class Aside extends BaseComponent {
+  // Getters
+  static get NAME() {
+    return NAME
   }
-}(function($) {
-  "use strict";
-  $.aside = function(action) {
 
-    // Default variables
-    var defaults = {
-      element: {
-        main: '.aside',
-        backdrop: '#aside-backdrop',
-        toggle: '[data-toggle="aside"]'
-      },
-      breakpoint: 1025,
-      class: {
-        minimizedDesktop: 'aside-desktop-minimized',
-          minimizedMobile: 'aside-mobile-minimized',
-          maximizedDesktop: 'aside-desktop-maximized',
-          maximizedMobile: 'aside-mobile-maximized',
-          hover: 'aside-hover',
-      },
-      localStorage: 'aside-storage',
-      transitionDuration: 200,
-      easing: 'linear',
-    }
-    var settings = $.extend({}, defaults, $.aside.defaults);
+  constructor() {
+    super()
 
-    // Method list
-    var methods = [{
-        event: 'init',
-        action: function(el) {
-          _init(el);
-        }
-      },
-      {
-        event: 'toggle',
-        action: function() {
-          _toggle();
-        }
-      },
-      {
-        event: 'minimize',
-        action: function() {
-          _minimize();
-        }
-      },
-      {
-        event: 'maximize',
-        action: function() {
-          _maximize();
-        }
-      }
-    ]
+    this.syncState()
+    this.toggleListener()
+  }
 
-    function _init() {
-      var trigger = $(settings.element.toggle);
-      var asideStorage = localStorage.getItem(settings.localStorage);
+  // Function for syncing state with local storage
+  syncState() {
+    const persistState = localStorage.getItem(STORAGE_IDENTIFIER)
 
-      // Check wheter local storage is exist
-      if (asideStorage) {
-        var asideMinimized = JSON.parse(asideStorage).minimized
+    if (persistState) {
+      const desktopMaximized = JSON.parse(persistState).desktopMaximized
 
-        // Toggle Aside by local storage
-        if ($(window).width() >= settings.breakpoint) {
-          if (asideMinimized) {
-            _minimizeDesktop();
-
-            // Adding aside element hover class by timer
-            setTimeout(function() {
-              $(".aside, .wrapper").css("transition", "");
-            }, settings.transitionDuration)
-          } else {
-            _maximizeDesktop();
-            $(".aside, .wrapper").css("transition", "");
-          }
-        }
-      } else {
-
-        // When aside in minimized condition, it will add .aside-hover for hover behavior
-        if ($('body').hasClass(settings.class.minimizedDesktop)) {
-          $(settings.element.main).addClass(settings.class.hover);
-        }
-
-        $(".aside, .wrapper").css("transition", "");
-      }
-
-      // Make aside toggle event listener
-      trigger.on('click', function() {
-        var dataTarget = $(trigger.data('target'));
-        var target = dataTarget.length > 0 ? dataTarget : $(settings.element.main);
-
-        _toggle(target);
-      })
-    }
-
-    // Toggle maximize and minimize
-    function _toggle() {
-      var target = $(settings.element.main);
-
-      if (target.length > 0) {
-        var isMinimized = $(window).width() >= settings.breakpoint ? settings.class.minimizedDesktop : settings.class.minimizedMobile;
-
-        $('body').hasClass(isMinimized) ? _maximize() : _minimize();
+      if (this.getBrowserWith() >= BREAKPOINT) {
+        this.toggleDesktop(desktopMaximized)
       }
     }
 
-    // Minimize aside element
-    function _minimize() {
-      var target = $(settings.element.main);
-
-      if (target.length > 0) {
-        $(window).width() >= settings.breakpoint ? _minimizeDesktop() : _minimizeMobile();
-      }
+    if (document.body.classList.contains(CLASS_DESKTOP_MINIMIZED)) {
+      document.querySelector(SELECTOR_MAIN).classList.add(CLASS_HOVER)
     }
+  }
 
-    // Maximize aside element
-    function _maximize(target) {
-      var target = $(settings.element.main);
-
-      if (target.length > 0) {
-        $(window).width() >= settings.breakpoint ? _maximizeDesktop() : _maximizeMobile();
-      }
-    }
-
-    // Set body classes when aside element minimized
-    function _minimizeBodyClass() {
-      var addClass, removeClass;
-
-      if ($(window).width() >= settings.breakpoint) {
-        addClass = settings.class.minimizedDesktop;
-        removeClass = settings.class.maximizedDesktop;
-      } else {
-        addClass = settings.class.minimizedMobile;
-        removeClass = settings.class.maximizedMobile;
-      }
-
-      $('body').addClass(addClass);
-      $('body').removeClass(removeClass);
-    }
-
-    // Set body classes when aside element maximized
-    function _maximizeBodyClass() {
-      var addClass, removeClass;
-
-      if ($(window).width() >= settings.breakpoint) {
-        addClass = settings.class.maximizedDesktop;
-        removeClass = settings.class.minimizedDesktop;
-      } else {
-        addClass = settings.class.maximizedMobile;
-        removeClass = settings.class.minimizedMobile;
-      }
-
-      $('body').addClass(addClass);
-      $('body').removeClass(removeClass);
-    }
-
-    function _minimizeMobile() {
-      // Setting body classess
-      _minimizeBodyClass();
-
-      // Animate backdrop
-      var backdropElement = $(settings.element.backdrop);
-      backdropElement.removeClass("show");
-      backdropElement.off();
-      backdropElement.remove();
-    }
-
-    function _maximizeMobile() {
-      // Backdrop HTML string
-      var backdrop = '<div id="' + settings.element.backdrop.substr(1) + '"></div>';
-
-      // Setting body classess
-      _maximizeBodyClass();
-
-      // Creating backdrop and animate it
-      var backropElement = $(backdrop).appendTo('body');
-      backropElement.addClass("fade");
-      backropElement.addClass("show");
-      backropElement.on('click', function() {
-        _minimizeMobile();
-      });
-    }
-
-    function _minimizeDesktop() {
-      var target = $(settings.element.main);
-
-      // Setting body classess
-      _minimizeBodyClass();
-
-      // Set state in local storage
-      localStorage.setItem(settings.localStorage, JSON.stringify({ minimized: true }))
-
-      // Adding aside element hover class by timer
-      setTimeout(function() {
-        target.first().addClass(settings.class.hover);
-      }, settings.transitionDuration)
-
-      // Triggering window resize event
-      $(window).trigger('resize');
-    }
-
-    function _maximizeDesktop() {
-      var target = $(settings.element.main);
-
-      // Setting body classess
-      _maximizeBodyClass();
-
-      // Set state in local storage
-      localStorage.setItem(settings.localStorage, JSON.stringify({ minimized: false }))
-
-      // Removing aside element hover class
-      target.first().removeClass(settings.class.hover);
-
-      // Triggering window resize event
-      $(window).trigger('resize');
-    }
-
-    var element = $(this);
-
-    if (typeof action == 'string') {
-      methods.forEach(function(method) {
-        if (action == method.event) {
-          method.action(element)
+  // Function for adding event listener to toggle elements
+  toggleListener() {
+    document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
+      toggleElement.addEventListener('click', () => {
+        if (this.getBrowserWith() >= BREAKPOINT) {
+          this.toggleDesktop(document.body.classList.contains(CLASS_DESKTOP_MINIMIZED))
+        } else {
+          this.toggleMobile(document.body.classList.contains(CLASS_MOBILE_MINIMIZED))
         }
       })
+    })
+  }
+
+  // Function for toggling in desktop viewport 
+  toggleDesktop(isMaximized) {
+    const mainElement = document.querySelector(SELECTOR_MAIN)
+
+    this.toggleBodyClass(true, isMaximized)
+
+    localStorage.setItem(STORAGE_IDENTIFIER, JSON.stringify({ desktopMaximized: isMaximized }))
+
+    if (isMaximized) {
+      mainElement.classList.remove(CLASS_HOVER)
+      window.dispatchEvent(new Event('resize'))
+    } else {
+      setTimeout(() => {
+        mainElement.classList.add(CLASS_HOVER)
+        window.dispatchEvent(new Event('resize'))
+      }, TRANSITION_DURATION)
+    }
+  }
+
+  // Function for toggling in mobile viewport 
+  toggleMobile(isMaximized) {
+    this.toggleBodyClass(false, isMaximized)
+
+    if (isMaximized) {
+      let backdropElement = document.createElement('div')
+
+      backdropElement.id = SELECTOR_BACKDROP.replace('#', '')
+
+      backdropElement = document.body.appendChild(backdropElement)
+
+      backdropElement.classList.add('fade')
+      backdropElement.classList.add('show')
+      backdropElement.addEventListener('click', () => {
+        backdropElement.classList.remove('show')
+        backdropElement.remove()
+        this.toggleBodyClass(false, false)
+      })
+    } else {
+      const backdropElement = document.querySelector(SELECTOR_BACKDROP)
+      backdropElement.classList.remove('show')
+      backdropElement.remove()
+    }
+  }
+
+  // Function for toggling body class
+  toggleBodyClass(isDesktop, isMaximized) {
+    let addedClass, removedClass
+
+    if (isMaximized) {
+      addedClass = isDesktop ? CLASS_DESKTOP_MAXIMIZED : CLASS_MOBILE_MAXIMIZED
+      removedClass = isDesktop ? CLASS_DESKTOP_MINIMIZED : CLASS_MOBILE_MINIMIZED
+    } else {
+      addedClass = isDesktop ? CLASS_DESKTOP_MINIMIZED : CLASS_MOBILE_MINIMIZED
+      removedClass = isDesktop ? CLASS_DESKTOP_MAXIMIZED : CLASS_MOBILE_MAXIMIZED
     }
 
-    return this
+    document.body.classList.add(addedClass)
+    document.body.classList.remove(removedClass)
   }
 
-  // Remove Transition
-  if ($(window).width() >= 1025) {
-    $(".aside, .wrapper").css("transition", "none");
+  // Function for getting browser width
+  getBrowserWith() {
+    return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
   }
+}
 
-  $(function() {
-    // Initializing
-    $.aside('init');
-  })
+defineJQueryPlugin(Aside)
 
-}));
+export default Aside

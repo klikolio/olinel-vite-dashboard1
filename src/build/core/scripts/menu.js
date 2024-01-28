@@ -1,229 +1,162 @@
-(function(factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['jquery'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    module.exports = factory(require('jquery'));
-  } else {
-    factory(jQuery);
-  }
-}(function($) {
-  "use strict";
-  $.fn.menu = function(action) {
+import BaseComponent from "bootstrap/js/src/base-component"
+import { defineJQueryPlugin } from "bootstrap/js/src/util"
 
-    // Default variables
-    var defaults = {
-      element: {
-        main: '.menu-item',
-        toggle: '.menu-item-toggle',
-        link: '.menu-item-link',
-        menu: '.menu-submenu',
-      },
-      data: {
-        activated: 'menu-activated',
-        numParent: 'menu-num-parent',
-        height: 'menu-height',
-        path: 'menu-path'
-      },
-      activeClass: 'active'
-    }
-    var settings = $.extend({}, defaults, $.fn.menu.defaults);
+/**
+ * Constants
+ */
 
-    // Method list
-    var methods = [{
-        event: 'init',
-        action: function() {
-          _init();
-          _listener();
-        }
-      },
-      {
-        event: 'show',
-        action: function(target) {
-          _show(target);
-        }
-      },
-      {
-        event: 'hide',
-        action: function(target) {
-          _hide(target);
-        }
-      }
-    ]
+const NAME = 'menu'
 
-    // Calculation method
-    function _calc(target) {
-      var height = target.outerHeight();
+const SELECTOR_ITEM = '.menu-item'
+const SELECTOR_TOGGLE = '.menu-item-toggle'
+const SELECTOR_SUBMENU = '.menu-submenu'
 
-      target.data(settings.data.height, height);
-    }
+const DATA_COLLAPSED = 'data-menu-collapsed'
+const DATA_HEIGHT = 'data-submenu-height'
+const DATA_PATH = 'data-menu-path'
 
-    // Initial method
-    function _init() {
-      var hasMinimized = $('body').hasClass('aside-minimized');
-      var currentPath = window.location.pathname
-      var maxParent = 0;
+const CLASS_MAIN = 'menu'
+const CLASS_ITEM = 'menu-item'
+const CLASS_ACTIVE = 'active'
+const CLASS_ASIDE_DESKTOP_MINIMIZED = 'aside-desktop-minimized'
+const CLASS_ASIDE_DESKTOP_MAXIMIZED = 'aside-desktop-maximized'
 
-      // Remove .aside-minimized class from body for calculating
-      if (hasMinimized) {
-        $('body').removeClass('aside-minimized')
-      }
+/**
+ * Class definition
+ */
 
-      // Loop .menu-item element and set number of parent
-      $(settings.element.main).each(function() {
-        var numParent = $(this).parents(settings.element.menu).length;
-
-        if (numParent > maxParent) {
-          maxParent = numParent;
-        }
-
-        $(this).data(settings.data.numParent, numParent);
-      });
-
-      // Loop .menu-item-link elements
-      $(settings.element.link).each(function() {
-
-        // Check whether the path parameter is same as current URL Path
-        if ($(this).data(settings.data.path) == currentPath) {
-
-          // Add active class
-          $(this).addClass(settings.activeClass)
-
-          // Loop parent element
-          $(this).parents(settings.element.main).each(function() {
-            var menu = $(this).children(settings.element.menu);
-
-            // Open menu element
-            if (menu.length) {
-              _show(menu);
-            }
-          })
-        }
-      })
-
-      // Calculate all menu item element height
-      for (var i = maxParent; i >= 0; i--) {
-        $(settings.element.main).each(function() {
-
-          // Get menu item number of parents
-          var numParent = $(this).data(settings.data.numParent);
-
-          // Get submenu element
-          var menu = $(this).children(settings.element.menu);
-
-          if (numParent == i) {
-            $(this).data(settings.data.activated, true);
-
-            // Check wheater submenu element does exist
-            if (menu.length != 0) {
-
-              // Calculate submenu element height
-              _calc(menu);
-
-              // Check whather menu item element has active class
-              if ($(this).children(settings.element.toggle).hasClass(settings.activeClass)) {
-                _show(menu);
-              } else {
-                _hide(menu);
-              }
-            }
-          }
-        });
-      };
-
-      // Add .aside-minimized class from body
-      if (hasMinimized) {
-        $('body').addClass('aside-minimized')
-      }
-    }
-
-    // Make event listener for toggle button
-    function _listener() {
-      $(settings.element.toggle).on('click', function() {
-
-        // Getting target element
-        var target = $(this).siblings(settings.element.menu);
-
-        // Getting active state
-        var activated = target.data(settings.data.activated);
-
-        activated ? _hide(target) : _show(target);
-      })
-    }
-
-    // Method to show menu
-    function _show(target) {
-
-      // Taking first element
-      target = target.first();
-
-      // Checking whether target element has settings.element.menu class
-      if (target.hasClass(settings.element.menu.substr(1))) {
-
-        // Getting height and number of parents from element data
-        var height = target.data(settings.data.height);
-        var numParent = target.parent(settings.element.main).data(settings.data.numParent);
-
-        // Setting target element height
-        target.css('height', height);
-
-        // Resetting related parent elements height
-        target.parents(settings.element.menu).each(function() {
-          var parentHeight = $(this).data(settings.data.height) + height;
-
-          $(this).css('height', parentHeight);
-          $(this).data(settings.data.height, parentHeight);
-        });
-
-        // Adding active state to target element
-        target.siblings(settings.element.toggle).addClass(settings.activeClass);
-        target.data(settings.data.activated, true);
-      }
-    }
-
-    // Method to show menu
-    function _hide(target) {
-
-      // Taking first element
-      target = target.first();
-
-      // Check whether target element has settings.element.menu class
-      if (target.hasClass(settings.element.menu.substr(1))) {
-
-        // Getting height from element data
-        var height = target.data(settings.data.height);
-
-        // Setting target element height to zero for collapsing
-        target.css('height', 0);
-
-        // Resetting related parent elements height
-        target.parents(settings.element.menu).each(function() {
-          var parentHeight = $(this).data(settings.data.height) - height;
-
-          $(this).data(settings.data.height, parentHeight);
-          $(this).css('height', parentHeight);
-        });
-
-        // Removing active state to target element
-        target.siblings(settings.element.toggle).removeClass(settings.activeClass);
-        target.data(settings.data.activated, false);
-      }
-    }
-
-    var element = $(this);
-
-    if (typeof action == 'string') {
-      methods.forEach(function(method) {
-        if (action == method.event) {
-          method.action(element)
-        }
-      })
-    }
-
-    return this
+class Menu extends BaseComponent {
+  // Getters
+  static get NAME() {
+    return NAME
   }
 
-  $(function() {
-    // Initialize menu
-    $().menu('init');
-  })
-}));
+  asideDefaultDesktopMinimized
+
+  constructor() {
+    super()
+
+    this.asidePrepare()
+    this.calcHeight()
+    this.collapseAll()
+    this.setActiveLink()
+    this.toggleListener()
+    this.asideRestore()
+  }
+
+  // Function for adding event listener to toggle element
+  toggleListener() {
+    document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
+      toggleElement.addEventListener('click', () => {
+        const itemElement = toggleElement.parentElement
+        const isCollapsed = itemElement.getAttribute(DATA_COLLAPSED) === 'true'
+
+        this.toggleCollapse(itemElement, !isCollapsed)
+      })
+    })
+  }
+
+  // Function for calculating submenu height
+  calcHeight() {
+    document.querySelectorAll(SELECTOR_ITEM).forEach((itemElement) => {
+      const submenuElement = itemElement.querySelector(SELECTOR_SUBMENU)
+
+      if (submenuElement) {
+        const submenuHeight = submenuElement.clientHeight
+
+        itemElement.setAttribute(DATA_HEIGHT, submenuHeight)
+        submenuElement.style.height = `${submenuHeight}px`
+      }
+    })
+  }
+
+  // Function for collapsing all items
+  collapseAll() {
+    Array.from(document.querySelectorAll(SELECTOR_ITEM)).filter((itemElement) => {
+      return Boolean(itemElement.querySelector(SELECTOR_SUBMENU))
+    }).reverse().forEach((itemElement) => {
+      this.toggleCollapse(itemElement, true)
+    })
+  }
+
+  // Function for setting active link and items
+  setActiveLink() {
+    const activePath = window.location.pathname
+
+    const linkElement = document.querySelector(`[${DATA_PATH}="${activePath}"]`)
+
+    linkElement.classList.add(CLASS_ACTIVE)
+
+    this.getParentItems(linkElement).forEach((itemElement) => {
+      this.toggleCollapse(itemElement, false)
+    })
+  }
+
+  // Function for toggling item collapsion
+  toggleCollapse(itemElement, isCollapse) {
+    const toggleElement = itemElement.querySelector(SELECTOR_TOGGLE)
+    const submenuElement = itemElement.querySelector(SELECTOR_SUBMENU)
+    const submenuHeight = Number(itemElement.getAttribute(DATA_HEIGHT))
+
+    if (isCollapse) {
+      toggleElement.classList.remove(CLASS_ACTIVE)
+      submenuElement.style.height = '0px'
+    } else {
+      toggleElement.classList.add(CLASS_ACTIVE)
+      submenuElement.style.height = `${submenuHeight}px`
+    }
+
+    itemElement.setAttribute(DATA_COLLAPSED, isCollapse)
+
+    this.getParentItems(itemElement).forEach((parentItemElement) => {
+      const parentSubmenuElement = parentItemElement.querySelector(SELECTOR_SUBMENU)
+      const parentSubmenuHeight = Number(parentItemElement.getAttribute(DATA_HEIGHT))
+      const calculatedHeight = isCollapse ? parentSubmenuHeight - submenuHeight : parentSubmenuHeight + submenuHeight
+
+      parentItemElement.setAttribute(DATA_HEIGHT, calculatedHeight)
+      parentSubmenuElement.style.height = `${calculatedHeight}px`
+    })
+  }
+
+  // Function to get parent items
+  getParentItems(targetElement) {
+    const parentElements = []
+
+    let currentElement = targetElement.parentElement
+
+    while (!currentElement.classList.contains(CLASS_MAIN)) {
+      const hasClass = currentElement.classList.contains(CLASS_ITEM)
+      const hasSubmenu = Boolean(currentElement.querySelector(SELECTOR_SUBMENU))
+
+      if (hasClass && hasSubmenu) {
+        parentElements.push(currentElement)
+      }
+
+      currentElement = currentElement.parentElement
+    }
+
+    return Array.from(parentElements)
+  }
+
+  // Function to prepare aside adoption
+  asidePrepare() {
+    this.asideDefaultDesktopMinimized = document.body.classList.contains(CLASS_ASIDE_DESKTOP_MINIMIZED)
+
+    if (this.asideDefaultDesktopMinimized) {
+      document.body.classList.remove(CLASS_ASIDE_DESKTOP_MINIMIZED)
+      document.body.classList.add(CLASS_ASIDE_DESKTOP_MAXIMIZED)
+    }
+  }
+
+  // Function to restore aside default state
+  asideRestore() {
+    if (this.asideDefaultDesktopMinimized) {
+      document.body.classList.add(CLASS_ASIDE_DESKTOP_MINIMIZED)
+      document.body.classList.remove(CLASS_ASIDE_DESKTOP_MAXIMIZED)
+    }
+  }
+}
+
+defineJQueryPlugin(Menu)
+
+export default Menu

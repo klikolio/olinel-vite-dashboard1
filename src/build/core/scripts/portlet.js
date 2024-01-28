@@ -1,121 +1,51 @@
-(function(factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["jquery"], factory);
-  } else if (typeof module === "object" && module.exports) {
-    module.exports = factory(require("jquery"));
-  } else {
-    factory(jQuery);
+import BaseComponent from "bootstrap/js/src/base-component"
+import { defineJQueryPlugin } from "bootstrap/js/src/util"
+
+/**
+ * Constants
+ */
+
+const NAME = 'portlet'
+
+const SELECTOR_BODY = '.portlet-body'
+
+const DATA_COLLAPSED = 'data-portlet-collapsed'
+
+/**
+ * Class definition
+ */
+
+class Portlet extends BaseComponent {
+  // Getters
+  static get NAME() {
+    return NAME
   }
-})(function($) {
-  "use strict";
-  $.fn.portlet = function(action) {
-    // Default variables
-    var defaults = {
-      element: {
-        main: ".portlet",
-        body: ".portlet-body"
-      },
-      data: {
-        hidden: "portlet-hidden"
-      },
-      collapsedClass: "portlet-collapsed",
-      destroyMethod: "fade", // fade|slide
-      easing: "linear",
-      transitionDuration: 200
-    };
-    var settings = $.extend({}, defaults, $.fn.portlet.defaults);
 
-    // Method list
-    var methods = [
-      {
-        event: "collapse",
-        action: function(target) {
-          _collapse(target);
-        }
-      },
-      {
-        event: "uncollapse",
-        action: function(target) {
-          _uncollapse(target);
-        }
-      },
-      {
-        event: "toggleCollapse",
-        action: function(target) {
-          _toggleCollapse(target);
-        }
-      },
-      {
-        event: "destroy",
-        action: function(target) {
-          _destroy(target);
-        }
-      }
-    ];
+  constructor(element) {
+    super(element)
+  }
 
-    // Remove portlet with animation
-    function _destroy(target) {
-      // Validating target element whether it has .portlet class
-      if (target.hasClass(settings.element.main.substr(1))) {
-        var type = settings.destroyMethod;
+  // Function for toggling collapsion
+  toggleCollapse() {
+    const bodyElement = this._element.querySelector(SELECTOR_BODY)
 
-        if (type === "fade") {
-          target.fadeOut(settings.transitionDuration);
-        } else if (type === "slide") {
-          target.slideUp(settings.transitionDuration);
-        } else {
-          target.fadeOut(settings.transitionDuration);
-        }
-      }
+    const isCollapsed = this._element.getAttribute(DATA_COLLAPSED) === 'true'
+
+    this._element.setAttribute(DATA_COLLAPSED, !isCollapsed)
+
+    if (isCollapsed) {
+      bodyElement.style.display = null
+    } else {
+      bodyElement.style.display = 'none'
     }
+  }
 
-    // Collapse .portlet-body element
-    function _collapse(target) {
-      // Validating target element whether it has .portlet class
-      if (target.hasClass(settings.element.main.substr(1))) {
-        target.find(settings.element.body).slideUp({
-          duration: settings.transitionDuration,
-          easing: settings.easing,
-          complete: function() {
-            target.data(settings.data.hidden, true);
-            target.addClass(settings.collapsedClass);
-          }
-        });
-      }
-    }
+  // Function for destroying element
+  destroy() {
+    this._element.remove()
+  }
+}
 
-    // Uncollapse .portlet-body element
-    function _uncollapse(target) {
-      // Validating target element whether it has .portlet class
-      if (target.hasClass(settings.element.main.substr(1))) {
-        target
-          .find(settings.element.body)
-          .slideDown({
-            duration: settings.transitionDuration,
-            easing: settings.easing,
-            complete: function() {
-              target.data(settings.data.hidden, false);
-            }
-          })
-          .removeClass(settings.collapsedClass);
-      }
-    }
+defineJQueryPlugin(Portlet)
 
-    // Toggle collapse .portlet-body element
-    function _toggleCollapse(target) {
-      target.data(settings.data.hidden) ? _uncollapse(target) : _collapse(target);
-    }
-
-    var element = $(this);
-
-    if (typeof action == "string") {
-      methods.forEach(function(method) {
-        if (action == method.event) {
-          method.action(element);
-        }
-      });
-    }
-
-    return this;
-  };
-});
+export default Portlet

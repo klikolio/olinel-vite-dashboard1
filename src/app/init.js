@@ -1,3 +1,5 @@
+import '@/build/core/styles/index.scss'
 import '@fortawesome/fontawesome-free/js/all'
-import './utilities/simplebar-components'
-import './utilities/bootstrap-components'
+import '@/app/utilities/simplebar-components'
+import '@/app/utilities/bootstrap-components'
+import '@/app/utilities/core-components'

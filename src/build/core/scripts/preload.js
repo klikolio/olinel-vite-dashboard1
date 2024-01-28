@@ -1,67 +1,53 @@
-(function(factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["jquery"], factory);
-  } else if (typeof module === "object" && module.exports) {
-    module.exports = factory(require("jquery"));
-  } else {
-    factory(jQuery);
+import BaseComponent from "bootstrap/js/src/base-component"
+import { defineJQueryPlugin } from "bootstrap/js/src/util"
+
+/**
+ * Constants
+ */
+
+const NAME = 'preload'
+
+const DURATION = 6000
+
+const CLASS_ACTIVE = 'preload-active'
+const CLASS_HIDE = 'preload-hide'
+
+/**
+ * Class definition
+ */
+
+class Preload extends BaseComponent {
+  // Getters
+  static get NAME() {
+    return NAME
   }
-})(function($) {
-  "use strict";
-  $.preload = function(action) {
-    // Default variables
-    var defaults = {
-      bodyHideClass: "preload-hide",
-      bodyActiveClass: "preload-active"
-    };
-    var settings = $.extend({}, defaults, $.preload.defaults);
 
-    // Method list
-    var methods = [
-      {
-        event: "show",
-        action: function() {
-          _show();
-        }
-      },
-      {
-        event: "hide",
-        action: function() {
-          _hide();
-        }
-      }
-    ];
+  constructor() {
+    super()
 
-    // Show preload
-    function _show() {
-      $("body").removeClass(settings.bodyHideClass);
-      $("body").addClass(settings.bodyActiveClass);
-    }
+    this.autoHide()
+  }
 
-    // Hide preload
-    function _hide() {
-      $("body").addClass(settings.bodyHideClass);
-      $("body").removeClass(settings.bodyActiveClass);
-    }
+  // Function for automatically hiding preload
+  autoHide() {
+    setTimeout(() => {
+      this.hide()
+    }, DURATION)
+  }
 
-    var element = $(this);
+  // Function for showing preload
+  show() {
+    document.body.classList.add(CLASS_ACTIVE)
+    document.body.classList.remove(CLASS_HIDE)
+  }
 
-    if (typeof action == "string") {
-      methods.forEach(function(method) {
-        if (action == method.event) {
-          method.action(element);
-        }
-      });
-    }
+  // Function for hiding preload
+  hide() {
+    document.body.classList.add(CLASS_HIDE)
+    document.body.classList.remove(CLASS_ACTIVE)
+  }
+}
 
-    return this;
-  };
+defineJQueryPlugin(Preload)
 
-  setTimeout(function() {
-    $.preload("hide");
-  }, 6000);
-
-  $(function() {
-    $.preload("hide");
-  });
-});
+export default Preload
