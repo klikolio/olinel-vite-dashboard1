@@ -1,0 +1,14 @@
+{% from "components/variables.njk" import defaults %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id={{ defaults.google_analytics_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', '{{ defaults . google_analytics_id }}');
+</script>
