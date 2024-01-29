@@ -1,18 +1,15 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Select2" %}
+{% set page_id = "form.advanced.select2" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Select2", link: "form/advanced/select2.html"  }
+  { text: "Select2", link: "/form/advanced/select2.html" }
 ] %}
 {% set css_links = [
-  "assets/build/styles/vendor/select2.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/select2.js" ,
-  "assets/app/pages/form/select2.js" 
+  "assets/build/styles/vendor/select2.css"
 ] %}
 
 {% block content %}

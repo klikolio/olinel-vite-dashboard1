@@ -1,17 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Basic Editor" %}
+{% set page_id = "editor.basic" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Editor" },
-  { text: "Basic", link: "editor/basic.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/quill.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/quill.js" ,
-  "assets/app/pages/editor/basic.js" 
+  { text: "Basic", link: "/editor/basic.html" }
 ] %}
 
 {% block content %}

@@ -1,14 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Login 1" %}
+{% set page_id = "pages.login.login-1" %}
 {% set enable_container_fluid = true %}
 {% set enable_aside = false %}
 {% set enable_header = false %}
 {% set enable_footer = false %}
-{% set js_links = [
-  "assets/build/scripts/vendor/jquery-validation.js" ,
-  "assets/app/pages/pages/login.js" 
-] %}
 
 {% block content %}
   <div class="row g-0 align-items-center justify-content-center h-100">
@@ -76,7 +73,7 @@
             
             <!-- BEGIN Flex -->
             <div class="d-flex align-items-center justify-content-between">
-              <span>Don't have an account? <a href="{{ 'pages/register/register-1.html'  }}">Register</a></span>
+              <span>Don't have an account? <a href="{{ 'pages/register/register-1.html' }}">Register</a></span>
               <button type="submit" class="btn btn-label-primary btn-lg btn-widest">Login</button>
             </div>
             <!-- END Flex -->

@@ -1,11 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Tab" %}
+{% set page_id = "elements.base.tab" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Base" },
-  { text: "Tab", link: "elements/base/tab.html"  }
+  { text: "Tab", link: "/elements/base/tab.html" }
 ] %}
 
 {% block content %}

@@ -51,7 +51,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#29b6f6" data-chart-label="Garrett" data-chart-series="64, 40, 76, 62, 98, 64"></div>
+                  <div class="widget-chart-3" data-chart-color="#29b6f6" data-chart-label="Garrett" data-chart-value="64, 40, 76, 62, 98, 64"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -76,7 +76,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#ab47bc" data-chart-label="Rhona" data-chart-series="23, 50, 26, 54, 38, 45"></div>
+                  <div class="widget-chart-3" data-chart-color="#ab47bc" data-chart-label="Rhona" data-chart-value="23, 50, 26, 54, 38, 45"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -101,7 +101,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#ef5350" data-chart-label="Airi" data-chart-series="98, 56, 76, 54, 34, 45"></div>
+                  <div class="widget-chart-3" data-chart-color="#ef5350" data-chart-label="Airi" data-chart-value="98, 56, 76, 54, 34, 45"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -126,7 +126,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#ffa726" data-chart-label="Brielle" data-chart-series="65, 86, 23, 54, 90, 45"></div>
+                  <div class="widget-chart-3" data-chart-color="#ffa726" data-chart-label="Brielle" data-chart-value="65, 86, 23, 54, 90, 45"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -171,7 +171,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#ab47bc" data-chart-label="Rhona" data-chart-series="23, 50, 26, 54, 38, 45"></div>
+                  <div class="widget-chart-3" data-chart-color="#ab47bc" data-chart-label="Rhona" data-chart-value="23, 50, 26, 54, 38, 45"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -196,7 +196,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#ffa726" data-chart-label="Brielle" data-chart-series="65, 86, 23, 54, 90, 45"></div>
+                  <div class="widget-chart-3" data-chart-color="#ffa726" data-chart-label="Brielle" data-chart-value="65, 86, 23, 54, 90, 45"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -221,7 +221,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#29b6f6" data-chart-label="Garrett" data-chart-series="64, 40, 76, 62, 98, 64"></div>
+                  <div class="widget-chart-3" data-chart-color="#29b6f6" data-chart-label="Garrett" data-chart-value="64, 40, 76, 62, 98, 64"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -246,7 +246,7 @@
                 <td style="max-width: 8rem">
 
                   <!-- BEGIN Chart -->
-                  <div class="widget-chart-3" data-chart-color="#ef5350" data-chart-label="Airi" data-chart-series="98, 56, 76, 54, 34, 45"></div>
+                  <div class="widget-chart-3" data-chart-color="#ef5350" data-chart-label="Airi" data-chart-value="98, 56, 76, 54, 34, 45"></div>
                   <!-- END Chart -->
 
                 </td>
@@ -269,3 +269,24 @@
   </div>
 </div>
 <!-- END Portlet -->
+
+<!-- BEGIN Script -->
+<script type="module">
+  import { initChart3 } from '@/app/widgets/chart-3'
+
+  document.querySelectorAll('.widget-chart-3').forEach((chartQuery) => {
+    const baseColor = chartQuery.getAttribute('data-chart-color')
+    const chartLabel = chartQuery.getAttribute('data-chart-label')
+    const chartValue = chartQuery.getAttribute('data-chart-value').split(",").map(val => Number(val))
+
+    const chartInstance = initChart3(chartQuery, baseColor, [
+      {
+        name: chartLabel,
+        data: chartValue
+      }
+    ])
+
+    chartInstance.render()
+  })
+</script>
+<!-- END Script -->

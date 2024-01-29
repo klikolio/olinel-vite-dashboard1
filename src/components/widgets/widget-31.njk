@@ -5,9 +5,24 @@
     <span class="text-muted">Last 3 months</span>
 
     <!-- BEGIN Chart -->
-    <div class="widget-chart-9" data-chart-color="#29b6f6" data-chart-label="Users" data-chart-series="400, 640, 520, 760, 640, 980"></div>
+    <div id="widget-chart-9a"></div>
     <!-- END Chart -->
 
   </div>
 </div>
 <!-- END Portlet -->
+
+<!-- BEGIN Script -->
+<script type="module">
+  import { initChart9 } from '@/app/widgets/chart-9'
+
+  const chartInstance = initChart9(document.querySelector('#widget-chart-9a'), '#29b6f6', [
+    {
+      name: 'Users',
+      data: [400, 640, 520, 760, 640, 980]
+    },
+  ])
+
+  chartInstance.render()
+</script>
+<!-- END Script -->

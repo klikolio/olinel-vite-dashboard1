@@ -1,26 +1,10 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Dashboard" %}
+{% set page_id = "dashboard" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' }
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' }
 ] %}
-{% set css_links = [
-  "assets/build/styles/vendor/apexcharts.css" ,
-  "assets/build/styles/vendor/slick-carousel.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/apexcharts.js" ,
-  "assets/build/scripts/vendor/slick-carousel.js" ,
-  "src/app/home.js"
-] %}
-
-{% block script %}
-  <script type="module">
-    import calc from '/src/app/home'
-
-    calc(2, 4)
-  </script>
-{% endblock %}
 
 {% block content %}
   <div class="row">

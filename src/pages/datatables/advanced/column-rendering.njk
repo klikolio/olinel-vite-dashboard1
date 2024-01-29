@@ -1,22 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Search Panes Extension" %}
+{% set page_title = "Datatables Column Rendering" %}
+{% set page_id = "datatables.advanced.column-rendering" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
-  { text: "Extension" },
-  { text: "Search Panes", link: "datatable/extension/search-panes.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-select.css" ,
-  "assets/build/styles/vendor/datatables-searchpanes.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-select.js" ,
-  "assets/build/scripts/vendor/datatables-searchpanes.js" ,
-  "assets/app/pages/datatable/extension/search-panes.js" 
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
+  { text: "Advanced" },
+  { text: "Column rendering", link: "/datatables/advanced/column-rendering.html" }
 ] %}
 
 {% block content %}
@@ -26,15 +16,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable search panes extension</h3>
+          <h3 class="portlet-title">Datatables column rendering</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Search panes</strong> adds panes to the Datatable with the capability to search the Datatable by selecting rows in the panes. This is very useful when it comes to adding a more accessible searching feature and custom search capabilities.</p>
-          <p>If you include the <strong>Search panes</strong> extension on your page, it is automatically available for every Datatable on that page. You can customize the panes appearance and operation by adding a <code>Pfrtip</code> to the <code>dom</code> property. This allows the location of the panes to be defined. Configuration for the <strong>Search panes</strong> goes inside of the <code>searchPanes</code> property.</p>
+          <p>Each column has an optional rendering control called <code>columns.render</code> which can be used to process the content of each cell before data is used. This example show action buttons in the last column and render badges from number data in the status column.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -45,6 +34,8 @@
                 <th>Age</th>
                 <th>Start date</th>
                 <th>Salary</th>
+                <th>Status</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -57,6 +48,8 @@
                 <td>61</td>
                 <td>2011/04/25</td>
                 <td>$320,800</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>2</td>
@@ -67,6 +60,8 @@
                 <td>63</td>
                 <td>2011/07/25</td>
                 <td>$170,750</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>3</td>
@@ -77,6 +72,8 @@
                 <td>66</td>
                 <td>2009/01/12</td>
                 <td>$86,000</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>4</td>
@@ -87,6 +84,8 @@
                 <td>22</td>
                 <td>2012/03/29</td>
                 <td>$433,060</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>5</td>
@@ -97,6 +96,8 @@
                 <td>33</td>
                 <td>2008/11/28</td>
                 <td>$162,700</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>6</td>
@@ -107,6 +108,8 @@
                 <td>61</td>
                 <td>2012/12/02</td>
                 <td>$372,000</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>7</td>
@@ -117,6 +120,8 @@
                 <td>59</td>
                 <td>2012/08/06</td>
                 <td>$137,500</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>8</td>
@@ -127,6 +132,8 @@
                 <td>55</td>
                 <td>2010/10/14</td>
                 <td>$327,900</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>9</td>
@@ -137,6 +144,8 @@
                 <td>39</td>
                 <td>2009/09/15</td>
                 <td>$205,500</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>10</td>
@@ -147,6 +156,8 @@
                 <td>23</td>
                 <td>2008/12/13</td>
                 <td>$103,600</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>11</td>
@@ -157,6 +168,8 @@
                 <td>30</td>
                 <td>2008/12/19</td>
                 <td>$90,560</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>12</td>
@@ -167,6 +180,8 @@
                 <td>22</td>
                 <td>2013/03/03</td>
                 <td>$342,000</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>13</td>
@@ -177,6 +192,8 @@
                 <td>36</td>
                 <td>2008/10/16</td>
                 <td>$470,600</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>14</td>
@@ -187,6 +204,8 @@
                 <td>43</td>
                 <td>2012/12/18</td>
                 <td>$313,500</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>15</td>
@@ -197,6 +216,8 @@
                 <td>19</td>
                 <td>2010/03/17</td>
                 <td>$385,750</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>16</td>
@@ -207,6 +228,8 @@
                 <td>66</td>
                 <td>2012/11/27</td>
                 <td>$198,500</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>17</td>
@@ -217,6 +240,8 @@
                 <td>64</td>
                 <td>2010/06/09</td>
                 <td>$725,000</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>18</td>
@@ -227,6 +252,8 @@
                 <td>59</td>
                 <td>2009/04/10</td>
                 <td>$237,500</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>19</td>
@@ -237,6 +264,8 @@
                 <td>41</td>
                 <td>2012/10/13</td>
                 <td>$132,000</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>20</td>
@@ -247,6 +276,8 @@
                 <td>35</td>
                 <td>2012/09/26</td>
                 <td>$217,500</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>21</td>
@@ -257,6 +288,8 @@
                 <td>30</td>
                 <td>2011/09/03</td>
                 <td>$345,000</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>22</td>
@@ -267,6 +300,8 @@
                 <td>40</td>
                 <td>2009/06/25</td>
                 <td>$675,000</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>23</td>
@@ -277,6 +312,8 @@
                 <td>21</td>
                 <td>2011/12/12</td>
                 <td>$106,450</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>24</td>
@@ -287,6 +324,8 @@
                 <td>23</td>
                 <td>2010/09/20</td>
                 <td>$85,600</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>25</td>
@@ -297,6 +336,8 @@
                 <td>47</td>
                 <td>2009/10/09</td>
                 <td>$1,200,000</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>26</td>
@@ -307,6 +348,8 @@
                 <td>42</td>
                 <td>2010/12/22</td>
                 <td>$92,575</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>27</td>
@@ -317,6 +360,8 @@
                 <td>28</td>
                 <td>2010/11/14</td>
                 <td>$357,650</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>28</td>
@@ -327,6 +372,8 @@
                 <td>28</td>
                 <td>2011/06/07</td>
                 <td>$206,850</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>29</td>
@@ -337,6 +384,8 @@
                 <td>48</td>
                 <td>2010/03/11</td>
                 <td>$850,000</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>30</td>
@@ -347,6 +396,8 @@
                 <td>20</td>
                 <td>2011/08/14</td>
                 <td>$163,000</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>31</td>
@@ -357,6 +408,8 @@
                 <td>37</td>
                 <td>2011/06/02</td>
                 <td>$95,400</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>32</td>
@@ -367,6 +420,8 @@
                 <td>53</td>
                 <td>2009/10/22</td>
                 <td>$114,500</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>33</td>
@@ -377,6 +432,8 @@
                 <td>27</td>
                 <td>2011/05/07</td>
                 <td>$145,000</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>34</td>
@@ -387,6 +444,8 @@
                 <td>22</td>
                 <td>2008/10/26</td>
                 <td>$235,500</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>35</td>
@@ -397,6 +456,8 @@
                 <td>46</td>
                 <td>2011/03/09</td>
                 <td>$324,050</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>36</td>
@@ -407,6 +468,8 @@
                 <td>47</td>
                 <td>2009/12/09</td>
                 <td>$85,675</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>37</td>
@@ -417,6 +480,8 @@
                 <td>51</td>
                 <td>2008/12/16</td>
                 <td>$164,500</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>38</td>
@@ -427,6 +492,8 @@
                 <td>41</td>
                 <td>2010/02/12</td>
                 <td>$109,850</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>39</td>
@@ -437,6 +504,8 @@
                 <td>62</td>
                 <td>2009/02/14</td>
                 <td>$452,500</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>40</td>
@@ -447,6 +516,8 @@
                 <td>37</td>
                 <td>2008/12/11</td>
                 <td>$136,200</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>41</td>
@@ -457,6 +528,8 @@
                 <td>65</td>
                 <td>2008/09/26</td>
                 <td>$645,750</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>42</td>
@@ -467,6 +540,8 @@
                 <td>64</td>
                 <td>2011/02/03</td>
                 <td>$234,500</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>43</td>
@@ -477,6 +552,8 @@
                 <td>38</td>
                 <td>2011/05/03</td>
                 <td>$163,500</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>44</td>
@@ -487,6 +564,8 @@
                 <td>37</td>
                 <td>2009/08/19</td>
                 <td>$139,575</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>45</td>
@@ -497,6 +576,8 @@
                 <td>61</td>
                 <td>2013/08/11</td>
                 <td>$98,540</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>46</td>
@@ -507,6 +588,8 @@
                 <td>47</td>
                 <td>2009/07/07</td>
                 <td>$87,500</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>47</td>
@@ -517,6 +600,8 @@
                 <td>64</td>
                 <td>2012/04/09</td>
                 <td>$138,575</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>48</td>
@@ -527,6 +612,8 @@
                 <td>63</td>
                 <td>2010/01/04</td>
                 <td>$125,250</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>49</td>
@@ -537,6 +624,8 @@
                 <td>56</td>
                 <td>2012/06/01</td>
                 <td>$115,000</td>
+                <td>3</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>50</td>
@@ -547,6 +636,8 @@
                 <td>43</td>
                 <td>2013/02/01</td>
                 <td>$75,650</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>51</td>
@@ -557,6 +648,8 @@
                 <td>46</td>
                 <td>2011/12/06</td>
                 <td>$145,600</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>52</td>
@@ -567,6 +660,8 @@
                 <td>47</td>
                 <td>2011/03/21</td>
                 <td>$356,250</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>53</td>
@@ -577,6 +672,8 @@
                 <td>21</td>
                 <td>2009/02/27</td>
                 <td>$103,500</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>54</td>
@@ -587,6 +684,8 @@
                 <td>30</td>
                 <td>2010/07/14</td>
                 <td>$86,500</td>
+                <td>0</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>55</td>
@@ -597,6 +696,8 @@
                 <td>51</td>
                 <td>2008/11/13</td>
                 <td>$183,000</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>56</td>
@@ -607,6 +708,8 @@
                 <td>29</td>
                 <td>2011/06/27</td>
                 <td>$183,000</td>
+                <td>1</td>
+                <td class="text-nowrap"></td>
               </tr>
               <tr>
                 <td>57</td>
@@ -617,10 +720,12 @@
                 <td>27</td>
                 <td>2011/01/25</td>
                 <td>$112,000</td>
+                <td>2</td>
+                <td class="text-nowrap"></td>
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

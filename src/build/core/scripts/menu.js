@@ -13,7 +13,7 @@ const SELECTOR_SUBMENU = '.menu-submenu'
 
 const DATA_COLLAPSED = 'data-menu-collapsed'
 const DATA_HEIGHT = 'data-submenu-height'
-const DATA_PATH = 'data-menu-path'
+const DATA_ACTIVE_PAGE = 'data-menu-active-page'
 
 const CLASS_MAIN = 'menu'
 const CLASS_ITEM = 'menu-item'
@@ -81,9 +81,9 @@ class Menu extends BaseComponent {
 
   // Function for setting active link and items
   setActiveLink() {
-    const activePath = window.location.pathname
+    const activePage = document.documentElement.getAttribute('id')
 
-    const linkElement = document.querySelector(`[${DATA_PATH}="${activePath}"]`)
+    const linkElement = document.querySelector(`[${DATA_ACTIVE_PAGE}="${activePage}"]`)
 
     if (linkElement) {
       linkElement.classList.add(CLASS_ACTIVE)

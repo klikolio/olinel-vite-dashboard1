@@ -1,11 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Button" %}
+{% set page_id = "elements.base.button" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Base" },
-  { text: "Button", link: "elements/base/button.html"  }
+  { text: "Button", link: "/elements/base/button.html" }
 ] %}
 
 {% block content %}
@@ -419,7 +420,7 @@
           <h3 class="portlet-title">Addon</h3>
         </div>
         <div class="portlet-body">
-          <p>You can add a counter or marker to button by adding <code>.btn-{marker|counter}</code> and combine with <a href="{{ 'elements/base/badge.html'  }}">badge</a> or <a href="{{ 'elements/base/marker.html'  }}">marker</a> component.</p>
+          <p>You can add a counter or marker to button by adding <code>.btn-{marker|counter}</code> and combine with <a href="{{ 'elements/base/badge.html' }}">badge</a> or <a href="{{ 'elements/base/marker.html' }}">marker</a> component.</p>
 
           <!-- BEGIN Buttons -->
           <button class="btn btn-primary">

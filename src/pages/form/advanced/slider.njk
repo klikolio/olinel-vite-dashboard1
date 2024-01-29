@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Slider" %}
+{% set page_id = "form.advanced.slider" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Slider", link: "form/advanced/slider.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/ion-rangeslider.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/ion-rangeslider.js" ,
-  "assets/app/pages/form/slider.js" 
+  { text: "Slider", link: "/form/advanced/slider.html" }
 ] %}
 
 {% block content %}

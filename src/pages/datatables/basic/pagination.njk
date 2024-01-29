@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Datatable Column Visibility" %}
+{% set page_title = "Datatables Pagination" %}
+{% set page_id = "datatables.base.pagination" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
-  { text: "Advanced" },
-  { text: "Column Visibility", link: "datatable/advanced/column-visibility.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/app/pages/datatable/advanced/column-visibility.js" 
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
+  { text: "Basic" },
+  { text: "Pagination", link: "/datatables/basic/pagination.html" }
 ] %}
 
 {% block content %}
@@ -22,14 +16,15 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable column visibility</h3>
+          <h3 class="portlet-title">Datatables pagination</h3>
         </div>
         <div class="portlet-body">
-          <p>There are times when you might find it useful to display only a sub-set of the information that was available in the original table. For example you might want to reduce the amount of the data shown on screen to make it clearer for the user. This is done through the <code>columns.visible</code> column option.</p>
+          <p>The default page control presented by Datatables (forward and backward buttons with up to 7 page numbers in between) is fine for most situations, but there are cases where you may wish to customize the options presented to the end user.</p>
+          <p>This is done through Datatables's extensible pagination mechanism, the <code>pagingType</code> option. There are six built-in options for which pagination controls Datatables should show: <code>numbers|simple|simple_numbers|full|full_numbers|first_last_numbers</code>.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -615,7 +610,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Date Picker" %}
+{% set page_id = "form.advanced.datepicker" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Date Picker", link: "form/advanced/datepicker.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/bootstrap-datepicker.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/bootstrap-datepicker.js" ,
-  "assets/app/pages/form/datepicker.js" 
+  { text: "Date Picker", link: "/form/advanced/datepicker.html" }
 ] %}
 
 {% block content %}

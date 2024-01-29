@@ -1,19 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Date Range Picker" %}
+{% set page_id = "form.advanced.daterangepicker" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Date Range Picker", link: "form/advanced/daterangepicker.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/bootstrap-daterangepicker.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/moment.js" ,
-  "assets/build/scripts/vendor/bootstrap-daterangepicker.js" ,
-  "assets/app/pages/form/daterangepicker.js" 
+  { text: "Date Range Picker", link: "/form/advanced/daterangepicker.html" }
 ] %}
 
 {% block content %}

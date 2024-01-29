@@ -1,11 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Card" %}
+{% set page_id = "elements.base.card" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Base" },
-  { text: "Card", link: "elements/base/card.html"  }
+  { text: "Card", link: "/elements/base/card.html" }
 ] %}
 
 {% block content %}
@@ -27,7 +28,7 @@
 
               <!-- BEGIN Card -->
               <div class="card">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -116,7 +117,7 @@
 
               <!-- BEGIN Card -->
               <div class="card">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -147,7 +148,7 @@
           <h3 class="portlet-title">Navigation</h3>
         </div>
         <div class="portlet-body">
-          <p>Add some navigation to a card’s header (or block) with <a href="{{ 'elements/base/nav.html'  }}">nav</a>.</p>
+          <p>Add some navigation to a card’s header (or block) with <a href="{{ 'elements/base/nav.html' }}">nav</a>.</p>
 
           <!-- BEGIN Grid -->
           <div class="d-grid gap-3">
@@ -252,7 +253,7 @@
           <div class="card">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="img-fluid rounded-start" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="img-fluid rounded-start" alt="Card image">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -289,7 +290,7 @@
             
               <!-- BEGIN Card -->
               <div class="card">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -312,7 +313,7 @@
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </p>
                 </div>
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-bottom" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-bottom" alt="Card image">
               </div>
               <!-- END Card -->
 
@@ -324,7 +325,7 @@
 
           <!-- BEGIN Card -->
           <div class="card">
-            <img src="{{ 'assets/images/banner/1120x480.webp'  }}" class="card-img" alt="Card image">
+            <img src="{{ 'assets/images/banner/1120x480.webp' }}" class="card-img" alt="Card image">
             <div class="card-img-overlay">
               <h5 class="card-title text-white">Card title</h5>
               <p class="card-text text-white">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -475,7 +476,7 @@
 
             <!-- BEGIN Card -->
             <div class="card">
-              <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+              <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -488,7 +489,7 @@
 
             <!-- BEGIN Card -->
             <div class="card">
-              <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+              <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -501,7 +502,7 @@
 
             <!-- BEGIN Card -->
             <div class="card">
-              <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+              <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -533,7 +534,7 @@
             
               <!-- BEGIN Card -->
               <div class="card h-100">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -549,7 +550,7 @@
               
               <!-- BEGIN Card -->
               <div class="card h-100">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -565,7 +566,7 @@
             
               <!-- BEGIN Card -->
               <div class="card h-100">
-                <img src="{{ 'assets/images/banner/760x480.webp'  }}" class="card-img-top" alt="Card image">
+                <img src="{{ 'assets/images/banner/760x480.webp' }}" class="card-img-top" alt="Card image">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>

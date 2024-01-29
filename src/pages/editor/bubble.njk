@@ -1,17 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Bubble Editor" %}
+{% set page_id = "editor.bubble" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Editor" },
-  { text: "Bubble", link: "editor/bubble.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/quill.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/quill.js" ,
-  "assets/app/pages/editor/bubble.js" 
+  { text: "Bubble", link: "/editor/bubble.html" }
 ] %}
 
 {% block content %}

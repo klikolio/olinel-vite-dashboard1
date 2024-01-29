@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Autofill Extension" %}
+{% set page_id = "datatables.base.autofill" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
   { text: "Extension" },
-  { text: "Autofill", link: "datatable/extension/autofill.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-autofill.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-autofill.js" ,
-  "assets/app/pages/datatable/extension/autofill.js" 
+  { text: "Autofill", link: "/datatables/extension/autofill.html" }
 ] %}
 
 {% block content %}
@@ -24,10 +16,10 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable autofill extension</h3>
+          <h3 class="portlet-title">Datatables autofill extension</h3>
         </div>
         <div class="portlet-body">
-          <p class="mb-0">Spreadsheets such as Excel and Google Docs have a very handy data duplication option of an <strong>autofill</strong> tool. The <strong>autofill</strong> library for Datatable provides a similar interface for Datatable and extends upon this interface paradigm to provide complex data interaction options that the user can select between.</p>
+          <p class="mb-0">Spreadsheets such as Excel and Google Docs have a very handy data duplication option of an <strong>autofill</strong> tool. The <strong>autofill</strong> library for Datatables provides a similar interface for Datatables and extends upon this interface paradigm to provide complex data interaction options that the user can select between.</p>
         </div>
       </div>
       <!-- END Portlet -->
@@ -38,11 +30,11 @@
           <h3 class="portlet-title">Basic initialisation</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Autofill</strong> is enabled for a Datatable using the <code>autoFill</code> option, simply setting that parameter to <code>true</code></p>
+          <p><strong>Autofill</strong> is enabled for a Datatables using the <code>autoFill</code> option, simply setting that parameter to <code>true</code></p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -628,7 +620,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -643,8 +635,8 @@
           <p>The <em>click-to-drag</em> auto fill handle can be attached to the table using a number of different triggers. This is set by the <code>autoFill.focus</code> option: <code>click|focus|hover</code>. The default behavior is <code>hover</code>, unless <em>Keytable</em> is also initialised on the same table, in which case <code>focus</code> is used.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-2" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1230,7 +1222,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -1245,8 +1237,8 @@
           <p>This example demonstrates Autofill's ability to fill vertically only through the <code>autoFill.horizontal</code> option. There is also an <code>autoFill.vertical</code> option that can be used to allow only horizontal filling.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-3" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-3" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1832,7 +1824,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

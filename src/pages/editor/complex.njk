@@ -1,19 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Complex Editor" %}
+{% set page_id = "editor.complex" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Editor" },
-  { text: "Complex", link: "editor/complex.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/quill.css" ,
-  "assets/build/styles/vendor/katex.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/quill.js" ,
-  "assets/build/scripts/vendor/katex.js" ,
-  "assets/app/pages/editor/complex.js" 
+  { text: "Complex", link: "/editor/complex.html" }
 ] %}
 
 {% block content %}

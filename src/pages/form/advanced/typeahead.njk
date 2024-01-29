@@ -1,19 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Typeahead" %}
+{% set page_id = "form.advanced.typeahead" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Typeahead", link: "form/advanced/typeahead.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/typeahead.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/handlebars.js" ,
-  "assets/build/scripts/vendor/typeahead.js" ,
-  "assets/app/pages/form/typeahead.js" 
+  { text: "Typeahead", link: "/form/advanced/typeahead.html" }
 ] %}
 
 {% block content %}

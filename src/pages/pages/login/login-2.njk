@@ -1,14 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Login 2" %}
+{% set page_id = "pages.login.login-2" %}
 {% set enable_container_fluid = true %}
 {% set enable_aside = false %}
 {% set enable_header = false %}
 {% set enable_footer = false %}
-{% set js_links = [
-  "assets/build/scripts/vendor/jquery-validation.js" ,
-  "assets/app/pages/pages/login.js" 
-] %}
 
 {% block content %}
   <div class="row g-0 align-items-center justify-content-center h-100">
@@ -23,7 +20,7 @@
             <div class="portlet-body d-flex flex-column justify-content-center align-items-start h-100 bg-primary text-white">
               <h2>Welcome back!</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, temporibus, repudiandae. Voluptate tempore, expedita placeat rem labore iste eveniet ratione.</p>
-              <a href="{{ 'pages/register/register-2.html'  }}" class="btn btn-outline-light btn-lg btn-widest rounded-pill">Register</a>
+              <a href="{{ 'pages/register/register-2.html' }}" class="btn btn-outline-light btn-lg btn-widest rounded-pill">Register</a>
             </div>
           </div>
           <div class="col-md-6">

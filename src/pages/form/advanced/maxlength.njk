@@ -1,15 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Bootstrap Maxlength" %}
+{% set page_id = "form.advanced.maxlength" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Bootstrap Maxlength", link: "form/advanced/bs-maxlength.html"  }
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/bootstrap-maxlength.js" ,
-  "assets/app/pages/form/bs-maxlength.js" 
+  { text: "Bootstrap Maxlength", link: "/form/advanced/maxlength.html" }
 ] %}
 
 {% block content %}

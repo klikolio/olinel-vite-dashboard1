@@ -1,13 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Portlet Tool" %}
+{% set page_id = "portlet.tool" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Portlet" },
-  { text: "Tool", link: "portlet/tool.html"  }
-] %}
-{% set js_links = [
-  "assets/app/pages/portlet/tool.js" 
+  { text: "Tool", link: "/portlet/tool.html" }
 ] %}
 
 {% block content %}

@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Select Extension" %}
+{% set page_title = "Row Group Extension" %}
+{% set page_id = "datatables.base.row-group" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
   { text: "Extension" },
-  { text: "Select", link: "datatable/extension/select.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-select.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-select.js" ,
-  "assets/app/pages/datatable/extension/select.js" 
+  { text: "Row Group", link: "/datatables/extension/row-group.html" }
 ] %}
 
 {% block content %}
@@ -24,10 +16,10 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable select extension</h3>
+          <h3 class="portlet-title">Datatables row group extension</h3>
         </div>
         <div class="portlet-body">
-          <p class="mb-0"><strong>Select</strong> adds item selection capabilities to a Datatable. <em>Items</em> can be rows, columns or cells, which can be selected independently, or together. Item selection can be particularly useful in interactive tables where users can perform some action on the table.</p>
+          <p class="mb-0">The ability to group rows in a table can let an end user quickly and easily see the structure of the data shown, and also present them with summaries of the data shown in each group. <strong>Row group</strong> adds this ability to customize the start and end grouping rows displayed in the Datatables, letting you integrate the summarised data to fit perfectly in with your site.</p>
         </div>
       </div>
       <!-- END Portlet -->
@@ -38,11 +30,11 @@
           <h3 class="portlet-title">Basic initialisation</h3>
         </div>
         <div class="portlet-body">
-          <p>If you include the <strong>Select</strong> extension on your page, it is automatically available for every Datatable on that page through the API. If you would like to make item selection possible for your end users through actions such as click and tap, the <code>select</code> option can be set to boolen <code>true</code>.</p>
+          <p><strong>Row group</strong> can be initialised on a Datatables by using <code>rowGroup</code> option in the Datatables option object. In most circumstances you will wish to also set the <code>rowGroup.dataSrc</code> option to tell Datatables which data point in the data source to use for initial grouping.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -628,7 +620,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -637,14 +629,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Multi selection</h3>
+          <h3 class="portlet-title">Group callback</h3>
         </div>
         <div class="portlet-body">
-          <p>The <code>select.style</code> option provides the ability to control how items are selected in the table. It is a string that can be used with one of following options: <code>api|single|multi|os</code>. This example shows the <code>multi</code> option.</p>
+          <p>It can often be useful to have grouping rows at the start and the end of a group to show different summary information about the group. <strong>Row group</strong> provides two rendering options - <code>rowGroup.startRender</code> and <code>rowGroup.endRender</code> - as the naming implies, one for the group start and one for the group end, allowing them be configured independently</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-2" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1230,7 +1222,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -1239,14 +1231,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Cell selection</h3>
+          <h3 class="portlet-title">Multi level grouping</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Select</strong> has the ability to select rows, columns and/or cells in a table. Row selection is the default behavior as it is the most commonly used selection item type, but the items to be selected can be easily changed using the <code>select.items</code> initialisation option, or after initialisation using the <code>select.items()</code> API method.</p>
+          <p><strong>Row group</strong> provides the ability to group data a multiple levels. This example show the <code>rowGroup.dataSrc</code> option being used as an array to specify the <em>Office</em> as the top level group and <em>Position</em> as second level.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-3" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-3" class="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1832,7 +1824,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

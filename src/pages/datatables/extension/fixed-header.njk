@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Fixed Header Extension" %}
+{% set page_id = "datatables.base.fixed-header" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
   { text: "Extension" },
-  { text: "Fixed Header", link: "datatable/extension/fixed-header.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-fixedheader.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-fixedheader.js" ,
-  "assets/app/pages/datatable/extension/fixed-header.js" 
+  { text: "Fixed Header", link: "/datatables/extension/fixed-header.html" }
 ] %}
 
 {% block content %}
@@ -24,7 +16,7 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable fixed header extension</h3>
+          <h3 class="portlet-title">Datatables fixed header extension</h3>
         </div>
         <div class="portlet-body">
           <p class="mb-0">When displaying tables with a particularly large amount of data shown on each page, it can be useful to have the table's header and/or footer fixed to the top or bottom of the scrolling window. This lets your users quickly determine what each column refers to rather than needing to scroll back to the top of the table.</p>
@@ -38,11 +30,11 @@
           <h3 class="portlet-title">Basic initialisation</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Fixed header</strong> can be initialised on a Datatable by using the <code>fixedheader</code> option in the Datatable options object.</p>
+          <p><strong>Fixed header</strong> can be initialised on a Datatables by using the <code>fixedheader</code> option in the Datatables options object.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -628,7 +620,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -643,8 +635,8 @@
           <p><strong>Fixed header</strong> library provides the ability to fix in place the header and footer of the table. These are controlled by the options <code>fixedHeader.header</code> and <code>fixedHeader.footer</code>. Either can be optionally enabled, or as is the case in this example both enabled.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-2" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1242,7 +1234,7 @@
               </tr>
             </tfoot>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

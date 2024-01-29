@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Key Table Extension" %}
+{% set page_title = "Datatables Row Callback" %}
+{% set page_id = "datatables.advanced.row-callback" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
-  { text: "Extension" },
-  { text: "Key Table", link: "datatable/extension/key-table.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-keytable.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-keytable.js" ,
-  "assets/app/pages/datatable/extension/key-table.js" 
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
+  { text: "Advanced" },
+  { text: "Row Callback", link: "/datatables/advanced/row-callback.html" }
 ] %}
 
 {% block content %}
@@ -24,15 +16,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable key table extension</h3>
+          <h3 class="portlet-title">Datatables row callback</h3>
         </div>
         <div class="portlet-body">
-          <p>Spreadsheet navigation of a Datatable makes for an attractive and rapid data input interface, and also a very familiar one for those users experienced in Excel, OpenOffice or similar, who are now transitioning to web based apps. <strong>Key table</strong> adds keyboard navigation to Datatable, operating in exactly the same way as traditional spreadsheet applications.</p>
-          <p><strong>Key table</strong> can be initialised on a Datatable by using the <code>keys</code> option in the Datatable options object.</p>
+          <p>The following example shows how a callback function can be used to format a particular row at draw time. For each row that is generated for display, the <code>createdRow</code> function is called once and once only.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -618,7 +609,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

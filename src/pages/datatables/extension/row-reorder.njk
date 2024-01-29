@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Row Reorder Extension" %}
+{% set page_id = "datatables.base.row-reorder" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
   { text: "Extension" },
-  { text: "Row Reorder", link: "datatable/extension/row-reorder.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-rowreorder.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-rowreorder.js" ,
-  "assets/app/pages/datatable/extension/row-reorder.js" 
+  { text: "Row Reorder", link: "/datatables/extension/row-reorder.html" }
 ] %}
 
 {% block content %}
@@ -24,10 +16,10 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable row reorder extension</h3>
+          <h3 class="portlet-title">Datatables row reorder extension</h3>
         </div>
         <div class="portlet-body">
-          <p class="mb-0">Datatable is often used to show sequential data, and naturally from that comes the desire to be able to reorder that data. It provides the end user with the ability to click and drag (or touch and drag on mobile devices) a row in the table and change its position.</p>
+          <p class="mb-0">Datatables is often used to show sequential data, and naturally from that comes the desire to be able to reorder that data. It provides the end user with the ability to click and drag (or touch and drag on mobile devices) a row in the table and change its position.</p>
         </div>
       </div>
       <!-- END Portlet -->
@@ -38,11 +30,11 @@
           <h3 class="portlet-title">Basic initialisation</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Row reorder</strong> can be initialised on a Datatable by using the <code>rowReorder</code> option in the Datatable options object.</p>
+          <p><strong>Row reorder</strong> can be initialised on a Datatables by using the <code>rowReorder</code> option in the Datatables options object.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -628,7 +620,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -644,8 +636,8 @@
           <p>The restriction to the first column only for ordering is applied through the <code>columnDefs</code> option and <code>columns.orderable</code>. The <code>columnDefs</code> are applied in descending priority order, so the first entry overrides the second for the first column.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-2" class="table table-bordered table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1231,7 +1223,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

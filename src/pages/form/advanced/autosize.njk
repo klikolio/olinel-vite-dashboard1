@@ -1,15 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Autosize" %}
+{% set page_id = "form.advanced.autosize" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Autosize", link: "form/advanced/autosize.html"  }
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/autosize.js" ,
-  "assets/app/pages/form/autosize.js" 
+  { text: "Autosize", link: "/form/advanced/autosize.html" }
 ] %}
 
 {% block content %}

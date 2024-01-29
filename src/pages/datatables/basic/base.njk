@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Datatable Pagination" %}
+{% set page_title = "Basic Datatables" %}
+{% set page_id = "datatables.base.basic" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
   { text: "Basic" },
-  { text: "Pagination", link: "datatable/basic/pagination.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/app/pages/datatable/basic/pagination.js" 
+  { text: "Base", link: "/datatables/basic/base.html" }
 ] %}
 
 {% block content %}
@@ -22,15 +16,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable pagination</h3>
+          <h3 class="portlet-title">Basic datatables</h3>
         </div>
         <div class="portlet-body">
-          <p>The default page control presented by Datatable (forward and backward buttons with up to 7 page numbers in between) is fine for most situations, but there are cases where you may wish to customize the options presented to the end user.</p>
-          <p>This is done through Datatable's extensible pagination mechanism, the <code>pagingType</code> option. There are six built-in options for which pagination controls Datatable should show: <code>numbers|simple|simple_numbers|full|full_numbers|first_last_numbers</code>.</p>
+          <p><strong>Datatables</strong> has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable()</code>. Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -616,7 +609,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

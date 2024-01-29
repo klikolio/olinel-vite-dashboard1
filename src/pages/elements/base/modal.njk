@@ -1,11 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Modal" %}
+{% set page_id = "elements.base.modal" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Base" },
-  { text: "Modal", link: "elements/base/modal.html"  }
+  { text: "Modal", link: "/elements/base/modal.html" }
 ] %}
 
 {% block content %}
@@ -95,7 +96,7 @@
                 <div class="mb-2">
                   <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">Click me</button>
                 </div>
-                <p class="mb-0"><a href="{{ 'elements/base/tooltip.html'  }}">Tooltips</a> and <a href="{{ 'elements/base/popover.html'  }}">popovers</a> can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.</p>
+                <p class="mb-0"><a href="{{ 'elements/base/tooltip.html' }}">Tooltips</a> and <a href="{{ 'elements/base/popover.html' }}">popovers</a> can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.</p>
               </div>
             </div>
             <!-- END Row -->

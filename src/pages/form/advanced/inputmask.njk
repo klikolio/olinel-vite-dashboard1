@@ -1,15 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Input Mask" %}
+{% set page_id = "form.advanced.inputmask" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Input Mask", link: "form/advanced/inputmask.html"  }
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/inputmask.js" ,
-  "assets/app/pages/form/inputmask.js" 
+  { text: "Input Mask", link: "/form/advanced/inputmask.html" }
 ] %}
 
 {% block content %}

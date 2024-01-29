@@ -1,17 +1,11 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Draggable Portlet" %}
+{% set page_id = "portlet.drag" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Portlet" },
-  { text: "Draggable", link: "portlet/drag.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/sortable.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/sortable.js" ,
-  "assets/app/pages/portlet/drag.js" 
+  { text: "Draggable", link: "/portlet/drag.html" }
 ] %}
 
 {% block content %}

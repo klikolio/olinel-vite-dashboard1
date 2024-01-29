@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Block UI" %}
+{% set page_id = "elements.advanced.block-ui" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Advanced" },
-  { text: "Block UI", link: "elements/advanced/block-ui.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/block-ui.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/block-ui.js" ,
-  "assets/app/pages/elements/block-ui.js" 
+  { text: "Block UI", link: "/elements/advanced/block-ui.html" }
 ] %}
 
 {% block content %}

@@ -1,17 +1,11 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Chart Widget" %}
+{% set page_title = "Chart Widgets" %}
+{% set page_id = "widgets.chart" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Widgets" },
-  { text: "Chart", link: "widgets/chart.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/apexcharts.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/apexcharts.js" ,
-  "assets/app/pages/widgets/charts.js" 
+  { text: "Chart", link: "/widgets/chart.html" }
 ] %}
 
 {% block content %}

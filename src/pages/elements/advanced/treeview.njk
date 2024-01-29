@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Treeview" %}
+{% set page_id = "elements.advanced.treeview" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Advanced" },
-  { text: "Treeview", link: "elements/advanced/treeview.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/jstree.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/jstree.js" ,
-  "assets/app/pages/elements/treeview.js" 
+  { text: "Treeview", link: "/elements/advanced/treeview.html" }
 ] %}
 
 {% block content %}

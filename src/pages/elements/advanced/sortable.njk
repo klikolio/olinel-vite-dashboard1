@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Sortable" %}
+{% set page_id = "elements.advanced.sortable" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Advanced" },
-  { text: "Sortable", link: "elements/advanced/sortable.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/sortable.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/sortable.js" ,
-  "assets/app/pages/elements/sortable.js" 
+  { text: "Sortable", link: "/elements/advanced/sortable.html" }
 ] %}
 
 {% block content %}

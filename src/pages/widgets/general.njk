@@ -1,17 +1,11 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "General Widget" %}
+{% set page_title = "General Widgets" %}
+{% set page_id = "widgets.general" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Widgets" },
-  { text: "General", link: "widgets/general.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/slick-carousel.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/slick-carousel.js" ,
-  "assets/app/pages/widgets/general.js" 
+  { text: "General", link: "/widgets/general.html" }
 ] %}
 
 {% block content %}

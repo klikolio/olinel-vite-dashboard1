@@ -1,15 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Clipboard" %}
+{% set page_id = "form.advanced.clipboard" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Clipboard", link: "form/advanced/clipboard.html"  }
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/clipboard.js" ,
-  "assets/app/pages/form/clipboard.js" 
+  { text: "Clipboard", link: "/form/advanced/clipboard.html" }
 ] %}
 
 {% block content %}

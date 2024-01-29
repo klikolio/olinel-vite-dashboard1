@@ -1,11 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "List Group" %}
+{% set page_id = "elements.base.list-group" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Base" },
-  { text: "List Group", link: "elements/base/list-group.html"  }
+  { text: "List Group", link: "/elements/base/list-group.html" }
 ] %}
 
 {% block content %}
@@ -305,7 +306,7 @@
           <h3 class="portlet-title">Badges</h3>
         </div>
         <div class="portlet-body">
-          <p>Add <a href="{{ 'elements/base/badge.html'  }}">badges</a> to any list group item to show unread counts, activity, and more with the help of some <strong>utilities</strong>.</p>
+          <p>Add <a href="{{ 'elements/base/badge.html' }}">badges</a> to any list group item to show unread counts, activity, and more with the help of some <strong>utilities</strong>.</p>
 
           <!-- BEGIN List Group -->
           <ul class="list-group">

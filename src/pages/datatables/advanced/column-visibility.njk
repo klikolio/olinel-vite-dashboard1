@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Column Reorder Extension" %}
+{% set page_title = "Datatables Column Visibility" %}
+{% set page_id = "datatables.advanced.column-visibility" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
-  { text: "Extension" },
-  { text: "Column Reorder", link: "datatable/extension/column-reorder.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-colreorder.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-colreorder.js" ,
-  "assets/app/pages/datatable/extension/column-reorder.js" 
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
+  { text: "Advanced" },
+  { text: "Column Visibility", link: "/datatables/advanced/column-visibility.html" }
 ] %}
 
 {% block content %}
@@ -24,15 +16,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable Column reorder extension</h3>
+          <h3 class="portlet-title">Datatables column visibility</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Column Reorder</strong> adds the ability for the end user to be able to reorder columns in a Datatable through a click and drag operation. This can be useful when presenting data in a table, letting the user move columns that they wish to compare next to each other for easier comparison.</p>
-          <p><strong>Column Reorder</strong> can be initialized on a Datatable by using the <code>colReorder</code> option in the Datatable options object.</p>
+          <p>There are times when you might find it useful to display only a sub-set of the information that was available in the original table. For example you might want to reduce the amount of the data shown on screen to make it clearer for the user. This is done through the <code>columns.visible</code> column option.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -618,7 +609,7 @@
               </tr>
             </tbody>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

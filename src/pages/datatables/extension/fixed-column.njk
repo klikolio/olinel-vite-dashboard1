@@ -1,20 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Fixed Column Extension" %}
+{% set page_id = "datatables.base.fixed-column" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
   { text: "Extension" },
-  { text: "Fixed Column", link: "datatable/extension/fixed-column.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" ,
-  "assets/build/styles/vendor/datatables-fixedcolumns.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/build/scripts/vendor/datatables-fixedcolumns.js" ,
-  "assets/app/pages/datatable/extension/fixed-column.js" 
+  { text: "Fixed Column", link: "/datatables/extension/fixed-column.html" }
 ] %}
 
 {% block content %}
@@ -27,11 +19,11 @@
           <h3 class="portlet-title">Basic initialisation</h3>
         </div>
         <div class="portlet-body">
-          <p><strong>Fixed column</strong> can be initialized on a Datatable by using the <code>fixedColumns</code> option in the Datatable options object.</p>
+          <p><strong>Fixed column</strong> can be initialized on a Datatables by using the <code>fixedColumns</code> option in the Datatables options object.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -924,7 +916,7 @@
               </tr>
             </tfoot>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -939,8 +931,8 @@
           <p><strong>Fixed column</strong> allows more than one column to be frozen into place using the <code>fixedColumns.leftColumns</code> parameter. The example below shows two columns fixed.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-2" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -1833,7 +1825,7 @@
               </tr>
             </tfoot>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
@@ -1848,8 +1840,8 @@
           <p><strong>Fixed column</strong> allows columns to be fixed from both left and right hand sides of the table. Fixing right hand side columns is done by using the <code>fixedColumns.rightColumns</code> initialisation parameter, which works just the same as <code>fixedColumns.leftColumns</code> does for left side of the table. This example shows both the left and right columns being fixed place</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-3" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-3" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -2742,7 +2734,7 @@
               </tr>
             </tfoot>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>

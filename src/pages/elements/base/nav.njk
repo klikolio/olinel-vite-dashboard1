@@ -1,11 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Navigation" %}
+{% set page_id = "elements.base.nav" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Base" },
-  { text: "Navigation", link: "elements/base/nav.html"  }
+  { text: "Navigation", link: "/elements/base/nav.html" }
 ] %}
 
 {% block content %}
@@ -302,7 +303,7 @@
           <h3 class="portlet-title">Additional elements</h3>
         </div>
         <div class="portlet-body">
-          <p>You can combine other elements such as <a href="{{ 'elements/base/badge.html'  }}">badges</a>, icon or caret to separate nav items, we provide <code>.nav-prepend</code> and <code>.nav-append</code> for wrapping those elements.</p>
+          <p>You can combine other elements such as <a href="{{ 'elements/base/badge.html' }}">badges</a>, icon or caret to separate nav items, we provide <code>.nav-prepend</code> and <code>.nav-append</code> for wrapping those elements.</p>
 
           <!-- BEGIN Nav -->
           <ul class="nav nav-pills">

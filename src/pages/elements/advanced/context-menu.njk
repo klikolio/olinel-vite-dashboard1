@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Context Menu" %}
+{% set page_id = "elements.advanced.context-menu" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Advanced" },
-  { text: "Context Menu", link: "elements/advanced/context-menu.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/jquery-contextmenu.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/jquery-contextmenu.js" ,
-  "assets/app/pages/elements/context-menu.js" 
+  { text: "Context Menu", link: "/elements/advanced/context-menu.html" }
 ] %}
 
 {% block content %}

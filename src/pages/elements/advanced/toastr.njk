@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Toastr" %}
+{% set page_id = "elements.advanced.toastr" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
   { text: "Advanced" },
-  { text: "Toastr", link: "elements/advanced/toastr.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/toastr.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/toastr.js" ,
-  "assets/app/pages/elements/toastr.js" 
+  { text: "Toastr", link: "/elements/advanced/toastr.html" }
 ] %}
 
 {% block content %}

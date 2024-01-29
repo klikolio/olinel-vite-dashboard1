@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
 {% set page_title = "Touchspin" %}
+{% set page_id = "form.advanced.touchspin" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
   { text: "Form" },
   { text: "Advanced" },
-  { text: "Touchspin", link: "form/advanced/touchspin.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/bootstrap-touchspin.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/bootstrap-touchspin.js" ,
-  "assets/app/pages/form/touchspin.js" 
+  { text: "Touchspin", link: "/form/advanced/touchspin.html" }
 ] %}
 
 {% block content %}

@@ -1,18 +1,12 @@
 {% extends "components/template.njk" %}
 
-{% set page_title = "Datatable Footer Callback" %}
+{% set page_title = "Datatables Length Menu" %}
+{% set page_id = "datatables.base.menu" %}
 {% set breadcrumb = [
-  { text: "Dashboard", link: "index.html" , icon: '<i data-feather="home"></i>' },
-  { text: "Datatable" },
-  { text: "Advanced" },
-  { text: "Footer Callback", link: "datatable/advanced/footer-callback.html"  }
-] %}
-{% set css_links = [
-  "assets/build/styles/vendor/datatables.css" 
-] %}
-{% set js_links = [
-  "assets/build/scripts/vendor/datatables.js" ,
-  "assets/app/pages/datatable/advanced/footer-callback.js" 
+  { text: "Dashboard", link: "/index.html", icon: '<i data-feather="home"></i>' },
+  { text: "Datatables" },
+  { text: "Basic" },
+  { text: "Menu", link: "/datatables/basic/menu.html" }
 ] %}
 
 {% block content %}
@@ -22,14 +16,14 @@
       <!-- BEGIN Portlet -->
       <div class="portlet">
         <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatable footer callback</h3>
+          <h3 class="portlet-title">Datatables length menu</h3>
         </div>
         <div class="portlet-body">
-          <p>Through the use of the header and footer callback manipulation functions provides by Datatable (<code>headerCallback</code> and <code>footerCallback</code>), it is possible to perform some powerful and useful data manipulation functions, such as summarising data in the table.</p>
+          <p>It is possible to easily customize the options shown in the length menu (by default at the top left of the table) using the <code>lengthMenu</code> Initialisation option, this parameter can take 1D or 2D array.</p>
           <hr>
 
-          <!-- BEGIN Datatable -->
-          <table id="datatable-1" class="table table-bordered table-striped table-hover">
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -614,20 +608,8 @@
                 <td>$112,000</td>
               </tr>
             </tbody>
-            <tfoot>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </tfoot>
           </table>
-          <!-- END Datatable -->
+          <!-- END Datatables -->
 
         </div>
       </div>
