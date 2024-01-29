@@ -85,11 +85,13 @@ class Menu extends BaseComponent {
 
     const linkElement = document.querySelector(`[${DATA_PATH}="${activePath}"]`)
 
-    linkElement.classList.add(CLASS_ACTIVE)
-
-    this.getParentItems(linkElement).forEach((itemElement) => {
-      this.toggleCollapse(itemElement, false)
-    })
+    if (linkElement) {
+      linkElement.classList.add(CLASS_ACTIVE)
+  
+      this.getParentItems(linkElement).forEach((itemElement) => {
+        this.toggleCollapse(itemElement, false)
+      })
+    }
   }
 
   // Function for toggling item collapsion
