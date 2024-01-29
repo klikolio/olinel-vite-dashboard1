@@ -1,5 +1,6 @@
-import $ from 'jquery'
 import 'jquery-sticky'
+import '@/build/vendors/slick-carousel/styles/slick.scss'
+import $ from 'jquery'
 
 const stickyConfig = {
   topSpacing: 0

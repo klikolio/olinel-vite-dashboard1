@@ -1,4 +1,5 @@
 export const defaultThemeVariant = 'light'
+export const defaultPageDirection = 'ltr'
 
 export const colorScheme = {
   blue: '#29b6f6',
@@ -42,4 +43,8 @@ export function getChartThemeOptions() {
   const themeVariant = getThemeVariant()
 
   return chartThemeOptions[themeVariant]
+}
+
+export function getPageDirection() {
+  return document.documentElement.getAttribute('dir') ?? defaultThemeVariant
 }
