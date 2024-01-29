@@ -35,17 +35,20 @@
   --#{$variable-prefix}gradient: #{$gradient};
 
   // Root and body
-  @if $font-size-root != null {
+  @if $font-size-root !=null {
     --#{$variable-prefix}root-font-size: #{$font-size-root};
   }
+
   --#{$variable-prefix}body-font-family: #{$font-family-base};
   @include rfs($font-size-base, --#{$variable-prefix}body-font-size);
   --#{$variable-prefix}body-font-weight: #{$font-weight-base};
   --#{$variable-prefix}body-line-height: #{$line-height-base};
   --#{$variable-prefix}body-color: #{$body-color};
-  @if $body-text-align != null {
+
+  @if $body-text-align !=null {
     --#{$variable-prefix}body-text-align: #{$body-text-align};
   }
+
   --#{$variable-prefix}body-bg: #{$body-bg};
 
   --#{$variable-prefix}border-width: #{$border-width};
@@ -70,6 +73,8 @@
 }
 
 [data-theme="light"] {
+  color-scheme: light;
+
   --#{$variable-prefix}body-bg: #{$body-bg-light};
 
   --#{$variable-prefix}text-level-1: #{$text-level-1-light};
@@ -81,11 +86,13 @@
   --#{$variable-prefix}bg-level-2: #{$bg-level-2-light};
   --#{$variable-prefix}bg-level-3: #{$bg-level-3-light};
   --#{$variable-prefix}bg-level-4: #{$bg-level-4-light};
-  
+
   --#{$variable-prefix}border-color: #{$border-color-light};
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
+
   --#{$variable-prefix}body-bg: #{$body-bg-dark};
 
   --#{$variable-prefix}text-level-1: #{$text-level-1-dark};
