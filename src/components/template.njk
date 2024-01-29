@@ -4,8 +4,8 @@
   "preload-active": enable_preload | default(defaults.enable_preload),
   "aside-active": enable_preload | default(defaults.enable_aside),
   "aside-mobile-minimized": enable_aside | default(defaults.enable_aside),
-  "aside-desktop-minimized": enable_aside | default(defaults.enable_aside) and enable_minimized_aside,
-  "aside-desktop-maximized": enable_aside | default(defaults.enable_aside) and not enable_minimized_aside
+  "aside-desktop-minimized": enable_aside | default(defaults.enable_aside) and enable_minimized_aside | default(defaults.enable_minimized_aside),
+  "aside-desktop-maximized": enable_aside | default(defaults.enable_aside) and not enable_minimized_aside | default(defaults.enable_minimized_aside)
 } | classnames %}
 
 {% if enable_container_fluid | default(defaults.enable_container_fluid) %}
@@ -20,13 +20,13 @@
     {% if enable_analytics | default(defaults.enable_analytics) %}
       {% include 'components/analytics/analytics-head.njk' %}
     {% endif %}
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    {% for link in defaults.css_links | array_concat(css_links) %}
-      <link href="{{ link }}" rel="stylesheet">
-    {% endfor %}
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap">
+    <link rel="stylesheet" href="/src/build/core/styles/index.scss">
     <link href="{{ defaults.favicon }}" rel="shortcut icon" type="image/x-icon">
     <title>{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}</title>
   </head>
@@ -73,12 +73,8 @@
     {% endfor %}
 
     {% block offcanvas %}{% endblock %}
-
-    {% for link in defaults.js_links | array_concat(js_links) %}
-      <script type="text/javascript" src="{{ link }}"></script>
-    {% endfor %}
-
     {% block script %}{% endblock %}
 
+    <script type="module" src="/src/app/init.js"></script>
   </body>
 </html>

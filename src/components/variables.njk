@@ -1,9 +1,9 @@
 {% set defaults = {
   brand_name: "Olinel",
-  favicon: "assets/images/favicon.ico" ,
+  favicon: "/images/favicon.ico" ,
   theme: "light",
   enable_container_fluid: true,
-  enable_preload: false,
+  enable_preload: true,
   enable_aside: true,
   enable_minimized_aside: false,
   enable_header: true,
@@ -17,30 +17,8 @@
     footer: "components/layout/footer.njk",
     offcanvas: [
       "components/layout/floating-button.njk",
-      "components/offcanvas/navigation.njk",
       "components/offcanvas/settings.njk",
       "components/offcanvas/todo.njk"
     ]
-  },
-  css_links: [
-    "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap",
-    "src/build/core/styles/index.scss",
-    "src/build/vendor/simplebar/simplebar.scss" ,
-    "src/build/vendor/fontawesome/fontawesome.scss" ,
-    "src/build/vendor/feather-icons/feather-icons.scss" 
-  ],
-  js_links: [
-    "assets/build/scripts/vendor/jquery.js" ,
-    "assets/build/scripts/vendor/popperjs.js" ,
-    "assets/build/scripts/vendor/simplebar.js" ,
-    "assets/build/scripts/vendor/jquery-sticky.js" ,
-    "assets/build/scripts/vendor/feather-icons.js" ,
-    "assets/build/scripts/core.js" ,
-    "assets/app/utilities/sticky-header.js" ,
-    "assets/app/utilities/copyright-year.js" ,
-    "assets/app/utilities/theme-switcher.js" ,
-    "assets/app/utilities/tooltip-popover.js" ,
-    "assets/app/utilities/dropdown-scrollbar.js" ,
-    "assets/app/utilities/fullscreen-trigger.js" 
-  ]
+  }
 }%}
