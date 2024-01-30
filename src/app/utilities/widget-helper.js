@@ -48,3 +48,11 @@ export function getChartThemeOptions() {
 export function getPageDirection() {
   return document.documentElement.getAttribute('dir') ?? defaultThemeVariant
 }
+
+export function getPageIsRTL() {
+  return getPageDirection() === 'rtl'
+}
+
+export function getBrowserWidth() {
+  return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+}

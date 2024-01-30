@@ -46,7 +46,7 @@ class Aside extends BaseComponent {
     if (persistState) {
       const desktopMaximized = JSON.parse(persistState).desktopMaximized
 
-      if (this.getBrowserWith() >= BREAKPOINT) {
+      if (this.getBrowserWidth() >= BREAKPOINT) {
         this.toggleDesktop(desktopMaximized)
       }
     }
@@ -60,7 +60,7 @@ class Aside extends BaseComponent {
   toggleListener() {
     document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
       toggleElement.addEventListener('click', () => {
-        if (this.getBrowserWith() >= BREAKPOINT) {
+        if (this.getBrowserWidth() >= BREAKPOINT) {
           this.toggleDesktop(document.body.classList.contains(CLASS_DESKTOP_MINIMIZED))
         } else {
           this.toggleMobile(document.body.classList.contains(CLASS_MOBILE_MINIMIZED))
@@ -130,7 +130,7 @@ class Aside extends BaseComponent {
   }
 
   // Function for getting browser width
-  getBrowserWith() {
+  getBrowserWidth() {
     return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
   }
 }

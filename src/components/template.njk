@@ -73,8 +73,11 @@
     {% endfor %}
 
     {% block offcanvas %}{% endblock %}
-    {% block script %}{% endblock %}
 
     <script type="module" src="/src/app/init.js"></script>
+
+    {% if main_script is not null %}
+      <script type="module" src="{{ main_script }}"></script>
+    {% endif %}
   </body>
 </html>

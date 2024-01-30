@@ -62,7 +62,7 @@ class Menu extends BaseComponent {
       const submenuElement = itemElement.querySelector(SELECTOR_SUBMENU)
 
       if (submenuElement) {
-        const submenuHeight = submenuElement.clientHeight
+        const submenuHeight = submenuElement.offsetHeight
 
         itemElement.setAttribute(DATA_HEIGHT, submenuHeight)
         submenuElement.style.height = `${submenuHeight}px`

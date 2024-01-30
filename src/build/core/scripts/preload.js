@@ -8,6 +8,7 @@ import { defineJQueryPlugin } from "bootstrap/js/src/util"
 const NAME = 'preload'
 
 const MAX_DURATION = 6000
+const DELAY_DURATION = 100
 
 const CLASS_ACTIVE = 'preload-active'
 const CLASS_HIDE = 'preload-hide'
@@ -31,8 +32,9 @@ class Preload extends BaseComponent {
   // Function for automatically hiding preload
   autoHide() {
     document.addEventListener("DOMContentLoaded", () => {
-      console.log('loaded');
-      this.hide()
+      setTimeout(() => {
+        this.hide()
+      }, DELAY_DURATION)
     })
 
     setTimeout(() => {

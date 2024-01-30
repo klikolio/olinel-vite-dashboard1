@@ -1,8 +1,8 @@
-@import "core/styles/functions";
-@import "core/styles/variables";
-@import "core/styles/mixins";
+@import "@/build/core/styles/functions";
+@import "@/build/core/styles/variables";
+@import "@/build/core/styles/mixins";
 
 @import "variables";
-@import 'core';
-@import 'bubble/toolbar';
-@import 'bubble/tooltip';
+@import "core";
+@import "bubble/toolbar";
+@import "bubble/tooltip";

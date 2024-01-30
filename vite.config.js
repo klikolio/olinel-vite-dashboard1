@@ -3,7 +3,6 @@ import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
 
 export default defineConfig({
-
   resolve: {
     alias: {
       '@': '/src'

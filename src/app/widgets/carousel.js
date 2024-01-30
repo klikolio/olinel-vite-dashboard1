@@ -1,9 +1,11 @@
 import 'slick-carousel'
+import '@/build/vendors/slick-carousel/styles/slick.scss'
+
 import $ from 'jquery'
-import { getPageDirection } from '../utilities/widget-helper'
+import { getPageIsRTL } from '@/app/utilities/widget-helper'
 
 export function initCarousel(mainSelector, navSelector) {
-  const isRtl = getPageDirection() === "rtl"
+  const isRtl = getPageIsRTL()
 
   $(mainSelector).slick({
     rtl: isRtl, // Carousel direction
