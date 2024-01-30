@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# configuration files
+postcss.config.js
+vite.config.js
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# source codes
+
+_variables.scss
+src/build/vendors/**/scripts/*.js
