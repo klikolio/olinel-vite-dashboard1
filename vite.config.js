@@ -2,6 +2,7 @@ import 'dotenv/config'
 import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
 import legacy from '@vitejs/plugin-legacy'
+import eslint from 'vite-plugin-eslint'
 import { defineConfig } from 'vite'
 import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
@@ -19,6 +20,7 @@ export default defineConfig({
 	plugins: [
 		vituum(),
 		ViteMinifyPlugin(),
+		eslint(),
 		legacy(),
 		nunjucks({
 			root: './src',

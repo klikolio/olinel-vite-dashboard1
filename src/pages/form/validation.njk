@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Form Validation" %}
 {% set page_id = "form.validation" %}
-{% set main_script = "/src/app/pages/form/validation.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -9,6 +8,10 @@
   { text: "Validation", link: "/form/validation.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/form/validation.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

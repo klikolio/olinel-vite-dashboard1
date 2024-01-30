@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Fixed Header Extension" %}
 {% set page_id = "datatables.extension.fixed-header" %}
-{% set main_script = "/src/app/pages/datatables/extension/fixed-header.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Fixed Header", link: "/datatables/extension/fixed-header.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/datatables/extension/fixed-header.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

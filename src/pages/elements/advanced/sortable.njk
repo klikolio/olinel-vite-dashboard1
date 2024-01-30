@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Sortable" %}
 {% set page_id = "elements.advanced.sortable" %}
-{% set main_script = "/src/app/pages/elements/advanced/sortable.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Sortable", link: "/elements/advanced/sortable.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/elements/sortable.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

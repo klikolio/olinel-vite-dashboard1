@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Typeahead" %}
 {% set page_id = "form.advanced.typeahead" %}
-{% set main_script = "/src/app/pages/form/advanced/typeahead.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Typeahead", link: "/form/advanced/typeahead.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/form/typeahead.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

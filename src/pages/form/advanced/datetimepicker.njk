@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Date Time Picker" %}
 {% set page_id = "form.advanced.datetimepicker" %}
-{% set main_script = "/src/app/pages/form/advanced/datetimepicker.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Date Time Picker", link: "/form/advanced/datetimepicker.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/form/datetimepicker.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

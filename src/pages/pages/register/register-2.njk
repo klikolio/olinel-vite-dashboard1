@@ -1,11 +1,14 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Register 2" %}
 {% set page_id = "pages.register.register-2" %}
-{% set main_script = "/src/app/pages/pages/register.js" %}
 {% set enable_container_fluid = true %}
 {% set enable_aside = false %}
 {% set enable_header = false %}
 {% set enable_footer = false %}
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/pages/register.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row g-0 align-items-center justify-content-center h-100">

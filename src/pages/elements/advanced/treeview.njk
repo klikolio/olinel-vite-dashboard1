@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Treeview" %}
 {% set page_id = "elements.advanced.treeview" %}
-{% set main_script = "/src/app/pages/elements/advanced/treeview.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Treeview", link: "/elements/advanced/treeview.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/elements/treeview.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

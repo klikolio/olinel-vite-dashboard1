@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Datatables Multiple Controls" %}
 {% set page_id = "datatables.advanced.multiple-controls" %}
-{% set main_script = "/src/app/pages/datatables/advanced/multiple-controls.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Multiple Controls", link: "/datatables/advanced/multiple-controls.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/datatables/advanced/multiple-controls.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

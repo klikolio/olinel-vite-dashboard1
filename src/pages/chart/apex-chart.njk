@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Apex Chart" %}
 {% set page_id = "chart.apex-chart" %}
-{% set main_script = "/src/app/pages/chart/apex-chart.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -9,6 +8,10 @@
   { text: "Apex Chart", link: "/chart/apex-chart.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/chart/apex-chart.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Slider" %}
 {% set page_id = "form.advanced.slider" %}
-{% set main_script = "/src/app/pages/form/advanced/slider.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Slider", link: "/form/advanced/slider.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/form/slider.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

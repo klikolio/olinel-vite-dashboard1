@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Datatables Row Callback" %}
 {% set page_id = "datatables.advanced.row-callback" %}
-{% set main_script = "/src/app/pages/datatables/advanced/row-callback.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Row Callback", link: "/datatables/advanced/row-callback.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/datatables/advanced/row-callback.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

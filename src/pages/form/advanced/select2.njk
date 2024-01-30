@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Select2" %}
 {% set page_id = "form.advanced.select2" %}
-{% set main_script = "/src/app/pages/form/advanced/select2.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,11 +9,10 @@
   { text: "Select2", link: "/form/advanced/select2.html" }
 ] %}
 <!-- prettier-ignore-end -->
-{%
-	set css_links = [
-	"assets/build/styles/vendor/select2.css"
-	]
-%}
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/form/select2.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

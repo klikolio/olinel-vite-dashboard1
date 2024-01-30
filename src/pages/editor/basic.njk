@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Basic Editor" %}
 {% set page_id = "editor.basic" %}
-{% set main_script = "/src/app/pages/editor/basic.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -9,6 +8,10 @@
   { text: "Basic", link: "/editor/basic.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/editor/basic.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">

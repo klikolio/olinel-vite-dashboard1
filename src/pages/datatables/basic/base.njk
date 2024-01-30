@@ -1,7 +1,6 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Basic Datatables" %}
 {% set page_id = "datatables.basic.base" %}
-{% set main_script = "/src/app/pages/datatables/basic/base.js" %}
 <!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
@@ -10,6 +9,10 @@
   { text: "Base", link: "/datatables/basic/base.html" }
 ] %}
 <!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/datatables/basic/base.js"></script>
+{% endblock %}
 
 {% block content %}
 	<div class="row">
