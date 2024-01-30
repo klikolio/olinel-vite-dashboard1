@@ -9,15 +9,15 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true,
+	data: DATATABLES_DATA,
+	responsive: true,
 
-  // Custom DOM layout
-  dom: `
+	// Custom DOM layout
+	dom: `
     <'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>
     <'row'<'col-sm-12 col-md-6'i><'col-sm-12 col-md-6'p>>
     <'row'<'col-sm-12'tr>>
     <'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>
     <'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>
-  `
+  `,
 })

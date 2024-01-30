@@ -9,6 +9,6 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true
+	data: DATATABLES_DATA,
+	responsive: true,
 })

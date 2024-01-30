@@ -9,31 +9,31 @@ import $ from 'jquery'
 import { DATATABLES_DATA_LONG } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA_LONG,
-  scrollY: 300,
-  scrollX: true,
-  scrollCollapse: true, // Enable scrollable table
-  fixedColumns: true // Enable autofill extension with default configuration
+	data: DATATABLES_DATA_LONG,
+	scrollY: 300,
+	scrollX: true,
+	scrollCollapse: true, // Enable scrollable table
+	fixedColumns: true, // Enable autofill extension with default configuration
 })
 
 $('#datatables-2').DataTable({
-  data: DATATABLES_DATA_LONG,
-  scrollY: 300,
-  scrollX: true,
-  scrollCollapse: true, // Enable scrollable table
-  fixedColumns: {
-    leftColumns: 2 // Float first two columns
-  }
+	data: DATATABLES_DATA_LONG,
+	scrollY: 300,
+	scrollX: true,
+	scrollCollapse: true, // Enable scrollable table
+	fixedColumns: {
+		leftColumns: 2, // Float first two columns
+	},
 })
 
 $('#datatables-3').DataTable({
-  data: DATATABLES_DATA_LONG,
-  scrollY: 300,
-  scrollX: true,
-  scrollCollapse: true, // Enable scrollable table
-  // Float first and last columns
-  fixedColumns: {
-    leftColumns: 1,
-    rightColumns: 1
-  }
+	data: DATATABLES_DATA_LONG,
+	scrollY: 300,
+	scrollX: true,
+	scrollCollapse: true, // Enable scrollable table
+	// Float first and last columns
+	fixedColumns: {
+		leftColumns: 1,
+		rightColumns: 1,
+	},
 })

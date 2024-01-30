@@ -12,23 +12,23 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true,
-  rowReorder: true // Enable row reorder extension with default configuration
+	data: DATATABLES_DATA,
+	responsive: true,
+	rowReorder: true, // Enable row reorder extension with default configuration
 })
 
 $('#datatables-2').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true,
-  rowReorder: true, // Enable row reorder extension with default configuration
-  columnDefs: [
-    {
-      orderable: true,
-      targets: 0
-    },
-    {
-      orderable: false,
-      targets: '_all'
-    }
-  ]
+	data: DATATABLES_DATA,
+	responsive: true,
+	rowReorder: true, // Enable row reorder extension with default configuration
+	columnDefs: [
+		{
+			orderable: true,
+			targets: 0,
+		},
+		{
+			orderable: false,
+			targets: '_all',
+		},
+	],
 })

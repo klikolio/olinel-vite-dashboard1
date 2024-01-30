@@ -1,20 +1,20 @@
 import Portlet from '@/build/core/scripts/portlet'
 
 document.querySelectorAll('.portlet').forEach((portletElement) => {
-  const portletInstance = new Portlet(portletElement)
+	const portletInstance = new Portlet(portletElement)
 
-  portletElement.querySelectorAll('[data-toggle="portlet"]').forEach((toggleElement) => {
-    const behavior = toggleElement.getAttribute('data-behavior')
+	portletElement.querySelectorAll('[data-toggle="portlet"]').forEach((toggleElement) => {
+		const behavior = toggleElement.getAttribute('data-behavior')
 
-    toggleElement.addEventListener('click', () => {
-      switch (behavior) {
-        case 'toggleCollapse':
-          portletInstance.toggleCollapse()
-          break
-        case 'destroy':
-          portletInstance.destroy()
-          break
-      }
-    })
-  })
+		toggleElement.addEventListener('click', () => {
+			switch (behavior) {
+				case 'toggleCollapse':
+					portletInstance.toggleCollapse()
+					break
+				case 'destroy':
+					portletInstance.destroy()
+					break
+			}
+		})
+	})
 })

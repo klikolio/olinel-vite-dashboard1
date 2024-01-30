@@ -1,5 +1,5 @@
 {
-  "extends": "standard",
+  "extends": "plugin:prettier/recommended",
   "env": {
     "browser": true,
     "es2021": true
@@ -7,7 +7,9 @@
   "ignorePatterns": [
     "node_modules",
     "dist",
-    "src/build/vendors/**/scripts/*.js"
+    "src/build/vendors/**/scripts/*.js",
+    "postcss.config.js",
+    "vite.config.js"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",

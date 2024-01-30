@@ -9,12 +9,12 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true,
+	data: DATATABLES_DATA,
+	responsive: true,
 
-  // Set length menu select element
-  lengthMenu: [
-    [5, 10, 25, 50, -1],
-    [5, 10, 25, 50, 'All']
-  ]
+	// Set length menu select element
+	lengthMenu: [
+		[5, 10, 25, 50, -1],
+		[5, 10, 25, 50, 'All'],
+	],
 })

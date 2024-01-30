@@ -9,15 +9,15 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true,
+	data: DATATABLES_DATA,
+	responsive: true,
 
-  // Hide columns and change default ordered column
-  order: [[1, 'asc']],
-  columnDefs: [
-    {
-      targets: [0, 5],
-      visible: false // Hide selected columns
-    }
-  ]
+	// Hide columns and change default ordered column
+	order: [[1, 'asc']],
+	columnDefs: [
+		{
+			targets: [0, 5],
+			visible: false, // Hide selected columns
+		},
+	],
 })

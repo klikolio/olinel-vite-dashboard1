@@ -15,22 +15,22 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA,
-  responsive: true,
-  dom: `
+	data: DATATABLES_DATA,
+	responsive: true,
+	dom: `
     <'row'<'col-12'P>>
     <'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>
     <'row'<'col-12'tr>>
     <'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>
   `,
-  searchPanes: {
-    cascadePanes: true,
-    viewTotal: true
-  },
-  language: {
-    searchPanes: {
-      count: '{total} found',
-      countFiltered: '{shown} / {total}'
-    }
-  }
+	searchPanes: {
+		cascadePanes: true,
+		viewTotal: true,
+	},
+	language: {
+		searchPanes: {
+			count: '{total} found',
+			countFiltered: '{shown} / {total}',
+		},
+	},
 })

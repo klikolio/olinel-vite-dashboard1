@@ -6,10 +6,10 @@ import $ from 'jquery'
 import { DATATABLES_DATA_LONG } from '@/app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
-  data: DATATABLES_DATA_LONG,
+	data: DATATABLES_DATA_LONG,
 
-  // Enable scrollable table
-  scrollCollapse: true,
-  scrollY: '50vh',
-  scrollX: true
+	// Enable scrollable table
+	scrollCollapse: true,
+	scrollY: '50vh',
+	scrollX: true,
 })
