@@ -23,7 +23,7 @@ const msgs = [
 ]
 
 // Get string from message array by index
-function getMessage() {
+function getMessage () {
   i++
   i = i === msgs.length ? 0 : i
 
@@ -31,38 +31,37 @@ function getMessage() {
 }
 
 // Add clear button to message string
-function getMessageWithClearButton(msg) {
-  msg = msg ? msg : 'Clear it self?'
+function getMessageWithClearButton (msg) {
+  msg = msg || 'Clear it self?'
   msg += '<br><button type="button" class="btn btn-primary clear mt-2">Close</button>'
 
   return msg
 }
 
 // Get radio value
-function getRadioValue(groupSelector) {
+function getRadioValue (groupSelector) {
   return Array.from(document.querySelector(groupSelector).querySelectorAll('input[type="radio"]')).find((radioElement) => radioElement.checked).value
 }
 
 // Show toastr handler
 document.querySelector('#showtoast').addEventListener('click', () => {
-
   // Get all options
-  let shortCutFunction = getRadioValue('#toastTypeGroup')
+  const shortCutFunction = getRadioValue('#toastTypeGroup')
   let msg = document.querySelector('#message').value || getMessage()
-  let title = document.querySelector('#title').value || ''
-  let showDuration = document.querySelector('#showDuration').value
-  let hideDuration = document.querySelector('#hideDuration').value
-  let timeOut = document.querySelector('#timeOut').value
-  let extendedTimeOut = document.querySelector('#extendedTimeOut').value
-  let showEasing = document.querySelector('#showEasing').value
-  let hideEasing = document.querySelector('#hideEasing').value
-  let showMethod = document.querySelector('#showMethod').value
-  let hideMethod = document.querySelector('#hideMethod').value
-  let addBehaviorToastClick = document.querySelector('#addBehaviorOnToastClick').checked
-  let addClear = document.querySelector('#addClear').checked
-  
+  const title = document.querySelector('#title').value || ''
+  const showDuration = document.querySelector('#showDuration').value
+  const hideDuration = document.querySelector('#hideDuration').value
+  const timeOut = document.querySelector('#timeOut').value
+  const extendedTimeOut = document.querySelector('#extendedTimeOut').value
+  const showEasing = document.querySelector('#showEasing').value
+  const hideEasing = document.querySelector('#hideEasing').value
+  const showMethod = document.querySelector('#showMethod').value
+  const hideMethod = document.querySelector('#hideMethod').value
+  const addBehaviorToastClick = document.querySelector('#addBehaviorOnToastClick').checked
+  const addClear = document.querySelector('#addClear').checked
+
   // Increase index
-  let toastIndex = toastCount++
+  const toastIndex = toastCount++
 
   // Set toastr configuration
   toastr.options = {
@@ -78,7 +77,7 @@ document.querySelector('#showtoast').addEventListener('click', () => {
   // Add toastr click behavior if enabled
   if (addBehaviorToastClick) {
     toastr.options.onclick = () => {
-      alert("You can perform some custom action after a toast goes away")
+      alert('You can perform some custom action after a toast goes away')
     }
   }
 
@@ -129,14 +128,14 @@ document.querySelector('#showtoast').addEventListener('click', () => {
   }
 
   // Set toastr command and configuration code to variables
-  let optionText = `toastr.options = ${JSON.stringify(toastr.options, null, 4)}`
-  let commandText = `toastr.${shortCutFunction}(\`${msg}\`${title ? ', "' + title + '"' : ""})`
+  const optionText = `toastr.options = ${JSON.stringify(toastr.options, null, 4)}`
+  const commandText = `toastr.${shortCutFunction}(\`${msg}\`${title ? ', "' + title + '"' : ''})`
 
   // Show the code
   document.querySelector('#toastrOptions').innerHTML = `${optionText}\n\n${commandText}`
 
   // Execute toastr
-  let toastElement = toastr[shortCutFunction](msg, title)
+  const toastElement = toastr[shortCutFunction](msg, title)
 
   // Save the last toastr object
   toastLastElement = toastElement

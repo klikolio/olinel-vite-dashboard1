@@ -14,7 +14,7 @@ import '@/build/vendors/datatables/searchpanes/styles/searchpanes.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   dom: `
@@ -29,9 +29,8 @@ $("#datatables-1").DataTable({
   },
   language: {
     searchPanes: {
-      count: "{total} found",
-      countFiltered: "{shown} / {total}"
+      count: '{total} found',
+      countFiltered: '{shown} / {total}'
     }
   }
 })
-

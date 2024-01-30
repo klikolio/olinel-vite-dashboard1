@@ -8,12 +8,12 @@ import '@/build/vendors/datatables/responsive/styles/responsive.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
 
   // Hide columns and change default ordered column
-  order: [[1, "asc"]],
+  order: [[1, 'asc']],
   columnDefs: [
     {
       targets: [0, 5],

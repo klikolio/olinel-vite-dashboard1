@@ -10,10 +10,10 @@ document.querySelectorAll('.portlet').forEach((portletElement) => {
       switch (behavior) {
         case 'toggleCollapse':
           portletInstance.toggleCollapse()
-          break;
+          break
         case 'destroy':
           portletInstance.destroy()
-          break;
+          break
       }
     })
   })

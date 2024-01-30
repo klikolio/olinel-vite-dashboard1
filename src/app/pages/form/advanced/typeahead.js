@@ -9,10 +9,10 @@ import Handlebars from 'handlebars'
 const data = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
 
 // Keyword matcher function
-function manualMatcher(dataset) {
-  return function findMatches(query, callback) {
-    let matches = []
-    let regex = new RegExp(query, 'i')
+function manualMatcher (dataset) {
+  return function findMatches (query, callback) {
+    const matches = []
+    const regex = new RegExp(query, 'i')
 
     dataset.forEach(data => {
       if (regex.test(data)) {
@@ -79,7 +79,7 @@ $('#typeahead-4').typeahead(null, {
 
   // Custom templates
   templates: {
-    empty: `<div class="tt-empty-message">Not found</div>`,
+    empty: '<div class="tt-empty-message">Not found</div>',
     suggestion: Handlebars.compile(`
       <div class="tt-menu-item">
         <div class="tt-menu-content">
@@ -100,7 +100,7 @@ const nflTeams = new Bloodhound({
 })
 
 // Default suggestion function from nflTeams data
-function nflTeamsWithDefaults(query, sync) {
+function nflTeamsWithDefaults (query, sync) {
   if (query === '') {
     sync(nflTeams.get('Detroit Lions', 'Green Bay Packers', 'Chicago Bears'))
   } else {

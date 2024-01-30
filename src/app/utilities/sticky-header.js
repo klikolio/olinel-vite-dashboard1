@@ -6,16 +6,16 @@ const stickyConfig = {
 }
 
 // Method to initialize sticky header
-function stickyInit(target) {
+function stickyInit (target) {
   $(target).sticky(stickyConfig)
 }
 
 // Method to destroy sticky header
-function stickyDestroy(target) {
+function stickyDestroy (target) {
   $(target).unstick()
 }
 
-export function initStickyHeader() {
+export function initStickyHeader () {
   // Set required constants
   const stickyBreakpoint = 1025
   const stickyHeaderElements = {

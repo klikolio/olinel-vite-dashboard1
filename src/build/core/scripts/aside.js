@@ -1,5 +1,5 @@
-import BaseComponent from "bootstrap/js/src/base-component"
-import { defineJQueryPlugin } from "bootstrap/js/src/util"
+import BaseComponent from 'bootstrap/js/src/base-component'
+import { defineJQueryPlugin } from 'bootstrap/js/src/util'
 
 /**
  * Constants
@@ -28,11 +28,11 @@ const STORAGE_IDENTIFIER = 'aside-state'
 
 class Aside extends BaseComponent {
   // Getters
-  static get NAME() {
+  static get NAME () {
     return NAME
   }
 
-  constructor() {
+  constructor () {
     super()
 
     this.syncState()
@@ -40,7 +40,7 @@ class Aside extends BaseComponent {
   }
 
   // Function for syncing state with local storage
-  syncState() {
+  syncState () {
     const persistState = localStorage.getItem(STORAGE_IDENTIFIER)
 
     if (persistState) {
@@ -57,7 +57,7 @@ class Aside extends BaseComponent {
   }
 
   // Function for adding event listener to toggle elements
-  toggleListener() {
+  toggleListener () {
     document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
       toggleElement.addEventListener('click', () => {
         if (this.getBrowserWidth() >= BREAKPOINT) {
@@ -69,8 +69,8 @@ class Aside extends BaseComponent {
     })
   }
 
-  // Function for toggling in desktop viewport 
-  toggleDesktop(isMaximized) {
+  // Function for toggling in desktop viewport
+  toggleDesktop (isMaximized) {
     const mainElement = document.querySelector(SELECTOR_MAIN)
 
     this.toggleBodyClass(true, isMaximized)
@@ -88,8 +88,8 @@ class Aside extends BaseComponent {
     }
   }
 
-  // Function for toggling in mobile viewport 
-  toggleMobile(isMaximized) {
+  // Function for toggling in mobile viewport
+  toggleMobile (isMaximized) {
     this.toggleBodyClass(false, isMaximized)
 
     if (isMaximized) {
@@ -114,7 +114,7 @@ class Aside extends BaseComponent {
   }
 
   // Function for toggling body class
-  toggleBodyClass(isDesktop, isMaximized) {
+  toggleBodyClass (isDesktop, isMaximized) {
     let addedClass, removedClass
 
     if (isMaximized) {
@@ -130,7 +130,7 @@ class Aside extends BaseComponent {
   }
 
   // Function for getting browser width
-  getBrowserWidth() {
+  getBrowserWidth () {
     return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
   }
 }

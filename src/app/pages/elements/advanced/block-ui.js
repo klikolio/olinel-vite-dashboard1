@@ -10,32 +10,32 @@ $.blockUI.defaults = Object.assign($.blockUI.defaults, {
   message: '<span class="blockUI blockTitle">Please wait...</span>',
   css: {},
   themedCSS: {},
-  overlayCSS:  {},
-  growlCSS: {},
-});
+  overlayCSS: {},
+  growlCSS: {}
+})
 
-$("#blockui-trigger-1").on("click", () => {
+$('#blockui-trigger-1').on('click', () => {
   $(blockTarget).block()
 })
 
-$("#blockui-trigger-2").on("click", () => {
+$('#blockui-trigger-2').on('click', () => {
   $(blockTarget).unblock()
 })
 
-$("#blockui-trigger-3").on("click", () => {
+$('#blockui-trigger-3').on('click', () => {
   $(blockTarget).block({
     timeout: 1000
   })
 })
 
-$("#blockui-trigger-4").on("click", () => {
+$('#blockui-trigger-4').on('click', () => {
   $(blockTarget).block({
-    message: "Custom text here...",
+    message: 'Custom text here...',
     timeout: 1000
   })
 })
 
-$("#blockui-trigger-5").on("click", () => {
+$('#blockui-trigger-5').on('click', () => {
   $(blockTarget).block({
     message: `
       <form class="py-2">
@@ -47,25 +47,25 @@ $("#blockui-trigger-5").on("click", () => {
   })
 })
 
-$("#blockui-trigger-6").on("click", () => {
+$('#blockui-trigger-6').on('click', () => {
   $(blockTarget).block({
     overlayCSS: {
-      backgroundColor: "#29b6f6"
+      backgroundColor: '#29b6f6'
     },
     css: {
-      backgroundColor: "#ffee58"
+      backgroundColor: '#ffee58'
     },
     timeout: 1000
   })
 })
 
-$("#blockui-trigger-7").on("click", () => {
+$('#blockui-trigger-7').on('click', () => {
   $.blockUI({
     timeout: 1000
   })
 })
 
-$("#blockui-trigger-8").on("click", () => {
+$('#blockui-trigger-8').on('click', () => {
   $(blockTarget).block({
     message: `
       <div class="spinner-border text-primary"></div>
@@ -75,7 +75,7 @@ $("#blockui-trigger-8").on("click", () => {
   })
 })
 
-$("#blockui-trigger-9").on("click", () => {
+$('#blockui-trigger-9').on('click', () => {
   $(blockTarget).block({
     message: `
       <div class="spinner-grow text-success"></div>
@@ -85,14 +85,14 @@ $("#blockui-trigger-9").on("click", () => {
   })
 })
 
-$("#blockui-trigger-10").on("click", () => {
+$('#blockui-trigger-10').on('click', () => {
   $(blockTarget).block({
     message: '<div class="spinner-border text-primary m-0"></div>',
     overlayCSS: {
-      backgroundColor: "#fff"
+      backgroundColor: '#fff'
     },
     css: {
-      backgroundColor: "transparent"
+      backgroundColor: 'transparent'
     },
     timeout: 1000
   })

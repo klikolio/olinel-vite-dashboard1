@@ -3,18 +3,18 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { colorScheme, getChartThemeOptions, getThemeVariantIsDark } from '@/app/utilities/widget-helper'
 
-const chart1 = new ApexCharts(document.querySelector("#apexchart-1"), {
+const chart1 = new ApexCharts(document.querySelector('#apexchart-1'), {
   ...getChartThemeOptions(),
   series: [
     {
-      name: "Desktops",
+      name: 'Desktops',
       data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
     }
   ],
   chart: {
     height: 350,
-    background: "transparent",
-    type: "line",
+    background: 'transparent',
+    type: 'line',
     zoom: {
       enabled: false
     }
@@ -23,98 +23,98 @@ const chart1 = new ApexCharts(document.querySelector("#apexchart-1"), {
     enabled: false
   },
   stroke: {
-    curve: "straight"
+    curve: 'straight'
   },
   markers: {
     strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white
   },
   title: {
-    text: "Product Trends by Month",
-    align: "left"
+    text: 'Product Trends by Month',
+    align: 'left'
   },
   grid: {
     row: {
-      colors: ["#f3f3f3", "transparent"],
+      colors: ['#f3f3f3', 'transparent'],
       opacity: 0.5
     }
   },
   xaxis: {
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"]
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
   }
 })
 
-const chart2 = new ApexCharts(document.querySelector("#apexchart-2"), {
+const chart2 = new ApexCharts(document.querySelector('#apexchart-2'), {
   ...getChartThemeOptions(),
   series: [
     {
-      name: "series1",
+      name: 'series1',
       data: [31, 40, 28, 51, 42, 109, 100]
     },
     {
-      name: "series2",
+      name: 'series2',
       data: [11, 32, 45, 32, 34, 52, 41]
     }
   ],
   chart: {
     height: 350,
-    type: "area",
-    background: "transparent"
+    type: 'area',
+    background: 'transparent'
   },
-  fill: { type: "gradient" },
+  fill: { type: 'gradient' },
   dataLabels: {
     enabled: false
   },
   stroke: {
-    curve: "smooth"
+    curve: 'smooth'
   },
   markers: {
     strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white
   },
   xaxis: {
-    type: "datetime",
+    type: 'datetime',
     categories: [
-      "2018-09-19T00:00:00.000Z",
-      "2018-09-19T01:30:00.000Z",
-      "2018-09-19T02:30:00.000Z",
-      "2018-09-19T03:30:00.000Z",
-      "2018-09-19T04:30:00.000Z",
-      "2018-09-19T05:30:00.000Z",
-      "2018-09-19T06:30:00.000Z"
+      '2018-09-19T00:00:00.000Z',
+      '2018-09-19T01:30:00.000Z',
+      '2018-09-19T02:30:00.000Z',
+      '2018-09-19T03:30:00.000Z',
+      '2018-09-19T04:30:00.000Z',
+      '2018-09-19T05:30:00.000Z',
+      '2018-09-19T06:30:00.000Z'
     ]
   },
   tooltip: {
     x: {
-      format: "dd/MM/yy HH:mm"
+      format: 'dd/MM/yy HH:mm'
     }
   }
 })
 
-const chart3 = new ApexCharts(document.querySelector("#apexchart-3"), {
+const chart3 = new ApexCharts(document.querySelector('#apexchart-3'), {
   ...getChartThemeOptions(),
   series: [
     {
-      name: "Net Profit",
+      name: 'Net Profit',
       data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
     },
     {
-      name: "Revenue",
+      name: 'Revenue',
       data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
     },
     {
-      name: "Free Cash Flow",
+      name: 'Free Cash Flow',
       data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
     }
   ],
   chart: {
-    type: "bar",
+    type: 'bar',
     height: 350,
-    background: "transparent"
+    background: 'transparent'
   },
   plotOptions: {
     bar: {
       horizontal: false,
-      columnWidth: "55%",
-      endingShape: "rounded"
+      columnWidth: '55%',
+      endingShape: 'rounded'
     }
   },
   dataLabels: {
@@ -123,14 +123,14 @@ const chart3 = new ApexCharts(document.querySelector("#apexchart-3"), {
   stroke: {
     show: true,
     width: 2,
-    colors: ["transparent"]
+    colors: ['transparent']
   },
   xaxis: {
-    categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"]
+    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
   },
   yaxis: {
     title: {
-      text: "$ (thousands)"
+      text: '$ (thousands)'
     }
   },
   fill: {
@@ -143,7 +143,7 @@ const chart3 = new ApexCharts(document.querySelector("#apexchart-3"), {
   }
 })
 
-const chart4 = new ApexCharts(document.querySelector("#apexchart-4"), {
+const chart4 = new ApexCharts(document.querySelector('#apexchart-4'), {
   ...getChartThemeOptions(),
   series: [
     {
@@ -151,9 +151,9 @@ const chart4 = new ApexCharts(document.querySelector("#apexchart-4"), {
     }
   ],
   chart: {
-    type: "bar",
+    type: 'bar',
     height: 350,
-    background: "transparent"
+    background: 'transparent'
   },
   plotOptions: {
     bar: {
@@ -165,38 +165,38 @@ const chart4 = new ApexCharts(document.querySelector("#apexchart-4"), {
   },
   xaxis: {
     categories: [
-      "South Korea",
-      "Canada",
-      "United Kingdom",
-      "Netherlands",
-      "Italy",
-      "France",
-      "Japan",
-      "United States",
-      "China",
-      "Germany"
+      'South Korea',
+      'Canada',
+      'United Kingdom',
+      'Netherlands',
+      'Italy',
+      'France',
+      'Japan',
+      'United States',
+      'China',
+      'Germany'
     ]
   }
 })
 
-const chart5 = new ApexCharts(document.querySelector("#apexchart-5"), {
+const chart5 = new ApexCharts(document.querySelector('#apexchart-5'), {
   ...getChartThemeOptions(),
   series: [
     {
-      name: "Website Blog",
-      type: "column",
+      name: 'Website Blog',
+      type: 'column',
       data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
     },
     {
-      name: "Social Media",
-      type: "line",
+      name: 'Social Media',
+      type: 'line',
       data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
     }
   ],
   chart: {
     height: 350,
-    type: "line",
-    background: "transparent"
+    type: 'line',
+    background: 'transparent'
   },
   stroke: {
     width: [0, 4]
@@ -205,72 +205,72 @@ const chart5 = new ApexCharts(document.querySelector("#apexchart-5"), {
     strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white
   },
   title: {
-    text: "Traffic Sources"
+    text: 'Traffic Sources'
   },
   dataLabels: {
     enabled: true,
     enabledOnSeries: [1]
   },
   labels: [
-    "01 Jan 2001",
-    "02 Jan 2001",
-    "03 Jan 2001",
-    "04 Jan 2001",
-    "05 Jan 2001",
-    "06 Jan 2001",
-    "07 Jan 2001",
-    "08 Jan 2001",
-    "09 Jan 2001",
-    "10 Jan 2001",
-    "11 Jan 2001",
-    "12 Jan 2001"
+    '01 Jan 2001',
+    '02 Jan 2001',
+    '03 Jan 2001',
+    '04 Jan 2001',
+    '05 Jan 2001',
+    '06 Jan 2001',
+    '07 Jan 2001',
+    '08 Jan 2001',
+    '09 Jan 2001',
+    '10 Jan 2001',
+    '11 Jan 2001',
+    '12 Jan 2001'
   ],
   xaxis: {
-    type: "datetime"
+    type: 'datetime'
   },
   yaxis: [
     {
       title: {
-        text: "Website Blog"
+        text: 'Website Blog'
       }
     },
     {
       opposite: true,
       title: {
-        text: "Social Media"
+        text: 'Social Media'
       }
     }
   ]
 })
 
-const chart6 = new ApexCharts(document.querySelector("#apexchart-6"), {
+const chart6 = new ApexCharts(document.querySelector('#apexchart-6'), {
   ...getChartThemeOptions(),
   series: [
     {
       data: [
         {
-          x: "Code",
-          y: [new Date("2019-03-02").getTime(), new Date("2019-03-04").getTime()]
+          x: 'Code',
+          y: [new Date('2019-03-02').getTime(), new Date('2019-03-04').getTime()]
         },
         {
-          x: "Test",
-          y: [new Date("2019-03-04").getTime(), new Date("2019-03-08").getTime()]
+          x: 'Test',
+          y: [new Date('2019-03-04').getTime(), new Date('2019-03-08').getTime()]
         },
         {
-          x: "Validation",
-          y: [new Date("2019-03-08").getTime(), new Date("2019-03-12").getTime()]
+          x: 'Validation',
+          y: [new Date('2019-03-08').getTime(), new Date('2019-03-12').getTime()]
         },
         {
-          x: "Deployment",
-          y: [new Date("2019-03-12").getTime(), new Date("2019-03-18").getTime()]
+          x: 'Deployment',
+          y: [new Date('2019-03-12').getTime(), new Date('2019-03-18').getTime()]
         }
       ]
     }
   ],
   chart: {
     height: 350,
-    type: "rangeBar",
-    background: "transparent"
+    type: 'rangeBar',
+    background: 'transparent'
   },
   plotOptions: {
     bar: {
@@ -278,11 +278,11 @@ const chart6 = new ApexCharts(document.querySelector("#apexchart-6"), {
     }
   },
   xaxis: {
-    type: "datetime"
+    type: 'datetime'
   }
 })
 
-const chart7 = new ApexCharts(document.querySelector("#apexchart-7"), {
+const chart7 = new ApexCharts(document.querySelector('#apexchart-7'), {
   ...getChartThemeOptions(),
   series: [
     {
@@ -531,16 +531,16 @@ const chart7 = new ApexCharts(document.querySelector("#apexchart-7"), {
     }
   ],
   chart: {
-    type: "candlestick",
+    type: 'candlestick',
     height: 350,
-    background: "transparent"
+    background: 'transparent'
   },
   title: {
-    text: "CandleStick Chart",
-    align: "left"
+    text: 'CandleStick Chart',
+    align: 'left'
   },
   xaxis: {
-    type: "datetime"
+    type: 'datetime'
   },
   yaxis: {
     tooltip: {
@@ -549,18 +549,18 @@ const chart7 = new ApexCharts(document.querySelector("#apexchart-7"), {
   }
 })
 
-const chart8 = new ApexCharts(document.querySelector("#apexchart-8"), {
+const chart8 = new ApexCharts(document.querySelector('#apexchart-8'), {
   ...getChartThemeOptions(),
   series: [44, 55, 13, 43, 22],
   chart: {
     width: 380,
-    type: "pie",
-    background: "transparent"
+    type: 'pie',
+    background: 'transparent'
   },
   stroke: {
-    colors: ["transparent"]
+    colors: ['transparent']
   },
-  labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+  labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
   tooltip: {
     fillSeriesColor: false
   },
@@ -572,18 +572,18 @@ const chart8 = new ApexCharts(document.querySelector("#apexchart-8"), {
           width: 200
         },
         legend: {
-          position: "bottom"
+          position: 'bottom'
         }
       }
     }
   ]
 })
 
-const chart9 = new ApexCharts(document.querySelector("#apexchart-9"), {
+const chart9 = new ApexCharts(document.querySelector('#apexchart-9'), {
   ...getChartThemeOptions(),
   series: [
     {
-      name: "SAMPLE A",
+      name: 'SAMPLE A',
       data: [
         [16.4, 5.4],
         [21.7, 2],
@@ -619,7 +619,7 @@ const chart9 = new ApexCharts(document.querySelector("#apexchart-9"), {
       ]
     },
     {
-      name: "SAMPLE B",
+      name: 'SAMPLE B',
       data: [
         [36.4, 13.4],
         [1.7, 11],
@@ -655,7 +655,7 @@ const chart9 = new ApexCharts(document.querySelector("#apexchart-9"), {
       ]
     },
     {
-      name: "SAMPLE C",
+      name: 'SAMPLE C',
       data: [
         [21.7, 3],
         [23.6, 3.5],
@@ -693,16 +693,16 @@ const chart9 = new ApexCharts(document.querySelector("#apexchart-9"), {
   ],
   chart: {
     height: 350,
-    type: "scatter",
-    background: "transparent",
+    type: 'scatter',
+    background: 'transparent',
     zoom: {
       enabled: true,
-      type: "xy"
+      type: 'xy'
     }
   },
   stroke: {
     show: false,
-    colors: ["transparent"]
+    colors: ['transparent']
   },
   markers: {
     strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white
@@ -718,27 +718,27 @@ const chart9 = new ApexCharts(document.querySelector("#apexchart-9"), {
   }
 })
 
-const chart10 = new ApexCharts(document.querySelector("#apexchart-10"), {
+const chart10 = new ApexCharts(document.querySelector('#apexchart-10'), {
   ...getChartThemeOptions(),
   series: [
     {
-      name: "Series 1",
+      name: 'Series 1',
       data: [80, 50, 30, 40, 100, 20]
     }
   ],
   chart: {
     height: 350,
-    type: "radar",
-    background: "transparent",
+    type: 'radar',
+    background: 'transparent'
   },
   markers: {
     strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white
   },
   title: {
-    text: "Basic Radar Chart"
+    text: 'Basic Radar Chart'
   },
   xaxis: {
-    categories: ["January", "February", "March", "April", "May", "June"]
+    categories: ['January', 'February', 'March', 'April', 'May', 'June']
   }
 })
 
@@ -756,7 +756,6 @@ chart10.render()
 
 // Theme toggle listener
 document.querySelector('#theme-toggle').addEventListener('click', () => {
-
   // Update all widget colors
   chart1.updateOptions({
     ...getChartThemeOptions(),

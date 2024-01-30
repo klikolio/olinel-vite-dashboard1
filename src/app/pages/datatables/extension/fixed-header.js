@@ -16,21 +16,21 @@ const headerOffset = getBrowserWidth() >= 1025
   ? document.querySelector('#sticky-header-desktop').clientHeight
   : document.querySelector('#sticky-header-mobile').clientHeight
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   fixedHeader: {
     header: true, // Float table header
-    headerOffset: headerOffset // Fit table header with page header
+    headerOffset // Fit table header with page header
   }
 })
 
-$("#datatables-2").DataTable({
+$('#datatables-2').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   fixedHeader: {
     header: true,
     footer: true,
-    headerOffset: headerOffset // Fit table header with page header
+    headerOffset // Fit table header with page header
   }
 })

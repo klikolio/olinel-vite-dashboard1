@@ -8,7 +8,7 @@ import '@/build/vendors/datatables/fixedcolumns/styles/fixedcolumns.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA_LONG } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA_LONG,
   scrollY: 300,
   scrollX: true,
@@ -16,7 +16,7 @@ $("#datatables-1").DataTable({
   fixedColumns: true // Enable autofill extension with default configuration
 })
 
-$("#datatables-2").DataTable({
+$('#datatables-2').DataTable({
   data: DATATABLES_DATA_LONG,
   scrollY: 300,
   scrollX: true,
@@ -26,7 +26,7 @@ $("#datatables-2").DataTable({
   }
 })
 
-$("#datatables-3").DataTable({
+$('#datatables-3').DataTable({
   data: DATATABLES_DATA_LONG,
   scrollY: 300,
   scrollX: true,

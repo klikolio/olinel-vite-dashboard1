@@ -3,20 +3,20 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { colorScheme, getChartThemeOptions, getThemeVariantIsDark } from '@/app/utilities/widget-helper'
 
-export function initChart9(chartQuery, baseColor, series) {
+export function initChart9 (chartQuery, baseColor, series) {
   const chartInstance = new ApexCharts(chartQuery, {
     ...getChartThemeOptions(), // Add theme option to chart
-    series: series,
+    series,
     chart: {
-      type: "area",
+      type: 'area',
       height: 150,
-      background: "transparent",
+      background: 'transparent',
       sparkline: {
         enabled: true
       }
     },
     fill: {
-      type: "solid",
+      type: 'solid',
       opacity: 0
     },
     markers: {
@@ -25,7 +25,7 @@ export function initChart9(chartQuery, baseColor, series) {
     stroke: {
       show: true,
       colors: [baseColor],
-      lineCap: "round"
+      lineCap: 'round'
     },
     tooltip: {
       marker: {
@@ -33,7 +33,7 @@ export function initChart9(chartQuery, baseColor, series) {
       }
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
       crosshairs: {
         show: false
       }

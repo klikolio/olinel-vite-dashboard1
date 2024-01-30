@@ -1,5 +1,5 @@
-import BaseComponent from "bootstrap/js/src/base-component"
-import { defineJQueryPlugin } from "bootstrap/js/src/util"
+import BaseComponent from 'bootstrap/js/src/base-component'
+import { defineJQueryPlugin } from 'bootstrap/js/src/util'
 
 /**
  * Constants
@@ -27,13 +27,13 @@ const CLASS_ASIDE_DESKTOP_MAXIMIZED = 'aside-desktop-maximized'
 
 class Menu extends BaseComponent {
   // Getters
-  static get NAME() {
+  static get NAME () {
     return NAME
   }
 
   asideDefaultDesktopMinimized
 
-  constructor() {
+  constructor () {
     super()
 
     this.asidePrepare()
@@ -45,7 +45,7 @@ class Menu extends BaseComponent {
   }
 
   // Function for adding event listener to toggle element
-  toggleListener() {
+  toggleListener () {
     document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
       toggleElement.addEventListener('click', () => {
         const itemElement = toggleElement.parentElement
@@ -57,7 +57,7 @@ class Menu extends BaseComponent {
   }
 
   // Function for calculating submenu height
-  calcHeight() {
+  calcHeight () {
     document.querySelectorAll(SELECTOR_ITEM).forEach((itemElement) => {
       const submenuElement = itemElement.querySelector(SELECTOR_SUBMENU)
 
@@ -71,7 +71,7 @@ class Menu extends BaseComponent {
   }
 
   // Function for collapsing all items
-  collapseAll() {
+  collapseAll () {
     Array.from(document.querySelectorAll(SELECTOR_ITEM)).filter((itemElement) => {
       return Boolean(itemElement.querySelector(SELECTOR_SUBMENU))
     }).reverse().forEach((itemElement) => {
@@ -80,14 +80,14 @@ class Menu extends BaseComponent {
   }
 
   // Function for setting active link and items
-  setActiveLink() {
+  setActiveLink () {
     const activePage = document.documentElement.getAttribute('id')
 
     const linkElement = document.querySelector(`[${DATA_ACTIVE_PAGE}="${activePage}"]`)
 
     if (linkElement) {
       linkElement.classList.add(CLASS_ACTIVE)
-  
+
       this.getParentItems(linkElement).forEach((itemElement) => {
         this.toggleCollapse(itemElement, false)
       })
@@ -95,7 +95,7 @@ class Menu extends BaseComponent {
   }
 
   // Function for toggling item collapsion
-  toggleCollapse(itemElement, isCollapse) {
+  toggleCollapse (itemElement, isCollapse) {
     const toggleElement = itemElement.querySelector(SELECTOR_TOGGLE)
     const submenuElement = itemElement.querySelector(SELECTOR_SUBMENU)
     const submenuHeight = Number(itemElement.getAttribute(DATA_HEIGHT))
@@ -121,7 +121,7 @@ class Menu extends BaseComponent {
   }
 
   // Function to get parent items
-  getParentItems(targetElement) {
+  getParentItems (targetElement) {
     const parentElements = []
 
     let currentElement = targetElement.parentElement
@@ -141,7 +141,7 @@ class Menu extends BaseComponent {
   }
 
   // Function to prepare aside adoption
-  asidePrepare() {
+  asidePrepare () {
     this.asideDefaultDesktopMinimized = document.body.classList.contains(CLASS_ASIDE_DESKTOP_MINIMIZED)
 
     if (this.asideDefaultDesktopMinimized) {
@@ -151,7 +151,7 @@ class Menu extends BaseComponent {
   }
 
   // Function to restore aside default state
-  asideRestore() {
+  asideRestore () {
     if (this.asideDefaultDesktopMinimized) {
       document.body.classList.add(CLASS_ASIDE_DESKTOP_MINIMIZED)
       document.body.classList.remove(CLASS_ASIDE_DESKTOP_MAXIMIZED)

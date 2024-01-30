@@ -3,20 +3,20 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { colorScheme, getChartThemeOptions, getThemeVariantIsDark, currencyFormatter } from '@/app/utilities/widget-helper'
 
-export function initChart7(chartQuery, baseColor, enabledCurrencyFormat, series) {
+export function initChart7 (chartQuery, baseColor, enabledCurrencyFormat, series) {
   const chartInstance = new ApexCharts(chartQuery, {
     ...getChartThemeOptions(), // Add theme option to chart
-    series: series,
+    series,
     chart: {
-      type: "area",
+      type: 'area',
       height: 200,
-      background: "transparent",
+      background: 'transparent',
       sparkline: {
         enabled: true
       }
     },
     fill: {
-      type: "solid",
+      type: 'solid',
       colors: [baseColor],
       opacity: 0.1
     },
@@ -38,7 +38,7 @@ export function initChart7(chartQuery, baseColor, enabledCurrencyFormat, series)
       }
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
       crosshairs: {
         show: false
       }

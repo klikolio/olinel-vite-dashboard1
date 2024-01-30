@@ -1,5 +1,5 @@
-import BaseComponent from "bootstrap/js/src/base-component"
-import { defineJQueryPlugin } from "bootstrap/js/src/util"
+import BaseComponent from 'bootstrap/js/src/base-component'
+import { defineJQueryPlugin } from 'bootstrap/js/src/util'
 
 /**
  * Constants
@@ -17,16 +17,12 @@ const DATA_COLLAPSED = 'data-portlet-collapsed'
 
 class Portlet extends BaseComponent {
   // Getters
-  static get NAME() {
+  static get NAME () {
     return NAME
   }
 
-  constructor(element) {
-    super(element)
-  }
-
   // Function for toggling collapsion
-  toggleCollapse() {
+  toggleCollapse () {
     const bodyElement = this._element.querySelector(SELECTOR_BODY)
 
     const isCollapsed = this._element.getAttribute(DATA_COLLAPSED) === 'true'
@@ -41,7 +37,7 @@ class Portlet extends BaseComponent {
   }
 
   // Function for destroying element
-  destroy() {
+  destroy () {
     this._element.remove()
   }
 }

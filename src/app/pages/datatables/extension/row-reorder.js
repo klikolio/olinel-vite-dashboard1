@@ -11,13 +11,13 @@ import '@/build/vendors/datatables/rowreorder/styles/rowreorder.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   rowReorder: true // Enable row reorder extension with default configuration
 })
 
-$("#datatables-2").DataTable({
+$('#datatables-2').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   rowReorder: true, // Enable row reorder extension with default configuration
@@ -28,8 +28,7 @@ $("#datatables-2").DataTable({
     },
     {
       orderable: false,
-      targets: "_all"
+      targets: '_all'
     }
   ]
 })
-

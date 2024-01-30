@@ -3,122 +3,122 @@ import 'jstree'
 
 import $ from 'jquery'
 
-$("#jstree-1").jstree({
-  plugins: ["types"],
+$('#jstree-1').jstree({
+  plugins: ['types'],
   core: {
     themes: { ellipsis: true } // Collapse text responsively
   },
   types: {
-    default: { icon: "far fa-folder" },
-    file: { icon: "far fa-file" }
+    default: { icon: 'far fa-folder' },
+    file: { icon: 'far fa-file' }
   }
 })
 
-$("#jstree-2").jstree({
-  plugins: ["types"],
+$('#jstree-2').jstree({
+  plugins: ['types'],
   core: {
     themes: { ellipsis: true }, // Collapse text responsively
     data: [
       {
-        text: "Root node 1",
+        text: 'Root node 1',
         children: [
           {
-            text: "initially selected",
+            text: 'initially selected',
             state: { selected: true }
           },
           {
-            text: "Custom icon",
-            icon: "fa fa-briefcase"
+            text: 'Custom icon',
+            icon: 'fa fa-briefcase'
           },
           {
-            text: "Initially open",
+            text: 'Initially open',
             state: { opened: true },
             children: [
               {
-                text: "Disabled node",
+                text: 'Disabled node',
                 state: { disabled: true }
               },
               {
-                text: "Another node",
-                type: "file"
+                text: 'Another node',
+                type: 'file'
               }
             ]
           },
           {
-            text: "Sub nodes",
+            text: 'Sub nodes',
             children: [
               {
-                text: "Item 1",
-                type: "file"
+                text: 'Item 1',
+                type: 'file'
               },
               {
-                text: "Item 2",
-                type: "file"
+                text: 'Item 2',
+                type: 'file'
               },
               {
-                text: "Sub nodes",
+                text: 'Sub nodes',
                 children: [
                   {
-                    text: "Item 1",
-                    type: "file"
+                    text: 'Item 1',
+                    type: 'file'
                   },
                   {
-                    text: "Item 2",
-                    type: "file"
+                    text: 'Item 2',
+                    type: 'file'
                   }
                 ]
               },
               {
-                text: "Item 3",
-                type: "file"
+                text: 'Item 3',
+                type: 'file'
               }
             ]
           },
           {
-            text: "Custom color icon",
-            icon: "fa fa-star text-success"
+            text: 'Custom color icon',
+            icon: 'fa fa-star text-success'
           }
         ]
       },
       {
-        text: "Clickable link node",
-        icon: "fa fa-link text-info",
-        a_attr: { href: "//google.com" }
+        text: 'Clickable link node',
+        icon: 'fa fa-link text-info',
+        a_attr: { href: '//google.com' }
       }
     ] // Treeview data
   },
   types: {
-    default: { icon: "far fa-folder" },
-    file: { icon: "far fa-file" }
+    default: { icon: 'far fa-folder' },
+    file: { icon: 'far fa-file' }
   }
 })
 
-$("#jstree-3").jstree({
-  plugins: ["wholerow", "checkbox", "types"],
+$('#jstree-3').jstree({
+  plugins: ['wholerow', 'checkbox', 'types'],
   core: {
     themes: { ellipsis: true } // Collapse text responsively
   },
   types: {
-    default: { icon: "far fa-folder" },
-    file: { icon: "far fa-file" }
+    default: { icon: 'far fa-folder' },
+    file: { icon: 'far fa-file' }
   }
 })
 
-$("#jstree-4").jstree({
-  plugins: ["dnd", "state", "types"],
+$('#jstree-4').jstree({
+  plugins: ['dnd', 'state', 'types'],
   core: {
     themes: { ellipsis: true }, // Collapse text responsively
     check_callback: true
   },
   types: {
-    default: { icon: "far fa-folder" },
-    file: { icon: "far fa-file" }
+    default: { icon: 'far fa-folder' },
+    file: { icon: 'far fa-file' }
   },
-  state: { key: "demo2" }
+  state: { key: 'demo2' }
 })
 
-$("#jstree-5").jstree({
-  plugins: ["contextmenu", "types"],
+$('#jstree-5').jstree({
+  plugins: ['contextmenu', 'types'],
   core: {
     themes: { ellipsis: true }, // Collapse text responsively
     check_callback: true
@@ -130,27 +130,27 @@ $("#jstree-5").jstree({
         create: {
           separator_before: false,
           separator_after: true,
-          label: "Create",
-          icon: "fa fa-pen",
+          label: 'Create',
+          icon: 'fa fa-pen',
           action: false,
           submenu: {
             file: {
               seperator_before: false,
               seperator_after: false,
-              icon: "fa fa-file",
-              label: "File",
+              icon: 'fa fa-file',
+              label: 'File',
               action: data => {
-                let tree = $.jstree.reference(data.reference)
-                let node = tree.get_node(data.reference)
+                const tree = $.jstree.reference(data.reference)
+                const node = tree.get_node(data.reference)
 
                 tree.create_node(
                   node,
                   {
-                    text: "New File",
-                    type: "file",
-                    icon: "fa fa-file"
+                    text: 'New File',
+                    type: 'file',
+                    icon: 'fa fa-file'
                   },
-                  "last",
+                  'last',
                   newNode => {
                     setTimeout(() => {
                       tree.edit(newNode)
@@ -162,19 +162,19 @@ $("#jstree-5").jstree({
             folder: {
               seperator_before: false,
               seperator_after: false,
-              icon: "fa fa-folder",
-              label: "Folder",
+              icon: 'fa fa-folder',
+              label: 'Folder',
               action: data => {
-                let tree = $.jstree.reference(data.reference)
-                let node = tree.get_node(data.reference)
+                const tree = $.jstree.reference(data.reference)
+                const node = tree.get_node(data.reference)
 
                 tree.create_node(
                   node,
                   {
-                    text: "New Folder",
-                    type: "default"
+                    text: 'New Folder',
+                    type: 'default'
                   },
-                  "last",
+                  'last',
                   newNode => {
                     setTimeout(() => {
                       tree.edit(newNode)
@@ -188,40 +188,40 @@ $("#jstree-5").jstree({
         rename: {
           separator_before: false,
           separator_after: false,
-          label: "Rename",
-          icon: "fa fa-i-cursor",
+          label: 'Rename',
+          icon: 'fa fa-i-cursor',
           action: data => {
-            let tree = $.jstree.reference(data.reference)
-            let node = tree.get_node(data.reference)
+            const tree = $.jstree.reference(data.reference)
+            const node = tree.get_node(data.reference)
             tree.edit(node)
           }
         },
         remove: {
           separator_before: false,
           separator_after: false,
-          label: "Remove",
-          icon: "fa fa-trash-alt",
+          label: 'Remove',
+          icon: 'fa fa-trash-alt',
           action: data => {
-            let tree = $.jstree.reference(data.reference)
-            let node = tree.get_node(data.reference)
+            const tree = $.jstree.reference(data.reference)
+            const node = tree.get_node(data.reference)
             tree.delete_node(node)
           }
         },
         cpp: {
           separator_before: false,
           separator_after: false,
-          label: "Edit",
-          icon: "fa fa-ellipsis-v",
+          label: 'Edit',
+          icon: 'fa fa-ellipsis-v',
           action: false,
           submenu: {
             cut: {
               seperator_before: false,
               seperator_after: false,
-              label: "Cut",
-              icon: "fa fa-cut",
+              label: 'Cut',
+              icon: 'fa fa-cut',
               action: data => {
-                let tree = $.jstree.reference(data.reference)
-                let node = tree.get_node(data.reference)
+                const tree = $.jstree.reference(data.reference)
+                const node = tree.get_node(data.reference)
 
                 if (tree.is_selected(node)) {
                   tree.cut(tree.get_top_selected())
@@ -233,11 +233,11 @@ $("#jstree-5").jstree({
             copy: {
               seperator_before: false,
               seperator_after: false,
-              label: "Copy",
-              icon: "fa fa-copy",
+              label: 'Copy',
+              icon: 'fa fa-copy',
               action: data => {
-                let tree = $.jstree.reference(data.reference)
-                let node = tree.get_node(data.reference)
+                const tree = $.jstree.reference(data.reference)
+                const node = tree.get_node(data.reference)
 
                 if (tree.is_selected(node)) {
                   tree.copy(tree.get_top_selected())
@@ -249,11 +249,11 @@ $("#jstree-5").jstree({
             paste: {
               seperator_before: false,
               seperator_after: false,
-              label: "Paste",
-              icon: "fa fa-paste",
+              label: 'Paste',
+              icon: 'fa fa-paste',
               action: data => {
-                let tree = $.jstree.reference(data.reference)
-                let node = tree.get_node(data.reference)
+                const tree = $.jstree.reference(data.reference)
+                const node = tree.get_node(data.reference)
                 tree.paste(node)
               }
             }
@@ -263,25 +263,25 @@ $("#jstree-5").jstree({
     }
   },
   types: {
-    default: { icon: "far fa-folder" },
-    file: { icon: "far fa-file" }
+    default: { icon: 'far fa-folder' },
+    file: { icon: 'far fa-file' }
   }
 })
 
-const treeview = $("#jstree-6").jstree({
-  plugins: ["search", "types"],
+const treeview = $('#jstree-6').jstree({
+  plugins: ['search', 'types'],
   core: {
     themes: { ellipsis: true }, // Collapse text responsively
     check_callback: true
   },
   types: {
-    default: { icon: "far fa-folder" },
-    file: { icon: "far fa-file" }
+    default: { icon: 'far fa-folder' },
+    file: { icon: 'far fa-file' }
   }
 })
 
 // Input form handler for treeview searching
-$("#jstree-6-input").keyup(function () {
+$('#jstree-6-input').keyup(function () {
   const value = $(this).val()
   treeview.jstree(true).search(value)
 })

@@ -3,15 +3,15 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { colorScheme, getChartThemeOptions, getThemeVariantIsDark } from '@/app/utilities/widget-helper'
 
-export function initChart4(chartQuery, labels, series) {
+export function initChart4 (chartQuery, labels, series) {
   const chartInstance = new ApexCharts(chartQuery, {
     ...getChartThemeOptions(), // Add theme option to chart
-    labels: labels,
-    series: series,
+    labels,
+    series,
     chart: {
       width: 300,
-      type: "donut",
-      background: "transparent",
+      type: 'donut',
+      background: 'transparent'
     },
     stroke: {
       colors: [getThemeVariantIsDark() ? colorScheme.black : colorScheme.white]

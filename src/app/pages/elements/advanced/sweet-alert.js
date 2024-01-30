@@ -6,9 +6,9 @@ const swal = Swal.mixin({
   customClass: {
     confirmButton: 'btn btn-label-success btn-wide mx-1',
     denyButton: 'btn btn-label-secondary btn-wide mx-1',
-    cancelButton: 'btn btn-label-danger btn-wide mx-1',
+    cancelButton: 'btn btn-label-danger btn-wide mx-1'
   },
-  buttonsStyling: false,
+  buttonsStyling: false
 })
 
 // Initialize Sweet Alert Toast object
@@ -21,7 +21,7 @@ const toast = Swal.mixin({
   didOpen: (toast) => {
     toast.addEventListener('mouseenter', Swal.stopTimer)
     toast.addEventListener('mouseleave', Swal.resumeTimer)
-  },
+  }
 })
 
 document.querySelector('#swal-1').addEventListener('click', () => {
@@ -69,7 +69,7 @@ document.querySelector('#swal-5').addEventListener('click', () => {
     showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: 'Save',
-    denyButtonText: `Don't save`,
+    denyButtonText: 'Don\'t save'
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
@@ -93,7 +93,7 @@ document.querySelector('#swal-6').addEventListener('click', () => {
 document.querySelector('#swal-7').addEventListener('click', () => {
   swal.fire({
     title: 'Are you sure?',
-    text: `You won't be able to revert this!`,
+    text: 'You won\'t be able to revert this!',
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
@@ -117,7 +117,7 @@ document.querySelector('#swal-8').addEventListener('click', () => {
     imageUrl: 'https://unsplash.it/400/200',
     imageWidth: 400,
     imageHeight: 200,
-    imageAlt: 'Custom image',
+    imageAlt: 'Custom image'
   })
 })
 

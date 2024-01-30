@@ -24,7 +24,7 @@ export default defineConfig({
       root: './src',
       globals: {
         env: {
-          PAGE_DIRECTION: process.env['PAGE_DIRECTION'] ?? 'ltr'
+          PAGE_DIRECTION: process.env.PAGE_DIRECTION ?? 'ltr'
         }
       },
       filters: {
@@ -32,7 +32,7 @@ export default defineConfig({
           return Object.keys(classNamesObj).map((className) => {
             return classNamesObj[className] ? className : null
           }).filter((className) => className !== null).join(' ')
-        },
+        }
       }
     })
   ]

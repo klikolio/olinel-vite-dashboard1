@@ -11,7 +11,7 @@ import '@/build/vendors/datatables/keytable/styles/keytable.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
 

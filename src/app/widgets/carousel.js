@@ -4,7 +4,7 @@ import '@/build/vendors/slick-carousel/styles/slick.scss'
 import $ from 'jquery'
 import { getPageIsRTL } from '@/app/utilities/widget-helper'
 
-export function initCarousel(mainSelector, navSelector) {
+export function initCarousel (mainSelector, navSelector) {
   const isRtl = getPageIsRTL()
 
   $(mainSelector).slick({
@@ -14,7 +14,7 @@ export function initCarousel(mainSelector, navSelector) {
     slidesToScroll: 1,
     arrows: false
   })
-  
+
   $(navSelector).slick({
     rtl: isRtl, // Carousel direction
     asNavFor: mainSelector, // Make this carousel as navigation for #widget-carousel carousel

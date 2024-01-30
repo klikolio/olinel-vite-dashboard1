@@ -8,27 +8,27 @@ window.moment = moment
 
 import('bootstrap-daterangepicker').then(() => {
   const direction = getPageIsRTL() ? 'left' : 'right'
-  
+
   $.fn.daterangepicker.defaultOptions = {
     cancelButtonClasses: 'btn-label-danger'
   }
-  
+
   $('#daterangepicker-1').daterangepicker({
     opens: direction // Set direction
   })
-  
+
   $('#daterangepicker-2').daterangepicker({
     opens: direction, // Set direction
     timePicker: true
   })
-  
+
   $('#daterangepicker-3').daterangepicker({
     opens: direction, // Set direction
     singleDatePicker: true,
     showDropdowns: true,
     timePicker: true
   })
-  
+
   $('#daterangepicker-4').daterangepicker({
     opens: direction, // Set direction
     startDate: moment().subtract(29, 'days'),
@@ -45,13 +45,13 @@ import('bootstrap-daterangepicker').then(() => {
       ]
     }
   })
-  
+
   $('#daterangepicker-5').daterangepicker({
     opens: direction, // Set direction
     minDate: '04/09/2020',
     maxDate: '05/15/2020'
   })
-  
+
   $('#daterangepicker-6').daterangepicker({
     opens: direction, // Set direction
     showWeekNumbers: true,
@@ -68,7 +68,7 @@ import('bootstrap-daterangepicker').then(() => {
       ]
     }
   })
-  
+
   $('#daterangepicker-7').daterangepicker({
     opens: direction, // Set direction
     locale: {
@@ -98,5 +98,4 @@ import('bootstrap-daterangepicker').then(() => {
       firstDay: 1
     }
   })
-})  
-
+})

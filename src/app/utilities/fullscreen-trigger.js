@@ -1,4 +1,4 @@
-export function initFullscreenTrigger() {
+export function initFullscreenTrigger () {
   const fullscreenActiveClass = 'fullscreen-active'
 
   const bodyQuery = 'body'

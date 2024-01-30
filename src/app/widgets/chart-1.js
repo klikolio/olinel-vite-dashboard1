@@ -3,20 +3,20 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { colorScheme, getChartThemeOptions, getThemeVariantIsDark, currencyFormatter } from '@/app/utilities/widget-helper'
 
-export function initChart1(chartQuery, series) {
+export function initChart1 (chartQuery, series) {
   const chartInstance = new ApexCharts(chartQuery, {
     ...getChartThemeOptions(), // Add theme option to chart
-    series: series,
+    series,
     chart: {
-      type: "area",
+      type: 'area',
       height: 300,
-      background: "transparent",
+      background: 'transparent',
       sparkline: {
         enabled: true
       }
     },
     fill: {
-      type: "solid",
+      type: 'solid',
       opacity: 1,
       colors: [colorScheme.blue]
     },
@@ -35,7 +35,7 @@ export function initChart1(chartQuery, series) {
       }
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
       crosshairs: {
         show: false
       }
@@ -51,7 +51,7 @@ export function initChart1(chartQuery, series) {
       }
     ]
   })
-  
+
   document.querySelector('#theme-toggle').addEventListener('click', () => {
     chartInstance.updateOptions({
       ...getChartThemeOptions(),

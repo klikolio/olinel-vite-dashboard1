@@ -13,46 +13,46 @@ export const colorScheme = {
 export const chartThemeOptions = {
   light: {
     theme: {
-      mode: "light",
-      palette: "palette1"
+      mode: 'light',
+      palette: 'palette1'
     }
   },
   dark: {
     theme: {
-      mode: "dark",
-      palette: "palette1"
+      mode: 'dark',
+      palette: 'palette1'
     }
   }
 }
 
-export const currencyFormatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
+export const currencyFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
   minimumFractionDigits: 0
 })
 
-export function getThemeVariant() {
+export function getThemeVariant () {
   return document.documentElement.getAttribute('data-theme') ?? defaultThemeVariant
 }
 
-export function getThemeVariantIsDark() {
+export function getThemeVariantIsDark () {
   return getThemeVariant() === 'dark'
 }
 
-export function getChartThemeOptions() {
+export function getChartThemeOptions () {
   const themeVariant = getThemeVariant()
 
   return chartThemeOptions[themeVariant]
 }
 
-export function getPageDirection() {
+export function getPageDirection () {
   return document.documentElement.getAttribute('dir') ?? defaultThemeVariant
 }
 
-export function getPageIsRTL() {
+export function getPageIsRTL () {
   return getPageDirection() === 'rtl'
 }
 
-export function getBrowserWidth() {
+export function getBrowserWidth () {
   return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 }

@@ -1,5 +1,5 @@
-import BaseComponent from "bootstrap/js/src/base-component"
-import { defineJQueryPlugin } from "bootstrap/js/src/util"
+import BaseComponent from 'bootstrap/js/src/base-component'
+import { defineJQueryPlugin } from 'bootstrap/js/src/util'
 
 /**
  * Constants
@@ -19,19 +19,19 @@ const CLASS_HIDE = 'preload-hide'
 
 class Preload extends BaseComponent {
   // Getters
-  static get NAME() {
+  static get NAME () {
     return NAME
   }
 
-  constructor() {
+  constructor () {
     super()
 
     this.autoHide()
   }
 
   // Function for automatically hiding preload
-  autoHide() {
-    document.addEventListener("DOMContentLoaded", () => {
+  autoHide () {
+    document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         this.hide()
       }, DELAY_DURATION)
@@ -43,13 +43,13 @@ class Preload extends BaseComponent {
   }
 
   // Function for showing preload
-  show() {
+  show () {
     document.body.classList.add(CLASS_ACTIVE)
     document.body.classList.remove(CLASS_HIDE)
   }
 
   // Function for hiding preload
-  hide() {
+  hide () {
     document.body.classList.add(CLASS_HIDE)
     document.body.classList.remove(CLASS_ACTIVE)
   }

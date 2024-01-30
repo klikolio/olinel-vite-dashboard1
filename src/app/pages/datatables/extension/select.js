@@ -11,25 +11,25 @@ import '@/build/vendors/datatables/select/styles/select.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   select: true // Enable select extension with default configuration
 })
 
-$("#datatables-2").DataTable({
+$('#datatables-2').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   select: {
-    style: "multi" // Enable multiple selection
+    style: 'multi' // Enable multiple selection
   }
 })
 
-$("#datatables-3").DataTable({
+$('#datatables-3').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   select: {
-    style: "os",
-    items: "cell" // Enable cell selection
+    style: 'os',
+    items: 'cell' // Enable cell selection
   }
 })

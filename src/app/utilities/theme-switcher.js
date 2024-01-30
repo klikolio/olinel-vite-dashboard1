@@ -1,9 +1,9 @@
 const rootQuery = 'html'
-const dataAttrName = "data-theme"
+const dataAttrName = 'data-theme'
 const localStorageIdentifier = 'theme-variant'
 const toggleQuery = '#theme-toggle'
 
-function themeSwitcher(isDark) {
+function themeSwitcher (isDark) {
   // Toggling theme class
   if (isDark) {
     document.querySelector(rootQuery).setAttribute(dataAttrName, 'light')
@@ -14,7 +14,7 @@ function themeSwitcher(isDark) {
   }
 }
 
-export function initThemeSwitcher() {
+export function initThemeSwitcher () {
   const persistedState = localStorage.getItem(localStorageIdentifier)
 
   // Change default theme by local storage
@@ -24,7 +24,7 @@ export function initThemeSwitcher() {
 
   // Add toggle event listener
   document.querySelector(toggleQuery).addEventListener('click', () => {
-    const isDark = document.querySelector(rootQuery).getAttribute(dataAttrName) === "dark"
+    const isDark = document.querySelector(rootQuery).getAttribute(dataAttrName) === 'dark'
 
     // Switching theme
     themeSwitcher(isDark)

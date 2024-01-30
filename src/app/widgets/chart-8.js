@@ -3,14 +3,14 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { getChartThemeOptions, currencyFormatter } from '@/app/utilities/widget-helper'
 
-export function initChart8(chartQuery, series) {
+export function initChart8 (chartQuery, series) {
   const chartInstance = new ApexCharts(chartQuery, {
     ...getChartThemeOptions(), // Add theme option to chart
-    series: series,
+    series,
     chart: {
-      type: "bar",
+      type: 'bar',
       height: 200,
-      background: "transparent",
+      background: 'transparent',
       sparkline: {
         enabled: true
       }
@@ -21,7 +21,7 @@ export function initChart8(chartQuery, series) {
     stroke: {
       show: true,
       width: 2,
-      colors: ["transparent"]
+      colors: ['transparent']
     },
     plotOptions: {
       bar: {
@@ -32,7 +32,7 @@ export function initChart8(chartQuery, series) {
       enabled: false
     },
     xaxis: {
-      categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"]
+      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
     },
     tooltip: {
       y: {

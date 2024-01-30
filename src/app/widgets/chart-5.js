@@ -3,13 +3,13 @@ import '@/build/vendors/apexcharts/scripts/apexcharts'
 
 import { colorScheme, getChartThemeOptions, getThemeVariantIsDark } from '@/app/utilities/widget-helper'
 
-export function initChart5(chartQuery, series) {
+export function initChart5 (chartQuery, series) {
   const chartInstance = new ApexCharts(chartQuery, {
     ...getChartThemeOptions(), // Add theme option to chart
-    series: series,
+    series,
     chart: {
-      type: "area",
-      background: "transparent",
+      type: 'area',
+      background: 'transparent',
       height: 300,
       toolbar: {
         show: false
@@ -20,12 +20,12 @@ export function initChart5(chartQuery, series) {
     },
     fill: {
       opacity: 0,
-      type: "solid",
+      type: 'solid'
     },
     stroke: {
       show: true,
       colors: [colorScheme.blue],
-      lineCap: "round"
+      lineCap: 'round'
     },
     markers: {
       colors: [getThemeVariantIsDark() ? colorScheme.black : colorScheme.white],
@@ -41,7 +41,7 @@ export function initChart5(chartQuery, series) {
       }
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
     }
   })
 

@@ -11,21 +11,21 @@ import '@/build/vendors/datatables/autofill/styles/autofill.scss'
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
-$("#datatables-1").DataTable({
+$('#datatables-1').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   autoFill: true // Enable autofill extension with default configuration
 })
 
-$("#datatables-2").DataTable({
+$('#datatables-2').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   autoFill: {
-    focus: "click" // Reset autofill trigger
+    focus: 'click' // Reset autofill trigger
   }
 })
 
-$("#datatables-3").DataTable({
+$('#datatables-3').DataTable({
   data: DATATABLES_DATA,
   responsive: true,
   autoFill: {
