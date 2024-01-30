@@ -1,8 +1,11 @@
-import 'bootstrap-touchspin'
 import '@/build/vendors/bootstrap-touchspin/styles/bootstrap-touchspin.scss'
 
 import $ from 'jquery'
+import TouchSpin from 'bootstrap-touchspin'
 import { getPageIsRTL } from '@/app/utilities/widget-helper';
+
+// Initilize touchspin
+TouchSpin(this, $)
 
 const isRtl = getPageIsRTL()
 

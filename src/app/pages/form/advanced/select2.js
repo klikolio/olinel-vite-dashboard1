@@ -1,7 +1,12 @@
-import '@/build/vendors/select2/scripts/select2'
 import '@/build/vendors/select2/styles/select2.scss'
 
 import $ from 'jquery'
+import select2 from 'select2'
+import { getPageIsRTL } from '@/app/utilities/widget-helper';
+
+select2(this, $)
+
+const direction = getPageIsRTL ? 'rtl' : 'ltr'
 
 $('#select2-1, #select2-2').select2({
   dir: direction, // Set the direction

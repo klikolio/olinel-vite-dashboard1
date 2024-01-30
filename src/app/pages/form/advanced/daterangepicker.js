@@ -1,10 +1,12 @@
-import 'moment'
-import 'bootstrap-daterangepicker'
 import '@/build/vendors/bootstrap-daterangepicker/styles/bootstrap-daterangepicker.scss'
 
 import $ from 'jquery'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
 import moment from 'moment'
+import { getPageIsRTL } from '@/app/utilities/widget-helper'
+
+window.moment = moment
+
+await import('bootstrap-daterangepicker')
 
 const direction = getPageIsRTL() ? 'left' : 'right'
 

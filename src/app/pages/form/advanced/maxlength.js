@@ -1,5 +1,8 @@
 import $ from 'jquery'
-import 'bootstrap-maxlength'
+
+window.jQuery = $
+
+await import('bootstrap-maxlength')
 
 $('#maxlength-1').maxlength({
   placement: 'bottom',
