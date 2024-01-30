@@ -7,9 +7,7 @@ const stickyConfig = {
 
 // Method to initialize sticky header
 function stickyInit(target) {
-  if ($(target).parent('.sticky-wrapper').length < 1) {
-    $(target).sticky(stickyConfig)
-  }
+  $(target).sticky(stickyConfig)
 }
 
 // Method to destroy sticky header
@@ -26,7 +24,7 @@ export function initStickyHeader() {
   }
 
   // Listen window resize event for responsive
-  $(window).resize(function () {
+  $(window).on('resize', function () {
     const viewport = $(this).width()
 
     // Check viewport breakpoint
