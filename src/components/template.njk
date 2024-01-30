@@ -1,5 +1,5 @@
 {% from "components/variables.njk" import defaults %}
-
+<!-- prettier-ignore-start -->
 {% set body_class = {
   "preload-active": enable_preload | default(defaults.enable_preload),
   "aside-active": enable_preload | default(defaults.enable_aside),
@@ -7,77 +7,80 @@
   "aside-desktop-minimized": enable_aside | default(defaults.enable_aside) and enable_minimized_aside | default(defaults.enable_minimized_aside),
   "aside-desktop-maximized": enable_aside | default(defaults.enable_aside) and not enable_minimized_aside | default(defaults.enable_minimized_aside)
 } | classnames %}
+<!-- prettier-ignore-end -->
 
 {% if enable_container_fluid | default(defaults.enable_container_fluid) %}
-  {% set container_class = "container-fluid g-5" %}
+	{% set container_class = "container-fluid g-5" %}
 {% else %}
-  {% set container_class = "container g-5" %}
+	{% set container_class = "container g-5" %}
 {% endif %}
 
-<!DOCTYPE html>
-<html lang="en" dir="{{ env['PAGE_DIRECTION'] }}" data-theme="{{ defaults.theme }}" id="{{ page_id | default('unknown') }}">
-  <head>
-    {% if enable_analytics | default(defaults.enable_analytics) %}
-      {% include 'components/analytics/analytics-head.njk' %}
-    {% endif %}
+<!doctype html>
+<html
+	lang="en"
+	dir="{{ env['PAGE_DIRECTION'] }}"
+	data-theme="{{ defaults.theme }}"
+	id="{{ page_id | default('unknown') }}"
+>
+	<head>
+		{% if enable_analytics | default(defaults.enable_analytics) %}
+			{% include 'components/analytics/analytics-head.njk' %}
+		{% endif %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap">
-    <link rel="stylesheet" href="/src/build/core/styles/index.scss">
-    <link href="{{ defaults.favicon }}" rel="shortcut icon" type="image/x-icon">
-    <title>{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}</title>
-  </head>
-  <body class="{{ body_class }}">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap"
+		/>
+		<link rel="stylesheet" href="/src/build/core/styles/index.scss" />
+		<link href="{{ defaults.favicon }}" rel="shortcut icon" type="image/x-icon" />
+		<title>{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}</title>
+	</head>
+	<body class="{{ body_class }}">
+		{% if enable_preload | default(defaults.enable_preload) %}
+			{% include defaults.components.preload %}
+		{% endif %}
 
-    {% if enable_preload | default(defaults.enable_preload) %}
-      {% include defaults.components.preload %}
-    {% endif %}
+		<!-- BEGIN Page Holder -->
+		<div class="holder">
+			{% if enable_aside | default(defaults.enable_aside) %}
+				{% include defaults.components.aside %}
+			{% endif %}
 
-    <!-- BEGIN Page Holder -->
-    <div class="holder">
+			<!-- BEGIN Page Wrapper -->
+			<div class="wrapper {{ content_wrapper_class }}">
+				{% if enable_header | default(defaults.enable_header) %}
+					{% include defaults.components.header %}
+				{% endif %}
 
-      {% if enable_aside | default(defaults.enable_aside) %}
-        {% include defaults.components.aside %}
-      {% endif %}
+				<!-- BEGIN Page Content -->
+				<div class="content">
+					<div class="{{ container_class }}">{% block content %}{% endblock %}</div>
+				</div>
+				<!-- END Page Content -->
 
-      <!-- BEGIN Page Wrapper -->
-      <div class="wrapper {{ content_wrapper_class }}">
+				{% if enable_footer | default(defaults.enable_footer) %}
+					{% include defaults.components.footer %}
+				{% endif %}
+			</div>
+			<!-- END Page Wrapper -->
+		</div>
+		<!-- END Page Holder -->
 
-        {% if enable_header | default(defaults.enable_header) %}
-          {% include defaults.components.header %}
-        {% endif %}
+		{% for component in defaults.components.offcanvas %}
+			{% include component %}
+		{% endfor %}
 
-        <!-- BEGIN Page Content -->
-        <div class="content">
-          <div class="{{ container_class }}">
-            {% block content %}{% endblock %}
-          </div>
-        </div>
-        <!-- END Page Content -->
+		{% block offcanvas %}
+		{% endblock %}
 
-        {% if enable_footer | default(defaults.enable_footer) %}
-          {% include defaults.components.footer %}
-        {% endif %}
+		<script type="module" src="/src/app/init.js"></script>
 
-      </div>
-      <!-- END Page Wrapper -->
-
-    </div>
-    <!-- END Page Holder -->
-
-    {% for component in defaults.components.offcanvas %}
-      {% include component %}
-    {% endfor %}
-
-    {% block offcanvas %}{% endblock %}
-
-    <script type="module" src="/src/app/init.js"></script>
-
-    {% if main_script is not null %}
-      <script type="module" src="{{ main_script }}"></script>
-    {% endif %}
-  </body>
+		{% if main_script is not null %}
+			<script type="module" src="{{ main_script }}"></script>
+		{% endif %}
+	</body>
 </html>

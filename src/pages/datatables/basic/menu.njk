@@ -1,49 +1,50 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Datatables Length Menu" %}
 {% set page_id = "datatables.basic.menu" %}
 {% set main_script = "/src/app/pages/datatables/basic/menu.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Datatables" },
   { text: "Basic" },
   { text: "Menu", link: "/datatables/basic/menu.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Datatables length menu</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						It is possible to easily customize the options shown in the length menu (by default at the top left of the
+						table) using the <code>lengthMenu</code> Initialisation option, this parameter can take 1D or 2D array.
+					</p>
+					<hr />
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatables length menu</h3>
-        </div>
-        <div class="portlet-body">
-          <p>It is possible to easily customize the options shown in the length menu (by default at the top left of the table) using the <code>lengthMenu</code> Initialisation option, this parameter can take 1D or 2D array.</p>
-          <hr>
-
-          <!-- BEGIN Datatables -->
-          <table id="datatables-1" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}

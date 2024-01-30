@@ -1,79 +1,68 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "General Widgets" %}
 {% set page_id = "widgets.general" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Widgets" },
   { text: "General", link: "/widgets/general.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
-      {% include "components/widgets/widget-33.njk" %}
-    </div>
-  </div>
-  <div class="row portlet-row-fill-xl">
-    <div class="col-xl-4">
-      {% include "components/widgets/widget-1.njk" %}
-    </div>
-    <div class="col-xl-4">
-      {% include "components/widgets/widget-2.njk" %}
-    </div>
-    <div class="col-xl-4">
-      {% include "components/widgets/widget-3.njk" %}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xl-8">
-      {% include "components/widgets/widget-4.njk" %}
-      {% include "components/widgets/widget-5.njk" %}
+	<div class="row">
+		<div class="col-12">{% include "components/widgets/widget-33.njk" %}</div>
+	</div>
+	<div class="row portlet-row-fill-xl">
+		<div class="col-xl-4">{% include "components/widgets/widget-1.njk" %}</div>
+		<div class="col-xl-4">{% include "components/widgets/widget-2.njk" %}</div>
+		<div class="col-xl-4">{% include "components/widgets/widget-3.njk" %}</div>
+	</div>
+	<div class="row">
+		<div class="col-xl-8">
+			{% include "components/widgets/widget-4.njk" %}
+			{% include "components/widgets/widget-5.njk" %}
 
-      <div class="row portlet-row-fill-md">
-        <div class="col-md-6">
-          {% include "components/widgets/widget-12.njk" %}
-          {% include "components/widgets/widget-13.njk" %}
+			<div class="row portlet-row-fill-md">
+				<div class="col-md-6">
+					{% include "components/widgets/widget-12.njk" %}
+					{% include "components/widgets/widget-13.njk" %}
 
-          <div class="row portlet-row-fill-sm">
-            <div class="col-sm-6">
-              {% include "components/widgets/widget-16.njk" %}
-              {% include "components/widgets/widget-17.njk" %}
-            </div>
-            <div class="col-sm-6">
-              {% include "components/widgets/widget-18.njk" %}
-              {% include "components/widgets/widget-19.njk" %}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          {% include "components/widgets/widget-14.njk" %}
-          {% include "components/widgets/widget-15.njk" %}
+					<div class="row portlet-row-fill-sm">
+						<div class="col-sm-6">
+							{% include "components/widgets/widget-16.njk" %}
+							{% include "components/widgets/widget-17.njk" %}
+						</div>
+						<div class="col-sm-6">
+							{% include "components/widgets/widget-18.njk" %}
+							{% include "components/widgets/widget-19.njk" %}
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					{% include "components/widgets/widget-14.njk" %}
+					{% include "components/widgets/widget-15.njk" %}
 
-          <div class="row portlet-row-fill-sm">
-            <div class="col-sm-6">
-              {% include "components/widgets/widget-20.njk" %}
-            </div>
-            <div class="col-sm-6">
-              {% include "components/widgets/widget-21.njk" %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-4">
-      <div class="row portlet-row-fill-md">
-        <div class="col-md-6 col-xl-12">
-          {% include "components/widgets/widget-6.njk" %}
-          {% include "components/widgets/widget-7.njk" %}
-          {% include "components/widgets/widget-8.njk" %}
-        </div>
-        <div class="col-md-6 col-xl-12">
-          {% include "components/widgets/widget-9.njk" %}
-          {% include "components/widgets/widget-10.njk" %}
-          {% include "components/widgets/widget-11.njk" %}
-        </div>
-      </div>
-    </div>
-  </div>
+					<div class="row portlet-row-fill-sm">
+						<div class="col-sm-6">{% include "components/widgets/widget-20.njk" %}</div>
+						<div class="col-sm-6">{% include "components/widgets/widget-21.njk" %}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-4">
+			<div class="row portlet-row-fill-md">
+				<div class="col-md-6 col-xl-12">
+					{% include "components/widgets/widget-6.njk" %}
+					{% include "components/widgets/widget-7.njk" %}
+					{% include "components/widgets/widget-8.njk" %}
+				</div>
+				<div class="col-md-6 col-xl-12">
+					{% include "components/widgets/widget-9.njk" %}
+					{% include "components/widgets/widget-10.njk" %}
+					{% include "components/widgets/widget-11.njk" %}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

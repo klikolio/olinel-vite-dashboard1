@@ -1,50 +1,57 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Search Panes Extension" %}
 {% set page_id = "datatables.extension.search-panes" %}
 {% set main_script = "/src/app/pages/datatables/extension/search-panes.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Datatables" },
   { text: "Extension" },
   { text: "Search Panes", link: "/datatables/extension/search-panes.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Datatables search panes extension</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						<strong>Search panes</strong> adds panes to the Datatables with the capability to search the Datatables by
+						selecting rows in the panes. This is very useful when it comes to adding a more accessible searching feature
+						and custom search capabilities.
+					</p>
+					<p>
+						If you include the <strong>Search panes</strong> extension on your page, it is automatically available for
+						every Datatables on that page. You can customize the panes appearance and operation by adding a
+						<code>Pfrtip</code> to the <code>dom</code> property. This allows the location of the panes to be defined.
+						Configuration for the <strong>Search panes</strong> goes inside of the <code>searchPanes</code> property.
+					</p>
+					<hr />
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatables search panes extension</h3>
-        </div>
-        <div class="portlet-body">
-          <p><strong>Search panes</strong> adds panes to the Datatables with the capability to search the Datatables by selecting rows in the panes. This is very useful when it comes to adding a more accessible searching feature and custom search capabilities.</p>
-          <p>If you include the <strong>Search panes</strong> extension on your page, it is automatically available for every Datatables on that page. You can customize the panes appearance and operation by adding a <code>Pfrtip</code> to the <code>dom</code> property. This allows the location of the panes to be defined. Configuration for the <strong>Search panes</strong> goes inside of the <code>searchPanes</code> property.</p>
-          <hr>
-
-          <!-- BEGIN Datatables -->
-          <table id="datatables-1" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}

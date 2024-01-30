@@ -1,49 +1,51 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Datatables Column Visibility" %}
 {% set page_id = "datatables.advanced.column-visibility" %}
 {% set main_script = "/src/app/pages/datatables/advanced/column-visibility.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Datatables" },
   { text: "Advanced" },
   { text: "Column Visibility", link: "/datatables/advanced/column-visibility.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Datatables column visibility</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						There are times when you might find it useful to display only a sub-set of the information that was
+						available in the original table. For example you might want to reduce the amount of the data shown on screen
+						to make it clearer for the user. This is done through the <code>columns.visible</code> column option.
+					</p>
+					<hr />
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatables column visibility</h3>
-        </div>
-        <div class="portlet-body">
-          <p>There are times when you might find it useful to display only a sub-set of the information that was available in the original table. For example you might want to reduce the amount of the data shown on screen to make it clearer for the user. This is done through the <code>columns.visible</code> column option.</p>
-          <hr>
-
-          <!-- BEGIN Datatables -->
-          <table id="datatables-1" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}

@@ -1,47 +1,42 @@
 <!-- BEGIN Portlet -->
 <div class="portlet">
-  <div class="portlet-body">
+	<div class="portlet-body">
+		<!-- BEGIN Widget -->
+		<div class="widget10-item p-0">
+			<div class="widget10-content">
+				<h2 class="widget10-title">$82,120</h2>
+				<span class="widget10-subtitle">Total revenue</span>
+			</div>
+			<div class="widget10-addon">
+				<!-- BEGIN Avatar -->
+				<div class="avatar avatar-label-primary avatar-circle widget10-avatar">
+					<div class="avatar-display">
+						<i class="fa fa-money-bill-trend-up"></i>
+					</div>
+				</div>
+				<!-- END Avatar -->
+			</div>
+		</div>
+		<!-- END Widget -->
+	</div>
 
-    <!-- BEGIN Widget -->
-    <div class="widget10-item p-0">
-      <div class="widget10-content">
-        <h2 class="widget10-title">$82,120</h2>
-        <span class="widget10-subtitle">Total revenue</span>
-      </div>
-      <div class="widget10-addon">
-
-        <!-- BEGIN Avatar -->
-        <div class="avatar avatar-label-primary avatar-circle widget10-avatar">
-          <div class="avatar-display">
-            <i class="fa fa-money-bill-trend-up"></i>
-          </div>
-        </div>
-        <!-- END Avatar -->
-
-      </div>
-    </div>
-    <!-- END Widget -->
-
-  </div>
-
-  <!-- BEGIN Chart -->
-  <div id="widget-chart-7a" class="widget11 widget11-bottom"></div>
-  <!-- END Chart -->
-
+	<!-- BEGIN Chart -->
+	<div id="widget-chart-7a" class="widget11 widget11-bottom"></div>
+	<!-- END Chart -->
 </div>
 <!-- END Portlet -->
 
 <!-- BEGIN Script -->
 <script type="module">
-  import { initChart7 } from '@/app/widgets/chart-7'
+	import { initChart7 } from "@/app/widgets/chart-7"
 
-  const chartInstance = initChart7(document.querySelector('#widget-chart-7a'), '#29b6f6', true, [
-    {
-      name: 'Revenue',
-      data: [5400, 3800, 6600, 2800, 9800, 5800]
-    }
-  ])
+	const chartInstance = initChart7(document.querySelector("#widget-chart-7a"), "#29b6f6", true, [
+		{
+			name: "Revenue",
+			data: [5400, 3800, 6600, 2800, 9800, 5800],
+		},
+	])
 
-  chartInstance.render()
+	chartInstance.render()
 </script>
 <!-- END Script -->

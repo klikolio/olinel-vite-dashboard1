@@ -1,84 +1,80 @@
 <!-- BEGIN Portlet -->
 <div class="portlet">
-  <div class="portlet-header portlet-header-bordered">
-    <div class="portlet-icon">
-      <i class="fa fa-question"></i>
-    </div>
-    <h3 class="portlet-title">Support requests</h3>
-  </div>
-  <div class="portlet-body">
-    <div class="row">
-      <div class="col-md-6 col-lg-5">
+	<div class="portlet-header portlet-header-bordered">
+		<div class="portlet-icon">
+			<i class="fa fa-question"></i>
+		</div>
+		<h3 class="portlet-title">Support requests</h3>
+	</div>
+	<div class="portlet-body">
+		<div class="row">
+			<div class="col-md-6 col-lg-5">
+				<!-- BEGIN Chart -->
+				<div class="d-flex justify-content-center" id="widget-chart-4"></div>
+				<!-- END Chart -->
 
-        <!-- BEGIN Chart -->
-        <div class="d-flex justify-content-center" id="widget-chart-4"></div>
-        <!-- END Chart -->
-
-        <!-- BEGIN Flex -->
-        <div class="d-flex justify-content-around mt-4">
-          <span class="text-muted">
-            <i class="marker marker-dot text-primary"></i>
-            40% Progress
-          </span>
-          <span class="text-muted">
-            <i class="marker marker-dot text-info"></i>
-            70% Done
-          </span>
-          <span class="text-muted">
-            <i class="marker marker-dot text-success"></i>
-            10% New
-          </span>
-        </div>
-        <!-- END Flex -->
-
-      </div>
-      <div class="col-md-6 col-lg-7">
-
-        <!-- BEGIN Table -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Type</th>
-              <th class="text-end">Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>EPS</td>
-              <td class="text-end text-primary">+64,20%</td>
-            </tr>
-            <tr>
-              <td>PDO</td>
-              <td class="text-end text-success">16,260</td>
-            </tr>
-            <tr>
-              <td>Status</td>
-              <td class="text-end text-danger">Negative</td>
-            </tr>
-            <tr>
-              <td>Priority</td>
-              <td class="text-end text-info">+460,080</td>
-            </tr>
-            <tr>
-              <td>Revenue stream</td>
-              <td class="text-end text-primary">$202,460</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- END Table -->
-
-      </div>
-    </div>
-  </div>
+				<!-- BEGIN Flex -->
+				<div class="d-flex justify-content-around mt-4">
+					<span class="text-muted">
+						<i class="marker marker-dot text-primary"></i>
+						40% Progress
+					</span>
+					<span class="text-muted">
+						<i class="marker marker-dot text-info"></i>
+						70% Done
+					</span>
+					<span class="text-muted">
+						<i class="marker marker-dot text-success"></i>
+						10% New
+					</span>
+				</div>
+				<!-- END Flex -->
+			</div>
+			<div class="col-md-6 col-lg-7">
+				<!-- BEGIN Table -->
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Type</th>
+							<th class="text-end">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>EPS</td>
+							<td class="text-end text-primary">+64,20%</td>
+						</tr>
+						<tr>
+							<td>PDO</td>
+							<td class="text-end text-success">16,260</td>
+						</tr>
+						<tr>
+							<td>Status</td>
+							<td class="text-end text-danger">Negative</td>
+						</tr>
+						<tr>
+							<td>Priority</td>
+							<td class="text-end text-info">+460,080</td>
+						</tr>
+						<tr>
+							<td>Revenue stream</td>
+							<td class="text-end text-primary">$202,460</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- END Table -->
+			</div>
+		</div>
+	</div>
 </div>
 <!-- END Portlet -->
 
 <!-- BEGIN Script -->
 <script type="module">
-  import { initChart4 } from '@/app/widgets/chart-4'
+	import { initChart4 } from "@/app/widgets/chart-4"
 
-  const chartInstance = initChart4(document.querySelector('#widget-chart-4'), ['Progress', 'Done', 'New'], [40, 50, 10])
+	const chartInstance = initChart4(document.querySelector("#widget-chart-4"), ["Progress", "Done", "New"], [40, 50, 10])
 
-  chartInstance.render()
+	chartInstance.render()
 </script>
 <!-- END Script -->

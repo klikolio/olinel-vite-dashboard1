@@ -1,49 +1,51 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Datatables Multiple Controls" %}
 {% set page_id = "datatables.advanced.multiple-controls" %}
 {% set main_script = "/src/app/pages/datatables/advanced/multiple-controls.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Datatables" },
   { text: "Advanced" },
   { text: "Multiple Controls", link: "/datatables/advanced/multiple-controls.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Datatables multiple controls</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						You can use the <code>dom</code> initialization parameter to move Datatables features around the table to
+						where you want them. In addition to this, you can also use <code>dom</code> to create multiple instances of
+						these table controls.
+					</p>
+					<hr />
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatables multiple controls</h3>
-        </div>
-        <div class="portlet-body">
-          <p>You can use the <code>dom</code> initialization parameter to move Datatables features around the table to where you want them. In addition to this, you can also use <code>dom</code> to create multiple instances of these table controls.</p>
-          <hr>
-
-          <!-- BEGIN Datatables -->
-          <table id="datatables-1" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}

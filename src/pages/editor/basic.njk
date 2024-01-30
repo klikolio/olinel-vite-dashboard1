@@ -1,26 +1,25 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Basic Editor" %}
 {% set page_id = "editor.basic" %}
 {% set main_script = "/src/app/pages/editor/basic.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Editor" },
   { text: "Basic", link: "/editor/basic.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
-
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Basic editor</h3>
-        </div>
-        <div class="portlet-body">
-
-          <!-- BEGIN Editor -->
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Basic editor</h3>
+				</div>
+				<div class="portlet-body">
+					<!-- BEGIN Editor -->
 					<div class="quill" id="quill">
 						<h1 class="ql-align-center">Quill Rich Text Editor</h1>
 						<br />
@@ -55,11 +54,9 @@
 						</p>
 					</div>
 					<!-- END Editor -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}

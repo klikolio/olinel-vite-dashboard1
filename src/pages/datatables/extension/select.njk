@@ -1,120 +1,134 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Select Extension" %}
 {% set page_id = "datatables.extension.select" %}
 {% set main_script = "/src/app/pages/datatables/extension/select.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Datatables" },
   { text: "Extension" },
   { text: "Select", link: "/datatables/extension/select.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Datatables select extension</h3>
+				</div>
+				<div class="portlet-body">
+					<p class="mb-0">
+						<strong>Select</strong> adds item selection capabilities to a Datatables. <em>Items</em> can be rows,
+						columns or cells, which can be selected independently, or together. Item selection can be particularly
+						useful in interactive tables where users can perform some action on the table.
+					</p>
+				</div>
+			</div>
+			<!-- END Portlet -->
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatables select extension</h3>
-        </div>
-        <div class="portlet-body">
-          <p class="mb-0"><strong>Select</strong> adds item selection capabilities to a Datatables. <em>Items</em> can be rows, columns or cells, which can be selected independently, or together. Item selection can be particularly useful in interactive tables where users can perform some action on the table.</p>
-        </div>
-      </div>
-      <!-- END Portlet -->
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Basic initialisation</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						If you include the <strong>Select</strong> extension on your page, it is automatically available for every
+						Datatables on that page through the API. If you would like to make item selection possible for your end
+						users through actions such as click and tap, the <code>select</code> option can be set to boolen
+						<code>true</code>.
+					</p>
+					<hr />
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Basic initialisation</h3>
-        </div>
-        <div class="portlet-body">
-          <p>If you include the <strong>Select</strong> extension on your page, it is automatically available for every Datatables on that page through the API. If you would like to make item selection possible for your end users through actions such as click and tap, the <code>select</code> option can be set to boolen <code>true</code>.</p>
-          <hr>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
 
-          <!-- BEGIN Datatables -->
-          <table id="datatables-1" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Multi selection</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						The <code>select.style</code> option provides the ability to control how items are selected in the table. It
+						is a string that can be used with one of following options: <code>api|single|multi|os</code>. This example
+						shows the <code>multi</code> option.
+					</p>
+					<hr />
 
-        </div>
-      </div>
-      <!-- END Portlet -->
+					<!-- BEGIN Datatables -->
+					<table id="datatables-2" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Multi selection</h3>
-        </div>
-        <div class="portlet-body">
-          <p>The <code>select.style</code> option provides the ability to control how items are selected in the table. It is a string that can be used with one of following options: <code>api|single|multi|os</code>. This example shows the <code>multi</code> option.</p>
-          <hr>
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Cell selection</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						<strong>Select</strong> has the ability to select rows, columns and/or cells in a table. Row selection is
+						the default behavior as it is the most commonly used selection item type, but the items to be selected can
+						be easily changed using the <code>select.items</code> initialisation option, or after initialisation using
+						the <code>select.items()</code> API method.
+					</p>
+					<hr />
 
-          <!-- BEGIN Datatables -->
-          <table id="datatables-2" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Cell selection</h3>
-        </div>
-        <div class="portlet-body">
-          <p><strong>Select</strong> has the ability to select rows, columns and/or cells in a table. Row selection is the default behavior as it is the most commonly used selection item type, but the items to be selected can be easily changed using the <code>select.items</code> initialisation option, or after initialisation using the <code>select.items()</code> API method.</p>
-          <hr>
-
-          <!-- BEGIN Datatables -->
-          <table id="datatables-3" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-3" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}

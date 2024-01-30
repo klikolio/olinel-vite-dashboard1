@@ -1,49 +1,51 @@
 {% extends "components/template.njk" %}
-
 {% set page_title = "Datatables Javascript Source" %}
 {% set page_id = "datatables.source.javascript" %}
 {% set main_script = "/src/app/pages/datatables/source/javascript.js" %}
+<!-- prettier-ignore-start -->
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Datatables" },
   { text: "Source" },
   { text: "Javascript", link: "/datatables/source/javascript.html" }
 ] %}
+<!-- prettier-ignore-end -->
 
 {% block content %}
-  <div class="row">
-    <div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Datatables javascript source</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						At times you will wish to be able to create a table from dynamic information passed directly to Datatables,
+						rather than having it read from the document. This is achieved using the <code>data</code> option in the
+						initialisation object, passing in an array of data to be used.
+					</p>
+					<hr />
 
-      <!-- BEGIN Portlet -->
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Datatables javascript source</h3>
-        </div>
-        <div class="portlet-body">
-          <p>At times you will wish to be able to create a table from dynamic information passed directly to Datatables, rather than having it read from the document. This is achieved using the <code>data</code> option in the initialisation object, passing in an array of data to be used.</p>
-          <hr>
-
-          <!-- BEGIN Datatables -->
-          <table id="datatables-1" class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Card ID</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-            </thead>
-          </table>
-          <!-- END Datatables -->
-
-        </div>
-      </div>
-      <!-- END Portlet -->
-
-    </div>
-  </div>
+					<!-- BEGIN Datatables -->
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Card ID</th>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+					<!-- END Datatables -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
 {% endblock %}
