@@ -15,7 +15,7 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html lang="en" dir="{{ defaults.direction }}" data-theme="{{ defaults.theme }}" id="{{ page_id | default('unknown') }}">
+<html lang="en" dir="{{ env['PAGE_DIRECTION'] }}" data-theme="{{ defaults.theme }}" id="{{ page_id | default('unknown') }}">
   <head>
     {% if enable_analytics | default(defaults.enable_analytics) %}
       {% include 'components/analytics/analytics-head.njk' %}
