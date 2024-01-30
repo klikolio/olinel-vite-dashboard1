@@ -1,11 +1,22 @@
 {
 	"semi": false,
-	"singleQuote": true,
 	"tabWidth": 2,
 	"useTabs": true,
 	"printWidth": 120,
 	"plugins": ["prettier-plugin-jinja-template"],
 	"overrides": [
+		{
+			"files": ["*.js", "*.cjs", "*.mjs"],
+			"options": {
+				"singleQuote": true
+			}
+		},
+		{
+			"files": ["*.scss", "*.sass"],
+			"options": {
+				"singleQuote": false
+			}
+		},
 		{
 			"files": ["*.njk"],
 			"options": {
