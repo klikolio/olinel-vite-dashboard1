@@ -1,9 +1,9 @@
 @mixin toastr-variant($bg, $color: color-contrast($bg)) {
-  background-color: $bg;
-  color: $color;
+	background-color: $bg;
+	color: $color;
 
-  a,
-  label {
-    color: $color;
-  }
+	a,
+	label {
+		color: $color;
+	}
 }

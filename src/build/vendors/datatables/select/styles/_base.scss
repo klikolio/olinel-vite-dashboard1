@@ -1,20 +1,22 @@
 .dataTable {
-  tbody {
-    // Selected state class
-    .selected {
-      &, td, th {
-        color: $datatable-selected-color !important;
-        background-color: $datatable-selected-bg !important;
-        box-shadow: none !important;
-      }
-    }
-  }
+	tbody {
+		// Selected state class
+		.selected {
+			&,
+			td,
+			th {
+				color: $datatable-selected-color !important;
+				background-color: $datatable-selected-bg !important;
+				box-shadow: none !important;
+			}
+		}
+	}
 }
 
 // Selected row information
 .dataTables_wrapper {
-  .select-info,
-  .select-item {
-    margin-left: $datatable-info-spacer;
-  }
+	.select-info,
+	.select-item {
+		margin-left: $datatable-info-spacer;
+	}
 }

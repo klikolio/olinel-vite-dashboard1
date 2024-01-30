@@ -29,7 +29,9 @@
 	white-space: nowrap;
 
 	// Fit wrapper to empty space
-	&.header-wrap-block { flex: 1; }
+	&.header-wrap-block {
+		flex: 1;
+	}
 }
 
 .header-title {
@@ -63,7 +65,7 @@
 
 	&.is-sticky {
 		z-index: inherit;
-	
+
 		.sticky-header {
 			right: 0;
 			left: 0;
@@ -75,9 +77,13 @@
 
 // Breakpoints for hiding .header-holder element
 @include media-breakpoint-down($layout-breakpoint-mobile-desktop) {
-	.header-holder-desktop { display: none; }
+	.header-holder-desktop {
+		display: none;
+	}
 }
 
 @include media-breakpoint-up($layout-breakpoint-mobile-desktop) {
-	.header-holder-mobile { display: none; }
+	.header-holder-mobile {
+		display: none;
+	}
 }

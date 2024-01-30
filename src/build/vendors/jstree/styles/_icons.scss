@@ -30,7 +30,7 @@
 }
 
 .jstree-themeicon-custom:after {
-	content: '';
+	content: "";
 }
 // Tool icons
 .jstree-open > .jstree-ocl:after {
@@ -50,7 +50,7 @@
 	}
 	// Spinner
 	&:after {
-		content: '';
+		content: "";
 		display: inline-block;
 		width: $jstree-icon-size;
 		height: $jstree-icon-size;

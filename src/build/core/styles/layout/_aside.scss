@@ -19,7 +19,7 @@
 			[data-theme="light"] & {
 				background: $aside-menu-link-hover-bg-light;
 			}
-			
+
 			[data-theme="dark"] & {
 				background: $aside-menu-link-hover-bg-dark;
 			}
@@ -30,7 +30,7 @@
 		[data-theme="light"] & {
 			background: $aside-menu-submenu-bg-light;
 		}
-		
+
 		[data-theme="dark"] & {
 			background: $aside-menu-submenu-bg-dark;
 		}
@@ -77,25 +77,34 @@
 
 // Styling for desktop viewport
 @include media-breakpoint-up($layout-breakpoint-mobile-desktop) {
-
 	// Changing icon at toggle button
-	body.aside-desktop-maximized .aside-icon-maximize { display: none !important; }
-	body.aside-desktop-minimized .aside-icon-minimize { display: none !important; }
+	body.aside-desktop-maximized .aside-icon-maximize {
+		display: none !important;
+	}
+	body.aside-desktop-minimized .aside-icon-minimize {
+		display: none !important;
+	}
 
 	body.aside-active {
-
 		// Adding space to wrapper and header for aside element
 		&.aside-desktop-maximized {
-			.wrapper { padding-left: $aside-width; }
-			.sticky-header { left: $aside-width; }
+			.wrapper {
+				padding-left: $aside-width;
+			}
+			.sticky-header {
+				left: $aside-width;
+			}
 		}
 
 		// Pushing wrapper and header to fit body when aside minimized
 		&.aside-desktop-minimized {
-			.wrapper { padding-left: $aside-collapse-width; }
-			.sticky-header { left: $aside-collapse-width; }
+			.wrapper {
+				padding-left: $aside-collapse-width;
+			}
+			.sticky-header {
+				left: $aside-collapse-width;
+			}
 		}
-
 	}
 
 	body.aside-desktop-minimized {
@@ -120,7 +129,9 @@
 		}
 
 		// Showing section icon to subtitute section text
-		.aside .menu .menu-section-icon { display: block; }
+		.aside .menu .menu-section-icon {
+			display: block;
+		}
 
 		// Aside hover effects
 		.aside-hover {
@@ -135,11 +146,15 @@
 					display: block;
 				}
 
-				.menu-section-icon { display: none; }
+				.menu-section-icon {
+					display: none;
+				}
 			}
 
 			&:not(:hover) {
-				.menu-section { padding-left: 0 }
+				.menu-section {
+					padding-left: 0;
+				}
 
 				.aside-header {
 					padding-right: 0;
@@ -147,7 +162,7 @@
 				}
 
 				.menu-item-link.active {
-					@include border-radius($menu-link-border-radius);	
+					@include border-radius($menu-link-border-radius);
 				}
 			}
 		}
@@ -161,10 +176,14 @@
 	}
 
 	// Changing icon at toggle button
-	.aside-icon-maximize { display: none !important; }
+	.aside-icon-maximize {
+		display: none !important;
+	}
 
 	// Hiding main scrollbar when aside opened
-	body.aside-mobile-maximized { overflow: hidden; }
+	body.aside-mobile-maximized {
+		overflow: hidden;
+	}
 
 	// Pushing aside element to canvas
 	body.aside-mobile-minimized,

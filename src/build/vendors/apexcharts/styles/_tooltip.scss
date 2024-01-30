@@ -1,52 +1,52 @@
 .apexcharts-tooltip {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 12;
-  cursor: default;
-  @include font-size($apexchart-tooltip-font-size); //
-  color: $apexchart-tooltip-color;
-  background: $apexchart-tooltip-bg;
-  border: $apexchart-tooltip-border-width $border-style $apexchart-tooltip-border-color;
-  /* rtl:begin:ignore */
-  left: $apexchart-tooltip-offset;
-  top: $apexchart-tooltip-offset;
-  /* rtl:end:ignore */
-  @include transition($apexchart-tooltip-transition);
-  @include border-radius($apexchart-tooltip-border-radius);
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 12;
+	cursor: default;
+	@include font-size($apexchart-tooltip-font-size); //
+	color: $apexchart-tooltip-color;
+	background: $apexchart-tooltip-bg;
+	border: $apexchart-tooltip-border-width $border-style $apexchart-tooltip-border-color;
+	/* rtl:begin:ignore */
+	left: $apexchart-tooltip-offset;
+	top: $apexchart-tooltip-offset;
+	/* rtl:end:ignore */
+	@include transition($apexchart-tooltip-transition);
+	@include border-radius($apexchart-tooltip-border-radius);
 
-  // Active class to show tooltip
-  &.apexcharts-active {
-    opacity: 1;
-    @include transition($apexchart-tooltip-transition);
-  }
+	// Active class to show tooltip
+	&.apexcharts-active {
+		opacity: 1;
+		@include transition($apexchart-tooltip-transition);
+	}
 
-  * {
-    font-family: inherit;
-  }
+	* {
+		font-family: inherit;
+	}
 }
 
 // Tooltip title
 .apexcharts-tooltip-title {
-  color: $apexchart-tooltip-header-color;
-  background: $apexchart-tooltip-header-bg;
-  @include font-size($apexchart-tooltip-header-font-size);
-  font-weight: $apexchart-tooltip-header-font-weight;
-  padding: $apexchart-tooltip-header-padding-y $apexchart-tooltip-header-padding-x;
-  margin-bottom: $apexchart-tooltip-value-spacer;
+	color: $apexchart-tooltip-header-color;
+	background: $apexchart-tooltip-header-bg;
+	@include font-size($apexchart-tooltip-header-font-size);
+	font-weight: $apexchart-tooltip-header-font-weight;
+	padding: $apexchart-tooltip-header-padding-y $apexchart-tooltip-header-padding-x;
+	margin-bottom: $apexchart-tooltip-value-spacer;
 }
 
 .apexcharts-tooltip-text-goals-value,
 .apexcharts-tooltip-text-y-value,
 .apexcharts-tooltip-text-z-value {
-  display: inline-block;
-  @include font-size($apexchart-tooltip-value-font-size);
-  font-weight: $apexchart-tooltip-value-font-weight;
-  margin-left: $apexchart-tooltip-value-spacer;
+	display: inline-block;
+	@include font-size($apexchart-tooltip-value-font-size);
+	font-weight: $apexchart-tooltip-value-font-weight;
+	margin-left: $apexchart-tooltip-value-spacer;
 }
 
 // Hide value element when empty
@@ -56,114 +56,114 @@
 .apexcharts-tooltip-text-y-value:empty,
 .apexcharts-tooltip-text-z-value:empty,
 .apexcharts-tooltip-title:empty {
-  display: none
+	display: none;
 }
 
-.apexcharts-tooltip-text-goals-label, 
+.apexcharts-tooltip-text-goals-label,
 .apexcharts-tooltip-text-goals-value {
-  padding: $apexchart-tooltip-padding-y 0 $apexchart-tooltip-padding-y;
+	padding: $apexchart-tooltip-padding-y 0 $apexchart-tooltip-padding-y;
 
-  &:not(:empty) {
-    margin-top: -$apexchart-tooltip-padding-y;
-  }
+	&:not(:empty) {
+		margin-top: -$apexchart-tooltip-padding-y;
+	}
 }
 
 .apexcharts-tooltip-goals-group,
 .apexcharts-tooltip-text-goals-label,
 .apexcharts-tooltip-text-goals-value {
-  display: flex
+	display: flex;
 }
 
 // Dot marker beside tooltip data
 .apexcharts-tooltip-marker {
-  position: relative;
-  top: 0px;
-  width: $apexchart-tooltip-marker-dimension;
-  height: $apexchart-tooltip-marker-dimension;
-  margin-right: $apexchart-tooltip-marker-spacer;
-  border-radius: 50%;
+	position: relative;
+	top: 0px;
+	width: $apexchart-tooltip-marker-dimension;
+	height: $apexchart-tooltip-marker-dimension;
+	margin-right: $apexchart-tooltip-marker-spacer;
+	border-radius: 50%;
 }
 
 // Tooltip data group
 .apexcharts-tooltip-series-group {
-  display: none;
-  justify-content: left;
-  text-align: left;
-  align-items: center;
-  padding: 0 $apexchart-tooltip-group-padding-x;
-  
-  // Show marker when group activated
-  &.apexcharts-active .apexcharts-tooltip-marker {
-    opacity: 1;
-  }
+	display: none;
+	justify-content: left;
+	text-align: left;
+	align-items: center;
+	padding: 0 $apexchart-tooltip-group-padding-x;
+
+	// Show marker when group activated
+	&.apexcharts-active .apexcharts-tooltip-marker {
+		opacity: 1;
+	}
 }
 
 .apexcharts-tooltip-series-group.apexcharts-active,
 .apexcharts-tooltip-series-group:last-child {
-  padding-bottom: $apexchart-toolbar-padding-y;
+	padding-bottom: $apexchart-toolbar-padding-y;
 }
 
 // Class to hide group
 .apexcharts-tooltip-series-group-hidden {
-  opacity: 0;
-  height: 0;
-  line-height: 0;
-  padding: 0 !important;
+	opacity: 0;
+	height: 0;
+	line-height: 0;
+	padding: 0 !important;
 }
 
 // Y axis group
 .apexcharts-tooltip-y-group {
-  padding: $apexchart-tooltip-group-padding-y 0;
+	padding: $apexchart-tooltip-group-padding-y 0;
 }
 
 .apexcharts-custom-tooltip,
 .apexcharts-tooltip-box {
-  padding: $apexchart-toolbar-padding-y $apexchart-toolbar-padding-x;
+	padding: $apexchart-toolbar-padding-y $apexchart-toolbar-padding-x;
 }
 
 .apexcharts-tooltip-boxPlot {
-  display: flex;
-  flex-direction: column-reverse;
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 .apexcharts-tooltip-box {
-  > div {
-    margin: $apexchart-tooltip-value-spacer 0;
-  }
+	> div {
+		margin: $apexchart-tooltip-value-spacer 0;
+	}
 
-  span.value {
-    font-weight: $apexchart-tooltip-header-font-weight;
-  }
+	span.value {
+		font-weight: $apexchart-tooltip-header-font-weight;
+	}
 }
 
 // Spesific tooltip version for range chart
 .apexcharts-tooltip-rangebar {
-  padding: $apexchart-tooltip-group-padding-y $apexchart-tooltip-group-padding-x;
+	padding: $apexchart-tooltip-group-padding-y $apexchart-tooltip-group-padding-x;
 
-  .category {
-    color: $apexchart-tooltip-category-color;
-    font-weight: $apexchart-tooltip-value-font-weight;
-  }
+	.category {
+		color: $apexchart-tooltip-category-color;
+		font-weight: $apexchart-tooltip-value-font-weight;
+	}
 
-  .series-name {
-    display: block;
-    font-weight: $apexchart-tooltip-value-font-weight;
-    margin-right: $apexchart-tooltip-value-spacer;
-  }
+	.series-name {
+		display: block;
+		font-weight: $apexchart-tooltip-value-font-weight;
+		margin-right: $apexchart-tooltip-value-spacer;
+	}
 }
 
 .apexcharts-xaxistooltip,
 .apexcharts-yaxistooltip {
-  position: absolute;
-  @include font-size($apexchart-tooltip-font-size);
-  padding: $apexchart-tooltip-padding-y $apexchart-tooltip-padding-x;
-  color: $apexchart-tooltip-color;
-  background: $apexchart-tooltip-bg;
-  border: $apexchart-tooltip-border-width $border-style $apexchart-tooltip-border-color;
-  text-align: center;
-  opacity: 0;
-  z-index: 10;
-  pointer-events: none;
-  @include border-radius($apexchart-tooltip-border-radius);
-  @include transition($apexchart-tooltip-transition);
+	position: absolute;
+	@include font-size($apexchart-tooltip-font-size);
+	padding: $apexchart-tooltip-padding-y $apexchart-tooltip-padding-x;
+	color: $apexchart-tooltip-color;
+	background: $apexchart-tooltip-bg;
+	border: $apexchart-tooltip-border-width $border-style $apexchart-tooltip-border-color;
+	text-align: center;
+	opacity: 0;
+	z-index: 10;
+	pointer-events: none;
+	@include border-radius($apexchart-tooltip-border-radius);
+	@include transition($apexchart-tooltip-transition);
 }

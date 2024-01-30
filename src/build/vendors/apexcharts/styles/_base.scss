@@ -1,74 +1,81 @@
 // Main canvas container
 
 @keyframes opaque {
-  0% { opacity: 0 }
-  to { opacity: 1 }
+	0% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes resizeanim {
-  0%, to { opacity: 0 }
+	0%,
+	to {
+		opacity: 0;
+	}
 }
 
 .apexcharts-canvas {
-  position: relative;
-  user-select: none;
+	position: relative;
+	user-select: none;
 
-  /* scrollbar is not visible by default for legend, hence forcing the visibility */
-  ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: $apexchart-scrollbar-width;
-  }
+	/* scrollbar is not visible by default for legend, hence forcing the visibility */
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: $apexchart-scrollbar-width;
+	}
 
-  ::-webkit-scrollbar-thumb {
-    background: $apexchart-scrollbar-color;
-    opacity: $apexchart-scrollbar-opacity;
-    @include border-radius($apexchart-scrollbar-border-radius);
-  }
+	::-webkit-scrollbar-thumb {
+		background: $apexchart-scrollbar-color;
+		opacity: $apexchart-scrollbar-opacity;
+		@include border-radius($apexchart-scrollbar-border-radius);
+	}
 }
 
 .apexcharts-inner {
-  position: relative
+	position: relative;
 }
 
 .apexcharts-text tspan {
-  font-family: inherit
+	font-family: inherit;
 }
 
 .legend-mouseover-inactive {
-  opacity: .2;
+	opacity: 0.2;
 }
 
 .apexcharts-series-collapsed {
-  opacity: 0;
+	opacity: 0;
 }
 
 .svg_select_points {
-  fill: $apexchart-select-point-color;
-  stroke: $apexchart-select-point-color;
-  rx: 2;
+	fill: $apexchart-select-point-color;
+	stroke: $apexchart-select-point-color;
+	rx: 2;
 }
 
 .svg_select_boundingRect,
 .svg_select_points_rot {
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .apexcharts-selection-rect {
-  cursor: move;
+	cursor: move;
 
-  + g .svg_select_boundingRect,
-  + g .svg_select_points_rot {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  + g .svg_select_points_l,
-  + g .svg_select_points_r {
-    cursor: ew-resize;
-    opacity: 1;
-    visibility: visible;
-    fill: $apexchart-select-point-color;
-  }
+	+ g .svg_select_boundingRect,
+	+ g .svg_select_points_rot {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	+ g .svg_select_points_l,
+	+ g .svg_select_points_r {
+		cursor: ew-resize;
+		opacity: 1;
+		visibility: visible;
+		fill: $apexchart-select-point-color;
+	}
 }

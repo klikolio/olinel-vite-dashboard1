@@ -24,12 +24,20 @@
 
 body {
 	&.fullscreen-active {
-		.fullscreen-icon-expand { display: none; }
-		.fullscreen-icon-compress { display: block; }
+		.fullscreen-icon-expand {
+			display: none;
+		}
+		.fullscreen-icon-compress {
+			display: block;
+		}
 	}
 
 	&:not(.fullscreen-active) {
-		.fullscreen-icon-expand { display: block; }
-		.fullscreen-icon-compress { display: none; }
+		.fullscreen-icon-expand {
+			display: block;
+		}
+		.fullscreen-icon-compress {
+			display: none;
+		}
 	}
 }

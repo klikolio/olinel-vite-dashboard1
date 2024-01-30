@@ -1,11 +1,10 @@
 {
-	"extends": "plugin:prettier/recommended",
+	"extends": ["standard", "plugin:prettier/recommended"],
 	"env": {
 		"browser": true,
 		"es2021": true
 	},
 	"ignorePatterns": [
-		"node_modules",
 		"dist",
 		"src/build/vendors/**/scripts/*.js",
 		"postcss.config.js",
@@ -16,6 +15,7 @@
 		"sourceType": "module"
 	},
 	"rules": {
+		"prettier/prettier": "warn",
 		"no-undef": "off",
 		"no-new": "off"
 	}
