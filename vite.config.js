@@ -28,14 +28,9 @@ export default defineConfig({
         }
       },
       filters: {
-        array_concat: (arr1, arr2) => (typeof arr1 === 'object' && typeof arr2 === 'object' ? [...arr1, ...arr2] : arr1),
         classnames: (classNamesObj) => {
           return Object.keys(classNamesObj).map((className) => {
-            if (classNamesObj[className]) {
-              return className
-            } else {
-              return null
-            }
+            return classNamesObj[className] ? className : null
           }).filter((className) => className !== null).join(' ')
         },
       }
