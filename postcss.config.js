@@ -1,10 +1,12 @@
 import 'dotenv/config'
-import postcssRTLCSS from 'postcss-rtlcss'
+import rtlcss from 'postcss-rtlcss'
+import lightningcss from 'postcss-lightningcss'
 
 export default {
 	plugins: [
+		lightningcss(),
 		process.env['PAGE_DIRECTION'] === 'rtl'
-			? postcssRTLCSS({ mode: 'override' })
+			? rtlcss({ mode: 'override' })
 			: undefined,
 	],
 }

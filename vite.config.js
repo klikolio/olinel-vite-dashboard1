@@ -25,7 +25,10 @@ const nunjucksFilters = {
 export default defineConfig({
 	publicDir: 'public',
 	server: {
-		port: 4040
+		port: 4040,
+	},
+	preview: {
+		port: 3030,
 	},
 	resolve: {
 		alias: {

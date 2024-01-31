@@ -33,7 +33,6 @@ export function initStickyHeader(headerDesktopSelector, headerMobileSelector) {
 	// Window resize Listener for responsiveness
 	window.addEventListener('resize', () => {
 		const viewport = getBrowserWidth()
-		console.log(viewport)
 
 		// Toggle desktop and mobile header
 		if (viewport >= breakpoint) {
