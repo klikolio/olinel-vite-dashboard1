@@ -21,9 +21,11 @@
 	position: relative;
 	color: var(--#{$variable-prefix}alert-color);
 	background-color: var(--#{$variable-prefix}alert-bg);
-	padding: var(--#{$variable-prefix}alert-padding-y) var(--#{$variable-prefix}alert-padding-x);
+	padding: var(--#{$variable-prefix}alert-padding-y)
+		var(--#{$variable-prefix}alert-padding-x);
 	margin-bottom: var(--#{$variable-prefix}alert-margin-bottom);
-	border: var(--#{$variable-prefix}alert-border-width) $border-style var(--#{$variable-prefix}alert-border-color);
+	border: var(--#{$variable-prefix}alert-border-width) $border-style
+		var(--#{$variable-prefix}alert-border-color);
 	@include border-radius(var(--#{$variable-prefix}alert-border-radius));
 
 	hr {

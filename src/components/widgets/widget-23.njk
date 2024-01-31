@@ -8,7 +8,10 @@
 		<div class="portlet-addon">
 			<!-- BEGIN Dropdown -->
 			<div class="dropdown">
-				<button class="btn btn-label-primary btn-wider rounded-pill dropdown-toggle" data-bs-toggle="dropdown">
+				<button
+					class="btn btn-label-primary btn-wider rounded-pill dropdown-toggle"
+					data-bs-toggle="dropdown"
+				>
 					Export
 				</button>
 				<div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
@@ -86,20 +89,5 @@
 <!-- END Portlet -->
 
 <!-- BEGIN Script -->
-<script type="module">
-	import { initChart2 } from "@/app/widgets/chart-2"
-
-	const chartInstance = initChart2(document.querySelector("#widget-chart-2"), [
-		{
-			name: "Revenue",
-			data: [4200, 9000, 5200, 13600, 6800, 10900, 8000],
-		},
-		{
-			name: "Profit",
-			data: [2800, 9200, 2800, 6000, 2000, 14600, 6000],
-		},
-	])
-
-	chartInstance.render()
-</script>
+<script type="module" src="/src/app/components/widgets/widget-23.js"></script>
 <!-- END Script -->

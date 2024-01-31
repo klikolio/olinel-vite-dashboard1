@@ -13,16 +13,20 @@ const navIcons = {
 
 $('#slick-1').slick({
 	rtl: isRtl, // Set direction
-	prevArrow: '<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
-	nextArrow: '<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
+	prevArrow:
+		'<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
+	nextArrow:
+		'<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
 })
 
 $('#slick-2').slick({
 	rtl: isRtl, // Set direction
 	slidesToShow: 3,
 	slidesToScroll: 2,
-	prevArrow: '<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
-	nextArrow: '<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
+	prevArrow:
+		'<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
+	nextArrow:
+		'<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
 })
 
 $('#slick-3').slick({
@@ -59,15 +63,19 @@ $('#slick-5').slick({
 	autoplay: true,
 	autoplaySpeed: 1000,
 	slidesToShow: 2,
-	prevArrow: '<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
-	nextArrow: '<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
+	prevArrow:
+		'<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
+	nextArrow:
+		'<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
 })
 
 $('#slick-6').slick({
 	rtl: isRtl, // Set direction
 	dots: true,
-	prevArrow: '<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
-	nextArrow: '<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
+	prevArrow:
+		'<button class="btn btn-flat-primary slick-prev" type="button">Previous</button>',
+	nextArrow:
+		'<button class="btn btn-flat-primary slick-next" type="button">Next</button>',
 })
 
 $('#slick-7-main').slick({

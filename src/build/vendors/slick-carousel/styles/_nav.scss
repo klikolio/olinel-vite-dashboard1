@@ -52,7 +52,9 @@
 }
 
 .slick-prev-3 {
-	right: calc(#{$slick-nav3-dimension} + #{$slick-nav-offset + $slick-nav3-spacer + $carousel-gutter});
+	right: calc(
+		#{$slick-nav3-dimension} + #{$slick-nav-offset + $slick-nav3-spacer + $carousel-gutter}
+	);
 }
 
 .slick-next-3 {

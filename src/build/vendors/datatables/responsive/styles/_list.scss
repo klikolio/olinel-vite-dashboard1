@@ -1,6 +1,7 @@
 // List of data that was collapsed
 .dataTable > tbody > .child {
-	padding: $datatable-responsive-list-padding-y $datatable-responsive-list-padding-x;
+	padding: $datatable-responsive-list-padding-y
+		$datatable-responsive-list-padding-x;
 
 	&:hover {
 		background: transparent !important;
@@ -14,7 +15,8 @@
 		padding: 0;
 
 		> li {
-			border-bottom: $datatable-responsive-list-border-width $border-style $datatable-responsive-list-border-color;
+			border-bottom: $datatable-responsive-list-border-width $border-style
+				$datatable-responsive-list-border-color;
 
 			&:not(:first-child) {
 				padding-top: $datatable-responsive-list-spacer;

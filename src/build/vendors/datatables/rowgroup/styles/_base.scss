@@ -29,7 +29,8 @@
 		// Calculate spacer on child group
 		@for $i from 1 through 5 {
 			&.dtrg-level-#{$i} th {
-				padding-left: $datatable-group-spacer + ($datatable-group-spacer-scale * $i);
+				padding-left: $datatable-group-spacer +
+					($datatable-group-spacer-scale * $i);
 			}
 		}
 	}

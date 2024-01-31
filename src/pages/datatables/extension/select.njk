@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/select.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/extension/select.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,9 +27,11 @@
 				</div>
 				<div class="portlet-body">
 					<p class="mb-0">
-						<strong>Select</strong> adds item selection capabilities to a Datatables. <em>Items</em> can be rows,
-						columns or cells, which can be selected independently, or together. Item selection can be particularly
-						useful in interactive tables where users can perform some action on the table.
+						<strong>Select</strong> adds item selection capabilities to a
+						Datatables. <em>Items</em> can be rows, columns or cells, which can
+						be selected independently, or together. Item selection can be
+						particularly useful in interactive tables where users can perform
+						some action on the table.
 					</p>
 				</div>
 			</div>
@@ -39,15 +44,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						If you include the <strong>Select</strong> extension on your page, it is automatically available for every
-						Datatables on that page through the API. If you would like to make item selection possible for your end
-						users through actions such as click and tap, the <code>select</code> option can be set to boolen
-						<code>true</code>.
+						If you include the <strong>Select</strong> extension on your page,
+						it is automatically available for every Datatables on that page
+						through the API. If you would like to make item selection possible
+						for your end users through actions such as click and tap, the
+						<code>select</code> option can be set to boolen <code>true</code>.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -73,14 +82,18 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						The <code>select.style</code> option provides the ability to control how items are selected in the table. It
-						is a string that can be used with one of following options: <code>api|single|multi|os</code>. This example
-						shows the <code>multi</code> option.
+						The <code>select.style</code> option provides the ability to control
+						how items are selected in the table. It is a string that can be used
+						with one of following options: <code>api|single|multi|os</code>.
+						This example shows the <code>multi</code> option.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-2" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-2"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -106,15 +119,20 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						<strong>Select</strong> has the ability to select rows, columns and/or cells in a table. Row selection is
-						the default behavior as it is the most commonly used selection item type, but the items to be selected can
-						be easily changed using the <code>select.items</code> initialisation option, or after initialisation using
-						the <code>select.items()</code> API method.
+						<strong>Select</strong> has the ability to select rows, columns
+						and/or cells in a table. Row selection is the default behavior as it
+						is the most commonly used selection item type, but the items to be
+						selected can be easily changed using the
+						<code>select.items</code> initialisation option, or after
+						initialisation using the <code>select.items()</code> API method.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-3" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-3"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

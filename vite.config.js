@@ -8,10 +8,6 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 export default defineConfig({
 	publicDir: 'public',
-	build: {
-		minify: 'terser',
-		cssMinify: 'lightningcss',
-	},
 	resolve: {
 		alias: {
 			'@': '/src',

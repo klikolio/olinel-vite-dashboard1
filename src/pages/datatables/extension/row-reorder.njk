@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/row-reorder.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/extension/row-reorder.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,9 +27,10 @@
 				</div>
 				<div class="portlet-body">
 					<p class="mb-0">
-						Datatables is often used to show sequential data, and naturally from that comes the desire to be able to
-						reorder that data. It provides the end user with the ability to click and drag (or touch and drag on mobile
-						devices) a row in the table and change its position.
+						Datatables is often used to show sequential data, and naturally from
+						that comes the desire to be able to reorder that data. It provides
+						the end user with the ability to click and drag (or touch and drag
+						on mobile devices) a row in the table and change its position.
 					</p>
 				</div>
 			</div>
@@ -39,8 +43,9 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						<strong>Row reorder</strong> can be initialised on a Datatables by using the <code>rowReorder</code> option
-						in the Datatables options object.
+						<strong>Row reorder</strong> can be initialised on a Datatables by
+						using the <code>rowReorder</code> option in the Datatables options
+						object.
 					</p>
 					<hr />
 
@@ -71,15 +76,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						This example shows the same information as the basic example, but in this case restricts the column sorting
-						that can be applied to the table to just the sequence number column. Generally this will be the
-						configuration that <strong>Row reorder</strong> will be used in, as ordering by other columns can make the
-						reordering potentially quite confusing for the end user.
+						This example shows the same information as the basic example, but in
+						this case restricts the column sorting that can be applied to the
+						table to just the sequence number column. Generally this will be the
+						configuration that <strong>Row reorder</strong> will be used in, as
+						ordering by other columns can make the reordering potentially quite
+						confusing for the end user.
 					</p>
 					<p>
-						The restriction to the first column only for ordering is applied through the <code>columnDefs</code> option
-						and <code>columns.orderable</code>. The <code>columnDefs</code> are applied in descending priority order, so
-						the first entry overrides the second for the first column.
+						The restriction to the first column only for ordering is applied
+						through the <code>columnDefs</code> option and
+						<code>columns.orderable</code>. The <code>columnDefs</code> are
+						applied in descending priority order, so the first entry overrides
+						the second for the first column.
 					</p>
 					<hr />
 

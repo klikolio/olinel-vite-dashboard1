@@ -21,7 +21,8 @@
 
 	position: relative;
 	display: inline-block;
-	padding: var(--#{$variable-prefix}btn-padding-y) var(--#{$variable-prefix}btn-padding-x);
+	padding: var(--#{$variable-prefix}btn-padding-y)
+		var(--#{$variable-prefix}btn-padding-x);
 	font-family: var(--#{$variable-prefix}btn-font-family);
 	@include font-size(var(--#{$variable-prefix}btn-font-size));
 	font-weight: var(--#{$variable-prefix}btn-font-weight);
@@ -34,7 +35,8 @@
 	vertical-align: middle;
 	cursor: if($enable-button-pointers, pointer, null);
 	user-select: none;
-	border: var(--#{$variable-prefix}btn-border-width) solid var(--#{$variable-prefix}btn-border-color);
+	border: var(--#{$variable-prefix}btn-border-width) solid
+		var(--#{$variable-prefix}btn-border-color);
 	@include border-radius(var(--#{$variable-prefix}btn-border-radius));
 	@include transition($btn-transition);
 
@@ -191,11 +193,21 @@
 //
 
 .btn-lg {
-	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+	@include button-size(
+		$btn-padding-y-lg,
+		$btn-padding-x-lg,
+		$btn-font-size-lg,
+		$btn-border-radius-lg
+	);
 }
 
 .btn-sm {
-	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+	@include button-size(
+		$btn-padding-y-sm,
+		$btn-padding-x-sm,
+		$btn-font-size-sm,
+		$btn-border-radius-sm
+	);
 }
 
 // Button wide sizes

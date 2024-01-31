@@ -9,10 +9,18 @@ import 'bootstrap/js/dist/tab'
 import Tooltip from 'bootstrap/js/dist/tooltip'
 import Popover from 'bootstrap/js/dist/popover'
 
-document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltipElement) => {
-	new Tooltip(tooltipElement)
-})
+function initTooltipPopover() {
+	document
+		.querySelectorAll('[data-bs-toggle="tooltip"]')
+		.forEach((tooltipElement) => {
+			new Tooltip(tooltipElement)
+		})
 
-document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popoverElement) => {
-	new Popover(popoverElement)
-})
+	document
+		.querySelectorAll('[data-bs-toggle="popover"]')
+		.forEach((popoverElement) => {
+			new Popover(popoverElement)
+		})
+}
+
+initTooltipPopover()

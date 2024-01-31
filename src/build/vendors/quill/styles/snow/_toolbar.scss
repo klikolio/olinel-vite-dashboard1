@@ -4,7 +4,8 @@
 	align-items: center;
 	flex-wrap: wrap;
 	padding: $quill-snow-toolbar-padding-y $quill-snow-toolbar-padding-x;
-	border: $quill-snow-toolbar-border-width solid $quill-snow-toolbar-border-color;
+	border: $quill-snow-toolbar-border-width solid
+		$quill-snow-toolbar-border-color;
 	@include border-top-radius($quill-snow-toolbar-border-radius);
 
 	// Button styles
@@ -144,8 +145,8 @@
 	.ql-color-picker {
 		.ql-picker-options {
 			padding: $quill-dropdown-padding-y $quill-dropdown-padding-x;
-			width: ($quill-control-color-dimension + 2 * $quill-control-color-margin) * $quill-control-color-num-per-row + 2 *
-				$quill-control-padding-x + 2;
+			width: ($quill-control-color-dimension + 2 * $quill-control-color-margin) *
+				$quill-control-color-num-per-row + 2 * $quill-control-padding-x + 2;
 		}
 
 		.ql-picker-item {

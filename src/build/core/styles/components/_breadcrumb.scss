@@ -2,7 +2,10 @@
 	--#{$variable-prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
 	--#{$variable-prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
 	--#{$variable-prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
-	@include rfs($breadcrumb-font-size, --#{$variable-prefix}breadcrumb-font-size);
+	@include rfs(
+		$breadcrumb-font-size,
+		--#{$variable-prefix}breadcrumb-font-size
+	);
 	--#{$variable-prefix}breadcrumb-font-weight: #{$breadcrumb-font-weight};
 	--#{$variable-prefix}breadcrumb-bg: #{$breadcrumb-bg};
 	--#{$variable-prefix}breadcrumb-color: #{$breadcrumb-color};
@@ -16,7 +19,8 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	padding: var(--#{$variable-prefix}breadcrumb-padding-y) var(--#{$variable-prefix}breadcrumb-padding-x);
+	padding: var(--#{$variable-prefix}breadcrumb-padding-y)
+		var(--#{$variable-prefix}breadcrumb-padding-x);
 	margin-bottom: var(--#{$variable-prefix}breadcrumb-margin-bottom);
 	@include font-size(var(--#{$variable-prefix}breadcrumb-font-size));
 	list-style: none;

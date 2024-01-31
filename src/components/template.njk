@@ -18,26 +18,29 @@
 <!doctype html>
 <html
 	lang="en"
+	id="{{ page_id | default('unknown') }}"
 	dir="{{ env['PAGE_DIRECTION'] }}"
 	data-theme="{{ defaults.theme }}"
-	id="{{ page_id | default('unknown') }}"
 >
 	<head>
-		{% if enable_analytics | default(defaults.enable_analytics) %}
-			{% include 'components/analytics/analytics-head.njk' %}
-		{% endif %}
-
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap"
-		/>
+
+		{% include 'components/heads/font-head.njk' %}
+
+		{% if enable_analytics | default(defaults.enable_analytics) %}
+			{% include 'components/heads/analytics-head.njk' %}
+		{% endif %}
+
 		<link rel="stylesheet" href="/src/build/core/styles/index.scss" />
-		<link href="{{ defaults.favicon }}" rel="shortcut icon" type="image/x-icon" />
-		<title>{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}</title>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="{{ defaults.favicon }}"
+		/>
+		<title>
+			{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}
+		</title>
 	</head>
 	<body class="{{ body_class }}">
 		{% if enable_preload | default(defaults.enable_preload) %}
@@ -58,7 +61,9 @@
 
 				<!-- BEGIN Page Content -->
 				<div class="content">
-					<div class="{{ container_class }}">{% block content %}{% endblock %}</div>
+					<div class="{{ container_class }}">
+						{% block content %}{% endblock %}
+					</div>
 				</div>
 				<!-- END Page Content -->
 

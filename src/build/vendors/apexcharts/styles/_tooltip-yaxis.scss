@@ -23,8 +23,13 @@
 	}
 
 	&:before {
-		border-width: calc(#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width});
-		margin-top: calc((#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}) * -1);
+		border-width: calc(
+			#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}
+		);
+		margin-top: calc(
+			(#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}) *
+				-1
+		);
 	}
 }
 

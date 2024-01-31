@@ -15,13 +15,9 @@ function stickyDestroy(target) {
 	$(target).unstick()
 }
 
-export function initStickyHeader() {
+export function initStickyHeader(headerDesktopSelector, headerMobileSelector) {
 	// Set required constants
 	const stickyBreakpoint = 1025
-	const stickyHeaderElements = {
-		desktop: '#sticky-header-desktop',
-		mobile: '#sticky-header-mobile',
-	}
 
 	// Listen window resize event for responsive
 	$(window).on('resize', function () {
@@ -29,18 +25,18 @@ export function initStickyHeader() {
 
 		// Check viewport breakpoint
 		if (viewport >= stickyBreakpoint) {
-			stickyInit(stickyHeaderElements.desktop)
-			stickyDestroy(stickyHeaderElements.mobile)
+			stickyInit(headerDesktopSelector)
+			stickyDestroy(headerMobileSelector)
 		} else {
-			stickyInit(stickyHeaderElements.mobile)
-			stickyDestroy(stickyHeaderElements.desktop)
+			stickyInit(headerMobileSelector)
+			stickyDestroy(headerDesktopSelector)
 		}
 	})
 
 	// Initialize sticky header for the first time
 	if ($(window).width() >= stickyBreakpoint) {
-		stickyInit(stickyHeaderElements.desktop)
+		stickyInit(headerDesktopSelector)
 	} else {
-		stickyInit(stickyHeaderElements.mobile)
+		stickyInit(headerMobileSelector)
 	}
 }

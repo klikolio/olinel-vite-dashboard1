@@ -71,7 +71,11 @@
 	--#{$variable-prefix}btn-disabled-border-color: #{$color};
 }
 
-@mixin button-flat-variant($color, $active-background: $color, $active-color: color-contrast($active-background)) {
+@mixin button-flat-variant(
+	$color,
+	$active-background: $color,
+	$active-color: color-contrast($active-background)
+) {
 	--#{$variable-prefix}btn-color: #{$btn-flat-color};
 	--#{$variable-prefix}btn-bg: #{$btn-flat-bg};
 	--#{$variable-prefix}btn-border-color: transparent;

@@ -86,7 +86,9 @@ class Menu extends BaseComponent {
 	setActiveLink() {
 		const activePage = document.documentElement.getAttribute('id')
 
-		const linkElement = document.querySelector(`[${DATA_ACTIVE_PAGE}="${activePage}"]`)
+		const linkElement = document.querySelector(
+			`[${DATA_ACTIVE_PAGE}="${activePage}"]`,
+		)
 
 		if (linkElement) {
 			linkElement.classList.add(CLASS_ACTIVE)
@@ -114,9 +116,14 @@ class Menu extends BaseComponent {
 		itemElement.setAttribute(DATA_COLLAPSED, isCollapse)
 
 		this.getParentItems(itemElement).forEach((parentItemElement) => {
-			const parentSubmenuElement = parentItemElement.querySelector(SELECTOR_SUBMENU)
-			const parentSubmenuHeight = Number(parentItemElement.getAttribute(DATA_HEIGHT))
-			const calculatedHeight = isCollapse ? parentSubmenuHeight - submenuHeight : parentSubmenuHeight + submenuHeight
+			const parentSubmenuElement =
+				parentItemElement.querySelector(SELECTOR_SUBMENU)
+			const parentSubmenuHeight = Number(
+				parentItemElement.getAttribute(DATA_HEIGHT),
+			)
+			const calculatedHeight = isCollapse
+				? parentSubmenuHeight - submenuHeight
+				: parentSubmenuHeight + submenuHeight
 
 			parentItemElement.setAttribute(DATA_HEIGHT, calculatedHeight)
 			parentSubmenuElement.style.height = `${calculatedHeight}px`
@@ -145,7 +152,9 @@ class Menu extends BaseComponent {
 
 	// Function to prepare aside adoption
 	asidePrepare() {
-		this.asideDefaultDesktopMinimized = document.body.classList.contains(CLASS_ASIDE_DESKTOP_MINIMIZED)
+		this.asideDefaultDesktopMinimized = document.body.classList.contains(
+			CLASS_ASIDE_DESKTOP_MINIMIZED,
+		)
 
 		if (this.asideDefaultDesktopMinimized) {
 			document.body.classList.remove(CLASS_ASIDE_DESKTOP_MINIMIZED)

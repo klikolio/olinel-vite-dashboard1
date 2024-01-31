@@ -121,9 +121,12 @@
 		&.yearselect {
 			width: auto;
 			display: inline-block;
-			padding: $form-select-padding-y-sm $form-select-indicator-padding $form-select-padding-y-sm
-				$form-select-padding-x-sm;
-			-moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
+			padding: $form-select-padding-y-sm $form-select-indicator-padding
+				$form-select-padding-y-sm $form-select-padding-x-sm;
+			-moz-padding-start: subtract(
+				$form-select-padding-x,
+				3px
+			); // See https://github.com/twbs/bootstrap/issues/32636
 			font-family: $form-select-font-family;
 			@include font-size($form-select-font-size-sm);
 			font-weight: $form-select-font-weight;

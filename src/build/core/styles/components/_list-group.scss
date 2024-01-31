@@ -73,7 +73,8 @@
 .list-group-item {
 	position: relative;
 	display: block;
-	padding: var(--#{$variable-prefix}list-group-item-padding-y) var(--#{$variable-prefix}list-group-item-padding-x);
+	padding: var(--#{$variable-prefix}list-group-item-padding-y)
+		var(--#{$variable-prefix}list-group-item-padding-x);
 	color: var(--#{$variable-prefix}list-group-color);
 	text-decoration: if($link-decoration == none, null, none);
 	background-color: var(--#{$variable-prefix}list-group-bg);
@@ -129,12 +130,16 @@
 
 			> .list-group-item {
 				&:first-child:not(:last-child) {
-					@include border-bottom-start-radius(var(--#{$variable-prefix}list-group-border-radius));
+					@include border-bottom-start-radius(
+						var(--#{$variable-prefix}list-group-border-radius)
+					);
 					@include border-top-end-radius(0);
 				}
 
 				&:last-child:not(:first-child) {
-					@include border-top-end-radius(var(--#{$variable-prefix}list-group-border-radius));
+					@include border-top-end-radius(
+						var(--#{$variable-prefix}list-group-border-radius)
+					);
 					@include border-bottom-start-radius(0);
 				}
 
@@ -150,7 +155,9 @@
 						margin-left: calc(
 							-1 * var(--#{$variable-prefix}list-group-border-width)
 						); // stylelint-disable-line function-disallowed-list
-						border-left-width: var(--#{$variable-prefix}list-group-border-width);
+						border-left-width: var(
+							--#{$variable-prefix}list-group-border-width
+						);
 					}
 				}
 			}

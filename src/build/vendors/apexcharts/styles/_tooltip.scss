@@ -11,7 +11,8 @@
 	@include font-size($apexchart-tooltip-font-size); //
 	color: $apexchart-tooltip-color;
 	background: $apexchart-tooltip-bg;
-	border: $apexchart-tooltip-border-width $border-style $apexchart-tooltip-border-color;
+	border: $apexchart-tooltip-border-width $border-style
+		$apexchart-tooltip-border-color;
 	/* rtl:begin:ignore */
 	left: $apexchart-tooltip-offset;
 	top: $apexchart-tooltip-offset;
@@ -36,7 +37,8 @@
 	background: $apexchart-tooltip-header-bg;
 	@include font-size($apexchart-tooltip-header-font-size);
 	font-weight: $apexchart-tooltip-header-font-weight;
-	padding: $apexchart-tooltip-header-padding-y $apexchart-tooltip-header-padding-x;
+	padding: $apexchart-tooltip-header-padding-y
+		$apexchart-tooltip-header-padding-x;
 	margin-bottom: $apexchart-tooltip-value-spacer;
 }
 
@@ -159,7 +161,8 @@
 	padding: $apexchart-tooltip-padding-y $apexchart-tooltip-padding-x;
 	color: $apexchart-tooltip-color;
 	background: $apexchart-tooltip-bg;
-	border: $apexchart-tooltip-border-width $border-style $apexchart-tooltip-border-color;
+	border: $apexchart-tooltip-border-width $border-style
+		$apexchart-tooltip-border-color;
 	text-align: center;
 	opacity: 0;
 	z-index: 10;

@@ -75,7 +75,8 @@
 	.vakata-context-separator {
 		height: 0;
 		padding: 0;
-		border-bottom: $jstree-menu-separator-width $border-style $jstree-menu-separator-color;
+		border-bottom: $jstree-menu-separator-width $border-style
+			$jstree-menu-separator-color;
 	}
 
 	.vakata-context-hover > a {

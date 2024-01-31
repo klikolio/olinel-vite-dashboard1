@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/advanced/footer-callback.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/advanced/footer-callback.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,16 +27,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						Through the use of the header and footer callback manipulation functions provides by Datatables (<code
-							>headerCallback</code
-						>
-						and <code>footerCallback</code>), it is possible to perform some powerful and useful data manipulation
-						functions, such as summarising data in the table.
+						Through the use of the header and footer callback manipulation
+						functions provides by Datatables (<code>headerCallback</code> and
+						<code>footerCallback</code>), it is possible to perform some
+						powerful and useful data manipulation functions, such as summarising
+						data in the table.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

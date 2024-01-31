@@ -1,7 +1,11 @@
 import '@/build/vendors/apexcharts/styles/apexcharts.scss'
 import '@/build/vendors/apexcharts/scripts/apexcharts'
 
-import { colorScheme, getChartThemeOptions, getThemeVariantIsDark } from '@/app/utilities/widget-helper'
+import {
+	colorScheme,
+	getChartThemeOptions,
+	getThemeVariantIsDark,
+} from '@/app/utilities/widget-helper'
 
 const chart1 = new ApexCharts(document.querySelector('#apexchart-1'), {
 	...getChartThemeOptions(),
@@ -26,7 +30,9 @@ const chart1 = new ApexCharts(document.querySelector('#apexchart-1'), {
 		curve: 'straight',
 	},
 	markers: {
-		strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+		strokeColors: getThemeVariantIsDark()
+			? colorScheme.black
+			: colorScheme.white,
 	},
 	title: {
 		text: 'Product Trends by Month',
@@ -68,7 +74,9 @@ const chart2 = new ApexCharts(document.querySelector('#apexchart-2'), {
 		curve: 'smooth',
 	},
 	markers: {
-		strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+		strokeColors: getThemeVariantIsDark()
+			? colorScheme.black
+			: colorScheme.white,
 	},
 	xaxis: {
 		type: 'datetime',
@@ -202,7 +210,9 @@ const chart5 = new ApexCharts(document.querySelector('#apexchart-5'), {
 		width: [0, 4],
 	},
 	markers: {
-		strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+		strokeColors: getThemeVariantIsDark()
+			? colorScheme.black
+			: colorScheme.white,
 	},
 	title: {
 		text: 'Traffic Sources',
@@ -250,19 +260,31 @@ const chart6 = new ApexCharts(document.querySelector('#apexchart-6'), {
 			data: [
 				{
 					x: 'Code',
-					y: [new Date('2019-03-02').getTime(), new Date('2019-03-04').getTime()],
+					y: [
+						new Date('2019-03-02').getTime(),
+						new Date('2019-03-04').getTime(),
+					],
 				},
 				{
 					x: 'Test',
-					y: [new Date('2019-03-04').getTime(), new Date('2019-03-08').getTime()],
+					y: [
+						new Date('2019-03-04').getTime(),
+						new Date('2019-03-08').getTime(),
+					],
 				},
 				{
 					x: 'Validation',
-					y: [new Date('2019-03-08').getTime(), new Date('2019-03-12').getTime()],
+					y: [
+						new Date('2019-03-08').getTime(),
+						new Date('2019-03-12').getTime(),
+					],
 				},
 				{
 					x: 'Deployment',
-					y: [new Date('2019-03-12').getTime(), new Date('2019-03-18').getTime()],
+					y: [
+						new Date('2019-03-12').getTime(),
+						new Date('2019-03-18').getTime(),
+					],
 				},
 			],
 		},
@@ -705,7 +727,9 @@ const chart9 = new ApexCharts(document.querySelector('#apexchart-9'), {
 		colors: ['transparent'],
 	},
 	markers: {
-		strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+		strokeColors: getThemeVariantIsDark()
+			? colorScheme.black
+			: colorScheme.white,
 	},
 	xaxis: {
 		tickAmount: 10,
@@ -732,7 +756,9 @@ const chart10 = new ApexCharts(document.querySelector('#apexchart-10'), {
 		background: 'transparent',
 	},
 	markers: {
-		strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+		strokeColors: getThemeVariantIsDark()
+			? colorScheme.black
+			: colorScheme.white,
 	},
 	title: {
 		text: 'Basic Radar Chart',
@@ -759,27 +785,47 @@ document.querySelector('#theme-toggle').addEventListener('click', () => {
 	// Update all widget colors
 	chart1.updateOptions({
 		...getChartThemeOptions(),
-		markers: { strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+		markers: {
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
+		},
 	})
 	chart2.updateOptions({
 		...getChartThemeOptions(),
-		markers: { strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+		markers: {
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
+		},
 	})
 	chart3.updateOptions(getChartThemeOptions())
 	chart4.updateOptions(getChartThemeOptions())
 	chart5.updateOptions({
 		...getChartThemeOptions(),
-		markers: { strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+		markers: {
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
+		},
 	})
 	chart6.updateOptions(getChartThemeOptions())
 	chart7.updateOptions(getChartThemeOptions())
 	chart8.updateOptions(getChartThemeOptions())
 	chart9.updateOptions({
 		...getChartThemeOptions(),
-		markers: { strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+		markers: {
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
+		},
 	})
 	chart10.updateOptions({
 		...getChartThemeOptions(),
-		markers: { strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+		markers: {
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
+		},
 	})
 })

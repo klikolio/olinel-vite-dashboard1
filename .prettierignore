@@ -6,6 +6,7 @@ dist-ssr
 .vscode/*
 
 # configuration files
+.prettierrc
 .eslintrc.json
 postcss.config.js
 vite.config.js

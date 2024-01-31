@@ -19,14 +19,20 @@
 
 	--#{$variable-prefix}chat-image-max-width: #{$chat-image-max-width};
 	--#{$variable-prefix}chat-author-color: #{$chat-author-color};
-	@include rfs($chat-author-font-size, --#{$variable-prefix}chat-author-font-size);
+	@include rfs(
+		$chat-author-font-size,
+		--#{$variable-prefix}chat-author-font-size
+	);
 	--#{$variable-prefix}chat-author-font-weight: #{$chat-author-font-weight};
 	--#{$variable-prefix}chat-time-color: #{$chat-time-color};
 	@include rfs($chat-time-font-size, --#{$variable-prefix}chat-time-font-size);
 	--#{$variable-prefix}chat-time-font-weight: #{$chat-time-font-weight};
 	--#{$variable-prefix}chat-section-bg: #{$chat-section-bg};
 	--#{$variable-prefix}chat-section-color: #{$chat-section-color};
-	@include rfs($chat-section-font-size, --#{$variable-prefix}chat-section-font-size);
+	@include rfs(
+		$chat-section-font-size,
+		--#{$variable-prefix}chat-section-font-size
+	);
 	--#{$variable-prefix}chat-section-font-weight: #{$chat-section-font-weight};
 	--#{$variable-prefix}chat-section-padding-y: #{$chat-section-padding-y};
 	--#{$variable-prefix}chat-section-padding-x: #{$chat-section-padding-x};
@@ -134,6 +140,7 @@
 	background-color: var(--#{$variable-prefix}chat-section-bg);
 	@include font-size(var(--#{$variable-prefix}chat-section-font-size));
 	font-weight: var(--#{$variable-prefix}chat-section-font-weight);
-	padding: var(--#{$variable-prefix}chat-section-padding-y) var(--#{$variable-prefix}chat-section-padding-x);
+	padding: var(--#{$variable-prefix}chat-section-padding-y)
+		var(--#{$variable-prefix}chat-section-padding-x);
 	@include border-radius(var(--#{$variable-prefix}chat-section-border-radius));
 }

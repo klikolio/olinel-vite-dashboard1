@@ -39,7 +39,8 @@ $utilities: map-merge(
 			print: true,
 			property: display,
 			class: d,
-			values: inline inline-block block grid table table-row table-cell flex inline-flex none,
+			values: inline inline-block block grid table table-row table-cell flex
+				inline-flex none,
 		),
 		"shadow": (
 			property: box-shadow,
@@ -85,7 +86,8 @@ $utilities: map-merge(
 		"border": (
 			property: border,
 			values: (
-				null: var(--#{$variable-prefix}border-width) var(--#{$variable-prefix}border-style)
+				null: var(--#{$variable-prefix}border-width)
+					var(--#{$variable-prefix}border-style)
 					var(--#{$variable-prefix}border-color),
 				0: 0,
 			),
@@ -93,7 +95,8 @@ $utilities: map-merge(
 		"border-top": (
 			property: border-top,
 			values: (
-				null: var(--#{$variable-prefix}border-width) var(--#{$variable-prefix}border-style)
+				null: var(--#{$variable-prefix}border-width)
+					var(--#{$variable-prefix}border-style)
 					var(--#{$variable-prefix}border-color),
 				0: 0,
 			),
@@ -102,7 +105,8 @@ $utilities: map-merge(
 			property: border-right,
 			class: border-end,
 			values: (
-				null: var(--#{$variable-prefix}border-width) var(--#{$variable-prefix}border-style)
+				null: var(--#{$variable-prefix}border-width)
+					var(--#{$variable-prefix}border-style)
 					var(--#{$variable-prefix}border-color),
 				0: 0,
 			),
@@ -110,7 +114,8 @@ $utilities: map-merge(
 		"border-bottom": (
 			property: border-bottom,
 			values: (
-				null: var(--#{$variable-prefix}border-width) var(--#{$variable-prefix}border-style)
+				null: var(--#{$variable-prefix}border-width)
+					var(--#{$variable-prefix}border-style)
 					var(--#{$variable-prefix}border-color),
 				0: 0,
 			),
@@ -119,7 +124,8 @@ $utilities: map-merge(
 			property: border-left,
 			class: border-start,
 			values: (
-				null: var(--#{$variable-prefix}border-width) var(--#{$variable-prefix}border-style)
+				null: var(--#{$variable-prefix}border-width)
+					var(--#{$variable-prefix}border-style)
 					var(--#{$variable-prefix}border-color),
 				0: 0,
 			),

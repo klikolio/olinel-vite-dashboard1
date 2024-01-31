@@ -39,7 +39,8 @@
 
 .progress-bar-striped {
 	@include gradient-striped();
-	background-size: var(--#{$variable-prefix}progress-height) var(--#{$variable-prefix}progress-height);
+	background-size: var(--#{$variable-prefix}progress-height)
+		var(--#{$variable-prefix}progress-height);
 }
 
 @if $enable-transitions {

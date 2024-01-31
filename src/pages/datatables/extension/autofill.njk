@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/autofill.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/extension/autofill.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,10 +27,13 @@
 				</div>
 				<div class="portlet-body">
 					<p class="mb-0">
-						Spreadsheets such as Excel and Google Docs have a very handy data duplication option of an
-						<strong>autofill</strong> tool. The <strong>autofill</strong> library for Datatables provides a similar
-						interface for Datatables and extends upon this interface paradigm to provide complex data interaction
-						options that the user can select between.
+						Spreadsheets such as Excel and Google Docs have a very handy data
+						duplication option of an
+						<strong>autofill</strong> tool. The
+						<strong>autofill</strong> library for Datatables provides a similar
+						interface for Datatables and extends upon this interface paradigm to
+						provide complex data interaction options that the user can select
+						between.
 					</p>
 				</div>
 			</div>
@@ -40,13 +46,17 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						<strong>Autofill</strong> is enabled for a Datatables using the <code>autoFill</code> option, simply setting
-						that parameter to <code>true</code>
+						<strong>Autofill</strong> is enabled for a Datatables using the
+						<code>autoFill</code> option, simply setting that parameter to
+						<code>true</code>
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -72,15 +82,20 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						The <em>click-to-drag</em> auto fill handle can be attached to the table using a number of different
-						triggers. This is set by the <code>autoFill.focus</code> option: <code>click|focus|hover</code>. The default
-						behavior is <code>hover</code>, unless <em>Keytable</em> is also initialised on the same table, in which
+						The <em>click-to-drag</em> auto fill handle can be attached to the
+						table using a number of different triggers. This is set by the
+						<code>autoFill.focus</code> option: <code>click|focus|hover</code>.
+						The default behavior is <code>hover</code>, unless
+						<em>Keytable</em> is also initialised on the same table, in which
 						case <code>focus</code> is used.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-2" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-2"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -106,14 +121,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						This example demonstrates Autofill's ability to fill vertically only through the
-						<code>autoFill.horizontal</code> option. There is also an <code>autoFill.vertical</code> option that can be
-						used to allow only horizontal filling.
+						This example demonstrates Autofill's ability to fill vertically only
+						through the
+						<code>autoFill.horizontal</code> option. There is also an
+						<code>autoFill.vertical</code> option that can be used to allow only
+						horizontal filling.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-3" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-3"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

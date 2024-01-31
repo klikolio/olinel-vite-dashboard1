@@ -9,7 +9,11 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
 
 function formatInt(num) {
-	return typeof num === 'string' ? num.replace(/[$,]/g, '') * 1 : typeof num === 'number' ? num : 0
+	return typeof num === 'string'
+		? num.replace(/[$,]/g, '') * 1
+		: typeof num === 'number'
+			? num
+			: 0
 }
 
 $('#datatables-1').DataTable({
@@ -28,6 +32,8 @@ $('#datatables-1').DataTable({
 				return formatInt(total) + formatInt(num)
 			}, 0)
 
-		$(api.column(column).footer()).html(`Total: ${$.fn.dataTable.render.number(',', '.', 0, '$').display(total)}`)
+		$(api.column(column).footer()).html(
+			`Total: ${$.fn.dataTable.render.number(',', '.', 0, '$').display(total)}`,
+		)
 	},
 })

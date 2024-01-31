@@ -1,7 +1,11 @@
 import '@/build/vendors/apexcharts/styles/apexcharts.scss'
 import '@/build/vendors/apexcharts/scripts/apexcharts'
 
-import { colorScheme, getChartThemeOptions, getThemeVariantIsDark } from '@/app/utilities/widget-helper'
+import {
+	colorScheme,
+	getChartThemeOptions,
+	getThemeVariantIsDark,
+} from '@/app/utilities/widget-helper'
 
 export function initChart4(chartQuery, labels, series) {
 	const chartInstance = new ApexCharts(chartQuery, {
@@ -34,7 +38,11 @@ export function initChart4(chartQuery, labels, series) {
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		chartInstance.updateOptions({
 			...getChartThemeOptions(),
-			stroke: { colors: [getThemeVariantIsDark() ? colorScheme.black : colorScheme.white] },
+			stroke: {
+				colors: [
+					getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+				],
+			},
 		})
 	})
 

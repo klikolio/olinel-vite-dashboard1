@@ -3,7 +3,10 @@
 .timeline {
 	--#{$variable-prefix}timeline-time-padding: #{$timeline-time-padding};
 	--#{$variable-prefix}timeline-time-color: #{$timeline-time-color};
-	@include rfs($timeline-time-font-size, --#{$variable-prefix}timeline-time-font-size);
+	@include rfs(
+		$timeline-time-font-size,
+		--#{$variable-prefix}timeline-time-font-size
+	);
 	--#{$variable-prefix}timeline-time-font-weight: #{$timeline-time-font-weight};
 	--#{$variable-prefix}timeline-content-color: #{$timeline-content-color};
 	--#{$variable-prefix}timeline-content-padding: #{$timeline-content-padding};
@@ -89,7 +92,11 @@
 	padding-left: $timeline-time-width + $timeline-pin-width;
 
 	&:before {
-		left: calc(#{$timeline-time-width + $timeline-pin-width} * 0.5 + #{($timeline-time-width) * 0.5});
+		left: calc(
+			#{$timeline-time-width + $timeline-pin-width} * 0.5 + #{(
+					$timeline-time-width
+				) * 0.5}
+		);
 	}
 
 	.timeline-time {

@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/advanced/column-visibility.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/advanced/column-visibility.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,14 +27,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						There are times when you might find it useful to display only a sub-set of the information that was
-						available in the original table. For example you might want to reduce the amount of the data shown on screen
-						to make it clearer for the user. This is done through the <code>columns.visible</code> column option.
+						There are times when you might find it useful to display only a
+						sub-set of the information that was available in the original table.
+						For example you might want to reduce the amount of the data shown on
+						screen to make it clearer for the user. This is done through the
+						<code>columns.visible</code> column option.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

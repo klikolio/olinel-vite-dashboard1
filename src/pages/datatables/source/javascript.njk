@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/source/javascript.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/source/javascript.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,14 +27,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						At times you will wish to be able to create a table from dynamic information passed directly to Datatables,
-						rather than having it read from the document. This is achieved using the <code>data</code> option in the
-						initialisation object, passing in an array of data to be used.
+						At times you will wish to be able to create a table from dynamic
+						information passed directly to Datatables, rather than having it
+						read from the document. This is achieved using the
+						<code>data</code> option in the initialisation object, passing in an
+						array of data to be used.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

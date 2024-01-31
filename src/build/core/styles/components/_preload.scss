@@ -8,7 +8,10 @@
 	--#{$variable-prefix}preload-message-border-radius: #{$preload-message-border-radius};
 	--#{$variable-prefix}preload-message-spinner-spacer: #{$preload-message-spinner-spacer};
 	--#{$variable-prefix}preload-message-text-color: #{$preload-message-text-color};
-	@include rfs($preload-message-text-font-size, --#{$variable-prefix}preload-message-text-font-size);
+	@include rfs(
+		$preload-message-text-font-size,
+		--#{$variable-prefix}preload-message-text-font-size
+	);
 	--#{$variable-prefix}preload-message-text-font-weight: #{$preload-message-text-font-weight};
 
 	position: fixed;
@@ -38,10 +41,13 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: var(--#{$variable-prefix}preload-message-padding-y) var(--#{$variable-prefix}preload-message-padding-x);
+	padding: var(--#{$variable-prefix}preload-message-padding-y)
+		var(--#{$variable-prefix}preload-message-padding-x);
 	border: var(--#{$variable-prefix}preload-message-border-width) $border-style
 		var(--#{$variable-prefix}preload-message-border-color);
-	@include border-radius(var(--#{$variable-prefix}preload-message-border-radius));
+	@include border-radius(
+		var(--#{$variable-prefix}preload-message-border-radius)
+	);
 
 	> [class*="spinner"] {
 		margin-right: var(--#{$variable-prefix}preload-message-spinner-spacer);

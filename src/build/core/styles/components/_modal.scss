@@ -21,7 +21,10 @@
 	--#{$variable-prefix}modal-header-border-color: #{$modal-header-border-color};
 	--#{$variable-prefix}modal-header-border-width: #{$modal-header-border-width};
 	--#{$variable-prefix}modal-title-color: #{$modal-title-color};
-	@include rfs($modal-title-font-size, --#{$variable-prefix}modal-title-font-size);
+	@include rfs(
+		$modal-title-font-size,
+		--#{$variable-prefix}modal-title-font-size
+	);
 	--#{$variable-prefix}modal-title-font-weight: #{$modal-title-font-weight};
 	--#{$variable-prefix}modal-title-line-height: #{$modal-title-line-height};
 	--#{$variable-prefix}modal-footer-gap: #{$modal-footer-margin-between};
@@ -99,7 +102,8 @@
 	pointer-events: auto;
 	background-color: var(--#{$variable-prefix}modal-bg);
 	background-clip: padding-box;
-	border: var(--#{$variable-prefix}modal-border-width) $border-style var(--#{$variable-prefix}modal-border-color);
+	border: var(--#{$variable-prefix}modal-border-width) $border-style
+		var(--#{$variable-prefix}modal-border-color);
 	@include border-radius(var(--#{$variable-prefix}modal-border-radius));
 	// Remove focus outline from opened modal
 	outline: 0;
@@ -128,9 +132,11 @@
 	align-items: center;
 	justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
 	padding: var(--#{$variable-prefix}modal-header-padding);
-	border-bottom: var(--#{$variable-prefix}modal-header-border-width) $border-style
-		var(--#{$variable-prefix}modal-header-border-color);
-	@include border-top-radius(var(--#{$variable-prefix}modal-inner-border-radius));
+	border-bottom: var(--#{$variable-prefix}modal-header-border-width)
+		$border-style var(--#{$variable-prefix}modal-header-border-color);
+	@include border-top-radius(
+		var(--#{$variable-prefix}modal-inner-border-radius)
+	);
 
 	.btn-close {
 		padding: calc(var(--#{$variable-prefix}modal-header-padding-y) * 0.5)
@@ -165,17 +171,25 @@
 	flex-shrink: 0;
 	align-items: center; // vertically center
 	justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-	padding: calc(var(--#{$variable-prefix}modal-padding) - var(--#{$variable-prefix}modal-footer-gap) * 0.5);
+	padding: calc(
+		var(--#{$variable-prefix}modal-padding) - var(
+				--#{$variable-prefix}modal-footer-gap
+			) * 0.5
+	);
 	background-color: var(--#{$variable-prefix}modal-footer-bg);
 	border-top: var(--#{$variable-prefix}modal-footer-border-width) $border-style
 		var(--#{$variable-prefix}modal-footer-border-color);
-	@include border-bottom-radius(var(--#{$variable-prefix}modal-inner-border-radius));
+	@include border-bottom-radius(
+		var(--#{$variable-prefix}modal-inner-border-radius)
+	);
 
 	// Place margin between footer elements
 	// This solution is far from ideal because of the universal selector usage,
 	// but is needed to fix https://github.com/twbs/bootstrap/issues/24800
 	> * {
-		margin: calc(var(--#{$variable-prefix}modal-footer-gap) * 0.5); // Todo in v6: replace with gap on parent class
+		margin: calc(
+			var(--#{$variable-prefix}modal-footer-gap) * 0.5
+		); // Todo in v6: replace with gap on parent class
 	}
 }
 

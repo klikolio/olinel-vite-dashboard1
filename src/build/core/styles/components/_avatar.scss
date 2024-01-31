@@ -9,7 +9,10 @@
 	--#{$variable-prefix}avatar-outline-color: #{$avatar-outline-color};
 	--#{$variable-prefix}avatar-border-radius: #{$avatar-border-radius};
 	--#{$variable-prefix}avatar-spacer: #{$avatar-spacer};
-	@include rfs($avatar-display-font-size, --#{$variable-prefix}avatar-display-font-size);
+	@include rfs(
+		$avatar-display-font-size,
+		--#{$variable-prefix}avatar-display-font-size
+	);
 	--#{$variable-prefix}avatar-display-font-weight: #{$avatar-display-font-weight};
 	--#{$variable-prefix}avatar-display-icon-size: #{$avatar-display-icon-size};
 	--#{$variable-prefix}avatar-addon-icon-bg: #{$avatar-addon-icon-bg};
@@ -52,7 +55,8 @@
 .avatar-badge,
 .avatar-icon {
 	position: relative;
-	border: var(--#{$variable-prefix}avatar-outline-width) solid var(--#{$variable-prefix}avatar-outline-color);
+	border: var(--#{$variable-prefix}avatar-outline-width) solid
+		var(--#{$variable-prefix}avatar-outline-color);
 }
 
 .avatar-icon {
@@ -124,7 +128,8 @@
 
 	> .avatar {
 		margin: 0;
-		border: var(--#{$variable-prefix}avatar-outline-width) solid var(--#{$variable-prefix}avatar-outline-color);
+		border: var(--#{$variable-prefix}avatar-outline-width) solid
+			var(--#{$variable-prefix}avatar-outline-color);
 
 		+ .avatar {
 			margin-left: -$avatar-group-offset;

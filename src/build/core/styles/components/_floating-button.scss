@@ -11,7 +11,8 @@
 	transform: translateY(-50%);
 	top: 50%;
 	background: var(--#{$variable-prefix}floating-btn-bg);
-	padding: var(--#{$variable-prefix}floating-btn-padding-y) var(--#{$variable-prefix}floating-btn-padding-x);
+	padding: var(--#{$variable-prefix}floating-btn-padding-y)
+		var(--#{$variable-prefix}floating-btn-padding-x);
 	border: var(--#{$variable-prefix}floating-btn-border-width) $border-style
 		var(--#{$variable-prefix}floating-btn-border-color);
 	z-index: var(--#{$variable-prefix}floating-btn-zindex);
@@ -20,10 +21,14 @@
 // Alignments
 .floating-btn-start {
 	left: 0;
-	@include border-end-radius(var(--#{$variable-prefix}floating-btn-border-radius));
+	@include border-end-radius(
+		var(--#{$variable-prefix}floating-btn-border-radius)
+	);
 }
 
 .floating-btn-end {
 	right: 0;
-	@include border-start-radius(var(--#{$variable-prefix}floating-btn-border-radius));
+	@include border-start-radius(
+		var(--#{$variable-prefix}floating-btn-border-radius)
+	);
 }

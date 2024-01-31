@@ -21,10 +21,16 @@
 	--#{$variable-prefix}gridnav-item-disabled-opacity: #{$gridnav-item-disabled-opacity};
 	--#{$variable-prefix}gridnav-content-line-height: #{$gridnav-content-line-height};
 	--#{$variable-prefix}gridnav-title-color: #{$gridnav-title-color};
-	@include rfs($gridnav-title-font-size, --#{$variable-prefix}gridnav-title-font-size);
+	@include rfs(
+		$gridnav-title-font-size,
+		--#{$variable-prefix}gridnav-title-font-size
+	);
 	--#{$variable-prefix}gridnav-title-font-weight: #{$gridnav-title-font-weight};
 	--#{$variable-prefix}gridnav-subtitle-color: #{$gridnav-subtitle-color};
-	@include rfs($gridnav-subtitle-font-size, --#{$variable-prefix}gridnav-subtitle-font-size);
+	@include rfs(
+		$gridnav-subtitle-font-size,
+		--#{$variable-prefix}gridnav-subtitle-font-size
+	);
 	--#{$variable-prefix}gridnav-subtitle-font-weight: #{$gridnav-subtitle-font-weight};
 	--#{$variable-prefix}gridnav-icon-color: #{$gridnav-icon-color};
 	--#{$variable-prefix}gridnav-icon-size: #{$gridnav-icon-size};
@@ -50,7 +56,8 @@
 	min-width: var(--#{$variable-prefix}gridnav-item-min-width);
 	color: var(--#{$variable-prefix}gridnav-color);
 	background: var(--#{$variable-prefix}gridnav-bg);
-	padding: var(--#{$variable-prefix}gridnav-item-padding-y) var(--#{$variable-prefix}gridnav-item-padding-x);
+	padding: var(--#{$variable-prefix}gridnav-item-padding-y)
+		var(--#{$variable-prefix}gridnav-item-padding-x);
 	cursor: default;
 
 	// Reset default behavior of <a> tag
@@ -66,7 +73,8 @@
 .grid-nav-bordered,
 .grid-nav-flush {
 	.grid-nav-item {
-		border: var(--#{$variable-prefix}gridnav-border-width) $border-style var(--#{$variable-prefix}gridnav-border-color);
+		border: var(--#{$variable-prefix}gridnav-border-width) $border-style
+			var(--#{$variable-prefix}gridnav-border-color);
 	}
 }
 
@@ -130,7 +138,9 @@
 		&:disabled {
 			color: var(--#{$variable-prefix}gridnav-item-disabled-color);
 			background: var(--#{$variable-prefix}gridnav-item-disabled-bg);
-			border-color: var(--#{$variable-prefix}gridnav-item-disabled-border-color);
+			border-color: var(
+				--#{$variable-prefix}gridnav-item-disabled-border-color
+			);
 			opacity: var(--#{$variable-prefix}gridnav-item-disabled-opacity);
 			pointer-events: none;
 		}
@@ -142,11 +152,15 @@
 	.grid-nav-row:first-of-type {
 		.grid-nav-item {
 			&:first-of-type {
-				@include border-top-start-radius(var(--#{$variable-prefix}gridnav-border-radius));
+				@include border-top-start-radius(
+					var(--#{$variable-prefix}gridnav-border-radius)
+				);
 			}
 
 			&:last-of-type {
-				@include border-top-end-radius(var(--#{$variable-prefix}gridnav-border-radius));
+				@include border-top-end-radius(
+					var(--#{$variable-prefix}gridnav-border-radius)
+				);
 			}
 		}
 	}
@@ -154,11 +168,15 @@
 	.grid-nav-row:last-of-type {
 		.grid-nav-item {
 			&:first-of-type {
-				@include border-bottom-start-radius(var(--#{$variable-prefix}gridnav-border-radius));
+				@include border-bottom-start-radius(
+					var(--#{$variable-prefix}gridnav-border-radius)
+				);
 			}
 
 			&:last-of-type {
-				@include border-bottom-end-radius(var(--#{$variable-prefix}gridnav-border-radius));
+				@include border-bottom-end-radius(
+					var(--#{$variable-prefix}gridnav-border-radius)
+				);
 			}
 		}
 	}

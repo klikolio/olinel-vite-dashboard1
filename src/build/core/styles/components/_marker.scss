@@ -15,7 +15,8 @@
 	margin: 0 var(--#{$variable-prefix}marker-spacer);
 
 	// Box shadow property is used for marker outline
-	box-shadow: 0 0 0 var(--#{$variable-prefix}marker-outline-width) var(--#{$variable-prefix}marker-outline-color);
+	box-shadow: 0 0 0 var(--#{$variable-prefix}marker-outline-width)
+		var(--#{$variable-prefix}marker-outline-color);
 }
 
 // Marker variations
@@ -27,7 +28,10 @@
 }
 
 .marker-pill {
-	width: calc(var(--#{$variable-prefix}marker-base-dimension) * var(--#{$variable-prefix}marker-pill-width-ratio));
+	width: calc(
+		var(--#{$variable-prefix}marker-base-dimension) *
+			var(--#{$variable-prefix}marker-pill-width-ratio)
+	);
 	height: var(--#{$variable-prefix}marker-base-dimension);
 	background-color: currentColor;
 	border-radius: calc(0.5 * var(--#{$variable-prefix}marker-base-dimension));
@@ -35,11 +39,13 @@
 
 .marker-circle {
 	width: calc(
-		var(--#{$variable-prefix}marker-base-dimension) * var(--#{$variable-prefix}marker-circle-border-ratio) +
+		var(--#{$variable-prefix}marker-base-dimension) *
+			var(--#{$variable-prefix}marker-circle-border-ratio) +
 			var(--#{$variable-prefix}marker-base-dimension)
 	);
 	height: calc(
-		var(--#{$variable-prefix}marker-base-dimension) * var(--#{$variable-prefix}marker-circle-border-ratio) +
+		var(--#{$variable-prefix}marker-base-dimension) *
+			var(--#{$variable-prefix}marker-circle-border-ratio) +
 			var(--#{$variable-prefix}marker-base-dimension)
 	);
 	background-color: var(--#{$variable-prefix}marker-circle-bg);

@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/column-reorder.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/extension/column-reorder.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,18 +27,24 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						<strong>Column Reorder</strong> adds the ability for the end user to be able to reorder columns in a
-						Datatables through a click and drag operation. This can be useful when presenting data in a table, letting
-						the user move columns that they wish to compare next to each other for easier comparison.
+						<strong>Column Reorder</strong> adds the ability for the end user to
+						be able to reorder columns in a Datatables through a click and drag
+						operation. This can be useful when presenting data in a table,
+						letting the user move columns that they wish to compare next to each
+						other for easier comparison.
 					</p>
 					<p>
-						<strong>Column Reorder</strong> can be initialized on a Datatables by using the
-						<code>colReorder</code> option in the Datatables options object.
+						<strong>Column Reorder</strong> can be initialized on a Datatables
+						by using the <code>colReorder</code> option in the Datatables
+						options object.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

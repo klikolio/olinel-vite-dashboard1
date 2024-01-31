@@ -75,7 +75,8 @@
 	&::after,
 	&::before {
 		border-width: calc(var(--#{$variable-prefix}tooltip-arrow-width) * 0.5)
-			var(--#{$variable-prefix}tooltip-arrow-height) calc(var(--#{$variable-prefix}tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
+			var(--#{$variable-prefix}tooltip-arrow-height)
+			calc(var(--#{$variable-prefix}tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
 	}
 
 	&::before {
@@ -120,7 +121,8 @@
 	&::after,
 	&::before {
 		border-width: calc(var(--#{$variable-prefix}tooltip-arrow-width) * 0.5) 0
-			calc(var(--#{$variable-prefix}tooltip-arrow-width) * 0.5) var(--#{$variable-prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
+			calc(var(--#{$variable-prefix}tooltip-arrow-width) * 0.5)
+			var(--#{$variable-prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
 	}
 
 	&::before {
@@ -154,10 +156,12 @@
 // Wrapper for the tooltip content
 .tooltip-inner {
 	max-width: var(--#{$variable-prefix}tooltip-max-width);
-	padding: var(--#{$variable-prefix}tooltip-padding-y) var(--#{$variable-prefix}tooltip-padding-x);
+	padding: var(--#{$variable-prefix}tooltip-padding-y)
+		var(--#{$variable-prefix}tooltip-padding-x);
 	color: var(--#{$variable-prefix}tooltip-color);
 	text-align: center;
 	background-color: var(--#{$variable-prefix}tooltip-bg);
-	border: var(--#{$variable-prefix}tooltip-border-width) $border-style var(--#{$variable-prefix}tooltip-border-color);
+	border: var(--#{$variable-prefix}tooltip-border-width) $border-style
+		var(--#{$variable-prefix}tooltip-border-color);
 	@include border-radius(var(--#{$variable-prefix}tooltip-border-radius));
 }

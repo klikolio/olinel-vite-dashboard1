@@ -101,7 +101,9 @@
 			// Big cell when select month and year
 			span {
 				display: block;
-				width: calc((100% / $datepicker-block-col) - ($datepicker-block-col-margin * 2));
+				width: calc(
+					(100% / $datepicker-block-col) - ($datepicker-block-col-margin * 2)
+				);
 				height: $datepicker-block-height;
 				line-height: $datepicker-block-height;
 				margin: $datepicker-block-col-margin;
@@ -164,7 +166,9 @@
 	.datetimepicker-hours table tr td span {
 		&.hour_am,
 		&.hour_pm {
-			width: calc((100% / $datetimepicker-hour-col) - ($datetimepicker-hour-margin * 2));
+			width: calc(
+				(100% / $datetimepicker-hour-col) - ($datetimepicker-hour-margin * 2)
+			);
 			margin: $datetimepicker-hour-margin;
 		}
 	}

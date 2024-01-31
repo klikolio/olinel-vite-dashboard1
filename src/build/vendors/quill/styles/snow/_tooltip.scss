@@ -59,7 +59,8 @@
 			&.ql-action::after {
 				content: "Edit";
 				// Add border divider
-				border-right: $quill-tooltip-border-width solid $quill-tooltip-border-color;
+				border-right: $quill-tooltip-border-width solid
+					$quill-tooltip-border-color;
 				padding-right: $quill-tooltip-content-spacer;
 				margin-left: $quill-tooltip-content-spacer;
 			}

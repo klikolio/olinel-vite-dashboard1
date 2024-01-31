@@ -27,10 +27,14 @@
 
 .apexcharts-annotation-rect,
 .apexcharts-area-series .apexcharts-area,
-.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-area-series
+	.apexcharts-series-markers
+	.apexcharts-marker.no-pointer-events,
 .apexcharts-gridline,
 .apexcharts-line,
-.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series
+	.apexcharts-series-markers
+	.apexcharts-marker.no-pointer-events,
 .apexcharts-point-annotation-label,
 .apexcharts-radar-series path,
 .apexcharts-radar-series polygon,

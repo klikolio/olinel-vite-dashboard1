@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/basic/scrollable.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/basic/scrollable.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,14 +27,18 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						In this example you can see Datatables doing both horizontal and vertical scrolling at the same time. To
-						enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you
-						want the container wrapper's height or width.
+						In this example you can see Datatables doing both horizontal and
+						vertical scrolling at the same time. To enable y-scrolling or
+						x-scrolling simply set the <code>scrollY|scrollX</code> parameter to
+						be whatever you want the container wrapper's height or width.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

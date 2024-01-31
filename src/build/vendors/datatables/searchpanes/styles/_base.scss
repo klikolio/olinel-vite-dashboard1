@@ -65,7 +65,8 @@
 	@include font-size($datatable-pane-font-size);
 	padding: $datatable-pane-padding-y $datatable-pane-padding-x;
 	margin-bottom: $datatable-pane-spacer;
-	border: $datatable-pane-border-width $border-style $datatable-pane-border-color;
+	border: $datatable-pane-border-width $border-style
+		$datatable-pane-border-color;
 	@include border-radius($datatable-pane-border-radius);
 }
 
@@ -83,7 +84,8 @@
 	margin: #{$datatable-pane-spacer * 0.5};
 
 	.dataTables_scrollBody {
-		border: $datatable-pane-body-border-width solid $datatable-pane-body-border-color !important;
+		border: $datatable-pane-body-border-width solid
+			$datatable-pane-body-border-color !important;
 		@include border-radius($datatable-pane-body-border-radius);
 
 		&:hover {

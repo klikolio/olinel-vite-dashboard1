@@ -26,7 +26,9 @@
 					</span>
 					in comparison to last month
 				</p>
-				<a href="#" class="btn btn-label-primary btn-widest rounded-pill">View details</a>
+				<a href="#" class="btn btn-label-primary btn-widest rounded-pill"
+					>View details</a
+				>
 			</div>
 			<div class="col-md-6 col-lg-7">
 				<!-- BEGIN Chart -->
@@ -40,16 +42,5 @@
 <!-- END Portlet -->
 
 <!-- BEGIN Script -->
-<script type="module">
-	import { initChart5 } from "@/app/widgets/chart-5"
-
-	const chartInstance = initChart5(document.querySelector("#widget-chart-5"), [
-		{
-			name: "Sales",
-			data: [400, 640, 200, 620, 320, 980],
-		},
-	])
-
-	chartInstance.render()
-</script>
+<script type="module" src="/src/app/components/widgets/widget-26.js"></script>
 <!-- END Script -->

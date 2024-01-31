@@ -8,10 +8,20 @@
 		<div class="portlet-addon">
 			<!-- BEGIN Navigation -->
 			<div class="nav portlet-nav" id="employee-tab">
-				<a class="nav-item nav-link active" id="employee-month-tab" data-bs-toggle="tab" href="#employee-month"
+				<a
+					class="nav-item nav-link active"
+					id="employee-month-tab"
+					data-bs-toggle="tab"
+					href="#employee-month"
 					>Last month</a
 				>
-				<a class="nav-item nav-link" id="employee-all-tab" data-bs-toggle="tab" href="#employee-all">All time</a>
+				<a
+					class="nav-item nav-link"
+					id="employee-all-tab"
+					data-bs-toggle="tab"
+					href="#employee-all"
+					>All time</a
+				>
 			</div>
 			<!-- END Navigation -->
 		</div>
@@ -55,7 +65,9 @@
 									<!-- END Chart -->
 								</td>
 								<td>
-									<span class="badge badge-label-info rounded-pill">Excelent</span>
+									<span class="badge badge-label-info rounded-pill"
+										>Excelent</span
+									>
 								</td>
 							</tr>
 							<tr>
@@ -81,7 +93,9 @@
 									<!-- END Chart -->
 								</td>
 								<td>
-									<span class="badge badge-label-success rounded-pill">Good</span>
+									<span class="badge badge-label-success rounded-pill"
+										>Good</span
+									>
 								</td>
 							</tr>
 							<tr>
@@ -133,7 +147,9 @@
 									<!-- END Chart -->
 								</td>
 								<td>
-									<span class="badge badge-label-primary rounded-pill">Standard</span>
+									<span class="badge badge-label-primary rounded-pill"
+										>Standard</span
+									>
 								</td>
 							</tr>
 						</tbody>
@@ -177,7 +193,9 @@
 									<!-- END Chart -->
 								</td>
 								<td>
-									<span class="badge badge-label-success rounded-pill">Good</span>
+									<span class="badge badge-label-success rounded-pill"
+										>Good</span
+									>
 								</td>
 							</tr>
 							<tr>
@@ -203,7 +221,9 @@
 									<!-- END Chart -->
 								</td>
 								<td>
-									<span class="badge badge-label-primary rounded-pill">Standard</span>
+									<span class="badge badge-label-primary rounded-pill"
+										>Standard</span
+									>
 								</td>
 							</tr>
 							<tr>
@@ -229,7 +249,9 @@
 									<!-- END Chart -->
 								</td>
 								<td>
-									<span class="badge badge-label-info rounded-pill">Excelent</span>
+									<span class="badge badge-label-info rounded-pill"
+										>Excelent</span
+									>
 								</td>
 							</tr>
 							<tr>
@@ -267,31 +289,13 @@
 		<!-- END Tab -->
 	</div>
 	<div class="portlet-footer pt-0 text-end">
-		<button class="btn btn-widest btn-label-primary rounded-pill">View all record</button>
+		<button class="btn btn-widest btn-label-primary rounded-pill">
+			View all record
+		</button>
 	</div>
 </div>
 <!-- END Portlet -->
 
 <!-- BEGIN Script -->
-<script type="module">
-	import { initChart3 } from "@/app/widgets/chart-3"
-
-	document.querySelectorAll(".widget-chart-3").forEach((chartQuery) => {
-		const baseColor = chartQuery.getAttribute("data-chart-color")
-		const chartLabel = chartQuery.getAttribute("data-chart-label")
-		const chartValue = chartQuery
-			.getAttribute("data-chart-value")
-			.split(",")
-			.map((val) => Number(val))
-
-		const chartInstance = initChart3(chartQuery, baseColor, [
-			{
-				name: chartLabel,
-				data: chartValue,
-			},
-		])
-
-		chartInstance.render()
-	})
-</script>
+<script type="module" src="/src/app/components/widgets/widget-24.js"></script>
 <!-- END Script -->

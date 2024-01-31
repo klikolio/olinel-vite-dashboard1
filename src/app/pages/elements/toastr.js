@@ -33,16 +33,19 @@ function getMessage() {
 // Add clear button to message string
 function getMessageWithClearButton(msg) {
 	msg = msg || 'Clear it self?'
-	msg += '<br><button type="button" class="btn btn-primary clear mt-2">Close</button>'
+	msg +=
+		'<br><button type="button" class="btn btn-primary clear mt-2">Close</button>'
 
 	return msg
 }
 
 // Get radio value
 function getRadioValue(groupSelector) {
-	return Array.from(document.querySelector(groupSelector).querySelectorAll('input[type="radio"]')).find(
-		(radioElement) => radioElement.checked,
-	).value
+	return Array.from(
+		document
+			.querySelector(groupSelector)
+			.querySelectorAll('input[type="radio"]'),
+	).find((radioElement) => radioElement.checked).value
 }
 
 // Show toastr handler
@@ -59,7 +62,9 @@ document.querySelector('#showtoast').addEventListener('click', () => {
 	const hideEasing = document.querySelector('#hideEasing').value
 	const showMethod = document.querySelector('#showMethod').value
 	const hideMethod = document.querySelector('#hideMethod').value
-	const addBehaviorToastClick = document.querySelector('#addBehaviorOnToastClick').checked
+	const addBehaviorToastClick = document.querySelector(
+		'#addBehaviorOnToastClick',
+	).checked
 	const addClear = document.querySelector('#addClear').checked
 
 	// Increase index
@@ -134,7 +139,8 @@ document.querySelector('#showtoast').addEventListener('click', () => {
 	const commandText = `toastr.${shortCutFunction}(\`${msg}\`${title ? ', "' + title + '"' : ''})`
 
 	// Show the code
-	document.querySelector('#toastrOptions').innerHTML = `${optionText}\n\n${commandText}`
+	document.querySelector('#toastrOptions').innerHTML =
+		`${optionText}\n\n${commandText}`
 
 	// Execute toastr
 	const toastElement = toastr[shortCutFunction](msg, title)
@@ -157,7 +163,9 @@ document.querySelector('#showtoast').addEventListener('click', () => {
 
 	if (toastElement.find('.surpriseBtn').length) {
 		toastElement.delegate('.surpriseBtn', 'click', () => {
-			alert(`Surprise! you clicked me. i was toast #${toastIndex}. You could perform an action here.`)
+			alert(
+				`Surprise! you clicked me. i was toast #${toastIndex}. You could perform an action here.`,
+			)
 		})
 	}
 

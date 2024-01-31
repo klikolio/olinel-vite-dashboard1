@@ -1,7 +1,10 @@
 import '@/build/vendors/apexcharts/styles/apexcharts.scss'
 import '@/build/vendors/apexcharts/scripts/apexcharts'
 
-import { getChartThemeOptions, currencyFormatter } from '@/app/utilities/widget-helper'
+import {
+	getChartThemeOptions,
+	currencyFormatter,
+} from '@/app/utilities/widget-helper'
 
 export function initChart8(chartQuery, series) {
 	const chartInstance = new ApexCharts(chartQuery, {

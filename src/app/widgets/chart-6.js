@@ -21,7 +21,9 @@ export function initChart6(chartQuery, series) {
 			},
 		},
 		markers: {
-			strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
 		},
 		fill: {
 			type: 'gradient',
@@ -52,7 +54,11 @@ export function initChart6(chartQuery, series) {
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		chartInstance.updateOptions({
 			...getChartThemeOptions(),
-			markers: { strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+			markers: {
+				strokeColors: getThemeVariantIsDark()
+					? colorScheme.black
+					: colorScheme.white,
+			},
 			fill: {
 				gradient: { shade: getThemeVariant() },
 			},

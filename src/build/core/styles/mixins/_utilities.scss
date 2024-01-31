@@ -17,7 +17,11 @@
 		}
 
 		// Use custom class if present
-		$property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
+		$property-class: if(
+			map-has-key($utility, class),
+			map-get($utility, class),
+			nth($properties, 1)
+		);
 		$property-class: if($property-class == null, "", $property-class);
 
 		// Use custom CSS variable name if present, otherwise default to `class`
@@ -30,10 +34,18 @@
 		// State params to generate pseudo-classes
 		$state: if(map-has-key($utility, state), map-get($utility, state), ());
 
-		$infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
+		$infix: if(
+			$property-class == "" and str-slice($infix, 1, 1) == "-",
+			str-slice($infix, 2),
+			$infix
+		);
 
 		// Don't prefix if value key is null (e.g. with shadow class)
-		$property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+		$property-class-modifier: if(
+			$key,
+			if($property-class == "" and $infix == "", "", "-") + $key,
+			""
+		);
 
 		@if map-get($utility, rfs) {
 			// Inside the media query
@@ -62,7 +74,9 @@
 				}
 
 				@each $pseudo in $state {
-					.#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+					.#{$property-class
+						+ $infix
+						+ $property-class-modifier}-#{$pseudo}:#{$pseudo} {
 						--#{$variable-prefix}#{$css-variable-name}: #{$value};
 					}
 				}
@@ -74,19 +88,23 @@
 								--#{$variable-prefix}#{$local-var}: #{$variable};
 							}
 						}
-						#{$property}: $value if($enable-important-utilities, !important, null);
+						#{$property}: $value
+							if($enable-important-utilities, !important, null);
 					}
 				}
 
 				@each $pseudo in $state {
-					.#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+					.#{$property-class
+						+ $infix
+						+ $property-class-modifier}-#{$pseudo}:#{$pseudo} {
 						@each $property in $properties {
 							@if $is-local-vars {
 								@each $local-var, $variable in $is-local-vars {
 									--#{$variable-prefix}#{$local-var}: #{$variable};
 								}
 							}
-							#{$property}: $value if($enable-important-utilities, !important, null);
+							#{$property}: $value
+								if($enable-important-utilities, !important, null);
 						}
 					}
 				}

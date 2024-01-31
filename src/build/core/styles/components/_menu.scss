@@ -40,7 +40,10 @@
 	--#{$variable-prefix}menu-section-spacer: #{$menu-section-spacer};
 	--#{$variable-prefix}menu-section-text-spacer: #{$menu-section-text-spacer};
 	--#{$variable-prefix}menu-section-color: #{$menu-section-color};
-	@include rfs($menu-section-font-size, --#{$variable-prefix}menu-section-font-size);
+	@include rfs(
+		$menu-section-font-size,
+		--#{$variable-prefix}menu-section-font-size
+	);
 	--#{$variable-prefix}menu-section-font-weight: #{$menu-section-font-weight};
 
 	display: flex;

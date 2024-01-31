@@ -61,9 +61,13 @@ class Aside extends BaseComponent {
 		document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
 			toggleElement.addEventListener('click', () => {
 				if (this.getBrowserWidth() >= BREAKPOINT) {
-					this.toggleDesktop(document.body.classList.contains(CLASS_DESKTOP_MINIMIZED))
+					this.toggleDesktop(
+						document.body.classList.contains(CLASS_DESKTOP_MINIMIZED),
+					)
 				} else {
-					this.toggleMobile(document.body.classList.contains(CLASS_MOBILE_MINIMIZED))
+					this.toggleMobile(
+						document.body.classList.contains(CLASS_MOBILE_MINIMIZED),
+					)
 				}
 			})
 		})
@@ -75,7 +79,10 @@ class Aside extends BaseComponent {
 
 		this.toggleBodyClass(true, isMaximized)
 
-		localStorage.setItem(STORAGE_IDENTIFIER, JSON.stringify({ desktopMaximized: isMaximized }))
+		localStorage.setItem(
+			STORAGE_IDENTIFIER,
+			JSON.stringify({ desktopMaximized: isMaximized }),
+		)
 
 		if (isMaximized) {
 			mainElement.classList.remove(CLASS_HOVER)
@@ -119,10 +126,14 @@ class Aside extends BaseComponent {
 
 		if (isMaximized) {
 			addedClass = isDesktop ? CLASS_DESKTOP_MAXIMIZED : CLASS_MOBILE_MAXIMIZED
-			removedClass = isDesktop ? CLASS_DESKTOP_MINIMIZED : CLASS_MOBILE_MINIMIZED
+			removedClass = isDesktop
+				? CLASS_DESKTOP_MINIMIZED
+				: CLASS_MOBILE_MINIMIZED
 		} else {
 			addedClass = isDesktop ? CLASS_DESKTOP_MINIMIZED : CLASS_MOBILE_MINIMIZED
-			removedClass = isDesktop ? CLASS_DESKTOP_MAXIMIZED : CLASS_MOBILE_MAXIMIZED
+			removedClass = isDesktop
+				? CLASS_DESKTOP_MAXIMIZED
+				: CLASS_MOBILE_MAXIMIZED
 		}
 
 		document.body.classList.add(addedClass)
@@ -131,7 +142,11 @@ class Aside extends BaseComponent {
 
 	// Function for getting browser width
 	getBrowserWidth() {
-		return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+		return (
+			window.innerWidth ||
+			document.documentElement.clientWidth ||
+			document.body.clientWidth
+		)
 	}
 }
 

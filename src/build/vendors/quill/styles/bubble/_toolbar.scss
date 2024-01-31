@@ -145,8 +145,8 @@
 	.ql-color-picker {
 		.ql-picker-options {
 			padding: $quill-dropdown-padding-y $quill-dropdown-padding-x;
-			width: ($quill-control-color-dimension + 2 * $quill-control-color-margin) * $quill-control-color-num-per-row + 2 *
-				$quill-control-padding-x + 2;
+			width: ($quill-control-color-dimension + 2 * $quill-control-color-margin) *
+				$quill-control-color-num-per-row + 2 * $quill-control-padding-x + 2;
 		}
 
 		.ql-picker-item {

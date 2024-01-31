@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/search-panes.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/extension/search-panes.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,20 +27,27 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						<strong>Search panes</strong> adds panes to the Datatables with the capability to search the Datatables by
-						selecting rows in the panes. This is very useful when it comes to adding a more accessible searching feature
-						and custom search capabilities.
+						<strong>Search panes</strong> adds panes to the Datatables with the
+						capability to search the Datatables by selecting rows in the panes.
+						This is very useful when it comes to adding a more accessible
+						searching feature and custom search capabilities.
 					</p>
 					<p>
-						If you include the <strong>Search panes</strong> extension on your page, it is automatically available for
-						every Datatables on that page. You can customize the panes appearance and operation by adding a
-						<code>Pfrtip</code> to the <code>dom</code> property. This allows the location of the panes to be defined.
-						Configuration for the <strong>Search panes</strong> goes inside of the <code>searchPanes</code> property.
+						If you include the <strong>Search panes</strong> extension on your
+						page, it is automatically available for every Datatables on that
+						page. You can customize the panes appearance and operation by adding
+						a <code>Pfrtip</code> to the <code>dom</code> property. This allows
+						the location of the panes to be defined. Configuration for the
+						<strong>Search panes</strong> goes inside of the
+						<code>searchPanes</code> property.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

@@ -1,10 +1,9 @@
-export function initFullscreenTrigger() {
+export function initFullscreenTrigger(triggerSelector) {
 	const fullscreenActiveClass = 'fullscreen-active'
 
 	const bodyQuery = 'body'
-	const triggerQuery = '#fullscreen-trigger'
 	const bodyElement = document.querySelector(bodyQuery)
-	const triggerElement = document.querySelector(triggerQuery)
+	const triggerElement = document.querySelector(triggerSelector)
 
 	document.addEventListener('fullscreenchange', () => {
 		if (document.fullscreenElement) {

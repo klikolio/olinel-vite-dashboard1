@@ -13,7 +13,8 @@
 			top: -#{$quill-tooltip-arrow-width - $quill-tooltip-border-width};
 
 			&:after {
-				border-bottom: $quill-tooltip-arrow-width solid $quill-tooltip-arrow-color;
+				border-bottom: $quill-tooltip-arrow-width solid
+					$quill-tooltip-arrow-color;
 			}
 		}
 
@@ -101,7 +102,8 @@
 				height: 0;
 				border-left: $quill-bubble-link-tooltip-arrow-width solid transparent;
 				border-right: $quill-bubble-link-tooltip-arrow-width solid transparent;
-				border-top: $quill-bubble-link-tooltip-arrow-width solid $quill-bubble-link-tooltip-arrow-color;
+				border-top: $quill-bubble-link-tooltip-arrow-width solid
+					$quill-bubble-link-tooltip-arrow-color;
 				top: 0;
 			}
 			// Show tooltip when hovering link

@@ -1,7 +1,10 @@
 .pagination {
 	--#{$variable-prefix}pagination-padding-x: #{$pagination-padding-x};
 	--#{$variable-prefix}pagination-padding-y: #{$pagination-padding-y};
-	@include rfs($pagination-font-size, --#{$variable-prefix}pagination-font-size);
+	@include rfs(
+		$pagination-font-size,
+		--#{$variable-prefix}pagination-font-size
+	);
 	--#{$variable-prefix}pagination-color: #{$pagination-color};
 	--#{$variable-prefix}pagination-bg: #{$pagination-bg};
 	--#{$variable-prefix}pagination-border-width: #{$pagination-border-width};
@@ -26,12 +29,14 @@
 .page-link {
 	position: relative;
 	display: block;
-	padding: var(--#{$variable-prefix}pagination-padding-y) var(--#{$variable-prefix}pagination-padding-x);
+	padding: var(--#{$variable-prefix}pagination-padding-y)
+		var(--#{$variable-prefix}pagination-padding-x);
 	@include font-size(var(--#{$variable-prefix}pagination-font-size));
 	color: var(--#{$variable-prefix}pagination-color);
 	text-decoration: if($link-decoration == none, null, none);
 	background-color: var(--#{$variable-prefix}pagination-bg);
-	border: var(--#{$variable-prefix}pagination-border-width) solid var(--#{$variable-prefix}pagination-border-color);
+	border: var(--#{$variable-prefix}pagination-border-width) solid
+		var(--#{$variable-prefix}pagination-border-color);
 	@include transition($pagination-transition);
 
 	&:hover {
@@ -74,19 +79,25 @@
 	@if $pagination-margin-start == ($pagination-border-width * -1) {
 		&:first-child {
 			.page-link {
-				@include border-start-radius(var(--#{$variable-prefix}pagination-border-radius));
+				@include border-start-radius(
+					var(--#{$variable-prefix}pagination-border-radius)
+				);
 			}
 		}
 
 		&:last-child {
 			.page-link {
-				@include border-end-radius(var(--#{$variable-prefix}pagination-border-radius));
+				@include border-end-radius(
+					var(--#{$variable-prefix}pagination-border-radius)
+				);
 			}
 		}
 	} @else {
 		// Add border-radius to all pageLinks in case they have left margin
 		.page-link {
-			@include border-radius(var(--#{$variable-prefix}pagination-border-radius));
+			@include border-radius(
+				var(--#{$variable-prefix}pagination-border-radius)
+			);
 		}
 	}
 }

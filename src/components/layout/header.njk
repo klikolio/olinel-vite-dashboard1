@@ -7,17 +7,24 @@
 		<!-- BEGIN Header Holder -->
 		<div class="header-holder header-holder-desktop">
 			<div class="header-container {{ container_class }}">
-				<div class="header-wrap header-wrap-block justify-content-start">{% include "./header-nav.njk" %}</div>
+				<div class="header-wrap header-wrap-block justify-content-start">
+					{% include "./header-nav.njk" %}
+				</div>
 				<div class="header-wrap hstack gap-2">
 					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
-						<button class="btn btn-flat-primary btn-icon" data-bs-toggle="dropdown">
+						<button
+							class="btn btn-flat-primary btn-icon"
+							data-bs-toggle="dropdown"
+						>
 							<i class="far fa-envelope-open"></i>
 							<div class="btn-marker">
 								<i class="marker marker-dot text-info"></i>
 							</div>
 						</button>
-						<div class="dropdown-menu dropdown-menu-end dropdown-menu-wide dropdown-menu-animated overflow-hidden py-0">
+						<div
+							class="dropdown-menu dropdown-menu-end dropdown-menu-wide dropdown-menu-animated overflow-hidden py-0"
+						>
 							{% include "./header-notification.njk" %}
 						</div>
 					</div>
@@ -25,28 +32,44 @@
 
 					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
-						<button class="btn btn-flat-primary btn-icon" data-bs-toggle="dropdown">
+						<button
+							class="btn btn-flat-primary btn-icon"
+							data-bs-toggle="dropdown"
+						>
 							<i class="far fa-comment-dots"></i>
 							<div class="btn-marker">
 								<i class="marker marker-dot text-info"></i>
 							</div>
 						</button>
-						<div class="dropdown-menu dropdown-menu-end dropdown-menu-wide dropdown-menu-animated overflow-hidden py-0">
+						<div
+							class="dropdown-menu dropdown-menu-end dropdown-menu-wide dropdown-menu-animated overflow-hidden py-0"
+						>
 							{% include "./header-chat.njk" %}
 						</div>
 					</div>
 					<!-- END Dropdown -->
 
-					<button class="btn btn-flat-primary btn-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-todo">
+					<button
+						class="btn btn-flat-primary btn-icon"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvas-todo"
+					>
 						<i class="fa fa-tasks"></i>
 					</button>
-					<button class="btn btn-flat-primary btn-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-settings">
+					<button
+						class="btn btn-flat-primary btn-icon"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvas-settings"
+					>
 						<i class="fa fa-sliders"></i>
 					</button>
 
 					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
-						<button class="btn btn-flat-primary widget13" data-bs-toggle="dropdown">
+						<button
+							class="btn btn-flat-primary widget13"
+							data-bs-toggle="dropdown"
+						>
 							<div class="widget13-text">Hi <strong>Kayla</strong></div>
 
 							<!-- BEGIN Avatar -->
@@ -57,7 +80,9 @@
 							</div>
 							<!-- END Avatar -->
 						</button>
-						<div class="dropdown-menu dropdown-menu-wide dropdown-menu-end dropdown-menu-animated overflow-hidden py-0">
+						<div
+							class="dropdown-menu dropdown-menu-wide dropdown-menu-end dropdown-menu-animated overflow-hidden py-0"
+						>
 							{% include "./header-user.njk" %}
 						</div>
 					</div>
@@ -74,7 +99,9 @@
 		<div class="header-container {{ container_class }}">
 			<h4 class="header-title">{{ page_title }}</h4>
 			<i class="header-divider"></i>
-			<div class="header-wrap header-wrap-block justify-content-start">{% include "./header-breadcrumb.njk" %}</div>
+			<div class="header-wrap header-wrap-block justify-content-start">
+				{% include "./header-breadcrumb.njk" %}
+			</div>
 			<div class="header-wrap">{% include "./header-action.njk" %}</div>
 		</div>
 	</div>
@@ -94,13 +121,20 @@
 					<h4 class="header-brand">{{ defaults.brand_name }}</h4>
 				</div>
 				<div class="header-wrap hstack gap-2">
-					<button class="btn btn-flat-primary btn-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-todo">
+					<button
+						class="btn btn-flat-primary btn-icon"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvas-todo"
+					>
 						<i class="fa fa-tasks"></i>
 					</button>
 
 					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
-						<button class="btn btn-flat-primary widget13" data-bs-toggle="dropdown">
+						<button
+							class="btn btn-flat-primary widget13"
+							data-bs-toggle="dropdown"
+						>
 							<div class="widget13-text">Hi <strong>Kayla</strong></div>
 
 							<!-- BEGIN Avatar -->
@@ -111,7 +145,9 @@
 							</div>
 							<!-- END Avatar -->
 						</button>
-						<div class="dropdown-menu dropdown-menu-wide dropdown-menu-end dropdown-menu-animated overflow-hidden py-0">
+						<div
+							class="dropdown-menu dropdown-menu-wide dropdown-menu-end dropdown-menu-animated overflow-hidden py-0"
+						>
 							{% include "./header-user.njk" %}
 						</div>
 					</div>
@@ -136,9 +172,5 @@
 <!-- END Header -->
 
 <!-- BEGIN Script -->
-<script type="module">
-	import { initStickyHeader } from "@/app/utilities/sticky-header"
-
-	initStickyHeader()
-</script>
+<script type="module" src="/src/app/components/layout/header.js"></script>
 <!-- END Script -->

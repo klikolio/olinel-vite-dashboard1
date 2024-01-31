@@ -33,16 +33,28 @@
 
 	> .form-control,
 	> .form-select {
-		@include floating-label-sizing($input-font-size, $input-padding-y, $input-padding-x);
+		@include floating-label-sizing(
+			$input-font-size,
+			$input-padding-y,
+			$input-padding-x
+		);
 	}
 
 	> .form-control-lg,
 	> .form-select-lg {
-		@include floating-label-sizing($input-font-size-lg, $input-padding-y-lg, $input-padding-x-lg);
+		@include floating-label-sizing(
+			$input-font-size-lg,
+			$input-padding-y-lg,
+			$input-padding-x-lg
+		);
 	}
 
 	> .form-control-sm,
 	> .form-select-sm {
-		@include floating-label-sizing($input-font-size-sm, $input-padding-y-sm, $input-padding-x-sm);
+		@include floating-label-sizing(
+			$input-font-size-sm,
+			$input-padding-y-sm,
+			$input-padding-x-sm
+		);
 	}
 }

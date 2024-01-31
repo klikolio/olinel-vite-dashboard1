@@ -6,11 +6,17 @@
 	--#{$variable-prefix}card-spacer-y: #{$card-spacer-y};
 	--#{$variable-prefix}card-spacer-x: #{$card-spacer-x};
 	--#{$variable-prefix}card-title-color: #{$card-title-color};
-	@include rfs($card-title-font-size, --#{$variable-prefix}card-title-font-size);
+	@include rfs(
+		$card-title-font-size,
+		--#{$variable-prefix}card-title-font-size
+	);
 	--#{$variable-prefix}card-title-font-weight: #{$card-title-font-weight};
 	--#{$variable-prefix}card-title-spacer-y: #{$card-title-spacer-y};
 	--#{$variable-prefix}card-subtitle-color: #{$card-subtitle-color};
-	@include rfs($card-subtitle-font-size, --#{$variable-prefix}card-subtitle-font-size);
+	@include rfs(
+		$card-subtitle-font-size,
+		--#{$variable-prefix}card-subtitle-font-size
+	);
 	--#{$variable-prefix}card-subtitle-font-weight: #{$card-subtitle-font-weight};
 	--#{$variable-prefix}card-border-width: #{$card-border-width};
 	--#{$variable-prefix}card-border-color: #{$card-border-color};
@@ -39,7 +45,8 @@
 	word-wrap: break-word;
 	background-color: var(--#{$variable-prefix}card-bg);
 	background-clip: border-box;
-	border: var(--#{$variable-prefix}card-border-width) $border-style var(--#{$variable-prefix}card-border-color);
+	border: var(--#{$variable-prefix}card-border-width) $border-style
+		var(--#{$variable-prefix}card-border-color);
 	@include border-radius(var(--#{$variable-prefix}card-border-radius));
 
 	> hr {
@@ -53,12 +60,16 @@
 
 		&:first-child {
 			border-top-width: 0;
-			@include border-top-radius(var(--#{$variable-prefix}card-inner-border-radius));
+			@include border-top-radius(
+				var(--#{$variable-prefix}card-inner-border-radius)
+			);
 		}
 
 		&:last-child {
 			border-bottom-width: 0;
-			@include border-bottom-radius(var(--#{$variable-prefix}card-inner-border-radius));
+			@include border-bottom-radius(
+				var(--#{$variable-prefix}card-inner-border-radius)
+			);
 		}
 	}
 
@@ -74,7 +85,8 @@
 	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
 	// as much space as possible, ensuring footers are aligned to the bottom.
 	flex: 1 1 auto;
-	padding: var(--#{$variable-prefix}card-spacer-y) var(--#{$variable-prefix}card-spacer-x);
+	padding: var(--#{$variable-prefix}card-spacer-y)
+		var(--#{$variable-prefix}card-spacer-x);
 	color: var(--#{$variable-prefix}card-color);
 }
 
@@ -119,11 +131,13 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: var(--#{$variable-prefix}card-cap-padding-y) var(--#{$variable-prefix}card-cap-padding-x);
+	padding: var(--#{$variable-prefix}card-cap-padding-y)
+		var(--#{$variable-prefix}card-cap-padding-x);
 	margin-bottom: 0; // Removes the default margin-bottom of <hN>
 	color: var(--#{$variable-prefix}card-cap-color);
 	background-color: var(--#{$variable-prefix}card-cap-bg);
-	border-bottom: var(--#{$variable-prefix}card-border-width) $border-style var(--#{$variable-prefix}card-border-color);
+	border-bottom: var(--#{$variable-prefix}card-border-width) $border-style
+		var(--#{$variable-prefix}card-border-color);
 
 	.card-title {
 		flex: 1;
@@ -132,7 +146,8 @@
 
 	&:first-child {
 		@include border-radius(
-			var(--#{$variable-prefix}card-inner-border-radius) var(--#{$variable-prefix}card-inner-border-radius) 0 0
+			var(--#{$variable-prefix}card-inner-border-radius)
+				var(--#{$variable-prefix}card-inner-border-radius) 0 0
 		);
 	}
 }
@@ -148,14 +163,17 @@
 }
 
 .card-footer {
-	padding: var(--#{$variable-prefix}card-cap-padding-y) var(--#{$variable-prefix}card-cap-padding-x);
+	padding: var(--#{$variable-prefix}card-cap-padding-y)
+		var(--#{$variable-prefix}card-cap-padding-x);
 	color: var(--#{$variable-prefix}card-cap-color);
 	background-color: var(--#{$variable-prefix}card-cap-bg);
-	border-top: var(--#{$variable-prefix}card-border-width) $border-style var(--#{$variable-prefix}card-border-color);
+	border-top: var(--#{$variable-prefix}card-border-width) $border-style
+		var(--#{$variable-prefix}card-border-color);
 
 	&:last-child {
 		@include border-radius(
-			0 0 var(--#{$variable-prefix}card-inner-border-radius) var(--#{$variable-prefix}card-inner-border-radius)
+			0 0 var(--#{$variable-prefix}card-inner-border-radius)
+				var(--#{$variable-prefix}card-inner-border-radius)
 		);
 	}
 }
@@ -201,7 +219,11 @@
 
 	.nav-link {
 		margin-bottom: calc(
-			(var(--#{$variable-prefix}card-cap-padding-y) - var(--#{$variable-prefix}card-line-border-width)) * -1
+			(
+					var(--#{$variable-prefix}card-cap-padding-y) - var(
+							--#{$variable-prefix}card-line-border-width
+						)
+				) * -1
 		);
 	}
 }
@@ -225,12 +247,16 @@
 
 .card-img,
 .card-img-top {
-	@include border-top-radius(var(--#{$variable-prefix}card-inner-border-radius));
+	@include border-top-radius(
+		var(--#{$variable-prefix}card-inner-border-radius)
+	);
 }
 
 .card-img,
 .card-img-bottom {
-	@include border-bottom-radius(var(--#{$variable-prefix}card-inner-border-radius));
+	@include border-bottom-radius(
+		var(--#{$variable-prefix}card-inner-border-radius)
+	);
 }
 
 //

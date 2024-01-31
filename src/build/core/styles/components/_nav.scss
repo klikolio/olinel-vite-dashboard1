@@ -25,7 +25,8 @@
 
 .nav-link {
 	display: block;
-	padding: var(--#{$variable-prefix}nav-link-padding-y) var(--#{$variable-prefix}nav-link-padding-x);
+	padding: var(--#{$variable-prefix}nav-link-padding-y)
+		var(--#{$variable-prefix}nav-link-padding-x);
 	@include font-size(var(--#{$variable-prefix}nav-link-font-size));
 	font-weight: var(--#{$variable-prefix}nav-link-font-weight);
 	color: var(--#{$variable-prefix}nav-link-color);
@@ -100,8 +101,11 @@
 		margin-bottom: calc(
 			-1 * var(--#{$variable-prefix}nav-tabs-border-width)
 		); // stylelint-disable-line function-disallowed-list
-		border: var(--#{$variable-prefix}nav-tabs-border-width) $border-style transparent;
-		@include border-top-radius(var(--#{$variable-prefix}nav-tabs-border-radius));
+		border: var(--#{$variable-prefix}nav-tabs-border-width) $border-style
+			transparent;
+		@include border-top-radius(
+			var(--#{$variable-prefix}nav-tabs-border-radius)
+		);
 
 		&:hover,
 		&:focus {
@@ -184,7 +188,8 @@
 	.nav-link {
 		border: 0;
 		background: none;
-		border-bottom: var(--#{$variable-prefix}nav-line-border-width) solid transparent;
+		border-bottom: var(--#{$variable-prefix}nav-line-border-width) solid
+			transparent;
 	}
 
 	.nav-link.active,

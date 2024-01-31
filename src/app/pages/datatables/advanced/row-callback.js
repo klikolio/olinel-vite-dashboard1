@@ -16,7 +16,10 @@ $('#datatables-1').DataTable({
 	createdRow: (row, data, index) => {
 		const column = 5
 		const cell = $(row).children('td').eq(column)
-		const classes = data[column] < 40 ? 'text-success font-weight-bold' : 'text-danger font-weight-bold'
+		const classes =
+			data[column] < 40
+				? 'text-success font-weight-bold'
+				: 'text-danger font-weight-bold'
 
 		cell.addClass(classes)
 	},

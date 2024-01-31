@@ -11,7 +11,10 @@
 	--#{$variable-prefix}offcanvas-border-width: #{$offcanvas-border-width};
 	--#{$variable-prefix}offcanvas-border-color: #{$offcanvas-border-color};
 	--#{$variable-prefix}offcanvas-title-color: #{$offcanvas-title-color};
-	@include rfs($offcanvas-title-font-size, --#{$variable-prefix}offcanvas-title-font-size);
+	@include rfs(
+		$offcanvas-title-font-size,
+		--#{$variable-prefix}offcanvas-title-font-size
+	);
 	--#{$variable-prefix}offcanvas-title-font-weight: #{$offcanvas-title-font-weight};
 	--#{$variable-prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
 }
@@ -48,8 +51,8 @@
 				top: 0;
 				left: 0;
 				width: var(--#{$variable-prefix}offcanvas-width);
-				border-right: var(--#{$variable-prefix}offcanvas-border-width) $border-style
-					var(--#{$variable-prefix}offcanvas-border-color);
+				border-right: var(--#{$variable-prefix}offcanvas-border-width)
+					$border-style var(--#{$variable-prefix}offcanvas-border-color);
 				transform: translateX(-100%);
 			}
 
@@ -57,8 +60,8 @@
 				top: 0;
 				right: 0;
 				width: var(--#{$variable-prefix}offcanvas-width);
-				border-left: var(--#{$variable-prefix}offcanvas-border-width) $border-style
-					var(--#{$variable-prefix}offcanvas-border-color);
+				border-left: var(--#{$variable-prefix}offcanvas-border-width)
+					$border-style var(--#{$variable-prefix}offcanvas-border-color);
 				transform: translateX(100%);
 			}
 
@@ -68,8 +71,8 @@
 				left: 0;
 				height: var(--#{$variable-prefix}offcanvas-height);
 				max-height: 100%;
-				border-bottom: var(--#{$variable-prefix}offcanvas-border-width) $border-style
-					var(--#{$variable-prefix}offcanvas-border-color);
+				border-bottom: var(--#{$variable-prefix}offcanvas-border-width)
+					$border-style var(--#{$variable-prefix}offcanvas-border-color);
 				transform: translateY(-100%);
 			}
 
@@ -78,8 +81,8 @@
 				left: 0;
 				height: var(--#{$variable-prefix}offcanvas-height);
 				max-height: 100%;
-				border-top: var(--#{$variable-prefix}offcanvas-border-width) $border-style
-					var(--#{$variable-prefix}offcanvas-border-color);
+				border-top: var(--#{$variable-prefix}offcanvas-border-width)
+					$border-style var(--#{$variable-prefix}offcanvas-border-color);
 				transform: translateY(100%);
 			}
 
@@ -119,14 +122,19 @@
 }
 
 .offcanvas-backdrop {
-	@include overlay-backdrop($zindex-offcanvas-backdrop, $offcanvas-backdrop-bg, $offcanvas-backdrop-opacity);
+	@include overlay-backdrop(
+		$zindex-offcanvas-backdrop,
+		$offcanvas-backdrop-bg,
+		$offcanvas-backdrop-opacity
+	);
 }
 
 .offcanvas-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: var(--#{$variable-prefix}offcanvas-padding-y) var(--#{$variable-prefix}offcanvas-padding-x);
+	padding: var(--#{$variable-prefix}offcanvas-padding-y)
+		var(--#{$variable-prefix}offcanvas-padding-x);
 
 	.btn-close {
 		padding: calc(var(--#{$variable-prefix}offcanvas-padding-y) * 0.5)
@@ -149,7 +157,8 @@
 	width: 100%;
 	height: 100%;
 	flex-grow: 1;
-	padding: var(--#{$variable-prefix}offcanvas-padding-y) var(--#{$variable-prefix}offcanvas-padding-x);
+	padding: var(--#{$variable-prefix}offcanvas-padding-y)
+		var(--#{$variable-prefix}offcanvas-padding-x);
 	overflow-y: auto;
 
 	.offcanvas-header + & {

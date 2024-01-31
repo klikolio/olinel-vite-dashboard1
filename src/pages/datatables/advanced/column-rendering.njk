@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/advanced/column-rendering.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/advanced/column-rendering.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,14 +27,19 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						Each column has an optional rendering control called <code>columns.render</code> which can be used to
-						process the content of each cell before data is used. This example show action buttons in the last column
-						and render badges from number data in the status column.
+						Each column has an optional rendering control called
+						<code>columns.render</code> which can be used to process the content
+						of each cell before data is used. This example show action buttons
+						in the last column and render badges from number data in the status
+						column.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

@@ -61,7 +61,10 @@
 	--#{$variable-prefix}dropdown-divider-width: #{$dropdown-divider-width};
 	--#{$variable-prefix}dropdown-divider-bg: #{$dropdown-divider-bg};
 	--#{$variable-prefix}dropdown-divider-margin-y: #{$dropdown-divider-margin-y};
-	@include rfs($dropdown-item-font-size, --#{$variable-prefix}dropdown-item-font-size);
+	@include rfs(
+		$dropdown-item-font-size,
+		--#{$variable-prefix}dropdown-item-font-size
+	);
 	--#{$variable-prefix}dropdown-item-font-weight: #{$dropdown-item-font-weight};
 	--#{$variable-prefix}dropdown-item-color: #{$dropdown-item-color};
 	--#{$variable-prefix}dropdown-item-hover-color: #{$dropdown-item-hover-color};
@@ -75,7 +78,10 @@
 	--#{$variable-prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
 	--#{$variable-prefix}dropdown-item-content-spacer: #{$dropdown-item-content-spacer};
 	--#{$variable-prefix}dropdown-header-color: #{$dropdown-header-color};
-	@include rfs($dropdown-header-font-size, --#{$variable-prefix}dropdown-header-font-size);
+	@include rfs(
+		$dropdown-header-font-size,
+		--#{$variable-prefix}dropdown-header-font-size
+	);
 	--#{$variable-prefix}dropdown-header-font-weight: #{$dropdown-header-font-weight};
 	--#{$variable-prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
 	--#{$variable-prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -87,7 +93,8 @@
 	z-index: var(--#{$variable-prefix}dropdown-zindex);
 	display: none; // none by default, but block on "open" of the menu
 	min-width: var(--#{$variable-prefix}dropdown-min-width);
-	padding: var(--#{$variable-prefix}dropdown-padding-y) var(--#{$variable-prefix}dropdown-padding-x);
+	padding: var(--#{$variable-prefix}dropdown-padding-y)
+		var(--#{$variable-prefix}dropdown-padding-x);
 	margin: 0; // Override default margin of ul
 	@include font-size(var(--#{$variable-prefix}dropdown-font-size));
 	color: var(--#{$variable-prefix}dropdown-color);
@@ -95,7 +102,8 @@
 	list-style: none;
 	background-color: var(--#{$variable-prefix}dropdown-bg);
 	background-clip: padding-box;
-	border: var(--#{$variable-prefix}dropdown-border-width) $border-style var(--#{$variable-prefix}dropdown-border-color);
+	border: var(--#{$variable-prefix}dropdown-border-width) $border-style
+		var(--#{$variable-prefix}dropdown-border-color);
 	animation-duration: var(--#{$variable-prefix}dropdown-animation-duration);
 	animation-fill-mode: both;
 	white-space: normal;
@@ -111,11 +119,15 @@
 	@if $dropdown-padding-y == 0 {
 		> .dropdown-item:first-child,
 		> li:first-child .dropdown-item {
-			@include border-top-radius(var(--#{$variable-prefix}dropdown-inner-border-radius));
+			@include border-top-radius(
+				var(--#{$variable-prefix}dropdown-inner-border-radius)
+			);
 		}
 		> .dropdown-item:last-child,
 		> li:last-child .dropdown-item {
-			@include border-bottom-radius(var(--#{$variable-prefix}dropdown-inner-border-radius));
+			@include border-bottom-radius(
+				var(--#{$variable-prefix}dropdown-inner-border-radius)
+			);
 		}
 	}
 }
@@ -281,7 +293,8 @@
 	flex-direction: row;
 	align-items: center;
 	width: 100%; // For `<button>`s
-	padding: var(--#{$variable-prefix}dropdown-item-padding-y) var(--#{$variable-prefix}dropdown-item-padding-x);
+	padding: var(--#{$variable-prefix}dropdown-item-padding-y)
+		var(--#{$variable-prefix}dropdown-item-padding-x);
 	clear: both;
 	color: var(--#{$variable-prefix}dropdown-item-color);
 	@include font-size(var(--#{$variable-prefix}dropdown-item-font-size));
@@ -329,7 +342,8 @@
 	color: var(--#{$variable-prefix}dropdown-header-color);
 	@include font-size(var(--#{$variable-prefix}dropdown-header-font-size));
 	font-weight: var(--#{$variable-prefix}dropdown-header-font-weight);
-	padding: var(--#{$variable-prefix}dropdown-header-padding-y) var(--#{$variable-prefix}dropdown-header-padding-x);
+	padding: var(--#{$variable-prefix}dropdown-header-padding-y)
+		var(--#{$variable-prefix}dropdown-header-padding-x);
 	margin-bottom: 0; // for use with heading elements
 	white-space: nowrap; // as with > li > a
 }
@@ -337,7 +351,8 @@
 // Dropdown text
 .dropdown-item-text {
 	display: block;
-	padding: var(--#{$variable-prefix}dropdown-item-padding-y) var(--#{$variable-prefix}dropdown-item-padding-x);
+	padding: var(--#{$variable-prefix}dropdown-item-padding-y)
+		var(--#{$variable-prefix}dropdown-item-padding-x);
 	color: var(--#{$variable-prefix}dropdown-item-color);
 }
 
@@ -355,7 +370,9 @@
 	height: calc(0.75 * var(--#{$variable-prefix}dropdown-icon-dimension));
 	width: calc(0.75 * var(--#{$variable-prefix}dropdown-icon-dimension));
 	min-width: calc(0.75 * var(--#{$variable-prefix}dropdown-icon-dimension));
-	margin-right: calc(0.75 * var(--#{$variable-prefix}dropdown-item-content-spacer));
+	margin-right: calc(
+		0.75 * var(--#{$variable-prefix}dropdown-item-content-spacer)
+	);
 	color: var(--#{$variable-prefix}dropdown-bullet-color);
 
 	&:before {

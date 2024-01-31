@@ -26,7 +26,9 @@ export function initChart1(chartQuery, series) {
 			colors: [colorScheme.blue],
 		},
 		markers: {
-			strokeColors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+			strokeColors: getThemeVariantIsDark()
+				? colorScheme.black
+				: colorScheme.white,
 		},
 		stroke: {
 			show: false,
@@ -40,7 +42,17 @@ export function initChart1(chartQuery, series) {
 			},
 		},
 		xaxis: {
-			categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			categories: [
+				'Jan',
+				'Feb',
+				'Mar',
+				'Apr',
+				'May',
+				'Jun',
+				'Jul',
+				'Aug',
+				'Sep',
+			],
 			crosshairs: {
 				show: false,
 			},
@@ -60,7 +72,9 @@ export function initChart1(chartQuery, series) {
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		chartInstance.updateOptions({
 			...getChartThemeOptions(),
-			markers: { strokeColors: getThemeVariantIsDark() ? colors.black : colors.white },
+			markers: {
+				strokeColors: getThemeVariantIsDark() ? colors.black : colors.white,
+			},
 		})
 	})
 

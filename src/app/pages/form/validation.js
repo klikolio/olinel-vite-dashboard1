@@ -2,7 +2,11 @@ import 'jquery-validation'
 import $ from 'jquery'
 
 // Custom method for validation
-$.validator.addMethod('notEqual', (value, element, arg) => arg !== value, 'Value must not equal arg.')
+$.validator.addMethod(
+	'notEqual',
+	(value, element, arg) => arg !== value,
+	'Value must not equal arg.',
+)
 
 // Initialize form validation
 $('#validate-1').validate({

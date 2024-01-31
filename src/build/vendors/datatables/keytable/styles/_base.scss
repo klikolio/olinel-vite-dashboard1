@@ -4,7 +4,8 @@
 		outline-offset: $datatable-key-outline-width * -1;
 
 		.dtk-focus-alt & {
-			outline: $datatable-key-outline-width solid $datatable-key-outline-alt-color;
+			outline: $datatable-key-outline-width solid
+				$datatable-key-outline-alt-color;
 			outline-offset: $datatable-key-outline-width * -1;
 		}
 	}

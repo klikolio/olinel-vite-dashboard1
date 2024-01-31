@@ -11,7 +11,10 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/advanced/multiple-controls.js"></script>
+	<script
+		type="module"
+		src="/src/app/pages/datatables/advanced/multiple-controls.js"
+	></script>
 {% endblock %}
 
 {% block content %}
@@ -24,14 +27,18 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						You can use the <code>dom</code> initialization parameter to move Datatables features around the table to
-						where you want them. In addition to this, you can also use <code>dom</code> to create multiple instances of
-						these table controls.
+						You can use the <code>dom</code> initialization parameter to move
+						Datatables features around the table to where you want them. In
+						addition to this, you can also use <code>dom</code> to create
+						multiple instances of these table controls.
 					</p>
 					<hr />
 
 					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
+					<table
+						id="datatables-1"
+						class="table table-bordered table-striped table-hover"
+					>
 						<thead>
 							<tr>
 								<th>ID</th>

@@ -16,7 +16,10 @@
 	--#{$variable-prefix}portlet-icon-size: #{$portlet-icon-size};
 	--#{$variable-prefix}portlet-icon-color: #{$portlet-icon-color};
 	--#{$variable-prefix}portlet-title-color: #{$portlet-title-color};
-	@include rfs($portlet-title-font-size, --#{$variable-prefix}portlet-title-font-size);
+	@include rfs(
+		$portlet-title-font-size,
+		--#{$variable-prefix}portlet-title-font-size
+	);
 	--#{$variable-prefix}portlet-title-font-weight: #{$portlet-title-font-weight};
 
 	position: relative;
@@ -26,7 +29,8 @@
 	margin-bottom: var(--#{$variable-prefix}portlet-spacer);
 	color: var(--#{$variable-prefix}portlet-color);
 	background-color: var(--#{$variable-prefix}portlet-bg);
-	border: var(--#{$variable-prefix}portlet-border-width) $border-style var(--#{$variable-prefix}portlet-border-color);
+	border: var(--#{$variable-prefix}portlet-border-width) $border-style
+		var(--#{$variable-prefix}portlet-border-color);
 	@include border-radius(var(--#{$variable-prefix}portlet-border-radius));
 
 	// Set border radius to first and last child elements
@@ -34,11 +38,15 @@
 	> .portlet-header,
 	> .portlet-footer {
 		&:first-child {
-			@include border-top-radius(var(--#{$variable-prefix}portlet-border-radius));
+			@include border-top-radius(
+				var(--#{$variable-prefix}portlet-border-radius)
+			);
 		}
 
 		&:last-child {
-			@include border-bottom-radius(var(--#{$variable-prefix}portlet-border-radius));
+			@include border-bottom-radius(
+				var(--#{$variable-prefix}portlet-border-radius)
+			);
 		}
 	}
 
@@ -87,7 +95,8 @@
 
 .portlet-body {
 	height: 100%;
-	padding: 0 var(--#{$variable-prefix}portlet-component-padding) var(--#{$variable-prefix}portlet-component-padding);
+	padding: 0 var(--#{$variable-prefix}portlet-component-padding)
+		var(--#{$variable-prefix}portlet-component-padding);
 	color: var(--#{$variable-prefix}portlet-body-color);
 
 	&:first-child {
@@ -181,10 +190,14 @@
 
 	&.nav-lines,
 	&.nav-tabs {
-		margin-bottom: calc((#{$portlet-component-padding} + #{$portlet-border-width}) * -1) !important;
+		margin-bottom: calc(
+			(#{$portlet-component-padding} + #{$portlet-border-width}) * -1
+		) !important;
 
 		.nav-link {
-			padding-bottom: calc(#{$portlet-component-padding} + #{$portlet-border-width}) !important;
+			padding-bottom: calc(
+				#{$portlet-component-padding} + #{$portlet-border-width}
+			) !important;
 			border-width: $portlet-border-width !important;
 		}
 	}

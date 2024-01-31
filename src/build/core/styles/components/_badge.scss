@@ -17,7 +17,8 @@
 	--#{$variable-prefix}badge-shape-line-height: #{$badge-shape-line-height};
 
 	display: inline-block;
-	padding: var(--#{$variable-prefix}badge-padding-y) var(--#{$variable-prefix}badge-padding-x);
+	padding: var(--#{$variable-prefix}badge-padding-y)
+		var(--#{$variable-prefix}badge-padding-x);
 	@include font-size(var(--#{$variable-prefix}badge-font-size));
 	font-weight: var(--#{$variable-prefix}badge-font-weight);
 	line-height: 1;

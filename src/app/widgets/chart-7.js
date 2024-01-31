@@ -8,7 +8,12 @@ import {
 	currencyFormatter,
 } from '@/app/utilities/widget-helper'
 
-export function initChart7(chartQuery, baseColor, enabledCurrencyFormat, series) {
+export function initChart7(
+	chartQuery,
+	baseColor,
+	enabledCurrencyFormat,
+	series,
+) {
 	const chartInstance = new ApexCharts(chartQuery, {
 		...getChartThemeOptions(), // Add theme option to chart
 		series,
@@ -39,7 +44,8 @@ export function initChart7(chartQuery, baseColor, enabledCurrencyFormat, series)
 				show: false,
 			},
 			y: {
-				formatter: (val) => (enabledCurrencyFormat ? currencyFormatter.format(val) : val), // Format chart tooltip value
+				formatter: (val) =>
+					enabledCurrencyFormat ? currencyFormatter.format(val) : val, // Format chart tooltip value
 			},
 		},
 		xaxis: {
@@ -53,7 +59,9 @@ export function initChart7(chartQuery, baseColor, enabledCurrencyFormat, series)
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		chartInstance.updateOptions({
 			...getChartThemeOptions(),
-			markers: { colors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white },
+			markers: {
+				colors: getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
+			},
 		})
 	})
 

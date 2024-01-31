@@ -75,7 +75,10 @@
 		@include form-validation-state-selector($state) {
 			@if $enable-validation-icons {
 				padding-right: $input-height-inner;
-				background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+				background-position: top
+					$input-height-inner-quarter
+					right
+					$input-height-inner-quarter;
 			}
 		}
 	}
@@ -88,15 +91,18 @@
 				&:not([multiple]):not([size]),
 				&:not([multiple])[size="1"] {
 					padding-right: $form-select-feedback-icon-padding-end;
-					background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+					background-position: $form-select-bg-position,
+						$form-select-feedback-icon-position;
 					background-size: $form-select-bg-size, $form-select-feedback-icon-size;
 
 					[data-theme="light"] & {
-						background-image: escape-svg($form-select-indicator-light), escape-svg($icon);
+						background-image: escape-svg($form-select-indicator-light),
+							escape-svg($icon);
 					}
 
 					[data-theme="dark"] & {
-						background-image: escape-svg($form-select-indicator-dark), escape-svg($icon);
+						background-image: escape-svg($form-select-indicator-dark),
+							escape-svg($icon);
 					}
 				}
 			}

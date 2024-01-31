@@ -121,7 +121,9 @@
 		// Big cell when select month and year
 		span {
 			display: block;
-			width: calc(100% / #{$datepicker-block-col} - #{$datepicker-block-col-margin * 2});
+			width: calc(
+				100% / #{$datepicker-block-col} - #{$datepicker-block-col-margin * 2}
+			);
 			height: $datepicker-block-height;
 			line-height: $datepicker-block-height;
 			margin: $datepicker-block-col-margin;

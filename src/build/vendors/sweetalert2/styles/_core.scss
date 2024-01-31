@@ -10,7 +10,10 @@
 		"top-start     top            top-end"
 		"center-start  center         center-end"
 		"bottom-start  bottom-center  bottom-end";
-	grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
+	grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(
+			min-content,
+			auto
+		);
 	height: 100%; // Safari
 	padding: $swal2-container-padding;
 	overflow-x: hidden;
@@ -172,11 +175,17 @@
 			}
 
 			&:hover {
-				background-image: linear-gradient($swal2-button-darken-hover, $swal2-button-darken-hover);
+				background-image: linear-gradient(
+					$swal2-button-darken-hover,
+					$swal2-button-darken-hover
+				);
 			}
 
 			&:active {
-				background-image: linear-gradient($swal2-button-darken-active, $swal2-button-darken-active);
+				background-image: linear-gradient(
+					$swal2-button-darken-active,
+					$swal2-button-darken-active
+				);
 			}
 		}
 	}

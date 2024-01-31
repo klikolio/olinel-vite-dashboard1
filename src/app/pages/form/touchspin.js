@@ -57,8 +57,12 @@ $('#touchspin-9').TouchSpin({
 })
 
 $('#touchspin-10').TouchSpin({
-	buttonup_txt: isRtl ? '<i class="fa fa-angle-left"></i>' : '<i class="fa fa-angle-right"></i>',
-	buttondown_txt: isRtl ? '<i class="fa fa-angle-right"></i>' : '<i class="fa fa-angle-left"></i>',
+	buttonup_txt: isRtl
+		? '<i class="fa fa-angle-left"></i>'
+		: '<i class="fa fa-angle-right"></i>',
+	buttondown_txt: isRtl
+		? '<i class="fa fa-angle-right"></i>'
+		: '<i class="fa fa-angle-left"></i>',
 })
 
 $('.touchspin-11').TouchSpin()

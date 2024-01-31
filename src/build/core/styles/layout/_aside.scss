@@ -195,6 +195,10 @@
 
 	// Backdrop styles
 	#aside-backdrop {
-		@include overlay-backdrop($zindex-aside-backdrop, $aside-backdrop-bg, $aside-backdrop-opacity);
+		@include overlay-backdrop(
+			$zindex-aside-backdrop,
+			$aside-backdrop-bg,
+			$aside-backdrop-opacity
+		);
 	}
 }

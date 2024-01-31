@@ -32,7 +32,9 @@ export const currencyFormatter = new Intl.NumberFormat('en-US', {
 })
 
 export function getThemeVariant() {
-	return document.documentElement.getAttribute('data-theme') ?? defaultThemeVariant
+	return (
+		document.documentElement.getAttribute('data-theme') ?? defaultThemeVariant
+	)
 }
 
 export function getThemeVariantIsDark() {
@@ -54,5 +56,9 @@ export function getPageIsRTL() {
 }
 
 export function getBrowserWidth() {
-	return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+	return (
+		window.innerWidth ||
+		document.documentElement.clientWidth ||
+		document.body.clientWidth
+	)
 }

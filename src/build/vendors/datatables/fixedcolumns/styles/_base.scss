@@ -22,7 +22,8 @@
 .dtfc-left-bottom-blocker,
 .dtfc-right-bottom-blocker {
 	background-color: $datatable-side-blocker-bg;
-	border-left: $datatable-blocker-border-width solid $datatable-blocker-border-color;
+	border-left: $datatable-blocker-border-width solid
+		$datatable-blocker-border-color;
 }
 
 .dtfc-left-top-blocker,
@@ -36,7 +37,12 @@
 }
 
 .dtfc-fixed-right,
-.dataTables_scrollBody .dataTables_scrollFootInner .table-bordered tr th:first-child,
+.dataTables_scrollBody
+	.dataTables_scrollFootInner
+	.table-bordered
+	tr
+	th:first-child,
 .dataTables_scrollHeadInner .table-bordered tr th:first-child {
-	border-left: $datatable-blocker-border-width solid $datatable-blocker-border-color !important;
+	border-left: $datatable-blocker-border-width solid
+		$datatable-blocker-border-color !important;
 }
