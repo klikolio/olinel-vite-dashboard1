@@ -1,4 +1,4 @@
-import '@modules/sortable/styles/sortable.scss'
+import '@modules/sortablejs/styles/sortablejs.scss'
 import Sortable from 'sortablejs'
 
 new Sortable(document.getElementById('sortable-1'))

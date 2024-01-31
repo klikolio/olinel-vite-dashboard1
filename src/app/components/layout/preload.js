@@ -1,4 +1,4 @@
-import Preload from '@modules/core/scripts/preload'
+import Preload from '@modules/bootstrap/scripts/preload'
 
 function initPreload() {
 	new Preload()
