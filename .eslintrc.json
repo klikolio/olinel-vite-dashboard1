@@ -15,10 +15,7 @@
 		"sourceType": "module"
 	},
 	"rules": {
-		"prettier/prettier": [
-			"warn",
-			{ "endOfLine": "auto" }
-		],
+		"prettier/prettier": "warn",
 		"no-undef": "off",
 		"no-new": "off"
 	}

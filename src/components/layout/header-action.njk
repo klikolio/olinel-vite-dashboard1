@@ -1,38 +1,19 @@
-<!-- BEGIN Button Group -->
+{# BEGIN Button Group #}
 <div class="btn-group me-2">
-	<input
-		type="radio"
-		class="btn-check"
-		name="timeOption"
-		id="timeOption1"
-		autocomplete="off"
-		checked
-	/>
+	<input type="radio" class="btn-check" name="timeOption" id="timeOption1" autocomplete="off" checked />
 	<label class="btn btn-flat-primary" for="timeOption1">Daily</label>
 
-	<input
-		type="radio"
-		class="btn-check"
-		name="timeOption"
-		id="timeOption2"
-		autocomplete="off"
-	/>
+	<input type="radio" class="btn-check" name="timeOption" id="timeOption2" autocomplete="off" />
 	<label class="btn btn-flat-primary" for="timeOption2">Weekly</label>
 
-	<input
-		type="radio"
-		class="btn-check"
-		name="timeOption"
-		id="timeOption3"
-		autocomplete="off"
-	/>
+	<input type="radio" class="btn-check" name="timeOption" id="timeOption3" autocomplete="off" />
 	<label class="btn btn-flat-primary" for="timeOption3">Monthly</label>
 </div>
-<!-- END Button Group -->
+{# END Button Group #}
 
-<!-- BEGIN Button Group -->
+{# BEGIN Button Group #}
 <div class="btn-group">
-	<!-- BEGIN Dropdown -->
+	{# BEGIN Dropdown #}
 	<div class="btn-group">
 		<button class="btn btn-label-primary btn-icon" data-bs-toggle="dropdown">
 			<i class="fa fa-plus"></i>
@@ -58,18 +39,15 @@
 			</a>
 		</div>
 	</div>
-	<!-- END Dropdown -->
+	{# END Dropdown #}
 
 	<button class="btn btn-label-primary btn-icon" id="fullscreen-trigger">
 		<i class="fa fa-expand fullscreen-icon-expand"></i>
 		<i class="fa fa-compress fullscreen-icon-compress"></i>
 	</button>
 </div>
-<!-- END Button Group -->
+{# END Button Group #}
 
-<!-- BEGIN Script -->
-<script
-	type="module"
-	src="/src/app/components/layout/header-action.js"
-></script>
-<!-- END Script -->
+{# BEGIN Script #}
+<script type="module" src="/src/app/components/layout/header-action.js"></script>
+{# END Script #}

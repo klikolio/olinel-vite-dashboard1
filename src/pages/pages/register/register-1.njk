@@ -13,25 +13,25 @@
 {% block content %}
 	<div class="row g-0 align-items-center justify-content-center h-100">
 		<div class="col-sm-8 col-md-6 col-lg-4 col-xl-3">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-body">
 					<div class="text-center mt-4 mb-5">
-						<!-- BEGIN Avatar -->
+						{# BEGIN Avatar #}
 						<div class="avatar avatar-label-primary avatar-circle widget12">
 							<div class="avatar-display">
 								<i class="fa fa-user-alt"></i>
 							</div>
 						</div>
-						<!-- END Avatar -->
+						{# END Avatar #}
 					</div>
 
-					<!-- BEGIN Form -->
+					{# BEGIN Form #}
 					<form class="d-grid gap-3" id="register-form">
-						<!-- BEGIN Row -->
+						{# BEGIN Row #}
 						<div class="row g-3">
 							<div class="col-sm-6 validation-container">
-								<!-- BEGIN Form Floating -->
+								{# BEGIN Form Floating #}
 								<div class="form-floating">
 									<input
 										class="form-control form-control-lg"
@@ -42,10 +42,10 @@
 									/>
 									<label for="first-name">First name</label>
 								</div>
-								<!-- END Form Floating -->
+								{# END Form Floating #}
 							</div>
 							<div class="col-sm-6 validation-container">
-								<!-- BEGIN Form Floating -->
+								{# BEGIN Form Floating #}
 								<div class="form-floating">
 									<input
 										class="form-control form-control-lg"
@@ -56,14 +56,14 @@
 									/>
 									<label for="last-name">Last name</label>
 								</div>
-								<!-- END Form Floating -->
+								{# END Form Floating #}
 							</div>
 						</div>
-						<!-- BEGIN Row -->
+						{# BEGIN Row #}
 
-						<!-- BEGIN Validation Container -->
+						{# BEGIN Validation Container #}
 						<div class="validation-container">
-							<!-- BEGIN Form Floating -->
+							{# BEGIN Form Floating #}
 							<div class="form-floating">
 								<input
 									class="form-control form-control-lg"
@@ -74,13 +74,13 @@
 								/>
 								<label for="email">Email</label>
 							</div>
-							<!-- END Form Floating -->
+							{# END Form Floating #}
 						</div>
-						<!-- END Validation Container -->
+						{# END Validation Container #}
 
-						<!-- BEGIN Validation Container -->
+						{# BEGIN Validation Container #}
 						<div class="validation-container">
-							<!-- BEGIN Form Floating -->
+							{# BEGIN Form Floating #}
 							<div class="form-floating">
 								<input
 									class="form-control form-control-lg"
@@ -91,13 +91,13 @@
 								/>
 								<label for="password">Password</label>
 							</div>
-							<!-- END Form Floating -->
+							{# END Form Floating #}
 						</div>
-						<!-- END Validation Container -->
+						{# END Validation Container #}
 
-						<!-- BEGIN Validation Container -->
+						{# BEGIN Validation Container #}
 						<div class="validation-container">
-							<!-- BEGIN Form Floating -->
+							{# BEGIN Form Floating #}
 							<div class="form-floating">
 								<input
 									class="form-control form-control-lg"
@@ -108,50 +108,35 @@
 								/>
 								<label for="password-confirm">Confirm password</label>
 							</div>
-							<!-- END Form Floating -->
+							{# END Form Floating #}
 						</div>
-						<!-- END Validation Container -->
+						{# END Validation Container #}
 
-						<!-- BEGIN Flex -->
+						{# BEGIN Flex #}
 						<div class="d-flex align-items-center justify-content-between">
 							<div class="validation-container">
-								<!-- BEGIN Form Check -->
+								{# BEGIN Form Check #}
 								<div class="form-check">
-									<input
-										class="form-check-input"
-										type="checkbox"
-										id="agreement"
-										name="agreement"
-									/>
-									<label class="form-check-label" for="agreement"
-										>Accept agreement</label
-									>
+									<input class="form-check-input" type="checkbox" id="agreement" name="agreement" />
+									<label class="form-check-label" for="agreement">Accept agreement</label>
 								</div>
-								<!-- END Form Check -->
+								{# END Form Check #}
 							</div>
 							<a href="#">Forgot password?</a>
 						</div>
-						<!-- END Flex -->
+						{# END Flex #}
 
-						<!-- BEGIN Flex -->
+						{# BEGIN Flex #}
 						<div class="d-flex align-items-center justify-content-between">
-							<span
-								>Already have an account?
-								<a href="/pages/login/login-1.html">Login</a></span
-							>
-							<button
-								type="submit"
-								class="btn btn-label-primary btn-lg btn-widest"
-							>
-								Register
-							</button>
+							<span>Already have an account? <a href="/pages/login/login-1.html">Login</a></span>
+							<button type="submit" class="btn btn-label-primary btn-lg btn-widest">Register</button>
 						</div>
-						<!-- END Flex -->
+						{# END Flex #}
 					</form>
-					<!-- END Form -->
+					{# END Form #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 {% endblock %}

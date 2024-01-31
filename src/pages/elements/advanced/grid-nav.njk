@@ -13,21 +13,18 @@
 {% block content %}
 	<div class="row">
 		<div class="col-12">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Variations</h3>
 				</div>
 				<div class="portlet-body">
-					<p>
-						<strong>Grid Nav</strong> has 3 versions of the border, like example
-						below
-					</p>
+					<p><strong>Grid Nav</strong> has 3 versions of the border, like example below</p>
 
-					<!-- BEGIN Row -->
+					{# BEGIN Row #}
 					<div class="row g-3">
 						<div class="col-md-4">
-							<!-- BEGIN Portlet -->
+							{# BEGIN Portlet #}
 							<div class="portlet mb-0">
 								<div class="portlet-header portlet-header-bordered">
 									<h3 class="portlet-title">Basic</h3>
@@ -35,7 +32,7 @@
 								<div class="portlet-body">
 									<p>Default version of grid navigation</p>
 
-									<!-- BEGIN Grid Nav -->
+									{# BEGIN Grid Nav #}
 									<div class="grid-nav">
 										<div class="grid-nav-row">
 											<div class="grid-nav-item">
@@ -58,24 +55,21 @@
 											</div>
 										</div>
 									</div>
-									<!-- END Grid Nav -->
+									{# END Grid Nav #}
 								</div>
 							</div>
-							<!-- END Portlet -->
+							{# END Portlet #}
 						</div>
 						<div class="col-md-4">
-							<!-- BEGIN Portlet -->
+							{# BEGIN Portlet #}
 							<div class="portlet mb-0">
 								<div class="portlet-header portlet-header-bordered">
 									<h3 class="portlet-title">Flush</h3>
 								</div>
 								<div class="portlet-body">
-									<p>
-										Add <code>.grid-nav-flush</code> to default grid navigation
-										to appear like below
-									</p>
+									<p>Add <code>.grid-nav-flush</code> to default grid navigation to appear like below</p>
 
-									<!-- BEGIN Grid Nav -->
+									{# BEGIN Grid Nav #}
 									<div class="grid-nav grid-nav-flush">
 										<div class="grid-nav-row">
 											<div class="grid-nav-item">
@@ -98,24 +92,21 @@
 											</div>
 										</div>
 									</div>
-									<!-- END Grid Nav -->
+									{# END Grid Nav #}
 								</div>
 							</div>
-							<!-- END Portlet -->
+							{# END Portlet #}
 						</div>
 						<div class="col-md-4">
-							<!-- BEGIN Portlet -->
+							{# BEGIN Portlet #}
 							<div class="portlet mb-0">
 								<div class="portlet-header portlet-header-bordered">
 									<h3 class="portlet-title">Bordered</h3>
 								</div>
 								<div class="portlet-body">
-									<p>
-										Add <code>.grid-nav-bordered</code> to default grid
-										navigation to appear like below
-									</p>
+									<p>Add <code>.grid-nav-bordered</code> to default grid navigation to appear like below</p>
 
-									<!-- BEGIN Grid Nav -->
+									{# BEGIN Grid Nav #}
 									<div class="grid-nav grid-nav-bordered">
 										<div class="grid-nav-row">
 											<div class="grid-nav-item">
@@ -138,21 +129,21 @@
 											</div>
 										</div>
 									</div>
-									<!-- END Grid Nav -->
+									{# END Grid Nav #}
 								</div>
 							</div>
-							<!-- END Portlet -->
+							{# END Portlet #}
 						</div>
 					</div>
-					<!-- END Row -->
+					{# END Row #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">More content</h3>
@@ -164,7 +155,7 @@
 						<code>.grid-nav-subtitle</code>
 					</p>
 
-					<!-- BEGIN Grid Nav -->
+					{# BEGIN Grid Nav #}
 					<div class="grid-nav grid-nav-bordered">
 						<div class="grid-nav-row">
 							<div class="grid-nav-item">
@@ -225,27 +216,25 @@
 							</div>
 						</div>
 					</div>
-					<!-- END Grid Nav -->
+					{# END Grid Nav #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 		<div class="col-md-6">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Action</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						<code>.grid-nav-item</code> class is support for
-						<code>{{ "<a>" }}</code>. Apply hover and focus states by adding
-						<code>.grid-nav-action</code>. Use <code>.active</code> to appear
-						clicked effect to individual link and use <code>.disabled</code> for
-						disabled appearance.
+						<code>.grid-nav-item</code> class is support for <code>{{ "<a>" }}</code>. Apply hover and focus states by
+						adding <code>.grid-nav-action</code>. Use <code>.active</code> to appear clicked effect to individual link
+						and use <code>.disabled</code> for disabled appearance.
 					</p>
 
-					<!-- BEGIN Grid Nav -->
+					{# BEGIN Grid Nav #}
 					<div class="grid-nav grid-nav-bordered grid-nav-action">
 						<div class="grid-nav-row">
 							<a href="#" class="grid-nav-item active">
@@ -306,10 +295,10 @@
 							</a>
 						</div>
 					</div>
-					<!-- END Grid Nav -->
+					{# END Grid Nav #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 {% endblock %}

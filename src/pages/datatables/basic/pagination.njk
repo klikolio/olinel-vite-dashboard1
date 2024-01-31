@@ -11,42 +11,32 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script
-		type="module"
-		src="/src/app/pages/datatables/basic/pagination.js"
-	></script>
+	<script type="module" src="/src/app/pages/datatables/basic/pagination.js"></script>
 {% endblock %}
 
 {% block content %}
 	<div class="row">
 		<div class="col-12">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Datatables pagination</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						The default page control presented by Datatables (forward and
-						backward buttons with up to 7 page numbers in between) is fine for
-						most situations, but there are cases where you may wish to customize
-						the options presented to the end user.
+						The default page control presented by Datatables (forward and backward buttons with up to 7 page numbers in
+						between) is fine for most situations, but there are cases where you may wish to customize the options
+						presented to the end user.
 					</p>
 					<p>
-						This is done through Datatables's extensible pagination mechanism,
-						the <code>pagingType</code> option. There are six built-in options
-						for which pagination controls Datatables should show:
-						<code
-							>numbers|simple|simple_numbers|full|full_numbers|first_last_numbers</code
-						>.
+						This is done through Datatables's extensible pagination mechanism, the
+						<code>pagingType</code> option. There are six built-in options for which pagination controls Datatables
+						should show: <code>numbers|simple|simple_numbers|full|full_numbers|first_last_numbers</code>.
 					</p>
 					<hr />
 
-					<!-- BEGIN Datatables -->
-					<table
-						id="datatables-1"
-						class="table table-bordered table-striped table-hover"
-					>
+					{# BEGIN Datatables #}
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -60,10 +50,10 @@
 							</tr>
 						</thead>
 					</table>
-					<!-- END Datatables -->
+					{# END Datatables #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 {% endblock %}

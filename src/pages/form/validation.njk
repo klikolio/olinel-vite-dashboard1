@@ -16,18 +16,16 @@
 {% block content %}
 	<div class="row">
 		<div class="col-md-6">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Validation states</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Grid -->
+					{# BEGIN Grid #}
 					<div class="d-grid gap-3">
 						<div>
-							<label for="exampleInputEmail" class="form-label"
-								>Email address</label
-							>
+							<label for="exampleInputEmail" class="form-label">Email address</label>
 							<input
 								type="email"
 								class="form-control is-valid"
@@ -35,14 +33,10 @@
 								placeholder="Please insert your email"
 							/>
 							<span class="valid-feedback">Valid feedback</span>
-							<small class="form-text"
-								>We'll never share your email with anyone else.</small
-							>
+							<small class="form-text">We'll never share your email with anyone else.</small>
 						</div>
 						<div>
-							<label for="exampleInputPassword" class="form-label"
-								>Password</label
-							>
+							<label for="exampleInputPassword" class="form-label">Password</label>
 							<input
 								type="password"
 								class="form-control is-invalid"
@@ -52,23 +46,21 @@
 							<small class="invalid-feedback">Invalid feedback</small>
 						</div>
 					</div>
-					<!-- END Grid -->
+					{# END Grid #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Supported elements</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Form Group -->
+					{# BEGIN Form Group #}
 					<form class="d-grid gap-3 was-validated">
 						<div>
-							<label for="validationTextarea" class="form-label"
-								>Textarea</label
-							>
+							<label for="validationTextarea" class="form-label">Textarea</label>
 							<textarea
 								class="form-control is-invalid"
 								id="validationTextarea"
@@ -78,47 +70,20 @@
 						</div>
 						<div>
 							<div class="form-check">
-								<input
-									type="checkbox"
-									class="form-check-input"
-									id="validationFormCheck1"
-									required
-								/>
-								<label class="form-check-label" for="validationFormCheck1"
-									>Check this checkbox</label
-								>
-								<div class="invalid-feedback">
-									Example invalid feedback text
-								</div>
+								<input type="checkbox" class="form-check-input" id="validationFormCheck1" required />
+								<label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+								<div class="invalid-feedback">Example invalid feedback text</div>
 							</div>
 						</div>
 						<div>
 							<div class="form-check">
-								<input
-									type="radio"
-									class="form-check-input"
-									id="validationFormCheck2"
-									name="radio-stacked"
-									required
-								/>
-								<label class="form-check-label" for="validationFormCheck2"
-									>Toggle this radio</label
-								>
+								<input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required />
+								<label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
 							</div>
 							<div class="form-check">
-								<input
-									type="radio"
-									class="form-check-input"
-									id="validationFormCheck3"
-									name="radio-stacked"
-									required
-								/>
-								<label class="form-check-label" for="validationFormCheck3"
-									>Or toggle this other radio</label
-								>
-								<div class="invalid-feedback">
-									More example invalid feedback text
-								</div>
+								<input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required />
+								<label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
+								<div class="invalid-feedback">More example invalid feedback text</div>
 							</div>
 						</div>
 						<div>
@@ -128,102 +93,77 @@
 								<option value="2">Two</option>
 								<option value="3">Three</option>
 							</select>
-							<div class="invalid-feedback">
-								Example invalid select feedback
-							</div>
+							<div class="invalid-feedback">Example invalid select feedback</div>
 						</div>
 						<div>
-							<input
-								type="file"
-								class="form-control"
-								aria-label="file example"
-								required
-							/>
-							<div class="invalid-feedback">
-								Example invalid form file feedback
-							</div>
+							<input type="file" class="form-control" aria-label="file example" required />
+							<div class="invalid-feedback">Example invalid form file feedback</div>
 						</div>
 						<div>
-							<button class="btn btn-primary" type="submit" disabled>
-								Submit form
-							</button>
+							<button class="btn btn-primary" type="submit" disabled>Submit form</button>
 						</div>
 					</form>
-					<!-- END Form Group -->
+					{# END Form Group #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 		<div class="col-md-6">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Input group</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Grid -->
+					{# BEGIN Grid #}
 					<div class="d-grid gap-3">
-						<!-- BEGIN Input Group -->
+						{# BEGIN Input Group #}
 						<div class="input-group">
 							<span class="input-group-text">@</span>
-							<input
-								type="email"
-								class="form-control is-valid"
-								placeholder="Email"
-							/>
+							<input type="email" class="form-control is-valid" placeholder="Email" />
 						</div>
-						<!-- END Input Group -->
+						{# END Input Group #}
 
-						<!-- BEGIN Input Group -->
+						{# BEGIN Input Group #}
 						<div class="input-group">
-							<input
-								type="text"
-								class="form-control is-invalid"
-								placeholder="Currency"
-							/>
+							<input type="text" class="form-control is-invalid" placeholder="Currency" />
 							<span class="input-group-text">
 								<i class="fa fa-dollar-sign"></i>
 							</span>
 						</div>
-						<!-- END Input Group -->
+						{# END Input Group #}
 
-						<!-- BEGIN Input Group -->
+						{# BEGIN Input Group #}
 						<div class="input-group">
 							<span class="input-group-text">
 								<i class="fa fa-link"></i>
 							</span>
-							<input
-								type="text"
-								class="form-control is-valid"
-								placeholder="Link"
-							/>
+							<input type="text" class="form-control is-valid" placeholder="Link" />
 							<span class="input-group-text">.com</span>
 						</div>
-						<!-- END Input Group -->
+						{# END Input Group #}
 					</div>
-					<!-- END Grid -->
+					{# END Grid #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">JQuery validation</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						We use <strong>jQuery Validation</strong> library to support these
-						features. This jQuery plugin makes simple clientside form validation
-						easy, whilst still offering plenty of customization options. Look
-						more references on
-						<a href="http://jqueryvalidation.org">plugin's pages</a>.
+						We use <strong>jQuery Validation</strong> library to support these features. This jQuery plugin makes simple
+						clientside form validation easy, whilst still offering plenty of customization options. Look more references
+						on <a href="http://jqueryvalidation.org">plugin's pages</a>.
 					</p>
 
-					<!-- BEGIN Form -->
+					{# BEGIN Form #}
 					<form class="row g-3" id="validate-1">
 						<div class="col-6 validation-container">
-							<!-- BEGIN Form Floating -->
+							{# BEGIN Form Floating #}
 							<div class="form-floating">
 								<input
 									type="text"
@@ -234,10 +174,10 @@
 								/>
 								<label for="first-name">First name</label>
 							</div>
-							<!-- END Form Floating -->
+							{# END Form Floating #}
 						</div>
 						<div class="col-6 validation-container">
-							<!-- BEGIN Form Floating -->
+							{# BEGIN Form Floating #}
 							<div class="form-floating">
 								<input
 									type="text"
@@ -248,60 +188,40 @@
 								/>
 								<label for="last-name">Last name</label>
 							</div>
-							<!-- END Form Floating -->
+							{# END Form Floating #}
 						</div>
 						<div class="col-12 validation-container">
-							<input
-								type="number"
-								class="form-control"
-								name="age"
-								placeholder="Please enter your age"
-							/>
+							<input type="number" class="form-control" name="age" placeholder="Please enter your age" />
 						</div>
 						<div class="col-12 validation-container">
-							<!-- BEGIN Form Select -->
+							{# BEGIN Form Select #}
 							<select class="form-select" name="gender">
 								<option value="default">Select your gender</option>
 								<option value="male">Male</option>
 								<option value="female">Female</option>
 							</select>
-							<!-- END Form Select -->
+							{# END Form Select #}
 						</div>
 						<div class="col-12 validation-container">
-							<!-- BEGIN Input Group -->
+							{# BEGIN Input Group #}
 							<div class="input-group">
 								<div class="input-group-text">
 									<i class="fa fa-envelope"></i>
 								</div>
-								<input
-									type="email"
-									class="form-control"
-									name="email"
-									placeholder="Please enter your email"
-								/>
+								<input type="email" class="form-control" name="email" placeholder="Please enter your email" />
 							</div>
-							<!-- END Input Group -->
+							{# END Input Group #}
 						</div>
 						<div class="col-12 validation-container">
-							<!-- BEGIN Input Group -->
+							{# BEGIN Input Group #}
 							<div class="input-group">
 								<span class="input-group-text">Homepage</span>
-								<input
-									type="text"
-									class="form-control"
-									name="homepage"
-									placeholder="https://example.me"
-								/>
+								<input type="text" class="form-control" name="homepage" placeholder="https://example.me" />
 							</div>
-							<!-- END Input Group -->
+							{# END Input Group #}
 						</div>
 						<div class="col-12 validation-container">
-							<input
-								type="password"
-								class="form-control"
-								name="password1"
-								placeholder="please provide your password"
-							/>
+							<input type="password" class="form-control" name="password1" placeholder="please provide your password" />
 						</div>
 						<div class="col-12 validation-container">
 							<input
@@ -312,28 +232,21 @@
 							/>
 						</div>
 						<div class="col-12 validation-container">
-							<!-- BEGIN Form Check -->
+							{# BEGIN Form Check #}
 							<div class="form-check">
-								<input
-									class="form-check-input"
-									type="checkbox"
-									id="agreement"
-									name="agreement"
-								/>
-								<label class="form-check-label" for="agreement"
-									>Accepts the agreement</label
-								>
+								<input class="form-check-input" type="checkbox" id="agreement" name="agreement" />
+								<label class="form-check-label" for="agreement">Accepts the agreement</label>
 							</div>
-							<!-- END Form Check -->
+							{# END Form Check #}
 						</div>
 						<div class="col-12">
 							<button class="btn btn-primary" type="submit">Submit</button>
 						</div>
 					</form>
-					<!-- END Form -->
+					{# END Form #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 {% endblock %}

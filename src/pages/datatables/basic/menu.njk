@@ -17,25 +17,20 @@
 {% block content %}
 	<div class="row">
 		<div class="col-12">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Datatables length menu</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						It is possible to easily customize the options shown in the length
-						menu (by default at the top left of the table) using the
-						<code>lengthMenu</code> Initialisation option, this parameter can
-						take 1D or 2D array.
+						It is possible to easily customize the options shown in the length menu (by default at the top left of the
+						table) using the <code>lengthMenu</code> Initialisation option, this parameter can take 1D or 2D array.
 					</p>
 					<hr />
 
-					<!-- BEGIN Datatables -->
-					<table
-						id="datatables-1"
-						class="table table-bordered table-striped table-hover"
-					>
+					{# BEGIN Datatables #}
+					<table id="datatables-1" class="table table-bordered table-striped table-hover">
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -49,10 +44,10 @@
 							</tr>
 						</thead>
 					</table>
-					<!-- END Datatables -->
+					{# END Datatables #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 {% endblock %}

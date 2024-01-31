@@ -3,7 +3,7 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"printWidth": 80,
-	"endOfLine": "auto",
+	"endOfLine": "lf",
 	"plugins": ["prettier-plugin-jinja-template"],
 	"overrides": [
 		{
@@ -21,6 +21,7 @@
 		{
 			"files": ["*.njk"],
 			"options": {
+				"printWidth": 120,
 				"parser": "jinja-template"
 			}
 		}

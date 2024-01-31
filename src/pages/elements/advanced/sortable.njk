@@ -17,30 +17,27 @@
 {% block content %}
 	<div class="row">
 		<div class="col-12">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-body">
 					<p class="mb-0">
-						<strong>SortableJS</strong> is javascript library for reorderable
-						drag-and-drop lists. Check other example on
-						<a href="http://sortablejs.github.io/Sortable" target="_blank"
-							>Sortable's page</a
-						>
+						<strong>SortableJS</strong> is javascript library for reorderable drag-and-drop lists. Check other example
+						on <a href="http://sortablejs.github.io/Sortable" target="_blank">Sortable's page</a>
 					</p>
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Basic</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Sortable -->
+					{# BEGIN Sortable #}
 					<div class="sortable rich-list-bordered" id="sortable-1">
 						<div class="sortable-item">
 							<div class="rich-list-item">
@@ -54,9 +51,7 @@
 							<div class="rich-list-item">
 								<div class="rich-list-content">
 									<h4 class="rich-list-title">List 2</h4>
-									<span class="rich-list-subtitle"
-										>Dapibus ac facilisis in</span
-									>
+									<span class="rich-list-subtitle">Dapibus ac facilisis in</span>
 								</div>
 							</div>
 						</div>
@@ -69,12 +64,12 @@
 							</div>
 						</div>
 					</div>
-					<!-- END Sortable -->
+					{# END Sortable #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Handle</h3>
@@ -82,7 +77,7 @@
 				<div class="portlet-body">
 					<p>You can only drag the items on the handle</p>
 
-					<!-- BEGIN Sortable -->
+					{# BEGIN Sortable #}
 					<div class="sortable rich-list-bordered" id="sortable-2">
 						<div class="sortable-item">
 							<div class="rich-list-item">
@@ -106,9 +101,7 @@
 								</div>
 								<div class="rich-list-content">
 									<h4 class="rich-list-title">List 2</h4>
-									<span class="rich-list-subtitle"
-										>Dapibus ac facilisis in</span
-									>
+									<span class="rich-list-subtitle">Dapibus ac facilisis in</span>
 								</div>
 							</div>
 						</div>
@@ -126,25 +119,22 @@
 							</div>
 						</div>
 					</div>
-					<!-- END Sortable -->
+					{# END Sortable #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Shared lists</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Row -->
+					{# BEGIN Row #}
 					<div class="row">
 						<div class="col-6">
-							<!-- BEGIN Sortable -->
-							<div
-								class="sortable rich-list rich-list-bordered"
-								id="sortable-3-start"
-							>
+							{# BEGIN Sortable #}
+							<div class="sortable rich-list rich-list-bordered" id="sortable-3-start">
 								<div class="sortable-item">
 									<div class="rich-list-item">
 										<div class="rich-list-content">
@@ -170,14 +160,11 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 						<div class="col-6">
-							<!-- BEGIN Sortable -->
-							<div
-								class="sortable rich-list rich-list-bordered"
-								id="sortable-3-end"
-							>
+							{# BEGIN Sortable #}
+							<div class="sortable rich-list rich-list-bordered" id="sortable-3-end">
 								<div class="sortable-item">
 									<div class="rich-list-item">
 										<div class="rich-list-content">
@@ -203,33 +190,30 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 					</div>
-					<!-- END Row -->
+					{# END Row #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Cloning</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						Try dragging from one list to another. The item you drag will be
-						cloned and the clone will stay in the original list.
+						Try dragging from one list to another. The item you drag will be cloned and the clone will stay in the
+						original list.
 					</p>
 
-					<!-- BEGIN Row -->
+					{# BEGIN Row #}
 					<div class="row">
 						<div class="col-6">
-							<!-- BEGIN Sortable -->
-							<div
-								class="sortable rich-list rich-list-bordered"
-								id="sortable-4-start"
-							>
+							{# BEGIN Sortable #}
+							<div class="sortable rich-list rich-list-bordered" id="sortable-4-start">
 								<div class="sortable-item">
 									<div class="rich-list-item">
 										<div class="rich-list-content">
@@ -255,14 +239,11 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 						<div class="col-6">
-							<!-- BEGIN Sortable -->
-							<div
-								class="sortable rich-list rich-list-bordered"
-								id="sortable-4-end"
-							>
+							{# BEGIN Sortable #}
+							<div class="sortable rich-list rich-list-bordered" id="sortable-4-end">
 								<div class="sortable-item">
 									<div class="rich-list-item">
 										<div class="rich-list-content">
@@ -288,29 +269,26 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 					</div>
-					<!-- END Row -->
+					{# END Row #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 		<div class="col-md-6">
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Disabled sorting</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Row -->
+					{# BEGIN Row #}
 					<div class="row">
 						<div class="col-6">
-							<!-- BEGIN Sortable -->
-							<div
-								class="sortable rich-list rich-list-bordered"
-								id="sortable-5-start"
-							>
+							{# BEGIN Sortable #}
+							<div class="sortable rich-list rich-list-bordered" id="sortable-5-start">
 								<div class="sortable-item">
 									<div class="rich-list-item">
 										<div class="rich-list-content">
@@ -336,14 +314,11 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 						<div class="col-6">
-							<!-- BEGIN Sortable -->
-							<div
-								class="sortable rich-list rich-list-bordered"
-								id="sortable-5-end"
-							>
+							{# BEGIN Sortable #}
+							<div class="sortable rich-list rich-list-bordered" id="sortable-5-end">
 								<div class="sortable-item">
 									<div class="rich-list-item">
 										<div class="rich-list-content">
@@ -369,21 +344,21 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 					</div>
-					<!-- END Row -->
+					{# END Row #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 
-			<!-- BEGIN Portlet -->
+			{# BEGIN Portlet #}
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Nested</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Sortable -->
+					{# BEGIN Sortable #}
 					<div class="sortable rich-list-bordered" id="sortable-6">
 						<div class="sortable-item">
 							<div class="rich-list-item">
@@ -393,7 +368,7 @@
 								</div>
 							</div>
 
-							<!-- BEGIN Sortable -->
+							{# BEGIN Sortable #}
 							<div class="sortable">
 								<div class="sortable-item">
 									<div class="rich-list-item">
@@ -412,7 +387,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 						<div class="sortable-item">
 							<div class="rich-list-item">
@@ -422,7 +397,7 @@
 								</div>
 							</div>
 
-							<!-- BEGIN Sortable -->
+							{# BEGIN Sortable #}
 							<div class="sortable">
 								<div class="sortable-item">
 									<div class="rich-list-item">
@@ -441,7 +416,7 @@
 									</div>
 								</div>
 
-								<!-- BEGIN Sortable -->
+								{# BEGIN Sortable #}
 								<div class="sortable">
 									<div class="sortable-item">
 										<div class="rich-list-item">
@@ -452,9 +427,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- END Sortable -->
+								{# END Sortable #}
 							</div>
-							<!-- END Sortable -->
+							{# END Sortable #}
 						</div>
 						<div class="sortable-item">
 							<div class="rich-list-item">
@@ -473,10 +448,10 @@
 							</div>
 						</div>
 					</div>
-					<!-- END Sortable -->
+					{# END Sortable #}
 				</div>
 			</div>
-			<!-- END Portlet -->
+			{# END Portlet #}
 		</div>
 	</div>
 {% endblock %}
