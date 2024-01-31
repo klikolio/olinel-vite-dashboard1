@@ -24,6 +24,9 @@ const nunjucksFilters = {
 
 export default defineConfig({
 	publicDir: 'public',
+	server: {
+		port: 4040
+	},
 	resolve: {
 		alias: {
 			'@app': '/src/app',
