@@ -17,21 +17,21 @@
 {% block content %}
 	<div class="row">
 		<div class="col-12">
-			{# BEGIN Portlet #}
+			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Toastr builder</h3>
 				</div>
 				<div class="portlet-body">
-					{# BEGIN Row #}
+					<!-- BEGIN Row -->
 					<div class="row g-3 mb-3">
 						<div class="col-md-4">
-							{# BEGIN Grid #}
+							<!-- BEGIN Grid -->
 							<div class="d-grid gap-3">
 								<input class="form-control" id="title" type="text" placeholder="Enter a title ..." />
 								<textarea class="form-control" id="message" rows="3" placeholder="Enter a message ..."></textarea>
 
-								{# BEGIN Grid #}
+								<!-- BEGIN Grid -->
 								<div class="d-grid">
 									<div class="form-check">
 										<input type="checkbox" class="form-check-input" id="closeButton" />
@@ -68,16 +68,16 @@
 										<label class="form-label" for="newestOnTop" class="form-check-label">Newest on top</label>
 									</div>
 								</div>
-								{# END Grid #}
+								<!-- END Grid -->
 							</div>
-							{# END Grid #}
+							<!-- END Grid -->
 						</div>
 						<div class="col-md-2">
-							{# BEGIN Grid #}
+							<!-- BEGIN Grid -->
 							<div class="d-grid gap-3">
 								<h6 class="mb-0">Toast Type</h6>
 
-								{# BEGIN Grid #}
+								<!-- BEGIN Grid -->
 								<div class="d-grid" id="toastTypeGroup">
 									<div class="form-check">
 										<input
@@ -103,11 +103,11 @@
 										<label class="form-label" for="error" class="form-check-label">Error</label>
 									</div>
 								</div>
-								{# END Grid #}
+								<!-- END Grid -->
 
 								<h6 class="mb-0">Positions</h6>
 
-								{# BEGIN Grid #}
+								<!-- BEGIN Grid -->
 								<div class="d-grid" id="positionGroup">
 									<div class="form-check">
 										<input
@@ -193,12 +193,12 @@
 										<label class="form-label" for="toast-bottom-center" class="form-check-label">Bottom Center</label>
 									</div>
 								</div>
-								{# END Grid #}
+								<!-- END Grid -->
 							</div>
-							{# END Grid #}
+							<!-- END Grid -->
 						</div>
 						<div class="col-md-3">
-							{# BEGIN Grid #}
+							<!-- BEGIN Grid -->
 							<div class="d-grid gap-3">
 								<div>
 									<label class="form-label" for="showEasing">Show Easing</label>
@@ -231,10 +231,10 @@
 									</select>
 								</div>
 							</div>
-							{# END Grid #}
+							<!-- END Grid -->
 						</div>
 						<div class="col-md-3">
-							{# BEGIN Grid #}
+							<!-- BEGIN Grid -->
 							<div class="d-grid gap-3">
 								<div>
 									<label class="form-label" for="showDuration">Show Duration</label>
@@ -260,12 +260,12 @@
 									/>
 								</div>
 							</div>
-							{# END Grid #}
+							<!-- END Grid -->
 						</div>
 					</div>
-					{# END Row #}
+					<!-- END Row -->
 
-					{# BEGIN Row #}
+					<!-- BEGIN Row -->
 					<div class="row mb-3">
 						<div class="col-12">
 							<button type="button" class="btn btn-label-primary me-2" id="showtoast">Show</button>
@@ -273,18 +273,18 @@
 							<button type="button" class="btn btn-label-primary" id="clearlasttoast">Clear Last</button>
 						</div>
 					</div>
-					{# END Row #}
+					<!-- END Row -->
 
-					{# BEGIN Portlet #}
+					<!-- BEGIN Portlet -->
 					<div class="portlet mb-0">
 						<div class="portlet-body">
 							<pre id="toastrOptions">output</pre>
 						</div>
 					</div>
-					{# END Portlet #}
+					<!-- END Portlet -->
 				</div>
 			</div>
-			{# END Portlet #}
+			<!-- END Portlet -->
 		</div>
 	</div>
 {% endblock %}

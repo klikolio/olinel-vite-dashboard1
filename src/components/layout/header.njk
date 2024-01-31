@@ -1,15 +1,15 @@
 {% from "components/variables.njk" import defaults %}
 
-{# BEGIN Header #}
+<!-- BEGIN Header -->
 <div class="header">
-	{# BEGIN Desktop Sticky Header #}
+	<!-- BEGIN Desktop Sticky Header -->
 	<div class="sticky-header" id="sticky-header-desktop">
-		{# BEGIN Header Holder #}
+		<!-- BEGIN Header Holder -->
 		<div class="header-holder header-holder-desktop">
 			<div class="header-container {{ container_class }}">
 				<div class="header-wrap header-wrap-block justify-content-start">{% include "./header-nav.njk" %}</div>
 				<div class="header-wrap hstack gap-2">
-					{# BEGIN Dropdown #}
+					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
 						<button class="btn btn-flat-primary btn-icon" data-bs-toggle="dropdown">
 							<i class="far fa-envelope-open"></i>
@@ -21,9 +21,9 @@
 							{% include "./header-notification.njk" %}
 						</div>
 					</div>
-					{# END Dropdown #}
+					<!-- END Dropdown -->
 
-					{# BEGIN Dropdown #}
+					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
 						<button class="btn btn-flat-primary btn-icon" data-bs-toggle="dropdown">
 							<i class="far fa-comment-dots"></i>
@@ -35,7 +35,7 @@
 							{% include "./header-chat.njk" %}
 						</div>
 					</div>
-					{# END Dropdown #}
+					<!-- END Dropdown -->
 
 					<button class="btn btn-flat-primary btn-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-todo">
 						<i class="fa fa-tasks"></i>
@@ -44,32 +44,32 @@
 						<i class="fa fa-sliders"></i>
 					</button>
 
-					{# BEGIN Dropdown #}
+					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
 						<button class="btn btn-flat-primary widget13" data-bs-toggle="dropdown">
 							<div class="widget13-text">Hi <strong>Kayla</strong></div>
 
-							{# BEGIN Avatar #}
+							<!-- BEGIN Avatar -->
 							<div class="avatar avatar-info widget13-avatar">
 								<div class="avatar-display">
 									<img src="/images/avatar/avatar-5.webp" alt="User" />
 								</div>
 							</div>
-							{# END Avatar #}
+							<!-- END Avatar -->
 						</button>
 						<div class="dropdown-menu dropdown-menu-wide dropdown-menu-end dropdown-menu-animated overflow-hidden py-0">
 							{% include "./header-user.njk" %}
 						</div>
 					</div>
-					{# END Dropdown #}
+					<!-- END Dropdown -->
 				</div>
 			</div>
 		</div>
-		{# END Header Holder #}
+		<!-- END Header Holder -->
 	</div>
-	{# END Desktop Sticky Header #}
+	<!-- END Desktop Sticky Header -->
 
-	{# BEGIN Header Holder #}
+	<!-- BEGIN Header Holder -->
 	<div class="header-holder header-holder-desktop">
 		<div class="header-container {{ container_class }}">
 			<h4 class="header-title">{{ page_title }}</h4>
@@ -78,11 +78,11 @@
 			<div class="header-wrap">{% include "./header-action.njk" %}</div>
 		</div>
 	</div>
-	{# END Header Holder #}
+	<!-- END Header Holder -->
 
-	{# BEGIN Mobile Sticky Header #}
+	<!-- BEGIN Mobile Sticky Header -->
 	<div class="sticky-header" id="sticky-header-mobile">
-		{# BEGIN Header Holder #}
+		<!-- BEGIN Header Holder -->
 		<div class="header-holder header-holder-mobile">
 			<div class="header-container {{ container_class }}">
 				<div class="header-wrap">
@@ -98,32 +98,32 @@
 						<i class="fa fa-tasks"></i>
 					</button>
 
-					{# BEGIN Dropdown #}
+					<!-- BEGIN Dropdown -->
 					<div class="dropdown">
 						<button class="btn btn-flat-primary widget13" data-bs-toggle="dropdown">
 							<div class="widget13-text">Hi <strong>Kayla</strong></div>
 
-							{# BEGIN Avatar #}
+							<!-- BEGIN Avatar -->
 							<div class="avatar avatar-info widget13-avatar">
 								<div class="avatar-display">
 									<img src="/images/avatar/avatar-5.webp" alt="User" />
 								</div>
 							</div>
-							{# END Avatar #}
+							<!-- END Avatar -->
 						</button>
 						<div class="dropdown-menu dropdown-menu-wide dropdown-menu-end dropdown-menu-animated overflow-hidden py-0">
 							{% include "./header-user.njk" %}
 						</div>
 					</div>
-					{# END Dropdown #}
+					<!-- END Dropdown -->
 				</div>
 			</div>
 		</div>
-		{# END Header Holder #}
+		<!-- END Header Holder -->
 	</div>
-	{# END Mobile Sticky Header #}
+	<!-- END Mobile Sticky Header -->
 
-	{# BEGIN Header Holder #}
+	<!-- BEGIN Header Holder -->
 	<div class="header-holder header-holder-mobile">
 		<div class="header-container {{ container_class }}">
 			<div class="header-wrap header-wrap-block justify-content-start w-100">
@@ -131,10 +131,10 @@
 			</div>
 		</div>
 	</div>
-	{# END Header Holder #}
+	<!-- END Header Holder -->
 </div>
-{# END Header #}
+<!-- END Header -->
 
-{# BEGIN Script #}
+<!-- BEGIN Script -->
 <script type="module" src="/src/app/components/layout/header.js"></script>
-{# END Script #}
+<!-- END Script -->

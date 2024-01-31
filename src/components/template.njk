@@ -41,31 +41,31 @@
 			{% include defaults.components.preload %}
 		{% endif %}
 
-		{# BEGIN Page Holder #}
+		<!-- BEGIN Page Holder -->
 		<div class="holder">
 			{% if enable_aside | default(defaults.enable_aside) %}
 				{% include defaults.components.aside %}
 			{% endif %}
 
-			{# BEGIN Page Wrapper #}
+			<!-- BEGIN Page Wrapper -->
 			<div class="wrapper {{ content_wrapper_class }}">
 				{% if enable_header | default(defaults.enable_header) %}
 					{% include defaults.components.header %}
 				{% endif %}
 
-				{# BEGIN Page Content #}
+				<!-- BEGIN Page Content -->
 				<div class="content">
 					<div class="{{ container_class }}">{% block content %}{% endblock %}</div>
 				</div>
-				{# END Page Content #}
+				<!-- END Page Content -->
 
 				{% if enable_footer | default(defaults.enable_footer) %}
 					{% include defaults.components.footer %}
 				{% endif %}
 			</div>
-			{# END Page Wrapper #}
+			<!-- END Page Wrapper -->
 		</div>
-		{# END Page Holder #}
+		<!-- END Page Holder -->
 
 		{% for component in defaults.components.offcanvas %}
 			{% include component %}
