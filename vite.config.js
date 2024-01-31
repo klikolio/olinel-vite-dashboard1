@@ -9,7 +9,7 @@ import { ViteMinifyPlugin as minify } from 'vite-plugin-minify'
 
 const nunjucksGlobals = {
 	env: {
-		PAGE_DIRECTION: process.env.PAGE_DIRECTION ?? 'ltr',
+		PAGE_DIRECTION: process.env['PAGE_DIRECTION'] ?? 'ltr',
 	},
 }
 
