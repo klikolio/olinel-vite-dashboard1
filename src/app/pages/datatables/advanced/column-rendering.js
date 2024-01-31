@@ -6,11 +6,9 @@ import '@modules/datatables/bootstrap/styles/datatables.scss'
 import '@modules/datatables/responsive/styles/responsive.scss'
 
 import $ from 'jquery'
+import Handlebars from 'handlebars'
 import { DATATABLES_DATA } from '@app/utilities/datatables-data'
-
-function getRandomNumber(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min
-}
+import { getRandomNumber } from '@app/utilities/widget-helper'
 
 const status = [
 	{ title: 'Success', state: 'success' },
@@ -43,7 +41,16 @@ $('#datatables-1').DataTable({
 		{
 			targets: -2,
 			render: (data, type, full, meta) => {
-				return `<span class="badge badge-label-${status[data].state}">${status[data].title}</span>`
+				const statusData = status.find(
+					(statusItem) => statusItem.state === data,
+				)
+
+				return Handlebars.compile(
+					`<span class="badge badge-label-{{ color }}">{{ text }}</span>`,
+				)({
+					color: statusData.state,
+					text: statusData.title,
+				})
 			},
 		},
 	],

@@ -1,0 +1,4 @@
+import '@app/entries/fontawesome-entry'
+import '@app/entries/feather-entry'
+import '@app/entries/simplebar-entry'
+import '@app/entries/bootstrap-entry'

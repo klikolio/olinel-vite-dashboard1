@@ -32,12 +32,8 @@
 			{% include 'components/heads/analytics-head.njk' %}
 		{% endif %}
 
-		<link rel="stylesheet" href="/src/build/core/styles/bootstrap.scss" />
-		<link
-			rel="shortcut icon"
-			type="image/x-icon"
-			href="{{ defaults.favicon }}"
-		/>
+		<link rel="shortcut icon" href="{{ defaults.favicon }}" />
+		<link rel="stylesheet" href="/src/modules/bootstrap/styles/bootstrap.scss" />
 		<title>
 			{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}
 		</title>
@@ -82,7 +78,7 @@
 		{% block offcanvas %}
 		{% endblock %}
 
-		<script type="module" src="/src/app/init.js"></script>
+		<script type="module" src="/src/app/entry.js"></script>
 
 		{% block main_script %}
 		{% endblock %}

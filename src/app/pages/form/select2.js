@@ -1,10 +1,11 @@
 import '@modules/select2/styles/select2.scss'
 
 import $ from 'jquery'
-import select2 from 'select2'
+import Select2 from 'select2'
 import { getPageIsRTL } from '@app/utilities/widget-helper'
 
-select2(this, $)
+// Initilize plugin instance
+Select2(this, $)
 
 const direction = getPageIsRTL ? 'rtl' : 'ltr'
 

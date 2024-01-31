@@ -1,4 +1,5 @@
 import 'jquery-validation'
+
 import $ from 'jquery'
 
 // Custom method for validation

@@ -4,7 +4,7 @@ import $ from 'jquery'
 import TouchSpin from 'bootstrap-touchspin'
 import { getPageIsRTL } from '@app/utilities/widget-helper'
 
-// Initilize touchspin
+// Initilize plugin instance
 TouchSpin(this, $)
 
 const isRtl = getPageIsRTL()

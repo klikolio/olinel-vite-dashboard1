@@ -1,7 +1,8 @@
-import '@modules/quill/styles/snow.scss'
 import 'katex/dist/katex.css'
-import Quill from 'quill'
+import '@modules/quill/styles/snow.scss'
+
 import katex from 'katex'
+import Quill from 'quill'
 
 window.katex = katex
 

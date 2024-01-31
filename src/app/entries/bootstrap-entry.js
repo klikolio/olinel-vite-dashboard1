@@ -9,6 +9,7 @@ import 'bootstrap/js/dist/tab'
 import Tooltip from 'bootstrap/js/dist/tooltip'
 import Popover from 'bootstrap/js/dist/popover'
 
+// Initialize Bootstrap tooltip and popover
 function initTooltipPopover() {
 	document
 		.querySelectorAll('[data-bs-toggle="tooltip"]')

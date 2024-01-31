@@ -7,14 +7,7 @@ import '@modules/datatables/responsive/styles/responsive.scss'
 
 import $ from 'jquery'
 import { DATATABLES_DATA } from '@app/utilities/datatables-data'
-
-function formatInt(num) {
-	return typeof num === 'string'
-		? num.replace(/[$,]/g, '') * 1
-		: typeof num === 'number'
-			? num
-			: 0
-}
+import { formatInt } from '@app/utilities/widget-helper'
 
 $('#datatables-1').DataTable({
 	data: DATATABLES_DATA,

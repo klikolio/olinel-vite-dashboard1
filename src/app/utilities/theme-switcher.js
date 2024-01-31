@@ -1,32 +1,31 @@
 const rootQuery = 'html'
 const dataAttrName = 'data-theme'
-const localStorageIdentifier = 'theme-variant'
+const storageId = 'theme-variant'
 
+// Toggle theme class
 function themeSwitcher(isDark) {
-	// Toggling theme class
 	if (isDark) {
 		document.querySelector(rootQuery).setAttribute(dataAttrName, 'light')
-		localStorage.setItem(localStorageIdentifier, 'light')
+		localStorage.setItem(storageId, 'light')
 	} else {
 		document.querySelector(rootQuery).setAttribute(dataAttrName, 'dark')
-		localStorage.setItem(localStorageIdentifier, 'dark')
+		localStorage.setItem(storageId, 'dark')
 	}
 }
 
 export function initThemeSwitcher(toggleSelector) {
-	const persistedState = localStorage.getItem(localStorageIdentifier)
+	const persistedState = localStorage.getItem(storageId)
 
-	// Change default theme by local storage
+	// Change default theme from local storage
 	if (persistedState) {
 		document.querySelector(rootQuery).setAttribute(dataAttrName, persistedState)
 	}
 
-	// Add toggle event listener
+	// Trigger listener for toggling theme
 	document.querySelector(toggleSelector).addEventListener('click', () => {
 		const isDark =
 			document.querySelector(rootQuery).getAttribute(dataAttrName) === 'dark'
 
-		// Switching theme
 		themeSwitcher(isDark)
 	})
 }

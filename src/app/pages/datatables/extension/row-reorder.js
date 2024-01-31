@@ -20,7 +20,7 @@ $('#datatables-1').DataTable({
 $('#datatables-2').DataTable({
 	data: DATATABLES_DATA,
 	responsive: true,
-	rowReorder: true, // Enable row reorder extension with default configuration
+	rowReorder: true,
 	columnDefs: [
 		{
 			orderable: true,

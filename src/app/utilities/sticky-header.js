@@ -1,30 +1,42 @@
 import 'jquery-sticky'
-import $ from 'jquery'
 
+import $ from 'jquery'
+import { getBrowserWidth } from './widget-helper'
+
+// Constants
+const breakpoint = 1025
+const wrapperSelector = '.sticky-wrapper'
 const stickyConfig = {
 	topSpacing: 0,
 }
 
-// Method to initialize sticky header
+// Initialize sticky element
 function stickyInit(target) {
-	$(target).sticky(stickyConfig)
+	if ($(target).parent(wrapperSelector).length < 1) {
+		$(target).sticky(stickyConfig)
+	}
 }
 
-// Method to destroy sticky header
+// Destroy sticky element
 function stickyDestroy(target) {
 	$(target).unstick()
 }
 
 export function initStickyHeader(headerDesktopSelector, headerMobileSelector) {
-	// Set required constants
-	const stickyBreakpoint = 1025
+	// Initialize sticky header
+	if (getBrowserWidth() >= breakpoint) {
+		stickyInit(headerDesktopSelector)
+	} else {
+		stickyInit(headerMobileSelector)
+	}
 
-	// Listen window resize event for responsive
-	$(window).on('resize', function () {
-		const viewport = $(this).width()
+	// Window resize Listener for responsiveness
+	window.addEventListener('resize', () => {
+		const viewport = getBrowserWidth()
+		console.log(viewport)
 
-		// Check viewport breakpoint
-		if (viewport >= stickyBreakpoint) {
+		// Toggle desktop and mobile header
+		if (viewport >= breakpoint) {
 			stickyInit(headerDesktopSelector)
 			stickyDestroy(headerMobileSelector)
 		} else {
@@ -32,11 +44,4 @@ export function initStickyHeader(headerDesktopSelector, headerMobileSelector) {
 			stickyDestroy(headerDesktopSelector)
 		}
 	})
-
-	// Initialize sticky header for the first time
-	if ($(window).width() >= stickyBreakpoint) {
-		stickyInit(headerDesktopSelector)
-	} else {
-		stickyInit(headerMobileSelector)
-	}
 }

@@ -62,3 +62,15 @@ export function getBrowserWidth() {
 		document.body.clientWidth
 	)
 }
+
+export function getRandomNumber(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+export function formatInt(num) {
+	return typeof num === 'string'
+		? num.replace(/[$,]/g, '') * 1
+		: typeof num === 'number'
+			? num
+			: 0
+}

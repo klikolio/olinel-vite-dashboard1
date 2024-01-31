@@ -26,6 +26,7 @@ $('#datatables-2').DataTable({
 	order: [[4, 'desc']],
 	rowGroup: {
 		dataSrc: 4, // Set the columns for row group
+
 		// Row group custom rendering method
 		endRender: (rows, group) => {
 			const avg =

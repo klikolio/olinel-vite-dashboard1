@@ -1,5 +1,5 @@
-import '@modules/jstree/styles/jstree.scss'
 import 'jstree'
+import '@modules/jstree/styles/jstree.scss'
 
 import $ from 'jquery'
 
@@ -281,7 +281,7 @@ const treeview = $('#jstree-6').jstree({
 })
 
 // Input form handler for treeview searching
-$('#jstree-6-input').keyup(function () {
+$('#jstree-6-input').on('keyup', function () {
 	const value = $(this).val()
 	treeview.jstree(true).search(value)
 })

@@ -1,20 +1,24 @@
-export function initFullscreenTrigger(triggerSelector) {
-	const fullscreenActiveClass = 'fullscreen-active'
+// Constants
+const bodySelector = 'body'
+const bodyActiveClass = 'fullscreen-active'
 
-	const bodyQuery = 'body'
-	const bodyElement = document.querySelector(bodyQuery)
+export function initFullscreenTrigger(triggerSelector) {
+	// Get elements
+	const bodyElement = document.querySelector(bodySelector)
 	const triggerElement = document.querySelector(triggerSelector)
 
+	// Fullscreen change Listener for toggling body class
 	document.addEventListener('fullscreenchange', () => {
 		if (document.fullscreenElement) {
-			bodyElement.classList.add(fullscreenActiveClass)
+			bodyElement.classList.add(bodyActiveClass)
 		} else {
-			bodyElement.classList.remove(fullscreenActiveClass)
+			bodyElement.classList.remove(bodyActiveClass)
 		}
 	})
 
+	// Trigger listener for toggling fullscreen
 	triggerElement.addEventListener('click', () => {
-		if (bodyElement.classList.contains(fullscreenActiveClass)) {
+		if (bodyElement.classList.contains(bodyActiveClass)) {
 			document.exitFullscreen()
 		} else {
 			document.documentElement.requestFullscreen()

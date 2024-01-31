@@ -13,7 +13,7 @@ $('#datatables-1').DataTable({
 	scrollY: 300,
 	scrollX: true,
 	scrollCollapse: true, // Enable scrollable table
-	fixedColumns: true, // Enable autofill extension with default configuration
+	fixedColumns: true, // Enable fixed column extension with default configuration
 })
 
 $('#datatables-2').DataTable({

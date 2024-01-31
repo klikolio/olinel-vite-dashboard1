@@ -1,5 +1,5 @@
-import '@modules/apexcharts/styles/apexcharts.scss'
 import '@modules/apexcharts/scripts/apexcharts'
+import '@modules/apexcharts/styles/apexcharts.scss'
 
 import {
 	colorScheme,
@@ -780,9 +780,9 @@ chart8.render()
 chart9.render()
 chart10.render()
 
-// Theme toggle listener
+// Theme switcher listener
 document.querySelector('#theme-toggle').addEventListener('click', () => {
-	// Update all widget colors
+	// Update all chart color theme
 	chart1.updateOptions({
 		...getChartThemeOptions(),
 		markers: {

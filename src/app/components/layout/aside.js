@@ -1,9 +1,9 @@
 import Aside from '@modules/bootstrap/scripts/aside'
 import Menu from '@modules/bootstrap/scripts/menu'
 
-function initAside() {
+function initAsideMenu() {
 	new Aside()
 	new Menu()
 }
 
-initAside()
+initAsideMenu()

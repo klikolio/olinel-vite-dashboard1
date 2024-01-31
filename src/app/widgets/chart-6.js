@@ -1,5 +1,5 @@
-import '@modules/apexcharts/styles/apexcharts.scss'
 import '@modules/apexcharts/scripts/apexcharts'
+import '@modules/apexcharts/styles/apexcharts.scss'
 
 import {
 	colorScheme,
@@ -51,7 +51,9 @@ export function initChart6(chartQuery, series) {
 		},
 	})
 
+	// Theme switcher listener
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
+		// Update chart color theme
 		chartInstance.updateOptions({
 			...getChartThemeOptions(),
 			markers: {

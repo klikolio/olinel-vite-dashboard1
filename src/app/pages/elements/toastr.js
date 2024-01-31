@@ -1,4 +1,5 @@
 import '@modules/toastr/styles/toastr.scss'
+
 import toastr from 'toastr'
 
 let i = -1

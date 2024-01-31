@@ -1,6 +1,7 @@
 import { initChart3 } from '@app/widgets/chart-3'
 
 document.querySelectorAll('.widget-chart-3').forEach((chartQuery) => {
+	// Get attribute data from element
 	const baseColor = chartQuery.getAttribute('data-chart-color')
 	const chartLabel = chartQuery.getAttribute('data-chart-label')
 	const chartValue = chartQuery
