@@ -1,11 +1,11 @@
-import '@/build/vendors/apexcharts/styles/apexcharts.scss'
-import '@/build/vendors/apexcharts/scripts/apexcharts'
+import '@modules/apexcharts/styles/apexcharts.scss'
+import '@modules/apexcharts/scripts/apexcharts'
 
 import {
 	colorScheme,
 	getChartThemeOptions,
 	getThemeVariantIsDark,
-} from '@/app/utilities/widget-helper'
+} from '@app/utilities/widget-helper'
 
 const chart1 = new ApexCharts(document.querySelector('#apexchart-1'), {
 	...getChartThemeOptions(),

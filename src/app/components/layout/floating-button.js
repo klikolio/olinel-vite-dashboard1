@@ -1,3 +1,3 @@
-import { initThemeSwitcher } from '@/app/utilities/theme-switcher'
+import { initThemeSwitcher } from '@app/utilities/theme-switcher'
 
 initThemeSwitcher('#theme-toggle')

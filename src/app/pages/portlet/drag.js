@@ -1,4 +1,4 @@
-import '@/build/vendors/sortable/styles/sortable.scss'
+import '@modules/sortable/styles/sortable.scss'
 import Sortable from 'sortablejs'
 
 document.querySelectorAll('.portlet-drag-container').forEach((dragElement) => {

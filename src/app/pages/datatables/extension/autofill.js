@@ -4,12 +4,12 @@ import 'datatables.net-responsive'
 import 'datatables.net-responsive-bs5'
 import 'datatables.net-autofill'
 import 'datatables.net-autofill-bs5'
-import '@/build/vendors/datatables/bootstrap/styles/datatables.scss'
-import '@/build/vendors/datatables/responsive/styles/responsive.scss'
-import '@/build/vendors/datatables/autofill/styles/autofill.scss'
+import '@modules/datatables/bootstrap/styles/datatables.scss'
+import '@modules/datatables/responsive/styles/responsive.scss'
+import '@modules/datatables/autofill/styles/autofill.scss'
 
 import $ from 'jquery'
-import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
+import { DATATABLES_DATA } from '@app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
 	data: DATATABLES_DATA,

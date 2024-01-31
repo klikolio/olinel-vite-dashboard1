@@ -4,13 +4,13 @@ import 'datatables.net-responsive'
 import 'datatables.net-responsive-bs5'
 import 'datatables.net-fixedheader'
 import 'datatables.net-fixedheader-bs5'
-import '@/build/vendors/datatables/bootstrap/styles/datatables.scss'
-import '@/build/vendors/datatables/responsive/styles/responsive.scss'
-import '@/build/vendors/datatables/fixedheader/styles/fixedheader.scss'
+import '@modules/datatables/bootstrap/styles/datatables.scss'
+import '@modules/datatables/responsive/styles/responsive.scss'
+import '@modules/datatables/fixedheader/styles/fixedheader.scss'
 
 import $ from 'jquery'
-import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
-import { getBrowserWidth } from '@/app/utilities/widget-helper'
+import { DATATABLES_DATA } from '@app/utilities/datatables-data'
+import { getBrowserWidth } from '@app/utilities/widget-helper'
 
 const headerOffset =
 	getBrowserWidth() >= 1025

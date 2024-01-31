@@ -1,8 +1,8 @@
-import '@/build/vendors/select2/styles/select2.scss'
+import '@modules/select2/styles/select2.scss'
 
 import $ from 'jquery'
 import select2 from 'select2'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
+import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 select2(this, $)
 

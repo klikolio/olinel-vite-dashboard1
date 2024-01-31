@@ -1,4 +1,4 @@
-import Portlet from '@/build/core/scripts/portlet'
+import Portlet from '@modules/core/scripts/portlet'
 
 document.querySelectorAll('.portlet').forEach((portletElement) => {
 	const portletInstance = new Portlet(portletElement)

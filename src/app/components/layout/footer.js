@@ -1,3 +1,3 @@
-import { initCopyrightYear } from '@/app/utilities/copyright-year'
+import { initCopyrightYear } from '@app/utilities/copyright-year'
 
 initCopyrightYear('#copyright-year')

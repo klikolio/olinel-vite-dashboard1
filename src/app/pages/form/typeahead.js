@@ -1,5 +1,5 @@
 import 'typeahead.js'
-import '@/build/vendors/typeahead/styles/typeahead.scss'
+import '@modules/typeahead/styles/typeahead.scss'
 
 import $ from 'jquery'
 import Bloodhound from 'typeahead.js/dist/bloodhound'

@@ -1,4 +1,4 @@
-import '@/build/vendors/sweetalert2/styles/sweetalert2.scss'
+import '@modules/sweetalert2/styles/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2'
 
 // Initialize Sweet Alert object

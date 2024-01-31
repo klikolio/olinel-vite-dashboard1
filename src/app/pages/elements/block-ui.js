@@ -1,5 +1,5 @@
 import 'block-ui'
-import '@/build/vendors/block-ui/styles/block-ui.scss'
+import '@modules/block-ui/styles/block-ui.scss'
 
 import $ from 'jquery'
 

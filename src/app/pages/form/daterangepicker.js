@@ -1,8 +1,8 @@
-import '@/build/vendors/bootstrap-daterangepicker/styles/bootstrap-daterangepicker.scss'
+import '@modules/bootstrap-daterangepicker/styles/bootstrap-daterangepicker.scss'
 
 import $ from 'jquery'
 import moment from 'moment'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
+import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 window.moment = moment
 

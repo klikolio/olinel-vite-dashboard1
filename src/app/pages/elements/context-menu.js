@@ -1,8 +1,8 @@
 import 'jquery-contextmenu'
-import '@/build/vendors/jquery-contextmenu/styles/context-menu.scss'
+import '@modules/jquery-contextmenu/styles/context-menu.scss'
 
 import $ from 'jquery'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
+import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 const isRtl = getPageIsRTL()
 

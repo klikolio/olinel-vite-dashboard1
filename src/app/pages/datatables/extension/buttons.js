@@ -7,12 +7,12 @@ import 'datatables.net-buttons-bs5'
 import 'datatables.net-buttons/js/buttons.colVis'
 import 'datatables.net-buttons/js/buttons.html5'
 import 'datatables.net-buttons/js/buttons.print'
-import '@/build/vendors/datatables/bootstrap/styles/datatables.scss'
-import '@/build/vendors/datatables/responsive/styles/responsive.scss'
-import '@/build/vendors/datatables/buttons/styles/buttons.scss'
+import '@modules/datatables/bootstrap/styles/datatables.scss'
+import '@modules/datatables/responsive/styles/responsive.scss'
+import '@modules/datatables/buttons/styles/buttons.scss'
 
 import $ from 'jquery'
-import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
+import { DATATABLES_DATA } from '@app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
 	data: DATATABLES_DATA,

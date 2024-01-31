@@ -1,4 +1,4 @@
-import '@/build/vendors/quill/styles/snow.scss'
+import '@modules/quill/styles/snow.scss'
 import 'katex/dist/katex.css'
 import Quill from 'quill'
 import katex from 'katex'

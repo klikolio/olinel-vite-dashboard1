@@ -4,12 +4,12 @@ import 'datatables.net-responsive'
 import 'datatables.net-responsive-bs5'
 import 'datatables.net-colreorder'
 import 'datatables.net-colreorder-bs5'
-import '@/build/vendors/datatables/bootstrap/styles/datatables.scss'
-import '@/build/vendors/datatables/responsive/styles/responsive.scss'
-import '@/build/vendors/datatables/colreorder/styles/colreorder.scss'
+import '@modules/datatables/bootstrap/styles/datatables.scss'
+import '@modules/datatables/responsive/styles/responsive.scss'
+import '@modules/datatables/colreorder/styles/colreorder.scss'
 
 import $ from 'jquery'
-import { DATATABLES_DATA } from '@/app/utilities/datatables-data'
+import { DATATABLES_DATA } from '@app/utilities/datatables-data'
 
 $('#datatables-1').DataTable({
 	data: DATATABLES_DATA,

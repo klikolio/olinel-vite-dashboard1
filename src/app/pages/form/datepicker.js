@@ -1,8 +1,8 @@
-import '@/build/vendors/bootstrap-datepicker/styles/bootstrap-datepicker.scss'
+import '@modules/bootstrap-datepicker/styles/bootstrap-datepicker.scss'
 import 'bootstrap-datepicker'
 
 import $ from 'jquery'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
+import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 const orientation = getPageIsRTL() ? 'right' : 'left'
 

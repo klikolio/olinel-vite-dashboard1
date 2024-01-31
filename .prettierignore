@@ -16,4 +16,4 @@ pnpm-lock.yaml
 
 # source codes
 _variables.scss
-src/build/vendors/**/scripts/*.js
+src/modules/**/scripts/*.js

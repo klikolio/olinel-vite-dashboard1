@@ -1,8 +1,8 @@
 import 'slick-carousel'
-import '@/build/vendors/slick-carousel/styles/slick.scss'
+import '@modules/slick-carousel/styles/slick.scss'
 
 import $ from 'jquery'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
+import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 const isRtl = getPageIsRTL()
 

@@ -4,18 +4,19 @@ import nunjucks from '@vituum/vite-plugin-nunjucks'
 import legacy from '@vitejs/plugin-legacy'
 import eslint from 'vite-plugin-eslint'
 import { defineConfig } from 'vite'
-import { ViteMinifyPlugin } from 'vite-plugin-minify'
+import { ViteMinifyPlugin as minify } from 'vite-plugin-minify'
 
 export default defineConfig({
 	publicDir: 'public',
 	resolve: {
 		alias: {
-			'@': '/src',
+			'@app': '/src/app',
+			'@modules': '/src/modules',
 		},
 	},
 	plugins: [
 		vituum(),
-		ViteMinifyPlugin(),
+		minify(),
 		eslint(),
 		legacy(),
 		nunjucks({

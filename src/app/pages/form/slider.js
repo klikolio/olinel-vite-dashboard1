@@ -1,5 +1,5 @@
 import 'ion-rangeslider'
-import '@/build/vendors/ion-rangeslider/styles/ion-rangeslider.scss'
+import '@modules/ion-rangeslider/styles/ion-rangeslider.scss'
 
 import $ from 'jquery'
 

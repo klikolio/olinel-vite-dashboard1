@@ -2,8 +2,8 @@ import 'datatables.net'
 import 'datatables.net-bs5'
 import 'datatables.net-scroller'
 import 'datatables.net-scroller-bs5'
-import '@/build/vendors/datatables/bootstrap/styles/datatables.scss'
-import '@/build/vendors/datatables/scroller/styles/scroller.scss'
+import '@modules/datatables/bootstrap/styles/datatables.scss'
+import '@modules/datatables/scroller/styles/scroller.scss'
 
 import $ from 'jquery'
 

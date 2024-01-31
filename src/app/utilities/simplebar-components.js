@@ -1,4 +1,4 @@
-import '@/build/vendors/simplebar/styles/simplebar.scss'
+import '@modules/simplebar/styles/simplebar.scss'
 import SimpleBar from 'simplebar'
 
 const dropdownQuery = '.dropdown'

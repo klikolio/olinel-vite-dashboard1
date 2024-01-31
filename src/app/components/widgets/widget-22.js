@@ -1,4 +1,4 @@
-import { initChart1 } from '@/app/widgets/chart-1'
+import { initChart1 } from '@app/widgets/chart-1'
 
 const chartInstance = initChart1(document.querySelector('#widget-chart-1'), [
 	{

@@ -32,13 +32,7 @@
 		["30", "Chantale", "Lynch", "97316", "United States"],
 		["31", "Jermaine", "Dawson", "A3H 7A1", "American Samoa"],
 		["32", "Ann", "Giles", "54258", "Korea"],
-		[
-			"33",
-			"Jerry",
-			"Carr",
-			"04901",
-			"South Georgia and The South Sandwich Islands"
-		],
+		["33", "Jerry", "Carr", "04901", "The South Sandwich Islands"],
 		["34", "Lionel", "Hooper", "67970", "Bahrain"],
 		["35", "Alyssa", "Hewitt", "R3K 2V8", "Paraguay"],
 		["36", "Lisandra", "Sheppard", "71886", "Seychelles"],
@@ -146,20 +140,8 @@
 		["138", "Ignacia", "Bruce", "Q8T 5Q1", "Sao Tome and Principe"],
 		["139", "Jana", "Mcguire", "89412", "Czech Republic"],
 		["140", "Alice", "Underwood", "74535", "Slovakia"],
-		[
-			"141",
-			"Tobias",
-			"Kent",
-			"33601",
-			"South Georgia and The South Sandwich Islands"
-		],
-		[
-			"142",
-			"Nasim",
-			"Coleman",
-			"19377",
-			"United States Minor Outlying Islands"
-		],
+		["141", "Tobias", "Kent", "33601", "The South Sandwich Islands"],
+		["142", "Nasim", "Coleman", "19377", "Minor Outlying Islands"],
 		["143", "Geoffrey", "Byers", "85753", "Netherlands Antilles"],
 		["144", "Odette", "Sawyer", "55418", "Tunisia"],
 		["145", "Chaney", "Flowers", "F4W 7O7", "Maldives"],
@@ -296,13 +278,7 @@
 		["276", "Ryder", "Long", "32725", "New Caledonia"],
 		["277", "Ariel", "Colon", "50675", "Estonia"],
 		["278", "Vanna", "Hess", "79057", "Saudi Arabia"],
-		[
-			"279",
-			"Hayley",
-			"Cherry",
-			"B5E 9X4",
-			"United States Minor Outlying Islands"
-		],
+		["279", "Hayley", "Cherry", "B5E 9X4", "Minor Outlying Islands"],
 		["280", "Knox", "Blair", "75626", "Central African Republic"],
 		["281", "Astra", "Mcdaniel", "24493", "Bermuda"],
 		["282", "Teegan", "Ford", "A8U 1K9", "Iran, Islamic Republic of"],
@@ -373,13 +349,7 @@
 		["347", "Quynn", "Irwin", "26524", "Chile"],
 		["348", "Colin", "Coleman", "22833", "United Arab Emirates"],
 		["349", "Sybil", "Delgado", "99947", "Belize"],
-		[
-			"350",
-			"Macaulay",
-			"Salinas",
-			"48521",
-			"Heard Island and Mcdonald Islands"
-		],
+		["350", "Macaulay", "Salinas", "48521", "Heard Island"],
 		["351", "Garrison", "Hogan", "68950", "India"],
 		["352", "Ronan", "Guerra", "55445", "Angola"],
 		["353", "Regina", "Andrews", "H3E 3T0", "Central African Republic"],
@@ -425,13 +395,7 @@
 		["393", "Kibo", "Sawyer", "30638", "Guyana"],
 		["394", "Jackson", "Meyers", "P4N 9D6", "Bangladesh"],
 		["395", "Kirk", "Baxter", "F3M 7S6", "Estonia"],
-		[
-			"396",
-			"Sybil",
-			"Christian",
-			"B3Q 2X0",
-			"South Georgia and The South Sandwich Islands"
-		],
+		["396", "Sybil", "Christian", "B3Q 2X0", "The South Sandwich Islands"],
 		["397", "Ina", "Mercer", "N4S 1K8", "Korea"],
 		["398", "Kiara", "Whitehead", "86023", "Nicaragua"],
 		["399", "Vielka", "Hays", "29845", "Malta"],
@@ -463,13 +427,7 @@
 		["425", "Deirdre", "Hensley", "F3X 1B7", "Micronesia"],
 		["426", "Bernard", "Vargas", "S4D 9T0", "Uzbekistan"],
 		["427", "Merrill", "Compton", "17713", "Suriname"],
-		[
-			"428",
-			"Carly",
-			"Baird",
-			"D3H 5G3",
-			"United States Minor Outlying Islands"
-		],
+		["428", "Carly", "Baird", "D3H 5G3", "Minor Outlying Islands"],
 		["429", "Grace", "Phelps", "64695", "Nauru"],
 		["430", "Kareem", "Stone", "65572", "Netherlands"],
 		["431", "Susan", "Newton", "04627", "Anguilla"],
@@ -495,13 +453,7 @@
 		["451", "Jordan", "Barnes", "D8K 9L8", "Dominica"],
 		["452", "Carly", "Love", "D8Z 3P4", "Mauritania"],
 		["453", "Mari", "George", "60260", "Japan"],
-		[
-			"454",
-			"Karly",
-			"Hodges",
-			"15790",
-			"South Georgia and The South Sandwich Islands"
-		],
+		["454", "Karly", "Hodges", "15790", "The South Sandwich Islands"],
 		["455", "Rana", "Logan", "M1R 6Y6", "Bosnia and Herzegovina"],
 		["456", "Theodore", "Sims", "C7A 8T2", "Barbados"],
 		["457", "Quin", "Thompson", "26884", "Bouvet Island"],
@@ -616,13 +568,7 @@
 		["566", "Deacon", "Silva", "Z5L 6M0", "Djibouti"],
 		["567", "Bree", "Landry", "43135", "Czech Republic"],
 		["568", "Molly", "Leach", "71714", "Botswana"],
-		[
-			"569",
-			"Idona",
-			"Cain",
-			"A2J 1R8",
-			"South Georgia and The South Sandwich Islands"
-		],
+		["569", "Idona", "Cain", "A2J 1R8", "The South Sandwich Islands"],
 		["570", "Aileen", "Salinas", "90344", "Uzbekistan"],
 		["571", "Dominique", "Cooper", "31803", "Sao Tome and Principe"],
 		["572", "Lunea", "Pollard", "S9R 7B0", "Sweden"],
@@ -947,13 +893,7 @@
 		["891", "Cynthia", "Nash", "U5P 1H4", "Switzerland"],
 		["892", "Tara", "Austin", "Q6X 8U0", "Burundi"],
 		["893", "Roanna", "Petty", "28524", "Northern Mariana Islands"],
-		[
-			"894",
-			"Palmer",
-			"Mcdowell",
-			"78234",
-			"United States Minor Outlying Islands"
-		],
+		["894", "Palmer", "Mcdowell", "78234", "Minor Outlying Islands"],
 		["895", "Sade", "Patton", "28984", "Czech Republic"],
 		["896", "Yoko", "Compton", "62165", "Saint Kitts and Nevis"],
 		["897", "Regan", "Mccarthy", "C5D 6G0", "Lebanon"],
@@ -1165,13 +1105,7 @@
 		["1103", "Connor", "Melton", "E2F 4Q2", "Angola"],
 		["1104", "Evelyn", "Barry", "I9H 8W7", "Turkmenistan"],
 		["1105", "Barry", "Stephens", "07823", "Gibraltar"],
-		[
-			"1106",
-			"Ferris",
-			"Farrell",
-			"I7H 5Z6",
-			"Saint Vincent and The Grenadines"
-		],
+		["1106", "Ferris", "Farrell", "I7H 5Z6", "The Grenadines"],
 		["1107", "Ursa", "Carr", "31124", "Chad"],
 		["1108", "Laith", "Johnson", "10428", "Cyprus"],
 		["1109", "Harlan", "Frank", "J6K 7I6", "Gambia"],
@@ -1223,13 +1157,7 @@
 		["1155", "Rae", "Curry", "45477", "Morocco"],
 		["1156", "Jillian", "Hogan", "N8L 4B5", "Iceland"],
 		["1157", "Mia", "Kaufman", "54758", "Burkina Faso"],
-		[
-			"1158",
-			"Remedios",
-			"Wilkerson",
-			"75420",
-			"Saint Vincent and The Grenadines"
-		],
+		["1158", "Remedios", "Wilkerson", "75420", "Saint Vincent"],
 		["1159", "Xanthus", "Baldwin", "13961", "Congo"],
 		["1160", "Madeline", "Gates", "76351", "Saint Helena"],
 		["1161", "Leroy", "Craig", "12770", "Finland"],
@@ -1351,13 +1279,7 @@
 		["1277", "Wesley", "Craig", "20141", "Australia"],
 		["1278", "Martena", "Mercer", "P6X 2L9", "Sudan"],
 		["1279", "Tamara", "Dennis", "D3H 9R0", "Mali"],
-		[
-			"1280",
-			"Phelan",
-			"Pena",
-			"D2H 2H7",
-			"United States Minor Outlying Islands"
-		],
+		["1280", "Phelan", "Pena", "D2H 2H7", "Minor Outlying Islands"],
 		["1281", "Rebecca", "Kinney", "B5Z 9S4", "Antarctica"],
 		["1282", "Josephine", "Delgado", "81010", "Algeria"],
 		["1283", "Kieran", "Estes", "70093", "Bermuda"],
@@ -1483,13 +1405,7 @@
 		["1403", "Alice", "Quinn", "06084", "Senegal"],
 		["1404", "Linda", "Burgess", "H1E 7C0", "Turkmenistan"],
 		["1405", "Hilda", "Burns", "Q9Q 4S2", "Kyrgyzstan"],
-		[
-			"1406",
-			"Griffith",
-			"Watts",
-			"D4J 7N2",
-			"United States Minor Outlying Islands"
-		],
+		["1406", "Griffith", "Watts", "D4J 7N2", "Minor Outlying Islands"],
 		["1407", "Camden", "Glenn", "12939", "Russian Federation"],
 		["1408", "Tallulah", "Rush", "G9V 3N2", "Turkey"],
 		["1409", "Hasad", "Salinas", "H3F 7P9", "Cameroon"],
@@ -1575,13 +1491,7 @@
 		["1489", "Dylan", "Ford", "04043", "Solomon Islands"],
 		["1490", "Kaitlin", "Franklin", "99451", "Namibia"],
 		["1491", "Hayes", "Craft", "D6H 4Y6", "Christmas Island"],
-		[
-			"1492",
-			"Nolan",
-			"Sullivan",
-			"31246",
-			"United States Minor Outlying Islands"
-		],
+		["1492", "Nolan", "Sullivan", "31246", "Minor Outlying Islands"],
 		["1493", "Jennifer", "Romero", "E7I 1R7", "Latvia"],
 		["1494", "Deanna", "Wall", "36109", "Nepal"],
 		["1495", "Dara", "Valenzuela", "18359", "Martinique"],
@@ -1900,13 +1810,7 @@
 		["1808", "Pamela", "Vasquez", "K2Q 9A1", "Ghana"],
 		["1809", "Patricia", "Haley", "51509", "Jordan"],
 		["1810", "Nevada", "Prince", "41315", "Tokelau"],
-		[
-			"1811",
-			"Martin",
-			"Wilkerson",
-			"Y8X 4Y5",
-			"Palestinian Territory, Occupied"
-		],
+		["1811", "Martin", "Wilkerson", "Y8X 4Y5", "Palestinian Territory"],
 		["1812", "Deirdre", "Castaneda", "X1S 5E2", "Bahrain"],
 		["1813", "Cara", "Flynn", "68372", "Azerbaijan"],
 		["1814", "Sylvia", "Alexander", "E5F 9M5", "Svalbard and Jan Mayen"],
@@ -2149,13 +2053,7 @@
 		["2051", "Peter", "Kelly", "91773", "Morocco"],
 		["2052", "Xandra", "Grimes", "66702", "Tokelau"],
 		["2053", "Michael", "Battle", "J2J 2N5", "Honduras"],
-		[
-			"2054",
-			"Steel",
-			"Wiggins",
-			"34625",
-			"United States Minor Outlying Islands"
-		],
+		["2054", "Steel", "Wiggins", "34625", "Minor Outlying Islands"],
 		["2055", "Holmes", "Christian", "45402", "Liechtenstein"],
 		["2056", "Charles", "Barrett", "O4N 9N8", "Lebanon"],
 		["2057", "Hermione", "Soto", "C8E 4H8", "Congo"],
@@ -2210,13 +2108,7 @@
 		["2106", "Aiko", "Santos", "K4H 1N0", "Saint Vincent and The Grenadines"],
 		["2107", "Amir", "Rivas", "02737", "Papua New Guinea"],
 		["2108", "Mira", "Kerr", "W6E 6Y2", "Sri Lanka"],
-		[
-			"2109",
-			"Harrison",
-			"Jensen",
-			"50193",
-			"Heard Island and Mcdonald Islands"
-		],
+		["2109", "Harrison", "Jensen", "50193", "Mcdonald Islands"],
 		["2110", "Merrill", "Randall", "21534", "Colombia"],
 		["2111", "Benjamin", "Howe", "N8M 4N6", "Turkmenistan"],
 		["2112", "Melyssa", "Kidd", "97657", "Cameroon"],
@@ -2232,13 +2124,7 @@
 		["2122", "Hall", "Schroeder", "I2D 9L7", "Kenya"],
 		["2123", "Amaya", "Lynch", "50534", "Costa Rica"],
 		["2124", "Randall", "Hanson", "B4R 2S3", "United Arab Emirates"],
-		[
-			"2125",
-			"Sasha",
-			"Clarke",
-			"50972",
-			"United States Minor Outlying Islands"
-		],
+		["2125", "Sasha", "Clarke", "50972", "Minor Outlying Islands"],
 		["2126", "Susan", "Sutton", "Z4T 6K3", "Solomon Islands"],
 		["2127", "Hiram", "Torres", "C8O 5O7", "Botswana"],
 		["2128", "Melanie", "Calhoun", "87097", "New Zealand"],
@@ -2276,13 +2162,7 @@
 		["2160", "Riley", "Santiago", "F8K 2Y6", "Gabon"],
 		["2161", "Iris", "Gallegos", "K9C 3T9", "Niue"],
 		["2162", "Kato", "Osborn", "N4C 2L8", "Puerto Rico"],
-		[
-			"2163",
-			"Imogene",
-			"Schroeder",
-			"79710",
-			"United States Minor Outlying Islands"
-		],
+		["2163", "Imogene", "Schroeder", "79710", "Minor Outlying Islands"],
 		["2164", "Olympia", "Hebert", "D4W 1L0", "Saint Lucia"],
 		["2165", "Skyler", "Burnett", "B2R 5H7", "Antarctica"],
 		["2166", "Faith", "Sims", "88476", "Egypt"],

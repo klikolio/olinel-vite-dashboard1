@@ -1,4 +1,4 @@
-import '@/build/vendors/toastr/styles/toastr.scss'
+import '@modules/toastr/styles/toastr.scss'
 import toastr from 'toastr'
 
 let i = -1

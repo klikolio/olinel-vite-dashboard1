@@ -1,8 +1,8 @@
 import 'bootstrap-datetime-picker'
-import '@/build/vendors/bootstrap-datetime-picker/styles/bootstrap-datetime-picker.scss'
+import '@modules/bootstrap-datetime-picker/styles/bootstrap-datetime-picker.scss'
 
 import $ from 'jquery'
-import { getPageIsRTL } from '@/app/utilities/widget-helper'
+import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 const direction = getPageIsRTL() ? 'left' : 'right'
 

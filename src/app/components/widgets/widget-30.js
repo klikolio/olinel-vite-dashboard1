@@ -1,4 +1,4 @@
-import { initChart8 } from '@/app/widgets/chart-8'
+import { initChart8 } from '@app/widgets/chart-8'
 
 const chartInstance = initChart8(document.querySelector('#widget-chart-8'), [
 	{

@@ -1,4 +1,4 @@
-import { initChart3 } from '@/app/widgets/chart-3'
+import { initChart3 } from '@app/widgets/chart-3'
 
 document.querySelectorAll('.widget-chart-3').forEach((chartQuery) => {
 	const baseColor = chartQuery.getAttribute('data-chart-color')

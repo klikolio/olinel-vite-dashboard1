@@ -1,4 +1,4 @@
-import '@/build/vendors/jstree/styles/jstree.scss'
+import '@modules/jstree/styles/jstree.scss'
 import 'jstree'
 
 import $ from 'jquery'

@@ -6,7 +6,7 @@
 	},
 	"ignorePatterns": [
 		"dist",
-		"src/build/vendors/**/scripts/*.js",
+		"src/modules/**/scripts/*.js",
 		"postcss.config.js",
 		"vite.config.js"
 	],
