@@ -1,4 +1,4 @@
-# Klikolio Docs (Vite Template)
+# Olinel - Vite Bootstrap Admin Dashboard Template
 
 ## Overview
 
@@ -37,11 +37,11 @@ This template also comes with **EsLint** and **Prettier**, you can optionally in
 │  ├─ modules/       - contains custom vendor modules
 │  ├─ components/    - contains Nunjucks components
 │  └─ pages/         - contains Nunjucks pages
-├─ .browserlistrc    - browser list for build
+├─ .browserslistrc   - browser list for build
 ├─ .env.example      - example of environment variables
 ├─ .eslintignore     - ignore file for EsLint
 ├─ .eslintrc.json    - Eslint configuration
-├─ .gitattribute     - Git attributes configuration
+├─ .gitattributes    - Git attributes configuration
 ├─ .gitignore        - ignore file for Git
 ├─ .prettierignore   - ignore file for Prettier
 ├─ .prettierrc       - Prettier configuration
@@ -62,7 +62,7 @@ This template has customized vendor library assets to fit the requirement, you c
 | Command                | Description                       |
 | ---------------------- | --------------------------------- |
 | `npm run dev`          | Start development server          |
-| `npm run build`        | Build assets for production      |
+| `npm run build`        | Build assets for production       |
 | `npm run preview`      | Preview local production build    |
 | `npm run lint`         | Lint JavaScript codes with EsLint |
 | `npm run format:check` | Check code format with Prettier   |
