@@ -3,14 +3,14 @@
 .jstree-node {
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 0 !important;
 	list-style-type: none;
 	list-style-image: none;
 }
 
 .jstree-container-ul > .jstree-node {
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 .jstree-anchor,

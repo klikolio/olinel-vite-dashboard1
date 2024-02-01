@@ -15,7 +15,7 @@
 	ul {
 		position: absolute;
 		width: $jstree-menu-min-width;
-		padding: $jstree-menu-padding-y 0;
+		padding: $jstree-menu-padding-y 0 !important;
 		margin: 0;
 		background: $jstree-menu-bg;
 		border: $jstree-menu-border-width $border-style $jstree-menu-border-color;
