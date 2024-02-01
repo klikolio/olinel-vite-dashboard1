@@ -1,4 +1,6 @@
+# production codes
 dist
+dist-ssr
+
+# source codes
 src/modules/**/scripts
-postcss.config.js
-vite.config.js

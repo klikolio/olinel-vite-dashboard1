@@ -7,13 +7,13 @@
 	"plugins": ["prettier-plugin-jinja-template"],
 	"overrides": [
 		{
-			"files": ["src/**/*.{js,cjs,mjs}", "!src/modules/**/scripts"],
+			"files": ["*.{js,cjs,mjs}"],
 			"options": {
 				"singleQuote": true
 			}
 		},
 		{
-			"files": ["*.scss", "*.sass"],
+			"files": ["*.{scss,sass}"],
 			"options": {
 				"singleQuote": false
 			}

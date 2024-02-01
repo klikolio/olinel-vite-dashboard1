@@ -1,0 +1,15 @@
+# Editor directories and files
+.vscode/*
+
+# production codes
+dist
+dist-ssr
+
+# source codes
+_variables.scss
+src/modules/**/scripts
+
+# additional files
+package.json
+package-lock.json
+pnpm-lock.yaml
