@@ -1,65 +1,69 @@
-import '@modules/apexcharts/scripts/apexcharts'
 import '@modules/apexcharts/styles/apexcharts.scss'
 
+import merge from 'deepmerge'
+import ApexCharts from 'apexcharts'
+import { getThemeVariant } from '@app/utilities/widget-helper'
 import {
-	colorScheme,
-	getChartThemeOptions,
-	getThemeVariantIsDark,
-} from '@app/utilities/widget-helper'
+	chartBgLevel,
+	chartColorScheme,
+	normalizeApexchartsOptions,
+} from '@app/utilities/apexcharts-helper'
+
+const chartOptions = (series) => {
+	const extraOptions = {}
+	const themeVariant = getThemeVariant()
+
+	if (series !== undefined) extraOptions.series = series
+
+	return normalizeApexchartsOptions(
+		merge(extraOptions, {
+			chart: {
+				type: 'area',
+				background: 'transparent',
+				height: 300,
+				toolbar: {
+					show: false,
+				},
+			},
+			dataLabels: {
+				enabled: false,
+			},
+			fill: {
+				opacity: 0,
+				type: 'solid',
+			},
+			stroke: {
+				show: true,
+				colors: [chartColorScheme.blue],
+				lineCap: 'round',
+			},
+			markers: {
+				colors: [chartBgLevel[themeVariant][1]],
+				strokeWidth: 4,
+				strokeColors: chartColorScheme.blue,
+			},
+			tooltip: {
+				marker: {
+					show: false,
+				},
+				y: {
+					formatter: (val) => `${val} Products`, // Format chart tooltip value
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+			},
+		}),
+	)
+}
 
 export function initChart5(chartQuery, series) {
-	const chartInstance = new ApexCharts(chartQuery, {
-		...getChartThemeOptions(), // Add theme option to chart
-		series,
-		chart: {
-			type: 'area',
-			background: 'transparent',
-			height: 300,
-			toolbar: {
-				show: false,
-			},
-		},
-		dataLabels: {
-			enabled: false,
-		},
-		fill: {
-			opacity: 0,
-			type: 'solid',
-		},
-		stroke: {
-			show: true,
-			colors: [colorScheme.blue],
-			lineCap: 'round',
-		},
-		markers: {
-			colors: [getThemeVariantIsDark() ? colorScheme.black : colorScheme.white],
-			strokeWidth: 4,
-			strokeColors: colorScheme.blue,
-		},
-		tooltip: {
-			marker: {
-				show: false,
-			},
-			y: {
-				formatter: (val) => `${val} Products`, // Format chart tooltip value
-			},
-		},
-		xaxis: {
-			categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-		},
-	})
+	const chartInstance = new ApexCharts(chartQuery, chartOptions(series))
 
 	// Theme switcher listener
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		// Update chart color theme
-		chartInstance.updateOptions({
-			...getChartThemeOptions(),
-			markers: {
-				colors: [
-					getThemeVariantIsDark() ? colorScheme.black : colorScheme.white,
-				],
-			},
-		})
+		chartInstance.updateOptions(chartOptions())
 	})
 
 	return chartInstance

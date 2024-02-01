@@ -1,82 +1,85 @@
-import '@modules/apexcharts/scripts/apexcharts'
 import '@modules/apexcharts/styles/apexcharts.scss'
 
+import merge from 'deepmerge'
+import ApexCharts from 'apexcharts'
+import { getThemeVariant } from '@app/utilities/widget-helper'
 import {
-	colorScheme,
-	getChartThemeOptions,
-	getThemeVariantIsDark,
+	chartBgLevel,
+	chartColorScheme,
 	currencyFormatter,
-} from '@app/utilities/widget-helper'
+	normalizeApexchartsOptions,
+} from '@app/utilities/apexcharts-helper'
 
-export function initChart2(chartQuery, series) {
-	const chartInstance = new ApexCharts(chartQuery, {
-		...getChartThemeOptions(), // Add theme option to chart
-		series,
-		chart: {
-			type: 'area',
-			height: 300,
-			background: 'transparent',
-			sparkline: {
-				enabled: true,
-			},
-		},
-		fill: {
-			type: 'solid',
-			opacity: 1,
-			colors: [colorScheme.cyan, colorScheme.green],
-		},
-		markers: {
-			strokeColors: getThemeVariantIsDark()
-				? colorScheme.black
-				: colorScheme.white,
-		},
-		stroke: {
-			show: false,
-		},
-		tooltip: {
-			y: {
-				formatter: (val) => currencyFormatter.format(val), // Format chart tooltip value
-			},
-		},
-		xaxis: {
-			categories: [
-				'Jan',
-				'Feb',
-				'Mar',
-				'Apr',
-				'May',
-				'Jun',
-				'Jul',
-				'Aug',
-				'Sep',
-			],
-			crosshairs: {
-				show: false,
-			},
-		},
-		responsive: [
-			{
-				breakpoint: 576,
-				options: {
-					chart: {
-						height: 200,
-					},
+const chartOptions = (series) => {
+	const extraOptions = {}
+	const themeVariant = getThemeVariant()
+
+	if (series !== undefined) extraOptions.series = series
+
+	return normalizeApexchartsOptions(
+		merge(extraOptions, {
+			...extraOptions,
+			chart: {
+				type: 'area',
+				height: 300,
+				background: 'transparent',
+				sparkline: {
+					enabled: true,
 				},
 			},
-		],
-	})
+			fill: {
+				type: 'solid',
+				opacity: 1,
+				colors: [chartColorScheme.cyan, chartColorScheme.green],
+			},
+			markers: {
+				strokeColors: chartBgLevel[themeVariant][1],
+			},
+			stroke: {
+				show: false,
+			},
+			tooltip: {
+				y: {
+					formatter: (val) => currencyFormatter.format(val), // Format chart tooltip value
+				},
+			},
+			xaxis: {
+				categories: [
+					'Jan',
+					'Feb',
+					'Mar',
+					'Apr',
+					'May',
+					'Jun',
+					'Jul',
+					'Aug',
+					'Sep',
+				],
+				crosshairs: {
+					show: false,
+				},
+			},
+			responsive: [
+				{
+					breakpoint: 576,
+					options: {
+						chart: {
+							height: 200,
+						},
+					},
+				},
+			],
+		}),
+	)
+}
+
+export function initChart2(chartQuery, series) {
+	const chartInstance = new ApexCharts(chartQuery, chartOptions(series))
 
 	// Theme switcher listener
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		// Update chart color theme
-		chartInstance.updateOptions({
-			...getChartThemeOptions(),
-			markers: {
-				strokeColors: getThemeVariantIsDark()
-					? colorScheme.black
-					: colorScheme.white,
-			},
-		})
+		chartInstance.updateOptions(chartOptions())
 	})
 
 	return chartInstance

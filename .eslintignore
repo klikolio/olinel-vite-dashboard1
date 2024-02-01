@@ -1,0 +1,4 @@
+dist
+src/modules/**/scripts
+postcss.config.js
+vite.config.js

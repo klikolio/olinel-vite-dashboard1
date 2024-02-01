@@ -1,12 +1,12 @@
 {
-  "editor.tabSize": 2,
-  "editor.insertSpaces": false,
-  "files.encoding": "utf8",
-  "files.eol": "\n",
-  "files.associations": {
-    "*.njk": "nunjucks"
-  },
-  "emmet.includeLanguages": {
-    "nunjucks": "html"
-  },
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"files.encoding": "utf8",
+	"files.eol": "\n",
+	"files.associations": {
+		"*.njk": "nunjucks"
+	},
+	"emmet.includeLanguages": {
+		"nunjucks": "html"
+	}
 }

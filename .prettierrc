@@ -7,7 +7,7 @@
 	"plugins": ["prettier-plugin-jinja-template"],
 	"overrides": [
 		{
-			"files": ["*.js", "*.cjs", "*.mjs"],
+			"files": ["src/**/*.{js,cjs,mjs}", "!src/modules/**/scripts"],
 			"options": {
 				"singleQuote": true
 			}
