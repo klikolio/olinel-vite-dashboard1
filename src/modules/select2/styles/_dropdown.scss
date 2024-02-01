@@ -64,6 +64,7 @@
 }
 // Group header element
 .select2-results__group {
+	display: block;
 	color: $select2-group-color;
 	background: $select2-group-bg;
 	@include font-size($select2-group-font-size);
