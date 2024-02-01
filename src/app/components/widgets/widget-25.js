@@ -1,6 +1,7 @@
 import { initChart4 } from '@app/widgets/chart-4'
+import { pageLoadedListener } from '@app/utilities/widget-helper'
 
-document.addEventListener('DOMContentLoaded', () => {
+pageLoadedListener(() => {
 	const chartInstance = initChart4(
 		document.querySelector('#widget-chart-4'),
 		['Progress', 'Done', 'New'],

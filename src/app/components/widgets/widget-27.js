@@ -1,6 +1,7 @@
 import { initChart6 } from '@app/widgets/chart-6'
+import { pageLoadedListener } from '@app/utilities/widget-helper'
 
-document.addEventListener('DOMContentLoaded', () => {
+pageLoadedListener(() => {
 	const chartInstance = initChart6(document.querySelector('#widget-chart-6'), [
 		{
 			name: 'Unique',

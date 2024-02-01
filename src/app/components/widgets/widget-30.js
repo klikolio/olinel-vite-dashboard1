@@ -1,6 +1,7 @@
 import { initChart8 } from '@app/widgets/chart-8'
+import { pageLoadedListener } from '@app/utilities/widget-helper'
 
-document.addEventListener('DOMContentLoaded', () => {
+pageLoadedListener(() => {
 	const chartInstance = initChart8(document.querySelector('#widget-chart-8'), [
 		{
 			name: 'Profit',

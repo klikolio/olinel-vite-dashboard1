@@ -1,6 +1,7 @@
 import { initChart5 } from '@app/widgets/chart-5'
+import { pageLoadedListener } from '@app/utilities/widget-helper'
 
-document.addEventListener('DOMContentLoaded', () => {
+pageLoadedListener(() => {
 	const chartInstance = initChart5(document.querySelector('#widget-chart-5'), [
 		{
 			name: 'Sales',

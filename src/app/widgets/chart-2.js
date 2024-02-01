@@ -18,7 +18,6 @@ const chartOptions = (series) => {
 
 	return normalizeApexchartsOptions(
 		merge(extraOptions, {
-			...extraOptions,
 			chart: {
 				type: 'area',
 				height: 300,
@@ -30,7 +29,6 @@ const chartOptions = (series) => {
 			fill: {
 				type: 'solid',
 				opacity: 1,
-				colors: [chartColorScheme.cyan, chartColorScheme.green],
 			},
 			markers: {
 				strokeColors: chartBgLevel[themeVariant][1],
@@ -75,7 +73,6 @@ const chartOptions = (series) => {
 
 export function initChart2(chartQuery, series) {
 	const chartInstance = new ApexCharts(chartQuery, chartOptions(series))
-
 	// Theme switcher listener
 	document.querySelector('#theme-toggle').addEventListener('click', () => {
 		// Update chart color theme

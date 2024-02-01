@@ -1,4 +1,5 @@
 import BaseComponent from 'bootstrap/js/src/base-component'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import { defineJQueryPlugin } from 'bootstrap/js/src/util'
 
 /**
@@ -13,6 +14,9 @@ const DELAY_DURATION = 100
 const CLASS_ACTIVE = 'preload-active'
 const CLASS_HIDE = 'preload-hide'
 
+const EVENT_HIDDEN_KEY = `hidden.${NAME}`
+const EVENT_SHOWN_KEY = `shown.${NAME}`
+
 /**
  * Class definition
  */
@@ -21,6 +25,10 @@ class Preload extends BaseComponent {
 	// Getters
 	static get NAME() {
 		return NAME
+	}
+
+	static get CLASS_NAMES() {
+		return { CLASS_ACTIVE, CLASS_HIDE }
 	}
 
 	constructor() {
@@ -46,12 +54,19 @@ class Preload extends BaseComponent {
 	show() {
 		document.body.classList.add(CLASS_ACTIVE)
 		document.body.classList.remove(CLASS_HIDE)
+
+		EventHandler.trigger(document, EVENT_SHOWN_KEY, {
+			relatedTarget: this._element
+		})
 	}
 
 	// Function for hiding preload
 	hide() {
 		document.body.classList.add(CLASS_HIDE)
-		document.body.classList.remove(CLASS_ACTIVE)
+		
+		EventHandler.trigger(document, EVENT_HIDDEN_KEY, {
+			relatedTarget: this._element
+		})
 	}
 }
 

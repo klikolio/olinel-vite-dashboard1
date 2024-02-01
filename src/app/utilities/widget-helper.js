@@ -38,3 +38,15 @@ export function formatInt(num) {
 			? num
 			: 0
 }
+
+export function pageLoadedListener(callback) {
+	const preloadEventKey = 'hidden.preload'
+	const preloadActiveClass = 'preload-active'
+	const preloadElement = document.querySelector('.preload')
+
+	if (preloadElement || document.body.classList.contains(preloadActiveClass)) {
+		document.addEventListener(preloadEventKey, callback)
+	} else {
+		document.addEventListener('DOMContentLoaded', callback)
+	}
+}

@@ -1,6 +1,7 @@
 import { initChart9 } from '@app/widgets/chart-9'
+import { pageLoadedListener } from '@app/utilities/widget-helper'
 
-document.addEventListener('DOMContentLoaded', () => {
+pageLoadedListener(() => {
 	const chartInstance = initChart9(
 		document.querySelector('#widget-chart-9b'),
 		'#fff',

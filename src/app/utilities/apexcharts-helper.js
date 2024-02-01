@@ -68,7 +68,7 @@ export const chartBorderColor = {
 	dark: chartColorScheme.gray700,
 }
 
-export const apexchartsNormalization = () => {
+export const apexchartsNormalization = (extraOptions) => {
 	const themeVariant = getThemeVariant()
 
 	return {
@@ -226,37 +226,41 @@ export const apexchartsNormalization = () => {
 				},
 			},
 		},
-		yaxis: {
-			labels: {
-				style: {
-					fontSize: '12px',
-					fontWeight: 400,
-				},
-			},
-			axisBorder: {
-				color: chartBgLevel[themeVariant][3],
-			},
-			axisTicks: {
-				color: chartBgLevel[themeVariant][3],
-			},
-			title: {
-				style: {
-					fontSize: '12px',
-					fontWeight: 600,
-				},
-			},
-			crosshairs: {
-				stroke: {
-					color: chartBgLevel[themeVariant][4],
-				},
-			},
-		},
 		theme: {
 			mode: getThemeVariant(),
 			monochrome: {
 				color: chartColorScheme.blue,
 			},
 		},
+		...(extraOptions?.chart?.sparkline?.enabled
+			? {}
+			: {
+					yaxis: {
+						labels: {
+							style: {
+								fontSize: '12px',
+								fontWeight: 400,
+							},
+						},
+						axisBorder: {
+							color: chartBgLevel[themeVariant][3],
+						},
+						axisTicks: {
+							color: chartBgLevel[themeVariant][3],
+						},
+						title: {
+							style: {
+								fontSize: '12px',
+								fontWeight: 600,
+							},
+						},
+						crosshairs: {
+							stroke: {
+								color: chartBgLevel[themeVariant][4],
+							},
+						},
+					},
+				}),
 	}
 }
 
@@ -267,5 +271,5 @@ export const currencyFormatter = new Intl.NumberFormat('en-US', {
 })
 
 export function normalizeApexchartsOptions(extraOptions) {
-	return merge(apexchartsNormalization(), extraOptions ?? {})
+	return merge(apexchartsNormalization(extraOptions), extraOptions ?? {})
 }
