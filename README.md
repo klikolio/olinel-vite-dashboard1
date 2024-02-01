@@ -7,6 +7,7 @@
 **Olinel** showcases a modern design style that blends aesthetics with functionality. Visually appealing interface ensures a delightful user experiences. This template also provides a rich library of components that empowers you to build dynamic admin dashboard application. Offering both practical examples and documentation from pre-built pages will accelerate your development process.
 
 **Files Included**
+
 - Nunjucks
 - SCSS
 - Javascript
