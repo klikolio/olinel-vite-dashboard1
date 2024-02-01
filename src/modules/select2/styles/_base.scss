@@ -22,7 +22,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: $select2-padding-y $select2-padding-x;
+	padding: $select2-padding-y $select2-padding-x !important;
 	margin: 0;
 	list-style: none;
 	overflow: hidden;
