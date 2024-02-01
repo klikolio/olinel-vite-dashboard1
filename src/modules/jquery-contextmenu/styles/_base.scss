@@ -26,8 +26,9 @@
 	display: inline-block;
 	min-width: $context-menu-min-width;
 	max-width: $context-menu-max-width;
-	padding: $context-menu-padding-y 0;
+	padding: $context-menu-padding-y 0 !important;
 	list-style: none;
+	
 	@if $enable-transitions {
 		animation-name: contextMenuslideUp;
 		animation-duration: $context-menu-animation-duration;
