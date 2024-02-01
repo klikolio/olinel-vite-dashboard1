@@ -2,9 +2,9 @@
 
 ## Overview
 
-**Olinel** is multipurpose admin dashboard template which leverages **Vite** as development tool, providing a efficient development environment, ensuring optimized production builds and embracing modern JavaScript features. This template also built upon robust and widely adopted **Bootstrap 5** which offering a seamless user experience across various browsers. Utilizes **SASS** enabling modular and maintainable styles which making easier to manage the visual aspects. **Nunjucks** as templating engine, simplifies HTML structure and enhances code reusability. For efficient DOM manipulation, this template also includes **jQuery**. Integration of **EsLint** and **Prettier**, ensuring code consistency and identifying potential issues early in development process to improves code quality.
+**Olinel** is a multipurpose admin dashboard template which leverages **Vite** as a development tool, providing an efficient development environment, ensuring optimized production builds and enabling modern JavaScript features. This template is also built upon robust and widely adopted **Bootstrap 5** which offers a seamless user experience across various browsers. Utilizes **SASS** for enabling modular and maintainable styles which make it easier to manage the visual aspects. **Nunjucks** as a templating engine simplifies HTML structure and enhances code reusability. For efficient DOM manipulation, this template also leverages **jQuery** library. Integration of **EsLint** and **Prettier**, ensuring code consistency and identifying potential issues early in the development process to improve code quality.
 
-**Olinel** showcases a modern design style that blends aesthetics with functionality. Visually appealing interface ensures a delightful user experiences. This template also provides a rich library of components that empowers you to build dynamic admin dashboard application. Offering both practical examples and documentation from pre-built pages will accelerate your development process.
+**Olinel** showcases a modern design style that blends aesthetics with functionality and visually appealing interface ensures a delightful user experience. This template also provides a rich library of components that empowers you to build dynamic admin dashboard applications. This template also offering both practical examples and documentation from pre-built pages will accelerate your development process.
 
 **Files Included**
 
@@ -13,13 +13,13 @@
 - Javascript
 - Supporting assets
 
-## Editor Setup
+## Editor Set Up
 
-**Olinel** comes with **Nunjucks** as templating engine. Most of code editor doesn't support the syntax highlighting out of the box, you need to setup your code editor. This documentation will show you how to setup **Visual Studio Code** as popular code editor. You should install [Nunjucks extension](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks) on your code editor. This template comes with Visual Studio Code specific configuration in `.vscode` directory.
+This template comes with **Nunjucks** as a templating engine. Most code editors don't support the syntax highlighting. This documentation will show you how to set up [Visual Studio Code](https://code.visualstudio.com) as the most popular code editor to work with this template. You should install [Nunjucks extension](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks) on your code editor. This template also comes with Visual Studio Code specific configuration in the `.vscode` directory, so you don't need to do a lot of configuration.
 
-**Olinel** also comes with **EsLint** and **Prettier** integration, you can optionally install [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugins for Visual Studio Code to make your development process for efficient.
+This template also comes with **EsLint** and **Prettier**, you can optionally install [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [EsLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugins on your Visual Studio Code to make your development process more efficient.
 
-## Project Setup
+## Project Set Up
 
 1. You must have [Node.js](https://nodejs.org) installed on your computer.
 2. Extract downloaded package from marketplace.
@@ -51,21 +51,21 @@
 ├─ vite.config.js    - Vite configuration
 ```
 
-For more understanding of the project structure, you need to understand `src/app` directory. This directory contains all application logic JavaScript codes. There are `entry.js` code in this directory, this file will imported to every pages, so you can set general function of your projects. For components and pages specific codes, you can find them in `src/app/{components|pages}` directory.
+For more understanding of the project structure, you need to understand the `src/app` directory. This directory contains all application logic in JavaScript codes. There is `entry.js` code in this directory, this file will be imported to every page, so you can set general functions of your project. For components and pages specific codes, you can find them in `src/app/{components|pages}` directory.
 
-This template uses **Nunjucks** to generating pages and modular components, all the codes are written in `*.njk` format that you can find in `components` and `pages` directory. All `*.njk` files in `pages` directory will be compiled as plain HTML, the routing will depends on your structure in `pages` directory. All the pages are extend `components/template.njk` as base page template and you can see the page configuration in `components/variables.njk`. This template uses **Vituum** to power page template system, you can see more detail on [the page](<(https://vituum.dev/guide/template-engines.html)>).
+This template uses **Nunjucks** to generate pages and components modulation, all the codes are written in `*.njk` format that you can find in `components` and `pages` directories. All `*.njk` files in the `pages` directory will be compiled as plain HTML, the routing will depend on your structure in the `pages` directory. All the pages are also extended from `components/template.njk` as base page template and you can see the page configuration in `components/variables.njk`. This template uses **Vituum** to power the page template system, you can see more detail on [the page](https://vituum.dev/guide/template-engines.html).
 
-This template has customize vendor library assets to fit the requirement, you can find all custom vendor modules in `modules` directory. Several library depends on **Bootstrap** as base library. This templates also extends extra components to Bootstrap and remove several components to fit template requirement, you can find them in `src/modules/bootstrap` directory. In `modules` directory, you can also find style codes for every components. Every modules has `_variables.scss` files that contains all styling variables, so you can override it to change the design style.
+This template has customized vendor library assets to fit the requirement, you can find all custom vendor modules in `modules` directory. Several libraries depend on **Bootstrap** as a base library. This template also extends extra components to Bootstrap library and removes several components to fit template requirements, you can find them in `src/modules/bootstrap` directory. In the `modules` directory, you can also find style codes for every component. Every module has `_variables.scss` files that contain all styling variables, so you can override it to change the design style.
 
 ## Command Line Interface
 
 | Command                | Description                       |
 | ---------------------- | --------------------------------- |
 | `npm run dev`          | Start development server          |
-| `npm run build`        | Build project for production      |
+| `npm run build`        | Build assets for production      |
 | `npm run preview`      | Preview local production build    |
 | `npm run lint`         | Lint JavaScript codes with EsLint |
 | `npm run format:check` | Check code format with Prettier   |
 | `npm run format:fix`   | Fix code format with Prettier     |
 
-To change page direction for your project you can set `PAGE_DIRECTION` with `ltr|rtl` in environment variables, you can see the example in `.env.example` file.
+To change page direction for this template you can set `PAGE_DIRECTION` with `ltr|rtl` in environment variables, you can see the example in the  `.env.example` file.
