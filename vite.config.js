@@ -36,6 +36,9 @@ export default defineConfig({
 			'@modules': '/src/modules',
 		},
 	},
+	build: {
+		cssMinify: 'lightningcss',
+	},
 	plugins: [
 		vituum(),
 		minify(),

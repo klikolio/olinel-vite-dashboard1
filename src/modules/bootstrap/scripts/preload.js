@@ -52,21 +52,26 @@ class Preload extends BaseComponent {
 
 	// Function for showing preload
 	show() {
-		document.body.classList.add(CLASS_ACTIVE)
-		document.body.classList.remove(CLASS_HIDE)
-
-		EventHandler.trigger(document, EVENT_SHOWN_KEY, {
-			relatedTarget: this._element
-		})
+		if (document.body.classList.contains(CLASS_HIDE)) {
+			document.body.classList.add(CLASS_ACTIVE)
+	
+			document.body.classList.remove(CLASS_HIDE)
+	
+			EventHandler.trigger(document, EVENT_SHOWN_KEY, {
+				relatedTarget: this._element
+			})
+		}
 	}
 
 	// Function for hiding preload
 	hide() {
-		document.body.classList.add(CLASS_HIDE)
-		
-		EventHandler.trigger(document, EVENT_HIDDEN_KEY, {
-			relatedTarget: this._element
-		})
+		if (!document.body.classList.contains(CLASS_HIDE)) {
+			document.body.classList.add(CLASS_HIDE)
+			
+			EventHandler.trigger(document, EVENT_HIDDEN_KEY, {
+				relatedTarget: this._element
+			})
+		}
 	}
 }
 
