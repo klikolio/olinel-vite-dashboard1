@@ -3,7 +3,6 @@ import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
 import legacy from '@vitejs/plugin-legacy'
 import eslint from 'vite-plugin-eslint'
-import tla from 'vite-plugin-top-level-await'
 import { defineConfig } from 'vite'
 import { ViteMinifyPlugin as minify } from 'vite-plugin-minify'
 
@@ -41,7 +40,6 @@ export default defineConfig({
 		minify(),
 		eslint(),
 		legacy(),
-		tla(),
 		nunjucks({
 			root: './src',
 			globals: nunjucksGlobals,
