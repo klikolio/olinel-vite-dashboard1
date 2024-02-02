@@ -66,8 +66,6 @@
 		"datatables.net-rowreorder-bs5": "1.4.1",
 		"datatables.net-scroller": "2.3.0",
 		"datatables.net-scroller-bs5": "2.3.0",
-		"datatables.net-searchpanes": "2.2.0",
-		"datatables.net-searchpanes-bs5": "2.2.0",
 		"datatables.net-select": "1.7.0",
 		"datatables.net-select-bs5": "1.7.0",
 		"deepmerge": "^4.3.1",

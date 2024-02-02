@@ -104,12 +104,6 @@ dependencies:
   datatables.net-scroller-bs5:
     specifier: 2.3.0
     version: 2.3.0
-  datatables.net-searchpanes:
-    specifier: 2.2.0
-    version: 2.2.0
-  datatables.net-searchpanes-bs5:
-    specifier: 2.2.0
-    version: 2.2.0
   datatables.net-select:
     specifier: 1.7.0
     version: 1.7.0
@@ -2528,21 +2522,6 @@ packages:
 
   /datatables.net-scroller@2.3.0:
     resolution: {integrity: sha512-/ruwuUVhwJH/cd6r7uYzSAGzBAxODEYisjifo9vpkOzEFNd96rgbfdRMfEwgqC7bFpYyMsWP0/aOieiCxKEdYg==}
-    dependencies:
-      datatables.net: 1.13.8
-      jquery: 3.7.1
-    dev: false
-
-  /datatables.net-searchpanes-bs5@2.2.0:
-    resolution: {integrity: sha512-Y2G8cB9lNWxn3xPFdwhvsE1afC014szp/m2gxINuYQHEqsGaqx4b0DBdM2IPeMtvbTcFpqdLFEMFR5Gqs/NoCg==}
-    dependencies:
-      datatables.net-bs5: 1.13.8
-      datatables.net-searchpanes: 2.2.0
-      jquery: 3.7.1
-    dev: false
-
-  /datatables.net-searchpanes@2.2.0:
-    resolution: {integrity: sha512-wp/bO24aLfKdTgVbOzaQQ8ThnJdJIx40Pacq2A/4e2xCPALTM8GafazWKnTbsl0547Q1pUtpmsi3BIvrOyvcBQ==}
     dependencies:
       datatables.net: 1.13.8
       jquery: 3.7.1

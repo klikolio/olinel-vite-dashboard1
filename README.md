@@ -68,4 +68,4 @@ This template has customized vendor library assets to fit the requirement, you c
 | `npm run format:check` | Check code format with Prettier   |
 | `npm run format:fix`   | Fix code format with Prettier     |
 
-To change page direction for this template you can set `PAGE_DIRECTION` with `ltr|rtl` in environment variables, you can see the example in the  `.env.example` file.
+To change page direction for this template you can set `PAGE_DIRECTION` with `ltr|rtl` in environment variables, you can see the example in the `.env.example` file.

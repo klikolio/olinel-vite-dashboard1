@@ -54,11 +54,11 @@ class Preload extends BaseComponent {
 	show() {
 		if (document.body.classList.contains(CLASS_HIDE)) {
 			document.body.classList.add(CLASS_ACTIVE)
-	
+
 			document.body.classList.remove(CLASS_HIDE)
-	
+
 			EventHandler.trigger(document, EVENT_SHOWN_KEY, {
-				relatedTarget: this._element
+				relatedTarget: this._element,
 			})
 		}
 	}
@@ -67,9 +67,9 @@ class Preload extends BaseComponent {
 	hide() {
 		if (!document.body.classList.contains(CLASS_HIDE)) {
 			document.body.classList.add(CLASS_HIDE)
-			
+
 			EventHandler.trigger(document, EVENT_HIDDEN_KEY, {
-				relatedTarget: this._element
+				relatedTarget: this._element,
 			})
 		}
 	}
