@@ -29,6 +29,8 @@
 		"@types/slick-carousel": "^1.6.40",
 		"@types/sortablejs": "^1.15.7",
 		"@types/typeahead.js": "^0.11.6",
+		"@typescript-eslint/eslint-plugin": "^6.20.0",
+		"@typescript-eslint/parser": "^6.20.0",
 		"@vitejs/plugin-legacy": "^5.3.0",
 		"@vituum/vite-plugin-nunjucks": "^1.1.0",
 		"eslint": "^8.56.0",

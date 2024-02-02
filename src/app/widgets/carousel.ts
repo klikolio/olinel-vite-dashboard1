@@ -1,7 +1,7 @@
 import 'slick-carousel'
 import '@modules/slick-carousel/styles/slick.scss'
 
-import * as $ from 'jquery'
+import $ from 'jquery'
 import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 // Initialize carousel widget
