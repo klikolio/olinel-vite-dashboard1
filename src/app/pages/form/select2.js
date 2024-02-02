@@ -6,7 +6,7 @@ import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 Select2(this, $)
 
-const direction = getPageIsRTL ? 'rtl' : 'ltr'
+const direction = getPageIsRTL() ? 'rtl' : 'ltr'
 
 $('#select2-1, #select2-2').select2({
 	dir: direction, // Set the direction

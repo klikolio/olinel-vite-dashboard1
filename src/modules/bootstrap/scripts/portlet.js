@@ -16,6 +16,10 @@ const DATA_COLLAPSED = 'data-portlet-collapsed'
  */
 
 class Portlet extends BaseComponent {
+	constructor(element) {
+		super(element)
+	}
+
 	// Getters
 	static get NAME() {
 		return NAME
