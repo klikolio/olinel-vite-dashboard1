@@ -7,9 +7,11 @@ export function initDropdownSimplebar() {
 
 	document.querySelectorAll(dropdownQuery).forEach((dropdownElement) => {
 		dropdownElement.addEventListener('show.bs.dropdown', () => {
-			document.querySelectorAll(simplebarQuery).forEach((simplebarElement) => {
-				new SimpleBar(simplebarElement as HTMLElement)
-			})
+			document
+				.querySelectorAll<HTMLElement>(simplebarQuery)
+				.forEach((simplebarElement) => {
+					new SimpleBar(simplebarElement)
+				})
 		})
 	})
 }

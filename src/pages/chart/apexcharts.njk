@@ -1,0 +1,146 @@
+{% extends "components/template.njk" %}
+<!-- prettier-ignore-start -->
+{% set page_title = "Apex Charts" %}
+{% set page_id = "chart.apexcharts" %}
+{% set breadcrumb = [
+  { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
+  { text: "Chart" },
+  { text: "Apex Chart", link: "/chart/apexcharts.html" }
+] %}
+<!-- prettier-ignore-end -->
+
+{% block main_script %}
+	<script type="module" src="/src/app/pages/chart/apexcharts.ts"></script>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-body">
+					<p class="mb-0">
+						<strong>Apex Charts</strong> is a modern charting library that helps developers to create beautiful and
+						interactive visualizations for web pages. Check more examples and references on
+						<a href="http://apexcharts.com" target="_blank">Apex Chart's page</a>.
+					</p>
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Line chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-1"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Column chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-3"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Mix chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-5"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Candlestick chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-7"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Bubble chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-9"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+		<div class="col-md-6">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Area chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-2"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Bar chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-4"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Timeline chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-6"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Pie chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-8"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Radar chart</h3>
+				</div>
+				<div class="portlet-body">
+					<div id="apexcharts-10"></div>
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
+{% endblock %}

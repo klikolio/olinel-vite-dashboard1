@@ -2,10 +2,8 @@ import '@modules/apexcharts/styles/apexcharts.scss'
 
 import merge from 'deepmerge'
 import ApexCharts, { type ApexOptions } from 'apexcharts'
-import {
-	currencyFormatter,
-	normalizeApexchartsOptions,
-} from '@app/utilities/apexcharts-helper'
+import { currencyFormatter } from '@app/utilities/widget-helper'
+import { normalizeApexchartsOptions } from '@app/utilities/apexcharts-helper'
 
 const chartOptions = (series?: ApexAxisChartSeries) => {
 	const extraOptions: ApexOptions = {}

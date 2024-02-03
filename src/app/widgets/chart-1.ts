@@ -2,11 +2,13 @@ import '@modules/apexcharts/styles/apexcharts.scss'
 
 import merge from 'deepmerge'
 import ApexCharts, { type ApexOptions } from 'apexcharts'
-import { getThemeVariant } from '@app/utilities/widget-helper'
+import {
+	getThemeVariant,
+	currencyFormatter,
+} from '@app/utilities/widget-helper'
 import {
 	chartBgLevel,
 	chartColorScheme,
-	currencyFormatter,
 	normalizeApexchartsOptions,
 } from '@app/utilities/apexcharts-helper'
 

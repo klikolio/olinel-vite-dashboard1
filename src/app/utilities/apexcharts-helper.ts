@@ -1,5 +1,9 @@
-import merge from 'deepmerge'
-import { getThemeVariant, themeObject, themeObjectLevel } from './widget-helper'
+import {
+	concatOptions,
+	getThemeVariant,
+	themeObject,
+	themeObjectLevel,
+} from '@app/utilities/widget-helper'
 import type { ApexOptions } from 'apexcharts'
 
 export const chartFontFamily = 'Poppins, sans-serif'
@@ -265,12 +269,8 @@ export const apexchartsNormalization = (extraOptions?: ApexOptions) => {
 	}
 }
 
-export const currencyFormatter = new Intl.NumberFormat('en-US', {
-	style: 'currency',
-	currency: 'USD',
-	minimumFractionDigits: 0,
-})
-
 export function normalizeApexchartsOptions(extraOptions?: ApexOptions) {
-	return merge(apexchartsNormalization(extraOptions), extraOptions ?? {})
+	const defaultOptions = apexchartsNormalization(extraOptions)
+
+	return concatOptions(defaultOptions, extraOptions)
 }

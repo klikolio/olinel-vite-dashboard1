@@ -1,16 +1,12 @@
+import merge from 'deepmerge'
+
 export type pageDirectionType = 'ltr' | 'rtl' | string
 export type themeVariantType = 'light' | 'dark' | string
-export type themeObject = {
-	[themeVariant: themeVariantType]: Object
-}
-export type themeObjectLevel = {
-	[themeVariant: themeVariantType]: {
-		[level: number]: string
-	}
-}
+export type themeObject = Record<themeVariantType, Object | string>
+export type themeObjectLevel = Record<themeVariantType, Record<number, string>>
 
 export const defaultThemeVariant: themeVariantType = 'light'
-export const defaultPageDirection = 'ltr'
+export const defaultPageDirection: pageDirectionType = 'ltr'
 
 export function getThemeVariant(): themeVariantType {
 	return (
@@ -61,3 +57,17 @@ export function pageLoadedListener(callback: () => void) {
 		document.addEventListener('DOMContentLoaded', callback)
 	}
 }
+
+export function concatOptions(defaultOptions: Object, extraOptions?: Object) {
+	if (extraOptions) {
+		return merge(defaultOptions, extraOptions)
+	} else {
+		return defaultOptions
+	}
+}
+
+export const currencyFormatter = new Intl.NumberFormat('en-US', {
+	style: 'currency',
+	currency: 'USD',
+	minimumFractionDigits: 0,
+})
