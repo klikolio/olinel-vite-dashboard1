@@ -1,18 +1,21 @@
 {
-	"extends": "plugin:prettier/recommended",
-	"plugins": ["@typescript-eslint"],
+	"root": true,
 	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"],
+	"extends": [
+		"plugin:prettier/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
 	"env": {
 		"browser": true,
 		"es2021": true
 	},
 	"parserOptions": {
-		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
 	"rules": {
 		"prettier/prettier": "warn",
-		"no-undef": "off",
-		"no-new": "off"
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/no-explicit-any": "off"
 	}
 }

@@ -1,6 +1,3 @@
-# Editor directories and files
-.vscode/*
-
 # production codes
 dist
 dist-ssr

@@ -2,7 +2,7 @@ import merge from 'deepmerge'
 
 export type pageDirectionType = 'ltr' | 'rtl' | string
 export type themeVariantType = 'light' | 'dark' | string
-export type themeObject = Record<themeVariantType, Object | string>
+export type themeObject = Record<themeVariantType, object | string>
 export type themeObjectLevel = Record<themeVariantType, Record<number, string>>
 
 export const defaultThemeVariant: themeVariantType = 'light'
@@ -58,7 +58,7 @@ export function pageLoadedListener(callback: () => void) {
 	}
 }
 
-export function concatOptions(defaultOptions: Object, extraOptions?: Object) {
+export function concatOptions(defaultOptions: object, extraOptions?: object) {
 	if (extraOptions) {
 		return merge(defaultOptions, extraOptions)
 	} else {
