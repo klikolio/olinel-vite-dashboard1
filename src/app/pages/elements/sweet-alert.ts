@@ -5,9 +5,9 @@ import Swal from 'sweetalert2/dist/sweetalert2'
 // Initialize Sweet Alert object
 const swal = Swal.mixin({
 	customClass: {
-		confirmButton: 'btn btn-label-success btn-wide mx-1',
-		denyButton: 'btn btn-label-secondary btn-wide mx-1',
-		cancelButton: 'btn btn-label-danger btn-wide mx-1',
+		confirmButton: 'btn btn-subtle-success btn-wide mx-1',
+		denyButton: 'btn btn-subtle-secondary btn-wide mx-1',
+		cancelButton: 'btn btn-subtle-danger btn-wide mx-1',
 	},
 	buttonsStyling: false,
 })

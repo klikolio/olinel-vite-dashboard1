@@ -1,0 +1,40 @@
+@import "bootstrap/scss/nav";
+
+.nav {
+  --#{$prefix}nav-icon-dimension: #{$nav-icon-dimension};
+  --#{$prefix}nav-icon-size: #{$nav-icon-size};
+  --#{$prefix}nav-addon-spacer: #{$nav-addon-spacer};
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-content {
+	flex: 1;
+	text-align: left;
+}
+
+.nav-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--#{$prefix}nav-icon-dimension);
+	@include icon-size(var(--#{$prefix}nav-icon-size));
+}
+
+.nav-append,
+.nav-prepend {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.nav-prepend {
+	margin-right: var(--#{$prefix}nav-addon-spacer);
+}
+
+.nav-append {
+	margin-left: var(--#{$prefix}nav-addon-spacer);
+}

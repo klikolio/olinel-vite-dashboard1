@@ -111,7 +111,7 @@
 }
 
 @each $color, $value in $theme-colors {
-	.btn-label-#{$color} {
+	.btn-subtle-#{$color} {
 		@include button-label-variant($value);
 	}
 }

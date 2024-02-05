@@ -103,23 +103,23 @@
 					<!-- BEGIN Portlet -->
 					<div class="portlet">
 						<div class="portlet-header portlet-header-bordered">
-							<h3 class="portlet-title">Label</h3>
+							<h3 class="portlet-title">Subtle</h3>
 						</div>
 						<div class="portlet-body">
 							<p>
 								Replace the default modifier classes with the
-								<code>.btn-label-{color}</code> to apply these variants
+								<code>.btn-subtle-{color}</code> to apply these variants
 							</p>
 
 							<!-- BEGIN Buttons -->
-							<button class="btn btn-label-primary">Primary</button>
-							<button class="btn btn-label-secondary">Secondary</button>
-							<button class="btn btn-label-success">Success</button>
-							<button class="btn btn-label-warning">Warning</button>
-							<button class="btn btn-label-danger">Danger</button>
-							<button class="btn btn-label-info">Info</button>
-							<button class="btn btn-label-dark">Dark</button>
-							<button class="btn btn-label-light">Light</button>
+							<button class="btn btn-subtle-primary">Primary</button>
+							<button class="btn btn-subtle-secondary">Secondary</button>
+							<button class="btn btn-subtle-success">Success</button>
+							<button class="btn btn-subtle-warning">Warning</button>
+							<button class="btn btn-subtle-danger">Danger</button>
+							<button class="btn btn-subtle-info">Info</button>
+							<button class="btn btn-subtle-dark">Dark</button>
+							<button class="btn btn-subtle-light">Light</button>
 							<!-- END Buttons -->
 						</div>
 					</div>
@@ -165,8 +165,8 @@
 					<p>Extend button class with <code>.rounded-pill</code> to make the button more rounded.</p>
 
 					<!-- BEGIN Buttons -->
-					<button class="btn btn-label-primary rounded-pill">Primary</button>
-					<button class="btn btn-label-secondary rounded-pill">Secondary</button>
+					<button class="btn btn-subtle-primary rounded-pill">Primary</button>
+					<button class="btn btn-subtle-secondary rounded-pill">Secondary</button>
 					<button class="btn btn-outline-success rounded-pill">Success</button>
 					<button class="btn btn-outline-warning rounded-pill">Warning</button>
 					<button class="btn btn-flat-danger rounded-pill">Danger</button>
@@ -204,13 +204,13 @@
 					<button class="btn btn-info btn-icon btn-lg">
 						<i class="fa fa-wrench"></i>
 					</button>
-					<button class="btn btn-warning btn-icon btn-circle btn-sm">
+					<button class="btn btn-warning btn-icon rounded-circle btn-sm">
 						<i class="fa fa-rocket"></i>
 					</button>
-					<button class="btn btn-danger btn-icon btn-circle">
+					<button class="btn btn-danger btn-icon rounded-circle">
 						<i class="fa fa-anchor"></i>
 					</button>
-					<button class="btn btn-info btn-icon btn-circle btn-lg">
+					<button class="btn btn-info btn-icon rounded-circle btn-lg">
 						<i class="fa fa-check"></i>
 					</button>
 					<!-- END Buttons -->
@@ -274,7 +274,7 @@
 							<!-- BEGIN Buttons -->
 							<div class="d-grid gap-2">
 								<button class="btn btn-primary">Block</button>
-								<button class="btn btn-label-primary">Block</button>
+								<button class="btn btn-subtle-primary">Block</button>
 							</div>
 							<!-- END Buttons -->
 						</div>
@@ -318,10 +318,10 @@
 							<button class="btn btn-primary btn-icon">
 								<i class="fa fa-times"></i>
 							</button>
-							<button class="btn btn-label-danger btn-icon">
+							<button class="btn btn-subtle-danger btn-icon">
 								<i class="fa fa-wrench"></i>
 							</button>
-							<button class="btn btn-label-info btn-icon">
+							<button class="btn btn-subtle-info btn-icon">
 								<i class="fa fa-cog"></i>
 							</button>
 							<button class="btn btn-flat-primary btn-icon">
@@ -340,32 +340,32 @@
 						<div class="portlet-body">
 							<p>
 								Make your icon buttons circular by extending
-								<code>.btn-icon</code> with <code>.btn-circle</code> modifier class.
+								<code>.btn-icon</code> with <code>.rounded-circle</code> modifier class.
 							</p>
 
 							<!-- BEGIN Buttons -->
-							<button class="btn btn-secondary btn-icon btn-circle">
+							<button class="btn btn-secondary btn-icon rounded-circle">
 								<i data-feather="anchor"></i>
 							</button>
-							<button class="btn btn-outline-success btn-icon btn-circle">
+							<button class="btn btn-outline-success btn-icon rounded-circle">
 								<i data-feather="archive"></i>
 							</button>
-							<button class="btn btn-outline-warning btn-icon btn-circle">
+							<button class="btn btn-outline-warning btn-icon rounded-circle">
 								<i data-feather="camera"></i>
 							</button>
-							<button class="btn btn-outline-info btn-icon btn-circle">
+							<button class="btn btn-outline-info btn-icon rounded-circle">
 								<i data-feather="eye"></i>
 							</button>
-							<button class="btn btn-primary btn-icon btn-circle">
+							<button class="btn btn-primary btn-icon rounded-circle">
 								<i class="fa fa-times"></i>
 							</button>
-							<button class="btn btn-label-danger btn-icon btn-circle">
+							<button class="btn btn-subtle-danger btn-icon rounded-circle">
 								<i class="fa fa-wrench"></i>
 							</button>
-							<button class="btn btn-label-info btn-icon btn-circle">
+							<button class="btn btn-subtle-info btn-icon rounded-circle">
 								<i class="fa fa-cog"></i>
 							</button>
-							<button class="btn btn-flat-primary btn-icon btn-circle">
+							<button class="btn btn-flat-primary btn-icon rounded-circle">
 								<i class="fa fa-bars"></i>
 							</button>
 							<!-- END Buttons -->
@@ -389,7 +389,7 @@
 								<i data-feather="eye" class="me-2"></i>
 								Button
 							</button>
-							<button class="btn btn-label-info">
+							<button class="btn btn-subtle-info">
 								Button
 								<i data-feather="camera" class="ms-2"></i>
 							</button>
@@ -432,45 +432,44 @@
 				</div>
 				<div class="portlet-body">
 					<p>
-						You can add a counter or marker to button by adding
-						<code>.btn-{marker|counter}</code> and combine with <a href="/elements/base/badge.html">badge</a> or
+						You can add a counter or marker to button by using <a target="_blank" href="https://getbootstrap.com/docs/5.3/utilities/api">Bootstrap utility classes</a> and combine it with <a href="/elements/base/badge.html">badge</a> or
 						<a href="/elements/base/marker.html">marker</a> component.
 					</p>
 
 					<!-- BEGIN Buttons -->
-					<button class="btn btn-primary">
+					<button class="btn btn-primary position-relative">
 						Button
-						<div class="btn-marker">
-							<span class="badge badge-secondary btn-counter">12</span>
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
+							<span class="badge badge-secondary">12</span>
 						</div>
 					</button>
-					<button class="btn btn-primary">
+					<button class="btn btn-primary position-relative">
 						Button
-						<div class="btn-marker">
-							<span class="badge badge-secondary rounded-pill btn-counter">12</span>
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
+							<span class="badge badge-secondary rounded-pill">12</span>
 						</div>
 					</button>
-					<button class="btn btn-primary">
+					<button class="btn btn-primary position-relative">
 						Button
-						<div class="btn-marker">
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
 							<i class="marker marker-dot text-success"></i>
 						</div>
 					</button>
-					<button class="btn btn-primary btn-icon">
+					<button class="btn btn-primary btn-icon position-relative">
 						<i class="fa fa-cog"></i>
-						<div class="btn-marker">
-							<span class="badge badge-secondary btn-counter">12</span>
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
+							<span class="badge badge-secondary">12</span>
 						</div>
 					</button>
-					<button class="btn btn-primary btn-icon">
+					<button class="btn btn-primary btn-icon position-relative">
 						<i class="fa fa-star"></i>
-						<div class="btn-marker">
-							<span class="badge badge-secondary rounded-pill btn-counter">12</span>
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
+							<span class="badge badge-secondary rounded-pill">12</span>
 						</div>
 					</button>
-					<button class="btn btn-primary btn-icon">
+					<button class="btn btn-primary btn-icon position-relative">
 						<i class="fa fa-wrench"></i>
-						<div class="btn-marker">
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
 							<i class="marker marker-dot text-success"></i>
 						</div>
 					</button>

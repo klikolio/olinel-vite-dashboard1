@@ -1,0 +1,41 @@
+@import "bootstrap/scss/buttons";
+
+.btn {
+  @include icon-size(var(--#{$prefix}btn-font-size))
+}
+
+@each $color, $value in $theme-colors {
+	.btn-flat-#{$color} {
+		@include button-flat-variant($value);
+	}
+
+	.btn-subtle-#{$color} {
+		@include button-subtle-variant($color, $value);
+	}
+
+	.btn-text-#{$color} {
+		@include button-text-variant($color, $value);
+	}
+}
+
+.btn-icon {
+	--#{$prefix}btn-icon-dimension: #{$input-height};
+	--#{$prefix}btn-icon-size: #{$btn-icon-size};
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+	width: var(--#{$prefix}btn-icon-dimension);
+	height: var(--#{$prefix}btn-icon-dimension);
+	padding: 0;
+
+	&.btn-sm {
+		--#{$prefix}btn-icon-dimension: #{$input-height-sm};
+		--#{$prefix}btn-icon-size: #{$btn-icon-size-sm};
+	}
+
+	&.btn-lg {
+		--#{$prefix}btn-icon-dimension: #{$input-height-lg};
+		--#{$prefix}btn-icon-size: #{$btn-icon-size-lg};
+	}
+}

@@ -109,10 +109,6 @@
 	margin-bottom: 0;
 }
 
-.card-text:last-child {
-	margin-bottom: 0;
-}
-
 .card-link {
 	&:hover {
 		text-decoration: if($link-hover-decoration == underline, none, null);

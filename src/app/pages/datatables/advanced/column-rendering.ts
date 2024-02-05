@@ -33,7 +33,7 @@ $('#datatables-1').DataTable({
 			searchable: false,
 			orderable: false,
 			render: (_data, _type, _full, _meta) => `
-        <button class="btn btn-label-primary btn-icon">
+        <button class="btn btn-subtle-primary btn-icon">
           <i class="fa fa-edit"></i>
         </button>
       `,
@@ -46,7 +46,7 @@ $('#datatables-1').DataTable({
 				)
 
 				return Handlebars.compile(
-					`<span class="badge badge-label-{{ color }}">{{ text }}</span>`,
+					`<span class="badge badge-subtle-{{ color }}">{{ text }}</span>`,
 				)({
 					color: statusData?.state ?? 'primary',
 					text: statusData?.title ?? 'Untitled',

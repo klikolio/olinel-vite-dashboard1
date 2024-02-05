@@ -44,8 +44,8 @@ initTouchspin().then(() => {
 	})
 
 	$('#touchspin-8').TouchSpin({
-		buttondown_class: 'btn btn-label-primary',
-		buttonup_class: 'btn btn-label-primary',
+		buttondown_class: 'btn btn-subtle-primary',
+		buttonup_class: 'btn btn-subtle-primary',
 	})
 
 	$('#touchspin-9').TouchSpin({
