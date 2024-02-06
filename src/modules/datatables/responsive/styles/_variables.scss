@@ -5,10 +5,10 @@ $datatable-responsive-list-border-width:          var(--#{$prefix}border-width) 
 $datatable-responsive-list-border-color:          var(--#{$prefix}border-color) !default;
 
 $datatable-responsive-list-title-min-width:       8rem !default;
-$datatable-responsive-list-title-color:           var(--#{$prefix}text-level-3) !default;
+$datatable-responsive-list-title-color:           var(--#{$prefix}heading-color) !default;
 $datatable-responsive-list-title-font-size:       $font-size-base !default;
 $datatable-responsive-list-title-font-weight:     $font-weight-medium !default;
 
-$datatable-responsive-list-data-color:            var(--#{$prefix}text-level-1) !default;
+$datatable-responsive-list-data-color:            var(--#{$prefix}body-color) !default;
 $datatable-responsive-list-data-font-size:        $font-size-base !default;
 $datatable-responsive-list-data-font-weight:      $font-weight-base !default;

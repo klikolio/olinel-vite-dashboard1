@@ -28,8 +28,8 @@ $datatable-autofill-list-backdrop-bg:               $modal-backdrop-bg !default;
 $datatable-autofill-list-backdrop-opacity:          $modal-backdrop-opacity !default;
 
 $datatable-autofill-list-item-min-height:           3.5rem !default;
-$datatable-autofill-list-item-color:                var(--#{$prefix}text-level-1) !default;
-$datatable-autofill-list-item-bg:                   var(--#{$prefix}bg-level-2) !default;
+$datatable-autofill-list-item-color:                var(--#{$prefix}body-color) !default;
+$datatable-autofill-list-item-bg:                   var(--#{$prefix}secondary-bg) !default;
 $datatable-autofill-list-item-hover-bg:             $component-hover-bg !default;
 $datatable-autofill-list-item-hover-color:          $component-hover-color !default;
 $datatable-autofill-list-item-font-size:            $font-size-base !default;

@@ -34,11 +34,11 @@
 		--#{$prefix}#{$color}-border-subtle: #{$value};
 	}
 
-	@each $level, $value in $text-levels-light {
+	@each $level, $value in $text-levels {
 		--#{$prefix}text-level-#{$level}: #{$value};
 	}
 
-	@each $level, $value in $bg-levels-light {
+	@each $level, $value in $bg-levels {
 		--#{$prefix}bg-level-#{$level}: #{$value};
 	}
 
@@ -66,23 +66,23 @@
 		--#{$prefix}body-text-align: #{$body-text-align};
 	}
 
-	--#{$prefix}body-color: #{$body-color-light};
-	--#{$prefix}body-color-rgb: #{to-rgb($body-color-light)};
-	--#{$prefix}body-bg: #{$body-bg-light};
-	--#{$prefix}body-bg-rgb: #{to-rgb($body-bg-light)};
+	--#{$prefix}body-color: #{$body-color};
+	--#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+	--#{$prefix}body-bg: #{$body-bg};
+	--#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
-	--#{$prefix}emphasis-color: #{$body-emphasis-color-light};
-	--#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-light)};
+	--#{$prefix}emphasis-color: #{$body-emphasis-color};
+	--#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
 
-	--#{$prefix}secondary-color: #{$body-secondary-color-light};
-	--#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-light)};
-	--#{$prefix}secondary-bg: #{$body-secondary-bg-light};
-	--#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-light)};
+	--#{$prefix}secondary-color: #{$body-secondary-color};
+	--#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color)};
+	--#{$prefix}secondary-bg: #{$body-secondary-bg};
+	--#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg)};
 
-	--#{$prefix}tertiary-color: #{$body-tertiary-color-light};
-	--#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-light)};
-	--#{$prefix}tertiary-bg: #{$body-tertiary-bg-light};
-	--#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-light)};
+	--#{$prefix}tertiary-color: #{$body-tertiary-color};
+	--#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color)};
+	--#{$prefix}tertiary-bg: #{$body-tertiary-bg};
+	--#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg)};
 
 	// scss-docs-end root-body-variables
 
@@ -106,7 +106,7 @@
 	// scss-docs-start root-border-var
 	--#{$prefix}border-width: #{$border-width};
 	--#{$prefix}border-style: #{$border-style};
-	--#{$prefix}border-color: #{$border-color-light};
+	--#{$prefix}border-color: #{$border-color};
 	--#{$prefix}border-color-translucent: #{$border-color-translucent};
 
 	--#{$prefix}border-radius: #{$border-radius};
@@ -162,18 +162,6 @@
 		--#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
 		--#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
 		--#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
-
-		@each $color, $value in $theme-colors-text-dark {
-			--#{$prefix}#{$color}-text-emphasis: #{$value};
-		}
-
-		@each $color, $value in $theme-colors-bg-subtle-dark {
-			--#{$prefix}#{$color}-bg-subtle: #{$value};
-		}
-
-		@each $color, $value in $theme-colors-border-subtle-dark {
-			--#{$prefix}#{$color}-border-subtle: #{$value};
-		}
 
 		@each $level, $value in $text-levels-dark {
 			--#{$prefix}text-level-#{$level}: #{$value};

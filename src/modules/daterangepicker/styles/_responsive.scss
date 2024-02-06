@@ -7,7 +7,7 @@
 		}
 		// Add border between range menu and calendar
 		&.show-ranges .drp-calendar.left {
-			border-left: $datepicker-border-width solid $border-color;
+			border-left: $datepicker-border-width solid $datepicker-border-color;
 		}
 		// Decrease ranges menu width
 		.ranges ul {

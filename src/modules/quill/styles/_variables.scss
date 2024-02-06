@@ -18,7 +18,7 @@ $quill-list-margin:                         .25em !default;
 $quill-list-width:                          1.25em !default;
 $quill-list-outer-width:                    $quill-list-width + $quill-list-margin !default;
 $quill-list-max-indent:                     9 !default;
-$quill-list-bullet-color:                   var(--#{$prefix}text-level-1) !default;
+$quill-list-bullet-color:                   var(--#{$prefix}bg-level-2) !default;
 
 $quill-list-styles: (
   decimal,
@@ -46,11 +46,11 @@ $quill-editor-border-width:                 var(--#{$prefix}border-width) !defau
 $quill-editor-border-color:                 var(--#{$prefix}border-color) !default;
 $quill-editor-border-radius:                $border-radius-lg !default;
 
-$quill-control-dimension:                   $btn-icon-dimension !default;
+$quill-control-dimension:                   $input-height !default;
 $quill-control-wide-width:                  8rem !default;
 $quill-control-padding-x:                   $spacer * .5 !default;
 $quill-control-bg:                          transparent !default;
-$quill-control-color:                       var(--#{$prefix}text-level-1) !default;
+$quill-control-color:                       var(--#{$prefix}body-color) !default;
 $quill-control-hover-bg:                    $component-hover-bg !default;
 $quill-control-hover-color:                 $component-hover-color !default;
 $quill-control-active-bg:                   $component-active-bg !default;
@@ -75,9 +75,9 @@ $quill-dropdown-border-width:               $dropdown-border-width !default;
 $quill-dropdown-border-color:               $dropdown-border-color !default;
 $quill-dropdown-border-radius:              $dropdown-border-radius !default;
 
-$quill-dropdown-item-color:                 $dropdown-item-color !default;
-$quill-dropdown-item-hover-bg:              $dropdown-item-hover-bg !default;
-$quill-dropdown-item-hover-color:           $dropdown-item-hover-color !default;
+$quill-dropdown-item-color:                 $dropdown-link-color !default;
+$quill-dropdown-item-hover-bg:              $dropdown-link-hover-bg !default;
+$quill-dropdown-item-hover-color:           $dropdown-link-hover-color !default;
 $quill-dropdown-item-padding-y:             $dropdown-item-padding-y !default;
 $quill-dropdown-item-padding-x:             $dropdown-item-padding-x !default;
 
@@ -93,7 +93,7 @@ $quill-tooltip-preview-width:               20rem !default;
 $quill-tooltip-offset:                      $spacer !default;
 
 $quill-tooltip-arrow-width:                 6px !default;
-$quill-tooltip-arrow-color:                 var(--#{$prefix}bg-level-2) !default;
+$quill-tooltip-arrow-color:                 var(--#{$prefix}secondary-bg) !default;
 
 $quill-input-width:                         15rem !default;
 $quill-input-height:                        $input-height !default;

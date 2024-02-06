@@ -6,7 +6,7 @@
 	flex-direction: column;
 	width: $toastr-width;
 	padding: $toastr-padding-y
-		calc(#{$btn-icon-dimension-sm} + #{$toastr-padding-x}) $toastr-padding-y
+		calc(#{$input-height-sm} + #{$toastr-padding-x}) $toastr-padding-y
 		$toastr-icon-dimension + $toastr-padding-x;
 	margin-bottom: $toastr-spacer;
 	opacity: $toastr-opacity;

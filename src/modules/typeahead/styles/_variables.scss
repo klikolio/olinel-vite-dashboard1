@@ -6,10 +6,10 @@ $typeahead-menu-border-color:           $input-border-color !default;
 $typeahead-menu-active-border-color:    $input-focus-border-color !default;
 $typeahead-menu-border-radius:          $input-border-radius !default;
 
-$typeahead-menu-item-color:             var(--#{$prefix}text-level-1) !default;
+$typeahead-menu-item-color:             var(--#{$prefix}body-color) !default;
 $typeahead-menu-item-hover-bg:          $component-hover-bg !default;
 $typeahead-menu-item-hover-color:       $component-hover-color !default;
-$typeahead-menu-item-active-bg:         var(--#{$prefix}bg-level-3) !default;
+$typeahead-menu-item-active-bg:         var(--#{$prefix}tertiary-bg) !default;
 $typeahead-menu-item-active-color:      $typeahead-menu-item-hover-color !default;
 $typeahead-menu-item-disabled-bg:       $component-disabled-bg !default;
 $typeahead-menu-item-disabled-opacity:  $component-disabled-opacity !default;
@@ -22,18 +22,18 @@ $typeahead-menu-item-child-spacer:      $spacer * 1.25 !default;
 $typeahead-menu-content-line-height:    $line-height-base !default;
 $typeahead-menu-content-font-size:      $font-size-base !default;
 
-$typeahead-menu-title-color:            var(--#{$prefix}text-level-3) !default;
+$typeahead-menu-title-color:            var(--#{$prefix}heading-color) !default;
 $typeahead-menu-title-font-weight:      $font-weight-medium !default;
-$typeahead-menu-subtitle-color:         var(--#{$prefix}text-level-1) !default;
+$typeahead-menu-subtitle-color:         var(--#{$prefix}body-color) !default;
 $typeahead-menu-subtitle-font-weight:   $font-weight-base !default;
 
 $typeahead-menu-addon-spacer:           $spacer * .5 !default;
 
-$typeahead-menu-empty-color:            var(--#{$prefix}text-level-2) !default;
+$typeahead-menu-empty-color:            var(--#{$prefix}secondary-color) !default;
 $typeahead-menu-empty-font-size:        $font-size-base !default;
 $typeahead-menu-empty-font-weight:      $font-weight-medium !default;
 
-$typeahead-menu-header-color:           var(--#{$prefix}text-level-3) !default;
+$typeahead-menu-header-color:           var(--#{$prefix}heading-color) !default;
 $typeahead-menu-header-font-size:       $font-size-base !default;
 $typeahead-menu-header-font-weight:     $font-weight-medium !default;
 

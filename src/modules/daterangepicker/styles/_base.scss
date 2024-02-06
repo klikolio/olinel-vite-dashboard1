@@ -135,19 +135,12 @@
 			background-color: $form-select-bg;
 			background-repeat: no-repeat;
 			background-position: $form-select-bg-position;
+			background-image: escape-svg($form-select-indicator);
 			background-size: $form-select-bg-size;
 			border: $form-select-border-width solid $form-select-border-color;
 			@include border-radius($form-select-border-radius-sm, 0);
 			@include transition($form-select-transition);
 			appearance: none;
-
-			[data-bs-theme="light"] & {
-				background-image: escape-svg($form-select-indicator-light);
-			}
-
-			[data-bs-theme="dark"] & {
-				background-image: escape-svg($form-select-indicator-dark);
-			}
 
 			&:focus {
 				border-color: $form-select-focus-border-color;

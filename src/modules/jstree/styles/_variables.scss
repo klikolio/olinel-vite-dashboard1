@@ -8,7 +8,7 @@ $jstree-line-width:                   2px !default;
 $jstree-line-color:                   var(--#{$prefix}bg-level-4) !default;
 
 $jstree-anchor-bg:                    $component-bg !default;
-$jstree-anchor-color:                 var(--#{$prefix}text-level-3) !default;
+$jstree-anchor-color:                 var(--#{$prefix}heading-color) !default;
 $jstree-anchor-hover-bg:              $component-hover-bg !default;
 $jstree-anchor-hover-color:           $component-hover-color !default;
 $jstree-anchor-active-bg:             $component-active-bg !default;
@@ -25,7 +25,7 @@ $jstree-icon-size:                    $font-size-lg !default;
 $jstree-icon-default:                 "\f07b" !default;
 
 $jstree-tool-bg:                      $jstree-anchor-bg !default;
-$jstree-tool-color:                   var(--#{$prefix}text-level-1) !default;
+$jstree-tool-color:                   var(--#{$prefix}body-color) !default;
 $jstree-tool-icon-open:               "\f150" !default;
 $jstree-tool-icon-close-ltr:          "\f152" !default;
 $jstree-tool-icon-close-rtl:          "\f191" !default;
@@ -51,12 +51,12 @@ $jstree-menu-separator-color:         var(--#{$prefix}border-color) !default;
 
 $jstree-menu-item-padding-y:          $dropdown-item-padding-y !default;
 $jstree-menu-item-padding-x:          $dropdown-item-padding-x !default;
-$jstree-menu-item-color:              $dropdown-item-color !default;
-$jstree-menu-item-hover-bg:           $dropdown-item-hover-bg !default;
-$jstree-menu-item-hover-color:        $dropdown-item-hover-color !default;
-$jstree-menu-item-disabled-color:     $dropdown-item-disabled-bg !default;
-$jstree-menu-item-disabled-bg:        $dropdown-item-disabled-color !default;
-$jstree-menu-item-disabled-opacity:   $dropdown-item-disabled-opacity !default;
+$jstree-menu-item-color:              $dropdown-link-color !default;
+$jstree-menu-item-hover-bg:           $dropdown-link-hover-bg !default;
+$jstree-menu-item-hover-color:        $dropdown-link-hover-color !default;
+$jstree-menu-item-disabled-color:     $component-disabled-bg !default;
+$jstree-menu-item-disabled-bg:        $component-disabled-color !default;
+$jstree-menu-item-disabled-opacity:   $component-disabled-opacity !default;
 
 $jstree-drag-marker-width:            .5rem !default;
 $jstree-drag-marker-color:            $jstree-tool-color !default;

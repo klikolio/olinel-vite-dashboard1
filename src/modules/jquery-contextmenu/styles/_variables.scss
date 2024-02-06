@@ -8,17 +8,17 @@ $context-menu-border-radius:            $dropdown-border-radius !default;
 $context-menu-animation-offset:         $dropdown-animation-offset !default;
 $context-menu-animation-duration:       .25s !default;
 
-$context-menu-item-font-size:           $dropdown-item-font-size !default;
+$context-menu-item-font-size:           $dropdown-font-size !default;
 $context-menu-item-font-weight:         $font-weight-base !default;
 $context-menu-item-line-height:         $line-height-base !default;
 $context-menu-item-padding-y:           $dropdown-item-padding-y !default;
 $context-menu-item-padding-x:           $dropdown-item-padding-x !default;
-$context-menu-item-color:               $dropdown-item-color !default;
-$context-menu-item-hover-bg:            $dropdown-item-hover-bg !default;
-$context-menu-item-hover-color:         $dropdown-item-hover-color !default;
-$context-menu-item-disabled-bg:         $dropdown-item-disabled-bg !default;
-$context-menu-item-disabled-color:      $dropdown-item-disabled-color !default;
-$context-menu-item-disabled-opacity:    $dropdown-item-disabled-opacity !default;
+$context-menu-item-color:               $dropdown-link-color !default;
+$context-menu-item-hover-bg:            $dropdown-link-hover-bg !default;
+$context-menu-item-hover-color:         $dropdown-link-hover-color !default;
+$context-menu-item-disabled-bg:         $component-disabled-bg !default;
+$context-menu-item-disabled-color:      $component-disabled-color !default;
+$context-menu-item-disabled-opacity:    $component-disabled-opacity !default;
 
 $context-menu-icon-dimension:           $dropdown-icon-dimension !default;
 $context-menu-icon-size:                $dropdown-icon-size !default;

@@ -26,11 +26,11 @@
 @import "bootstrap/scss/mixins/pagination";
 @import "bootstrap/scss/mixins/lists";
 @import "bootstrap/scss/mixins/forms";
-@import "mixins/table-variants";
+@import "bootstrap/scss/mixins/table-variants";
+@import "mixins/floating-labels";
 @import "mixins/buttons";
 @import "mixins/caret";
 @import "mixins/icon";
-@import "mixins/floating-labels";
 
 // Skins
 @import "bootstrap/scss/mixins/border-radius";

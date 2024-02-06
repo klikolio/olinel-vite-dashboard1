@@ -16,10 +16,10 @@ $datatable-control-line-height:           1.4em !default;
 $datatable-control-font-family:           $font-family-monospace !default;
 $datatable-control-font-size:             $font-size-base !default;
 $datatable-control-font-weight:           $font-weight-medium !default;
-$datatable-control-color-light:           var(--#{$prefix}text-level-3)-light !default;
-$datatable-control-color-dark:            var(--#{$prefix}text-level-3)-dark !default;
-$datatable-control-bg-light:              var(--#{$prefix}bg-level-3)-light !default;
-$datatable-control-bg-dark:               var(--#{$prefix}bg-level-3)-dark !default;
+$datatable-control-color-light:           var(--#{$prefix}tertiary-color) !default;
+$datatable-control-color-dark:            var(--#{$prefix}tertiary-color) !default;
+$datatable-control-bg-light:              var(--#{$prefix}tertiary-bg) !default;
+$datatable-control-bg-dark:               var(--#{$prefix}tertiary-bg)dark !default;
 $datatable-control-spacer:                .5rem !default;
 $datatable-control-border-radius:         $border-radius-sm !default;
 

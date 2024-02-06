@@ -21,8 +21,8 @@ $irs-tooltip-border-radius:       $tooltip-border-radius !default;
 $irs-tooltip-arrow-width:         .4rem !default;
 $irs-tooltip-arrow-color:         $primary !default;
 
-$irs-minmax-bg:                   var(--#{$prefix}bg-level-3) !default;
-$irs-minmax-color:                var(--#{$prefix}text-level-1) !default;
+$irs-minmax-bg:                   var(--#{$prefix}tertiary-bg) !default;
+$irs-minmax-color:                var(--#{$prefix}body-color) !default;
 
 $irs-label-bg:                    $primary !default;
 $irs-label-color:                 color-contrast($irs-label-bg) !default;
@@ -31,8 +31,8 @@ $irs-grid-height:                 2rem !default;
 $irs-grid-pol-width:              var(--#{$prefix}border-width) !default;
 $irs-grid-pol-height-lg:          .75rem !default;
 $irs-grid-pol-height-sm:          .5rem !default;
-$irs-grid-pol-color:              var(--#{$prefix}bg-level-3) !default;
-$irs-grid-text-color:             var(--#{$prefix}text-level-1) !default;
+$irs-grid-pol-color:              var(--#{$prefix}tertiary-bg) !default;
+$irs-grid-text-color:             var(--#{$prefix}body-color) !default;
 $irs-grid-text-font-size:         $font-size-base !default;
 $irs-grid-text-font-weight:       $font-weight-base !default;
 $irs-grid-text-spacer:            $spacer * .75 !default;

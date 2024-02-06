@@ -4,7 +4,7 @@ $blockui-backdrop-opacity:        $backdrop-opacity !default;
 $blockui-message-padding-y:       $spacer * .5 !default;
 $blockui-message-padding-x:       $spacer !default;
 $blockui-message-bg:              $component-bg !default;
-$blockui-message-color:           var(--#{$prefix}text-level-3) !default;
+$blockui-message-color:           var(--#{$prefix}heading-color) !default;
 $blockui-message-font-size:       $font-size-lg !default;
 $blockui-message-font-weight:     $font-weight-medium !default;
 $blockui-message-border-radius:   var(--#{$prefix}border-radius) !default;

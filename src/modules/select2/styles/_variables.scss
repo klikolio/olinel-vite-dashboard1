@@ -1,4 +1,4 @@
-$zindex-select2:                      $zindex-select-dropdown !default;
+$zindex-select2:                      $zindex-dropdown !default;
 
 $select2-height:                      $input-height !default;
 $select2-padding-x:                   $form-select-padding-x !default;
@@ -32,17 +32,17 @@ $select2-item-padding-y:              $dropdown-item-padding-y !default;
 $select2-item-padding-x:              $dropdown-item-padding-x !default;
 $select2-item-child-spacer:           $select2-item-padding-x + .5rem !default;
 $select2-item-bg:                     $select2-dropdown-bg !default;
-$select2-item-color:                  var(--#{$prefix}text-level-1) !default;
-$select2-item-hover-bg:               $dropdown-item-hover-bg !default;
-$select2-item-hover-color:            $dropdown-item-hover-color !default;
-$select2-item-active-bg:              $dropdown-item-active-bg !default;
-$select2-item-active-color:           $dropdown-item-active-color !default;
+$select2-item-color:                  var(--#{$prefix}body-color) !default;
+$select2-item-hover-bg:               $dropdown-link-hover-bg !default;
+$select2-item-hover-color:            $dropdown-link-hover-color !default;
+$select2-item-active-bg:              $dropdown-link-active-bg !default;
+$select2-item-active-color:           $dropdown-link-active-color !default;
 $select2-item-disabled-bg:            $component-disabled-bg !default;
 $select2-item-disabled-color:         $component-disabled-color !default;
 $select2-item-disabled-opacity:       $btn-disabled-opacity !default;
 
-$select2-choice-bg:                   var(--#{$prefix}bg-level-2) !default;
-$select2-choice-color:                var(--#{$prefix}text-level-1) !default;
+$select2-choice-bg:                   var(--#{$prefix}secondary-bg) !default;
+$select2-choice-color:                var(--#{$prefix}body-color) !default;
 $select2-choice-font-size:            $font-size-base !default;
 $select2-choice-font-weight:          $font-weight-base !default;
 $select2-choice-padding-x:            $spacer * .5 !default;
