@@ -28,6 +28,6 @@
 .sortable.rich-list-flush {
 	.sortable,
 	.sortable-item:not(:first-of-type) {
-		border-top: $richlist-border-width $border-style $richlist-border-color;
+		border-top: $richlist-border-width solid $richlist-border-color;
 	}
 }

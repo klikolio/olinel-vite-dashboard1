@@ -35,7 +35,7 @@
 		animation-fill-mode: both;
 	}
 	background: $context-menu-bg;
-	border: $context-menu-border-width $border-style $context-menu-border-color;
+	border: $context-menu-border-width solid $context-menu-border-color;
 	@include border-radius($context-menu-border-radius);
 }
 
@@ -94,7 +94,7 @@
 // Menu item divider
 .context-menu-separator {
 	height: 0;
-	border-bottom: $context-menu-divider-width $border-style
+	border-bottom: $context-menu-divider-width solid
 		$context-menu-divider-color;
 	margin: $context-menu-divider-spacer 0;
 	padding: 0;

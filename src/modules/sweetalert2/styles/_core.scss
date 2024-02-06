@@ -132,7 +132,7 @@
 	background: $swal2-bg;
 	@include font-size($swal2-font-size);
 	font-family: $swal2-font-family;
-	border: $swal2-border-width $border-style $swal2-border-color;
+	border: $swal2-border-width solid $swal2-border-color;
 	@include border-radius($swal2-border-radius);
 
 	&:focus {

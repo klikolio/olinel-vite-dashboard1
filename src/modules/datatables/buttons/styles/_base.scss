@@ -14,7 +14,7 @@
 	z-index: $zindex-datatable-btn-info;
 	width: $datatable-btn-info-width;
 	background-color: $datatable-btn-info-bg;
-	border: $datatable-btn-info-border-width $border-style
+	border: $datatable-btn-info-border-width solid
 		$datatable-btn-info-border-color;
 	@include border-radius($datatable-btn-info-border-radius);
 
@@ -29,7 +29,7 @@
 		color: $datatable-btn-info-title-color;
 		@include font-size($datatable-btn-info-title-font-size);
 		font-weight: $datatable-btn-info-title-font-weight;
-		border-bottom: $datatable-btn-info-border-width $border-style
+		border-bottom: $datatable-btn-info-border-width solid
 			$datatable-btn-info-border-color;
 	}
 
@@ -89,7 +89,7 @@
 		$datatable-btn-collection-padding-x;
 	z-index: $zindex-datatable-btn-collection;
 	background-color: $datatable-btn-collection-bg;
-	border: $datatable-btn-collection-border-width $border-style
+	border: $datatable-btn-collection-border-width solid
 		$datatable-btn-collection-border-color;
 	@include border-radius($datatable-btn-collection-border-radius);
 

@@ -14,6 +14,6 @@ $slick-dot-transition:            $transition-base !default;
 
 $slick-dot-item-dimension:        1.25rem !default;
 $slick-dot-item-spacer:           .5rem !default;
-$slick-dot-item-bg:               $bg-level-3 !default;
+$slick-dot-item-bg:               var(--#{$prefix}bg-level-3) !default;
 $slick-dot-item-hover-bg:         $gray-400 !default;
 $slick-dot-item-active-bg:        $component-active-bg !default;

@@ -3,20 +3,20 @@ $toastr-fluid-width:              96% !default;
 $toastr-padding-y:                $spacer * 1.25 !default;
 $toastr-padding-x:                $spacer * .5 !default;
 $toastr-spacer:                   $spacer * .75 !default;
-$toastr-border-radius:            $border-radius !default;
+$toastr-border-radius:            var(--#{$prefix}border-radius) !default;
 $toastr-opacity:                  .8 !default;
 $toastr-hover-opacity:            1 !default;
 $toastr-position-offset:          $spacer !default;
 
 $toastr-title-font-size:          $font-size-lg !default;
-$toastr-title-font-weight:        $font-weight-bold !default;
+$toastr-title-font-weight:        $font-weight-medium !default;
 $toastr-message-font-size:        $font-size-base !default;
-$toastr-message-font-weight:      $font-weight-normal !default;
-$toastr-link-font-weight:         $font-weight-bold !default;
+$toastr-message-font-weight:      $font-weight-base !default;
+$toastr-link-font-weight:         $font-weight-medium !default;
 
 $toastr-close-dimension:          $btn-icon-dimension-sm !default;
 $toastr-close-font-size:          $font-size-xl !default;
-$toastr-close-font-weight:        $font-weight-bolder !default;
+$toastr-close-font-weight:        $font-weight-bold !default;
 $toastr-close-offset:             $toastr-padding-x !default;
 
 $toastr-icon-dimension:           4rem !default;

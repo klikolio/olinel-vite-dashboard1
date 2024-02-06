@@ -4,7 +4,7 @@ $datatable-sorting-spacer:                $spacer * 2 !default;
 $datatable-sorting-spacer-sm:             $datatable-sorting-spacer * .5 !default;
 $datatable-sorting-offset:                $spacer * .75 !default;
 $datatable-sorting-offset-sm:             $spacer * .25 !default;
-$datatable-sorting-color:                 $text-level-1 !default;
+$datatable-sorting-color:                 var(--#{$prefix}text-level-1) !default;
 
 $datatable-input-spacer:                  $spacer * .5 !default;
 $datatable-info-spacer:                   $spacer * .75 !default;
@@ -15,11 +15,11 @@ $datatable-control-dimension:             1.5em !default;
 $datatable-control-line-height:           1.4em !default;
 $datatable-control-font-family:           $font-family-monospace !default;
 $datatable-control-font-size:             $font-size-base !default;
-$datatable-control-font-weight:           $font-weight-bold !default;
-$datatable-control-color-light:           $text-level-3-light !default;
-$datatable-control-color-dark:            $text-level-3-dark !default;
-$datatable-control-bg-light:              $bg-level-3-light !default;
-$datatable-control-bg-dark:               $bg-level-3-dark !default;
+$datatable-control-font-weight:           $font-weight-medium !default;
+$datatable-control-color-light:           var(--#{$prefix}text-level-3)-light !default;
+$datatable-control-color-dark:            var(--#{$prefix}text-level-3)-dark !default;
+$datatable-control-bg-light:              var(--#{$prefix}bg-level-3)-light !default;
+$datatable-control-bg-dark:               var(--#{$prefix}bg-level-3)-dark !default;
 $datatable-control-spacer:                .5rem !default;
 $datatable-control-border-radius:         $border-radius-sm !default;
 

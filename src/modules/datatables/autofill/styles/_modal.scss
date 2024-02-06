@@ -11,7 +11,7 @@
 	transform: translateX(-50%);
 	z-index: $zindex-modal + 1;
 	background-color: $datatable-autofill-list-bg;
-	border: $datatable-autofill-list-border-width $border-style
+	border: $datatable-autofill-list-border-width solid
 		$datatable-autofill-list-border-color;
 	@include border-radius($datatable-autofill-list-border-radius);
 
@@ -53,7 +53,7 @@
 		background-color: $datatable-autofill-list-item-bg;
 		padding: $datatable-autofill-list-item-padding-y
 			$datatable-autofill-list-item-padding-x;
-		border-bottom: $datatable-autofill-list-item-border-width $border-style
+		border-bottom: $datatable-autofill-list-item-border-width solid
 			$datatable-autofill-list-item-border-color;
 
 		&:last-child {

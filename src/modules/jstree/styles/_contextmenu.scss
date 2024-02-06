@@ -18,7 +18,7 @@
 		padding: $jstree-menu-padding-y 0 !important;
 		margin: 0;
 		background: $jstree-menu-bg;
-		border: $jstree-menu-border-width $border-style $jstree-menu-border-color;
+		border: $jstree-menu-border-width solid $jstree-menu-border-color;
 		@include border-radius($jstree-menu-border-radius);
 	}
 	// Submenu elements
@@ -75,7 +75,7 @@
 	.vakata-context-separator {
 		height: 0;
 		padding: 0;
-		border-bottom: $jstree-menu-separator-width $border-style
+		border-bottom: $jstree-menu-separator-width solid
 			$jstree-menu-separator-color;
 	}
 

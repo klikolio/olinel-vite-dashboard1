@@ -7,7 +7,7 @@
 	@include font-size($datepicker-font-size);
 	color: $datepicker-color;
 	background: $datepicker-bg;
-	border: $dropdown-border-width $border-style $dropdown-border-color;
+	border: $dropdown-border-width solid $dropdown-border-color;
 	@include border-radius($datepicker-border-radius);
 
 	.drp-calendar {
@@ -187,7 +187,7 @@
 		text-align: right;
 		padding: $datepicker-padding;
 		clear: both;
-		border-top: $dropdown-border-width $border-style $dropdown-border-color;
+		border-top: $dropdown-border-width solid $dropdown-border-color;
 
 		// Add space to button elements
 		.btn {
