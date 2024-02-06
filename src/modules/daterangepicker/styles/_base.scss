@@ -141,11 +141,11 @@
 			@include transition($form-select-transition);
 			appearance: none;
 
-			[data-theme="light"] & {
+			[data-bs-theme="light"] & {
 				background-image: escape-svg($form-select-indicator-light);
 			}
 
-			[data-theme="dark"] & {
+			[data-bs-theme="dark"] & {
 				background-image: escape-svg($form-select-indicator-dark);
 			}
 

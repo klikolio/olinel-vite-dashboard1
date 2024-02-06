@@ -9,7 +9,7 @@ const NAME = 'menu'
 
 const SELECTOR_ITEM = '.menu-item'
 const SELECTOR_TOGGLE = '.menu-item-toggle'
-const SELECTOR_SUBMENU = '.menu-submenu'
+const SELECTOR_SUBMENU = '.menu-sub'
 
 const DATA_COLLAPSED = 'data-menu-collapsed'
 const DATA_HEIGHT = 'data-submenu-height'

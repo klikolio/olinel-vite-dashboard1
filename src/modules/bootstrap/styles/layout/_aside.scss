@@ -16,23 +16,23 @@
 	.menu-item-link {
 		// Hover state
 		&:hover {
-			[data-theme="light"] & {
+			[data-bs-theme="light"] & {
 				background: $aside-menu-link-hover-bg-light;
 			}
 
-			[data-theme="dark"] & {
+			[data-bs-theme="dark"] & {
 				background: $aside-menu-link-hover-bg-dark;
 			}
 		}
 	}
 
-	.menu-submenu {
-		[data-theme="light"] & {
-			background: $aside-menu-submenu-bg-light;
+	.menu-sub {
+		[data-bs-theme="light"] & {
+			background: $aside-menu-sub-bg-light;
 		}
 
-		[data-theme="dark"] & {
-			background: $aside-menu-submenu-bg-dark;
+		[data-bs-theme="dark"] & {
+			background: $aside-menu-sub-bg-dark;
 		}
 	}
 
@@ -76,7 +76,7 @@
 }
 
 // Styling for desktop viewport
-@include media-breakpoint-up($layout-breakpoint-mobile-desktop) {
+@include media-breakpoint-up($layout-breakpoint) {
 	// Changing icon at toggle button
 	body.aside-desktop-maximized .aside-icon-maximize {
 		display: none !important;
@@ -121,7 +121,7 @@
 
 		// Hiding elements doesn't needed
 		.aside-title,
-		.menu-submenu,
+		.menu-sub,
 		.menu-item-text,
 		.menu-item-addon,
 		.menu-section-text {
@@ -139,7 +139,7 @@
 				width: $aside-width;
 
 				.aside-title,
-				.menu-submenu,
+				.menu-sub,
 				.menu-item-text,
 				.menu-item-addon,
 				.menu-section-text {
@@ -170,7 +170,7 @@
 }
 
 // Styling for mobile viewport
-@include media-breakpoint-down($layout-breakpoint-mobile-desktop) {
+@include media-breakpoint-down($layout-breakpoint) {
 	.aside {
 		@include transition($aside-transition);
 	}

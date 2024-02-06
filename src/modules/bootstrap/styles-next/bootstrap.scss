@@ -1,9 +1,5 @@
-@import "mixins/banner";
-@include bsBanner("");
-
-// scss-docs-start import-stack
 // Configuration
-@import "functions";
+@import "bootstrap/scss/functions";
 @import "variables";
 @import "variables-dark";
 @import "maps";
@@ -21,5 +17,4 @@
 @import "helpers";
 
 // Utilities
-@import "utilities/api";
-// scss-docs-end import-stack
+@import "bootstrap/scss/utilities/api";

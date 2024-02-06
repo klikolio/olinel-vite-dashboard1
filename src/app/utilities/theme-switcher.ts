@@ -1,5 +1,5 @@
 const rootQuery = 'html'
-const dataAttrName = 'data-theme'
+const dataAttrName = 'data-bs-theme'
 const storageId = 'theme-variant'
 
 // Toggle theme class

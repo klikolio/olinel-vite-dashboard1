@@ -10,7 +10,7 @@ export const defaultPageDirection: pageDirectionType = 'ltr'
 
 export function getThemeVariant(): themeVariantType {
 	return (
-		document.documentElement.getAttribute('data-theme') ?? defaultThemeVariant
+		document.documentElement.getAttribute('data-bs-theme') ?? defaultThemeVariant
 	)
 }
 

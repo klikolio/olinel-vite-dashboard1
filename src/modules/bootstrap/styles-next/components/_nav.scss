@@ -2,7 +2,7 @@
 
 .nav {
   --#{$prefix}nav-icon-dimension: #{$nav-icon-dimension};
-  --#{$prefix}nav-icon-size: #{$nav-icon-size};
+	@include rfs($nav-icon-size, --#{$prefix}nav-icon-size);
   --#{$prefix}nav-addon-spacer: #{$nav-addon-spacer};
 }
 
@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+	justify-content: center;
 }
 
 .nav-content {

@@ -5,10 +5,10 @@
 	--#{$prefix}card-title-font-weight: #{$card-title-font-weight};
 	--#{$prefix}card-subtitle-font-size: #{$card-subtitle-font-size};
 	--#{$prefix}card-subtitle-font-weight: #{$card-subtitle-font-weight};
-  --#{$prefix}card-icon-color: #{$card-icon-color};
-  --#{$prefix}card-icon-dimension: #{$card-icon-dimension};
-  --#{$prefix}card-icon-spacer: #{$card-icon-spacer};
-  --#{$prefix}card-icon-size: #{$card-icon-size};
+	--#{$prefix}card-icon-color: #{$card-icon-color};
+	@include rfs($card-icon-size, --#{$prefix}card-icon-size);
+	--#{$prefix}card-icon-dimension: #{$card-icon-dimension};
+	--#{$prefix}card-icon-spacer: #{$card-icon-spacer};
 }
 
 .card-title {
@@ -40,4 +40,14 @@
 	width: var(--#{$prefix}card-icon-dimension);
 	margin-right: var(--#{$prefix}card-icon-spacer);
 	@include icon-size(var(--#{$prefix}card-icon-size));
+}
+
+.card-header-underline {
+	margin-bottom: calc(-1 * var(--#{$prefix}card-cap-padding-y));
+
+	.nav-link {
+		padding-bottom: calc(
+			var(--#{$prefix}nav-link-padding-y) + var(--#{$prefix}card-cap-padding-y)
+		);
+	}
 }

@@ -95,12 +95,12 @@
 						$form-select-feedback-icon-position;
 					background-size: $form-select-bg-size, $form-select-feedback-icon-size;
 
-					[data-theme="light"] & {
+					[data-bs-theme="light"] & {
 						background-image: escape-svg($form-select-indicator-light),
 							escape-svg($icon);
 					}
 
-					[data-theme="dark"] & {
+					[data-bs-theme="dark"] & {
 						background-image: escape-svg($form-select-indicator-dark),
 							escape-svg($icon);
 					}

@@ -56,13 +56,13 @@
 		background-size: var(--#{$variable-prefix}accordion-caret-dimension);
 		@include transition(var(--#{$variable-prefix}accordion-caret-transition));
 
-		[data-theme="light"] & {
+		[data-bs-theme="light"] & {
 			--#{$variable-prefix}accordion-caret-icon: #{escape-svg(
 					$accordion-caret-icon-light
 				)};
 		}
 
-		[data-theme="dark"] & {
+		[data-bs-theme="dark"] & {
 			--#{$variable-prefix}accordion-caret-icon: #{escape-svg(
 					$accordion-caret-icon-dark
 				)};

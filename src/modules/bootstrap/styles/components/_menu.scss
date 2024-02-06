@@ -8,11 +8,11 @@
 	--#{$variable-prefix}menu-link-color: #{$menu-link-color};
 	--#{$variable-prefix}menu-link-hover-color: #{$menu-link-color};
 
-	[data-theme="light"] & {
+	[data-bs-theme="light"] & {
 		--#{$variable-prefix}menu-link-hover-bg: #{$menu-link-hover-bg-light};
 	}
 
-	[data-theme="dark"] & {
+	[data-bs-theme="dark"] & {
 		--#{$variable-prefix}menu-link-hover-bg: #{$menu-link-hover-bg-dark};
 	}
 
@@ -27,15 +27,15 @@
 	--#{$variable-prefix}menu-link-caret-spacer: #{$menu-link-caret-spacer};
 	--#{$variable-prefix}menu-link-transition: #{$menu-link-transition};
 
-	[data-theme="light"] & {
-		--#{$variable-prefix}menu-submenu-bg: #{$menu-submenu-bg-light};
+	[data-bs-theme="light"] & {
+		--#{$variable-prefix}menu-sub-bg: #{$menu-sub-bg-light};
 	}
 
-	[data-theme="dark"] & {
-		--#{$variable-prefix}menu-submenu-bg: #{$menu-submenu-bg-dark};
+	[data-bs-theme="dark"] & {
+		--#{$variable-prefix}menu-sub-bg: #{$menu-sub-bg-dark};
 	}
 
-	--#{$variable-prefix}menu-submenu-transition: #{$menu-submenu-transition};
+	--#{$variable-prefix}menu-sub-transition: #{$menu-sub-transition};
 	--#{$variable-prefix}menu-section-height: #{$menu-section-height};
 	--#{$variable-prefix}menu-section-spacer: #{$menu-section-spacer};
 	--#{$variable-prefix}menu-section-text-spacer: #{$menu-section-text-spacer};
@@ -94,14 +94,14 @@
 		}
 	}
 
-	.menu-submenu & {
+	.menu-sub & {
 		margin: 0;
 	}
 
 	&.menu-item-toggle.active {
 		@include border-bottom-radius(0);
 
-		+ .menu-submenu {
+		+ .menu-sub {
 			@include border-top-radius(0);
 		}
 	}
@@ -179,11 +179,11 @@
 }
 // Nesting submenu styles for 3 level
 
-.menu-submenu {
+.menu-sub {
 	overflow: hidden;
 	margin-top: calc(-1 * var(--#{$variable-prefix}menu-link-margin-y));
-	background-color: var(--#{$variable-prefix}menu-submenu-bg);
-	@include transition(var(--#{$variable-prefix}menu-submenu-transition));
+	background-color: var(--#{$variable-prefix}menu-sub-bg);
+	@include transition(var(--#{$variable-prefix}menu-sub-transition));
 	@include border-radius($menu-link-border-radius);
 
 	.menu-item-link {
@@ -200,18 +200,18 @@
 	}
 }
 
-.menu-submenu .menu-item-toggle.active {
+.menu-sub .menu-item-toggle.active {
 	@include border-radius(0);
 }
 
-.menu > .menu-item > .menu-submenu {
-	> .menu-item > .menu-submenu > .menu-item:first-child > .menu-item-link,
+.menu > .menu-item > .menu-sub {
+	> .menu-item > .menu-sub > .menu-item:first-child > .menu-item-link,
 	> .menu-item:first-child > .menu-item-link:not(.menu-item-toggle.active) {
 		@include border-top-radius(0);
 		@include border-bottom-radius($menu-link-border-radius);
 	}
 
-	> .menu-item > .menu-submenu > .menu-item:last-child > .menu-item-link,
+	> .menu-item > .menu-sub > .menu-item:last-child > .menu-item-link,
 	> .menu-item:last-child > .menu-item-link:not(.menu-item-toggle.active) {
 		@include border-bottom-radius(0);
 		@include border-top-radius($menu-link-border-radius);

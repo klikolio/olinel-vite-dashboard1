@@ -205,7 +205,7 @@
 	); // stylelint-disable-line function-disallowed-list
 }
 
-.card-header-lines {
+.card-header-underline {
 	margin-right: calc(
 		-0.5 * var(--#{$variable-prefix}card-cap-padding-x)
 	); // stylelint-disable-line function-disallowed-list

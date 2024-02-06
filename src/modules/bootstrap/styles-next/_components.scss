@@ -1,13 +1,18 @@
 @import "components/type";
+@import "components/preload";
 @import "components/images";
 @import "components/tables";
+@import "components/portlet";
+@import "components/menu";
 @import "components/buttons";
 @import "components/transitions";
 @import "components/dropdown";
 @import "components/button-group";
+@import "components/button-floating";
 @import "components/nav";
 @import "components/card";
 @import "components/accordion";
+@import "components/marker";
 @import "components/breadcrumb";
 @import "components/pagination";
 @import "components/badge";
@@ -23,3 +28,8 @@
 @import "components/spinners";
 @import "components/offcanvas";
 @import "components/placeholders";
+@import "components/avatar";
+@import "components/chat";
+@import "components/gridnav";
+@import "components/richlist";
+@import "components/timeline";

@@ -19,8 +19,8 @@
 					<h3 class="portlet-title">Dropdown examples</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- BEGIN Grid -->
-					<div class="d-grid gap-3">
+					<!-- BEGIN Stack -->
+					<div class="vstack gap-3">
 						<!-- BEGIN Row -->
 						<div class="row">
 							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Basic demo</label>
@@ -253,169 +253,6 @@
 
 						<!-- BEGIN Row -->
 						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Centered</label>
-							<div class="col-sm-8 col-lg-9">
-								<div class="mb-2">
-									<div class="d-inline-block me-2">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown-center">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-												Centered dropdown
-											</button>
-											<div class="dropdown-menu dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Action two</a>
-												<a class="dropdown-item" href="#">Action three</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-									<div class="d-inline-block">
-										<!-- BEGIN Dropdown -->
-										<div class="dropup-center dropup">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-												Centered dropdup
-											</button>
-											<div class="dropdown-menu dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Action two</a>
-												<a class="dropdown-item" href="#">Action three</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-								</div>
-								<p class="mb-0">
-									Make the dropdown menu centered below or above the toggle with
-									<code>.{dropdown|dropup}-center</code> on the parent element.
-								</p>
-							</div>
-						</div>
-						<!-- END Row -->
-
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Orientation</label>
-							<div class="col-sm-8 col-lg-9">
-								<div class="mb-2">
-									<div class="d-inline-block me-2">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>
-											<div class="dropdown-menu dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-									<div class="d-inline-block me-2">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown dropup">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropup</button>
-											<div class="dropdown-menu dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-									<div class="d-inline-block me-2">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown dropend">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropend</button>
-											<div class="dropdown-menu dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-									<div class="d-inline-block">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown dropstart">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropstart</button>
-											<div class="dropdown-menu dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-								</div>
-								<p class="mb-0">
-									Change dropdown menu orientation by applying
-									<code>.dropstart|.dropend|.dropup</code> classes to <code>.dropdown</code> elements
-								</p>
-							</div>
-						</div>
-						<!-- END Row -->
-
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Menu alignment</label>
-							<div class="col-sm-8 col-lg-9">
-								<div class="mb-2">
-									<div class="d-inline-block me-2">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Start</button>
-											<div class="dropdown-menu dropdown-menu-start dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-									<div class="d-inline-block">
-										<!-- BEGIN Dropdown -->
-										<div class="dropdown">
-											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">End</button>
-											<div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
-										<!-- END Dropdown -->
-									</div>
-								</div>
-								<p class="mb-0">
-									Apply <code>.dropdown-menu-{start|end}</code> to <code>.dropdown-menu</code> elements to change
-									alignment
-								</p>
-							</div>
-						</div>
-						<!-- END Row -->
-
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Text</label>
-							<div class="col-sm-8 col-lg-9">
-								<!-- BEGIN Dropdown -->
-								<div class="mb-2">
-									<div class="dropdown">
-										<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click me</button>
-										<div class="dropdown-menu dropdown-menu-animated p-4" style="max-width: 200px;">
-											<p>Some example text that's free-flowing within the dropdown menu.</p>
-											<p class="mb-0">And this is more example text.</p>
-										</div>
-									</div>
-								</div>
-								<!-- END Dropdown -->
-
-								<p class="mb-0">You can insert any elements into dropdown menu</p>
-							</div>
-						</div>
-						<!-- END Row -->
-
-						<!-- BEGIN Row -->
-						<div class="row">
 							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Form</label>
 							<div class="col-sm-8 col-lg-9">
 								<!-- BEGIN Dropdown -->
@@ -423,7 +260,8 @@
 									<div class="dropdown">
 										<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click me</button>
 										<div class="dropdown-menu dropdown-menu-animated">
-											<form class="d-grid gap-3 px-4 py-3">
+											<!-- BEGIN Form -->
+											<form class="vstack gap-3 px-4 py-3">
 												<div>
 													<label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
 													<input
@@ -450,6 +288,8 @@
 												</div>
 												<button type="submit" class="btn btn-primary">Sign in</button>
 											</form>
+											<!-- END Form -->
+
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="#">New around here? Sign up</a>
 											<a class="dropdown-item" href="#">Forgot password?</a>
@@ -620,8 +460,171 @@
 							</div>
 						</div>
 						<!-- END Row -->
+
+						<!-- BEGIN Row -->
+						<div class="row">
+							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Centered</label>
+							<div class="col-sm-8 col-lg-9">
+								<div class="mb-2">
+									<div class="d-inline-block me-2">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown-center">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+												Centered dropdown
+											</button>
+											<div class="dropdown-menu dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Action two</a>
+												<a class="dropdown-item" href="#">Action three</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+									<div class="d-inline-block">
+										<!-- BEGIN Dropdown -->
+										<div class="dropup-center dropup">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+												Centered dropdup
+											</button>
+											<div class="dropdown-menu dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Action two</a>
+												<a class="dropdown-item" href="#">Action three</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+								</div>
+								<p class="mb-0">
+									Make the dropdown menu centered below or above the toggle with
+									<code>.{dropdown|dropup}-center</code> on the parent element.
+								</p>
+							</div>
+						</div>
+						<!-- END Row -->
+
+						<!-- BEGIN Row -->
+						<div class="row">
+							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Orientation</label>
+							<div class="col-sm-8 col-lg-9">
+								<div class="mb-2">
+									<div class="d-inline-block me-2">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>
+											<div class="dropdown-menu dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+									<div class="d-inline-block me-2">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown dropup">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropup</button>
+											<div class="dropdown-menu dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+									<div class="d-inline-block me-2">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown dropend">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropend</button>
+											<div class="dropdown-menu dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+									<div class="d-inline-block">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown dropstart">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropstart</button>
+											<div class="dropdown-menu dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+								</div>
+								<p class="mb-0">
+									Change dropdown menu orientation by applying
+									<code>.dropstart|.dropend|.dropup</code> classes to <code>.dropdown</code> elements
+								</p>
+							</div>
+						</div>
+						<!-- END Row -->
+
+						<!-- BEGIN Row -->
+						<div class="row">
+							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Menu alignment</label>
+							<div class="col-sm-8 col-lg-9">
+								<div class="mb-2">
+									<div class="d-inline-block me-2">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Start</button>
+											<div class="dropdown-menu dropdown-menu-start dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+									<div class="d-inline-block">
+										<!-- BEGIN Dropdown -->
+										<div class="dropdown">
+											<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">End</button>
+											<div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+										<!-- END Dropdown -->
+									</div>
+								</div>
+								<p class="mb-0">
+									Apply <code>.dropdown-menu-{start|end}</code> to <code>.dropdown-menu</code> elements to change
+									alignment
+								</p>
+							</div>
+						</div>
+						<!-- END Row -->
+
+						<!-- BEGIN Row -->
+						<div class="row">
+							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Text</label>
+							<div class="col-sm-8 col-lg-9">
+								<!-- BEGIN Dropdown -->
+								<div class="mb-2">
+									<div class="dropdown">
+										<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click me</button>
+										<div class="dropdown-menu dropdown-menu-animated p-4" style="max-width: 200px;">
+											<p>Some example text that's free-flowing within the dropdown menu.</p>
+											<p class="mb-0">And this is more example text.</p>
+										</div>
+									</div>
+								</div>
+								<!-- END Dropdown -->
+
+								<p class="mb-0">You can insert any elements into dropdown menu</p>
+							</div>
+						</div>
+						<!-- END Row -->
 					</div>
-					<!-- END Grid -->
+					<!-- END Stack -->
 				</div>
 			</div>
 			<!-- END Portlet -->

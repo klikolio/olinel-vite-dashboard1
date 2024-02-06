@@ -3,9 +3,15 @@
 .dropdown {
 	--#{$prefix}dropdown-item-content-spacer: #{$dropdown-item-content-spacer};
 	--#{$prefix}dropdown-icon-dimension: #{$dropdown-icon-dimension};
-	--#{$prefix}dropdown-icon-size: #{$dropdown-icon-size};
+	@include rfs($dropdown-icon-size, --#{$prefix}dropdown-icon-size);
 	--#{$prefix}dropdown-bullet-size: #{$dropdown-bullet-size};
 	--#{$prefix}dropdown-bullet-color: #{$dropdown-bullet-color};
+	--#{$prefix}dropdown-col-padding: #{$dropdown-col-padding};
+}
+
+// Add spacer to caret element
+.dropdown-toggle::after {
+	margin-left: $dropdown-caret-spacer;
 }
 
 .dropdown-sub {
@@ -19,6 +25,17 @@
 .dropdown-sub-menu {
 	@extend .dropdown-menu;
 	width: fit-content;
+	top: 0;
+}
+
+.dropdown-sub-start {
+	left: 0;
+	transform: translateX(-100%);
+}
+
+.dropdown-sub-end {
+	right: 0;
+	transform: translateX(100%);
 }
 
 .dropdown-row {
@@ -93,7 +110,7 @@
 		width: var(--#{$prefix}dropdown-bullet-size);
 		height: var(--#{$prefix}dropdown-bullet-size);
 		border-radius: 50%;
-		background: currentColor;
+		background-color: currentColor;
 	}
 }
 
@@ -131,7 +148,7 @@
 			animation-name: slideDown;
 		}
 
-		.dropdown-submenu-menu,
+		.dropdown-sub-menu,
 		&[data-popper-placement^="right"],
 		&[data-popper-placement^="left"],
 		&[data-popper-placement^="bottom"] {

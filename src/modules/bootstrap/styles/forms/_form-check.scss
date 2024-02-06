@@ -113,11 +113,11 @@
 		@include border-radius($form-switch-border-radius);
 		@include transition($form-switch-transition);
 
-		[data-theme="light"] & {
+		[data-bs-theme="light"] & {
 			background-image: escape-svg($form-switch-bg-image-light);
 		}
 
-		[data-theme="dark"] & {
+		[data-bs-theme="dark"] & {
 			background-image: escape-svg($form-switch-bg-image-dark);
 		}
 

@@ -1,0 +1,197 @@
+// Base styles
+.aside {
+	--#{$prefix}aside-zindex: #{$zindex-aside};
+	--#{$prefix}aside-width: #{$aside-width};
+	--#{$prefix}aside-bg: #{$aside-bg};
+	--#{$prefix}aside-border-width: #{$aside-border-width};
+	--#{$prefix}aside-border-color: #{$aside-border-color};
+	--#{$prefix}aside-header-padding-y: #{$aside-header-padding-y};
+	--#{$prefix}aside-header-padding-x: #{$aside-header-padding-x};
+	--#{$prefix}aside-body-padding-y: #{$aside-body-padding-y};
+	--#{$prefix}aside-body-padding-x: #{$aside-body-padding-x};
+	--#{$prefix}aside-title-color: #{$aside-title-color};
+	@include rfs($aside-title-font-size, --#{$prefix}aside-title-font-size);
+	--#{$prefix}aside-title-font-weight: #{$aside-title-font-weight};
+	--#{$prefix}aside-section-icon-color: #{$aside-section-icon-color};
+	@include rfs($aside-section-icon-size, --#{$prefix}aside-section-icon-size);
+
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: var(--#{$prefix}aside-width);
+	background-color: var(--#{$prefix}aside-bg);
+	border-right: var(--#{$prefix}aside-border-width) solid
+		var(--#{$prefix}aside-border-color);
+	top: 0;
+	left: 0;
+	z-index: var(--#{$prefix}aside-zindex);
+}
+
+.aside-header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: var(--#{$prefix}aside-header-padding-y)
+		var(--#{$prefix}aside-header-padding-x);
+}
+
+.aside-body {
+	height: 100%;
+	overflow-y: auto;
+	padding: var(--#{$prefix}aside-body-padding-y)
+		var(--#{$prefix}aside-body-padding-x);
+}
+
+.aside-title {
+	width: 100%;
+	margin: 0;
+	color: var(--#{$prefix}aside-title-color);
+	@include font-size(var(--#{$prefix}aside-title-font-size));
+	font-weight: var(--#{$prefix}aside-title-font-weight);
+}
+
+.aside-addon {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.aside-section-icon {
+	display: none;
+	width: 100%;
+	text-align: center;
+	color: var(--#{$prefix}aside-section-icon-color);
+	@include icon-size(var(--#{$prefix}aside-section-icon-size));
+}
+
+// Styling for desktop viewport
+@include media-breakpoint-up($layout-breakpoint) {
+	// Changing icon at toggle button
+	body.aside-desktop-maximized .aside-icon-maximize,
+	body.aside-desktop-minimized .aside-icon-minimize {
+		display: none !important;
+	}
+
+	body.aside-active {
+		// Adding space to wrapper and header for aside element
+		&.aside-desktop-maximized {
+			.wrapper {
+				padding-left: $aside-width;
+			}
+
+			.sticky-header {
+				left: $aside-width;
+			}
+		}
+
+		// Pushing wrapper and header to fit body when aside minimized
+		&.aside-desktop-minimized {
+			.wrapper {
+				padding-left: $aside-collapse-width;
+			}
+
+			.sticky-header {
+				left: $aside-collapse-width;
+			}
+		}
+	}
+
+	body.aside-desktop-minimized {
+		// Decrease aside width
+		.aside {
+			--#{$prefix}aside-width: #{$aside-collapse-width};
+
+			@include transition($aside-transition);
+		}
+
+		.aside-addon {
+			flex: 1;
+			justify-content: center;
+		}
+
+		// Hiding elements doesn't needed
+		.aside-title,
+		.menu-sub,
+		.menu-item-text,
+		.menu-item-addon,
+		.menu-section-text {
+			display: none;
+		}
+
+		// Showing section icon to substitute section text
+		.aside .aside-section-icon {
+			display: block;
+		}
+
+		// Aside hover effects
+		.aside-hover {
+			&:hover {
+				--#{$prefix}aside-width: #{$aside-width};
+
+				.aside-title,
+				.menu-sub,
+				.menu-item-text,
+				.menu-item-addon,
+				.menu-section-text {
+					display: block;
+				}
+
+				.aside-section-icon {
+					display: none;
+				}
+			}
+
+			&:not(:hover) {
+				.menu-section {
+					padding-left: 0;
+				}
+
+				.aside-header {
+					padding-right: 0;
+					padding-left: 0;
+				}
+
+				.menu-item-link.active {
+					@include border-radius($menu-link-border-radius);
+				}
+			}
+		}
+	}
+}
+
+// Styling for mobile viewport
+@include media-breakpoint-down($layout-breakpoint) {
+	.aside {
+		@include transition($aside-transition);
+	}
+
+	// Changing icon at toggle button
+	.aside-icon-maximize {
+		display: none !important;
+	}
+
+	// Hiding main scrollbar when aside opened
+	body.aside-mobile-maximized {
+		overflow: hidden;
+	}
+
+	// Pushing aside element to canvas
+	body.aside-mobile-minimized,
+	body.aside-active:not(.aside-mobile-maximized) {
+		.aside {
+			transform: translateX(calc((100% + #{$grid-gutter-width}) * -1));
+		}
+	}
+
+	// Backdrop styles
+	#aside-backdrop {
+		@include overlay-backdrop(
+			$zindex-aside-backdrop,
+			$aside-backdrop-bg,
+			$aside-backdrop-opacity
+		);
+	}
+}

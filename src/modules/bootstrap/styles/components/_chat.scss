@@ -9,11 +9,11 @@
 	--#{$variable-prefix}chat-bubble-opacity: #{$chat-bubble-opacity};
 	--#{$variable-prefix}chat-bubble-padding: #{$chat-bubble-padding};
 
-	[data-theme="light"] & {
+	[data-bs-theme="light"] & {
 		--#{$variable-prefix}chat-bubble-bg: #{$chat-bubble-bg-light};
 	}
 
-	[data-theme="dark"] & {
+	[data-bs-theme="dark"] & {
 		--#{$variable-prefix}chat-bubble-bg: #{$chat-bubble-bg-dark};
 	}
 

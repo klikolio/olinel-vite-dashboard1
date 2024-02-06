@@ -462,7 +462,7 @@ $grid-breakpoints: (
   xxl:  1800px
 ) !default;
 
-$layout-breakpoint-mobile-desktop: "lg";
+$layout-breakpoint: "lg";
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
@@ -1719,10 +1719,10 @@ $menu-link-caret-spacer:                    $spacer * .25 !default;
 $menu-link-border-radius:                   $menu-link-height * .5 !default;
 $menu-link-transition:                      none !default;
 
-$menu-submenu-bg-opacity:                   .35 !default;
-$menu-submenu-bg-light:                     rgba($bg-level-3-light, $menu-submenu-bg-opacity) !default;
-$menu-submenu-bg-dark:                      rgba($bg-level-3-dark, $menu-submenu-bg-opacity) !default;
-$menu-submenu-transition:                   height .2s ease-in-out !default;
+$menu-sub-bg-opacity:                   .35 !default;
+$menu-sub-bg-light:                     rgba($bg-level-3-light, $menu-sub-bg-opacity) !default;
+$menu-sub-bg-dark:                      rgba($bg-level-3-dark, $menu-sub-bg-opacity) !default;
+$menu-sub-transition:                   height .2s ease-in-out !default;
 
 $menu-section-height:                       $menu-link-height !default;
 $menu-section-spacer:                       $spacer * .5 !default;
@@ -2011,8 +2011,8 @@ $aside-backdrop-opacity:                    $backdrop-opacity !default;
 
 $aside-menu-link-hover-bg-light:            rgba($bg-level-4-light, $menu-link-hover-bg-opacity) !default;
 $aside-menu-link-hover-bg-dark:             rgba($bg-level-4-dark, $menu-link-hover-bg-opacity) !default;
-$aside-menu-submenu-bg-light:               rgba($bg-level-4-light, $menu-submenu-bg-opacity) !default;
-$aside-menu-submenu-bg-dark:                rgba($bg-level-4-dark, $menu-submenu-bg-opacity) !default;
+$aside-menu-sub-bg-light:               rgba($bg-level-4-light, $menu-sub-bg-opacity) !default;
+$aside-menu-sub-bg-dark:                rgba($bg-level-4-dark, $menu-sub-bg-opacity) !default;
 $aside-menu-section-icon-color:             $gray-400 !default;
 $aside-menu-section-icon-size:              $menu-link-icon-size !default;
 

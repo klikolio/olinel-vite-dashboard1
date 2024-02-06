@@ -128,7 +128,7 @@ $utilities-bg: map-merge(
   (
     "black": to-rgb($black),
     "white": to-rgb($white),
-    "body": $body-bg
+    "body": var(--#{$prefix}body-bg)
   )
 ) !default;
 $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;

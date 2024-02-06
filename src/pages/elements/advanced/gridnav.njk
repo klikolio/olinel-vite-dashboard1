@@ -1,0 +1,304 @@
+{% extends "components/template.njk" %}
+<!-- prettier-ignore-start -->
+{% set page_title = "Grid Nav" %}
+{% set page_id = "elements.advanced.gridnav" %}
+{% set breadcrumb = [
+  { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
+  { text: "Elements" },
+  { text: "Advanced" },
+  { text: "Grid Nav", link: "/elements/advanced/gridnav.html" }
+] %}
+<!-- prettier-ignore-end -->
+
+{% block content %}
+	<div class="row">
+		<div class="col-12">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Variations</h3>
+				</div>
+				<div class="portlet-body">
+					<p><strong>Grid Nav</strong> has 3 versions of the border, like example below</p>
+
+					<!-- BEGIN Row -->
+					<div class="row g-3">
+						<div class="col-md-4">
+							<!-- BEGIN Portlet -->
+							<div class="portlet mb-0">
+								<div class="portlet-header portlet-header-bordered">
+									<h3 class="portlet-title">Basic</h3>
+								</div>
+								<div class="portlet-body">
+									<p>Default version of grid navigation</p>
+
+									<!-- BEGIN Grid Nav -->
+									<div class="gridnav">
+										<div class="gridnav-row">
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-address-card"></i>
+												</div>
+												<span class="gridnav-content">Profile</span>
+											</div>
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-comments"></i>
+												</div>
+												<span class="gridnav-content">Messages</span>
+											</div>
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-clone"></i>
+												</div>
+												<span class="gridnav-content">Activities</span>
+											</div>
+										</div>
+									</div>
+									<!-- END Grid Nav -->
+								</div>
+							</div>
+							<!-- END Portlet -->
+						</div>
+						<div class="col-md-4">
+							<!-- BEGIN Portlet -->
+							<div class="portlet mb-0">
+								<div class="portlet-header portlet-header-bordered">
+									<h3 class="portlet-title">Flush</h3>
+								</div>
+								<div class="portlet-body">
+									<p>Add <code>.gridnav-flush</code> to default grid navigation to appear like below</p>
+
+									<!-- BEGIN Grid Nav -->
+									<div class="gridnav gridnav-flush">
+										<div class="gridnav-row">
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-address-card"></i>
+												</div>
+												<span class="gridnav-content">Profile</span>
+											</div>
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-comments"></i>
+												</div>
+												<span class="gridnav-content">Messages</span>
+											</div>
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-clone"></i>
+												</div>
+												<span class="gridnav-content">Activities</span>
+											</div>
+										</div>
+									</div>
+									<!-- END Grid Nav -->
+								</div>
+							</div>
+							<!-- END Portlet -->
+						</div>
+						<div class="col-md-4">
+							<!-- BEGIN Portlet -->
+							<div class="portlet mb-0">
+								<div class="portlet-header portlet-header-bordered">
+									<h3 class="portlet-title">Bordered</h3>
+								</div>
+								<div class="portlet-body">
+									<p>Add <code>.gridnav-bordered</code> to default grid navigation to appear like below</p>
+
+									<!-- BEGIN Grid Nav -->
+									<div class="gridnav gridnav-bordered">
+										<div class="gridnav-row">
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-address-card"></i>
+												</div>
+												<span class="gridnav-content">Profile</span>
+											</div>
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-comments"></i>
+												</div>
+												<span class="gridnav-content">Messages</span>
+											</div>
+											<div class="gridnav-item">
+												<div class="gridnav-icon">
+													<i class="far fa-clone"></i>
+												</div>
+												<span class="gridnav-content">Activities</span>
+											</div>
+										</div>
+									</div>
+									<!-- END Grid Nav -->
+								</div>
+							</div>
+							<!-- END Portlet -->
+						</div>
+					</div>
+					<!-- END Row -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">More content</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						You can add multiple rows and more content by using
+						<code>.gridnav-title</code> and
+						<code>.gridnav-subtitle</code>
+					</p>
+
+					<!-- BEGIN Grid Nav -->
+					<div class="gridnav gridnav-bordered">
+						<div class="gridnav-row">
+							<div class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-address-card"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Profile</h3>
+									<span class="gridnav-subtitle">Edit your profile</span>
+								</div>
+							</div>
+							<div class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-comments"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Messages</h3>
+									<span class="gridnav-subtitle">Check new messages</span>
+								</div>
+							</div>
+							<div class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-clone"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Activities</h3>
+									<span class="gridnav-subtitle">Show last activity</span>
+								</div>
+							</div>
+						</div>
+						<div class="gridnav-row">
+							<div class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-calendar-check"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Tasks</h3>
+									<span class="gridnav-subtitle">Remind my tasks</span>
+								</div>
+							</div>
+							<div class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-sticky-note"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Notes</h3>
+									<span class="gridnav-subtitle">Show my notes</span>
+								</div>
+							</div>
+							<div class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-bell"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Notification</h3>
+									<span class="gridnav-subtitle">Check all notification</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END Grid Nav -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+		<div class="col-md-6">
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Action</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						<code>.gridnav-item</code> class is support for <code>{{ "<a>" }}</code>. Apply hover and focus states by
+						adding <code>.gridnav-action</code>. Use <code>.active</code> to appear clicked effect to individual link
+						and use <code>.disabled</code> for disabled appearance.
+					</p>
+
+					<!-- BEGIN Grid Nav -->
+					<div class="gridnav gridnav-bordered gridnav-action">
+						<div class="gridnav-row">
+							<a href="#" class="gridnav-item active">
+								<div class="gridnav-icon">
+									<i class="far fa-address-card"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Profile</h3>
+									<span class="gridnav-subtitle">Edit your profile</span>
+								</div>
+							</a>
+							<a href="#" class="gridnav-item disabled">
+								<div class="gridnav-icon">
+									<i class="far fa-comments"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Messages</h3>
+									<span class="gridnav-subtitle">Check new messages</span>
+								</div>
+							</a>
+							<a href="#" class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-clone"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Activities</h3>
+									<span class="gridnav-subtitle">Show last activity</span>
+								</div>
+							</a>
+						</div>
+						<div class="gridnav-row">
+							<a href="#" class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-calendar-check"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Tasks</h3>
+									<span class="gridnav-subtitle">Remind my tasks</span>
+								</div>
+							</a>
+							<a href="#" class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-sticky-note"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Notes</h3>
+									<span class="gridnav-subtitle">Show my notes</span>
+								</div>
+							</a>
+							<a href="#" class="gridnav-item">
+								<div class="gridnav-icon">
+									<i class="far fa-bell"></i>
+								</div>
+								<div class="gridnav-content">
+									<h3 class="gridnav-title">Notification</h3>
+									<span class="gridnav-subtitle">Check all notification</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- END Grid Nav -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+		</div>
+	</div>
+{% endblock %}

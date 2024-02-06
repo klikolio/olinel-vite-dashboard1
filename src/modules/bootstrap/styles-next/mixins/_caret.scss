@@ -1,69 +1,63 @@
-// scss-docs-start caret-mixins
-@mixin caret-down($width: $caret-width) {
-  border-top: $width solid;
-  border-right: $width solid transparent;
-  border-bottom: 0;
-  border-left: $width solid transparent;
+@mixin caret($direction: down, $element: after) {
+	position: relative;
+	@if $enable-caret {
+		&:#{$element} {
+			content: "";
+			position: relative;
+			display: inline-block;
+			color: inherit;
+			width: $caret-size;
+			height: $caret-size;
+			border: solid currentColor;
+			border-width: 0 $caret-border-width $caret-border-width 0;
+			border-bottom-right-radius: $caret-border-radius;
+			@include transition($caret-transition);
+			@if $direction == down {
+				@include caret-transform-down;
+			} @else if $direction == up {
+				@include caret-transform-up;
+			} @else if $direction == start {
+				@include caret-transform-start;
+			} @else if $direction == end {
+				@include caret-transform-end;
+			}
+			@content;
+		}
+	}
 }
 
-@mixin caret-up($width: $caret-width) {
-  border-top: 0;
-  border-right: $width solid transparent;
-  border-bottom: $width solid;
-  border-left: $width solid transparent;
+@mixin caret-transform($direction: down) {
+	@if $enable-caret {
+		&::after {
+			@if $direction == down {
+				@include caret-transform-down;
+			} @else if $direction == up {
+				@include caret-transform-up;
+			} @else if $direction == start {
+				@include caret-transform-start;
+			} @else if $direction == end {
+				@include caret-transform-end;
+			}
+		}
+	}
 }
 
-@mixin caret-end($width: $caret-width) {
-  border-top: $width solid transparent;
-  border-right: 0;
-  border-bottom: $width solid transparent;
-  border-left: $width solid;
+@mixin caret-transform-down {
+	transform: rotate(45deg);
+	bottom: $caret-offset;
 }
 
-@mixin caret-start($width: $caret-width) {
-  border-top: $width solid transparent;
-  border-right: $width solid;
-  border-bottom: $width solid transparent;
+@mixin caret-transform-up {
+	transform: rotate(-135deg);
+	bottom: $caret-offset;
 }
 
-@mixin caret(
-  $direction: down,
-  $width: $caret-width,
-  $spacing: $caret-spacing,
-  $vertical-align: $caret-vertical-align
-) {
-  @if $enable-caret {
-    &::after {
-      display: inline-block;
-      margin-left: $spacing;
-      vertical-align: $vertical-align;
-      content: "";
-      @if $direction == down {
-        @include caret-down($width);
-      } @else if $direction == up {
-        @include caret-up($width);
-      } @else if $direction == end {
-        @include caret-end($width);
-      }
-    }
-
-    @if $direction == start {
-      &::after {
-        display: none;
-      }
-
-      &::before {
-        display: inline-block;
-        margin-right: $spacing;
-        vertical-align: $vertical-align;
-        content: "";
-        @include caret-start($width);
-      }
-    }
-
-    &:empty::after {
-      margin-left: 0;
-    }
-  }
+@mixin caret-transform-start {
+	transform: rotate(-225deg);
+	bottom: $caret-offset * 0.5;
 }
-// scss-docs-end caret-mixins
+
+@mixin caret-transform-end {
+	transform: rotate(-45deg);
+	bottom: $caret-offset * 0.5;
+}

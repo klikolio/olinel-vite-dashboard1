@@ -2,7 +2,7 @@
 
 .breadcrumb {
 	--#{$prefix}breadcrumb-color: #{$breadcrumb-color};
-	--#{$prefix}breadcrumb-icon-size: #{$breadcrumb-icon-size};
+	@include rfs($breadcrumb-icon-size, --#{$prefix}breadcrumb-icon-size);
 }
 
 .breadcrumb-transparent {

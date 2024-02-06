@@ -72,7 +72,7 @@
 	--#{$variable-prefix}highlight-bg: #{$mark-bg};
 }
 
-[data-theme="light"] {
+[data-bs-theme="light"] {
 	color-scheme: light;
 
 	--#{$variable-prefix}body-bg: #{$body-bg-light};
@@ -90,7 +90,7 @@
 	--#{$variable-prefix}border-color: #{$border-color-light};
 }
 
-[data-theme="dark"] {
+[data-bs-theme="dark"] {
 	color-scheme: dark;
 
 	--#{$variable-prefix}body-bg: #{$body-bg-dark};

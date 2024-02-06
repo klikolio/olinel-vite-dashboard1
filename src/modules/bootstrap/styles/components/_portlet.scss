@@ -190,7 +190,7 @@
 .portlet-nav {
 	margin: 0 !important;
 
-	&.nav-lines,
+	&.nav-underline,
 	&.nav-tabs {
 		margin-bottom: calc(
 			(#{$portlet-component-padding} + #{$portlet-border-width}) * -1

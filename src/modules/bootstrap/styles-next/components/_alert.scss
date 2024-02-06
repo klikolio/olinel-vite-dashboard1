@@ -2,13 +2,13 @@
 
 .alert {
 	--#{$prefix}alert-icon-dimension: #{$alert-icon-dimension};
-	--#{$prefix}alert-icon-size: #{$alert-icon-size};
+	@include rfs($alert-icon-size, --#{$prefix}alert-icon-size);
 	--#{$prefix}alert-icon-spacer: #{$alert-icon-spacer};
-  --#{$prefix}alert-border-color: transparent;
+	--#{$prefix}alert-border-color: transparent;
 
 	display: flex;
 	flex-direction: row;
-	align-items: start;
+	align-items: center;
 }
 
 .alert-content {
@@ -19,6 +19,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	align-self: self-start;
 	width: var(--#{$prefix}alert-icon-dimension);
 	height: var(--#{$prefix}alert-icon-dimension);
 	margin-right: var(--#{$prefix}alert-icon-spacer);
@@ -31,20 +32,20 @@
 		--#{$prefix}alert-bg: var(--#{$prefix}#{$state});
 		--#{$prefix}alert-color: #{color-contrast(map-get($theme-colors, $state))};
 		--#{$prefix}alert-border-color: var(--#{$prefix}alert-bg);
-		--#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
+		--#{$prefix}alert-link-color: var(--#{$prefix}alert-color);
 	}
 
 	.alert-outline-#{$state} {
 		--#{$prefix}alert-bg: transparent;
 		--#{$prefix}alert-color: var(--#{$prefix}#{$state});
-		--#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
 		--#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
+		--#{$prefix}alert-link-color: var(--#{$prefix}alert-color);
 	}
 
 	.alert-subtle-#{$state} {
 		--#{$prefix}alert-bg: var(--#{$prefix}#{$state}-bg-subtle);
-		--#{$prefix}alert-color: var(--#{$prefix}#{$state}-text-emphasis);
-		--#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
-		--#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
+		--#{$prefix}alert-color: var(--#{$prefix}#{$state});
+		--#{$prefix}alert-border-color: var(--#{$prefix}alert-bg);
+		--#{$prefix}alert-link-color: var(--#{$prefix}alert-color);
 	}
 }

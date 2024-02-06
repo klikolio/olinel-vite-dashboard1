@@ -106,7 +106,7 @@
 	// scss-docs-start root-border-var
 	--#{$prefix}border-width: #{$border-width};
 	--#{$prefix}border-style: #{$border-style};
-	--#{$prefix}border-color: #{$border-color};
+	--#{$prefix}border-color: #{$border-color-light};
 	--#{$prefix}border-color-translucent: #{$border-color-translucent};
 
 	--#{$prefix}border-radius: #{$border-radius};

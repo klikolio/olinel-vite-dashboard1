@@ -1,7 +1,8 @@
 @import "bootstrap/scss/buttons";
 
 .btn {
-  @include icon-size(var(--#{$prefix}btn-font-size))
+	position: relative;
+  @include icon-size(var(--#{$prefix}btn-font-size));
 }
 
 @each $color, $value in $theme-colors {

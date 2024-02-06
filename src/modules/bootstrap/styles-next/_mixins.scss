@@ -6,38 +6,39 @@
 @import "bootstrap/scss/vendor/rfs";
 
 // Deprecate
-@import "mixins/deprecate";
+@import "bootstrap/scss/mixins/deprecate";
 
 // Helpers
-@import "mixins/breakpoints";
-@import "mixins/color-mode";
-@import "mixins/color-scheme";
-@import "mixins/image";
-@import "mixins/resize";
-@import "mixins/visually-hidden";
-@import "mixins/reset-text";
-@import "mixins/text-truncate";
-@import "mixins/icon";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "bootstrap/scss/mixins/color-mode";
+@import "bootstrap/scss/mixins/color-scheme";
+@import "bootstrap/scss/mixins/image";
+@import "bootstrap/scss/mixins/resize";
+@import "bootstrap/scss/mixins/visually-hidden";
+@import "bootstrap/scss/mixins/reset-text";
+@import "bootstrap/scss/mixins/text-truncate";
 
 // Utilities
-@import "mixins/utilities";
+@import "bootstrap/scss/mixins/utilities";
 
 // Components
-@import "mixins/backdrop";
+@import "bootstrap/scss/mixins/backdrop";
+@import "bootstrap/scss/mixins/pagination";
+@import "bootstrap/scss/mixins/lists";
+@import "bootstrap/scss/mixins/forms";
+@import "mixins/table-variants";
 @import "mixins/buttons";
 @import "mixins/caret";
-@import "mixins/pagination";
-@import "mixins/lists";
-@import "mixins/forms";
-@import "mixins/table-variants";
+@import "mixins/icon";
+@import "mixins/floating-labels";
 
 // Skins
-@import "mixins/border-radius";
-@import "mixins/box-shadow";
-@import "mixins/gradients";
-@import "mixins/transition";
+@import "bootstrap/scss/mixins/border-radius";
+@import "bootstrap/scss/mixins/box-shadow";
+@import "bootstrap/scss/mixins/gradients";
+@import "bootstrap/scss/mixins/transition";
 
 // Layout
-@import "mixins/clearfix";
-@import "mixins/container";
-@import "mixins/grid";
+@import "bootstrap/scss/mixins/clearfix";
+@import "bootstrap/scss/mixins/container";
+@import "bootstrap/scss/mixins/grid";

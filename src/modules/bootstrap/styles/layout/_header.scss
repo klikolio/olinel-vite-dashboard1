@@ -76,13 +76,13 @@
 }
 
 // Breakpoints for hiding .header-holder element
-@include media-breakpoint-down($layout-breakpoint-mobile-desktop) {
+@include media-breakpoint-down($layout-breakpoint) {
 	.header-holder-desktop {
 		display: none;
 	}
 }
 
-@include media-breakpoint-up($layout-breakpoint-mobile-desktop) {
+@include media-breakpoint-up($layout-breakpoint) {
 	.header-holder-mobile {
 		display: none;
 	}

@@ -13,12 +13,12 @@
 }
 
 @mixin icon-size($size) {
-	> i {
+	> i,
+	> svg {
 		@include font-size($size);
 	}
 
 	> svg {
-		@include font-size($size);
 		width: 1em;
 		height: 1em;
 	}

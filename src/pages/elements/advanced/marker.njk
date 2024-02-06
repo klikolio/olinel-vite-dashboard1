@@ -1,12 +1,12 @@
 {% extends "components/template.njk" %}
 <!-- prettier-ignore-start -->
 {% set page_title = "Marker" %}
-{% set page_id = "elements.base.marker" %}
+{% set page_id = "elements.advanced.marker" %}
 {% set breadcrumb = [
   { text: "Dashboard", link: "/", icon: '<i data-feather="home"></i>' },
   { text: "Elements" },
-  { text: "Base" },
-  { text: "Marker", link: "/elements/base/marker.html" }
+  { text: "Advanced" },
+  { text: "Marker", link: "/elements/advanced/marker.html" }
 ] %}
 <!-- prettier-ignore-end -->
 
@@ -141,13 +141,13 @@
 					<p>You can use marker with several elements together.</p>
 
 					<!-- BEGIN Buttons -->
-					<button class="btn btn-primary position-relative">
+					<button class="btn btn-primary">
 						Button
 						<div class="position-absolute translate-middle top-0 start-100 z-1">
 							<i class="marker marker-dot text-success"></i>
 						</div>
 					</button>
-					<button class="btn btn-primary btn-icon position-relative">
+					<button class="btn btn-primary btn-icon">
 						<i class="fa fa-star"></i>
 						<div class="position-absolute translate-middle top-0 start-100 z-1">
 							<i class="marker marker-dot text-success"></i>
