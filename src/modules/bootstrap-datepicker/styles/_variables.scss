@@ -18,7 +18,7 @@ $datepicker-cell-hover-bg:        $component-hover-bg !default;
 $datepicker-cell-hover-color:     $component-hover-color !default;
 $datepicker-cell-highlight-bg:    var(--#{$prefix}bg-level-2) !default;
 $datepicker-cell-highlight-color: $datepicker-color !default;
-$datepicker-cell-today-bg:        rgba($primary, .1) !default;
+$datepicker-cell-today-bg:        var(--#{$prefix}primary-bg-subtle) !default;
 $datepicker-cell-today-color:     $primary !default;
 $datepicker-cell-range-bg:        var(--#{$prefix}bg-level-3) !default;
 $datepicker-cell-range-color:     $datepicker-color !default;

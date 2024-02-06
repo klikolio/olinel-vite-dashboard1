@@ -683,6 +683,7 @@ $font-size-root:              12px !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-xl:                $font-size-base * 1.35 !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -778,7 +779,7 @@ $vr-border-width:             var(--#{$prefix}border-width) !default;
 // scss-docs-end vr-variables
 
 $legend-margin-bottom:        .5rem !default;
-$legend-font-size:            1.5rem !default;
+$legend-font-size:            $font-size-xl !default;
 $legend-font-weight:          null !default;
 
 $dt-font-weight:              $font-weight-medium !default;
@@ -901,7 +902,7 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-base !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -1885,8 +1886,8 @@ $portlet-title-font-size:           $font-size-lg !default;
 $portlet-title-font-weight:         $font-weight-medium !default;
 
 $portlet-icon-dimension:            2rem !default;
-$portlet-icon-size:                 $portlet-title-font-size !default;
-$portlet-icon-color:                var(--#{$prefix}text-level-2) !default;
+$portlet-icon-size:                 $font-size-xl !default;
+$portlet-icon-color:                var(--#{$prefix}text-level-1) !default;
 
 // Avatar
 
@@ -1898,7 +1899,7 @@ $avatar-font-size-lg:               $font-size-lg !default;
 $avatar-dimension:                  3.25em !default;
 $avatar-outline-width:              $marker-outline-width !default;
 $avatar-outline-color:              $marker-outline-color !default;
-$avatar-border-radius:              $border-radius !default;
+$avatar-border-radius:              var(--#{$prefix}border-radius) !default;
 $avatar-spacer:                     .25em !default;
 
 $avatar-display-font-size:          1.35em !default;
@@ -1934,7 +1935,7 @@ $chat-author-font-weight:           $font-weight-medium !default;
 
 $chat-time-color:                   var(--#{$prefix}text-level-1) !default;
 $chat-time-font-size:               $font-size-base !default;
-$chat-time-font-weight:             $font-weight-normal !default;
+$chat-time-font-weight:             $font-weight-base !default;
 
 $chat-section-bg:                   $primary !default;
 $chat-section-color:                color-contrast($chat-section-bg) !default;
@@ -1975,7 +1976,7 @@ $gridnav-title-font-weight:         $font-weight-medium !default;
 
 $gridnav-subtitle-color:            var(--#{$prefix}text-level-1) !default;
 $gridnav-subtitle-font-size:        $font-size-base !default;
-$gridnav-subtitle-font-weight:      $font-weight-normal !default;
+$gridnav-subtitle-font-weight:      $font-weight-base !default;
 
 $gridnav-icon-color:                var(--#{$prefix}text-level-2) !default;
 $gridnav-icon-size:                 2.15rem !default;
@@ -2005,9 +2006,9 @@ $richlist-content-font-size:        $font-size-base !default;
 $richlist-title-color:              var(--#{$prefix}text-level-3) !default;
 $richlist-title-font-weight:        $font-weight-medium !default;
 $richlist-subtitle-color:           var(--#{$prefix}text-level-1) !default;
-$richlist-subtitle-font-weight:     $font-weight-normal !default;
+$richlist-subtitle-font-weight:     $font-weight-base !default;
 $richlist-paragraph-color:          var(--#{$prefix}text-level-2) !default;
-$richlist-paragraph-font-weight:    $font-weight-normal !default;
+$richlist-paragraph-font-weight:    $font-weight-base !default;
 
 $richlist-addon-spacer:             $spacer * .5 !default;
 
@@ -2042,7 +2043,7 @@ $menu-link-hover-color:             $menu-link-color !default;
 $menu-link-active-bg:               $component-active-bg !default;
 $menu-link-active-color:            $component-active-color !default;
 $menu-link-font-size:               $font-size-base !default;
-$menu-link-font-weight:             $font-weight-normal !default;
+$menu-link-font-weight:             $font-weight-base !default;
 $menu-link-icon-dimension:          2.5rem !default;
 $menu-link-icon-size:               $font-size-lg !default;
 $menu-link-text-spacer:             $spacer * .5 !default;
@@ -2130,7 +2131,7 @@ $header-transition:                 $transition-base !default;
 $header-container-spacer:           $spacer !default;
 
 $header-title-color:                var(--#{$prefix}text-level-3) !default;
-$header-title-font-size:            $font-size-lg !default;
+$header-title-font-size:            $font-size-xl !default;
 $header-title-font-weight:          $font-weight-medium !default;
 
 $header-brand-color:                var(--#{$prefix}text-level-4) !default;
@@ -2147,3 +2148,198 @@ $footer-color:                      var(--#{$prefix}text-level-2) !default;
 $footer-border-width:               var(--#{$prefix}border-width) !default;
 $footer-border-color:               var(--#{$prefix}border-color) !default;
 $footer-padding-y:                  $spacer !default;
+
+// Widgets
+
+$widget1-border-radius:                     $portlet-border-radius !default;
+
+$widget1-display-height:                    20rem !default;
+$widget1-display-height-lg:                 $widget1-display-height + 5rem !default;
+$widget1-display-height-sm:                 $widget1-display-height - 5rem !default;
+
+$widget1-content-padding:                   $spacer !default;
+
+$widget1-title-font-size:                   $portlet-title-font-size !default;
+$widget1-title-font-weight:                 $portlet-title-font-weight !default;
+
+$widget1-body-offset:                       5rem !default;
+
+$widget2-link-border-width:                 var(--#{$prefix}border-width) !default;
+$widget2-link-border-color:                 var(--#{$prefix}border-color) !default;
+$widget2-link-border-radius:                var(--#{$prefix}border-radius) !default;
+$widget2-link-spacer:                       $spacer * .5 !default;
+$widget2-link-hover-bg:                     var(--#{$prefix}bg-level-2) !default;
+$widget2-link-hover-color:                  var(--#{$prefix}text-level-3) !default;
+$widget2-link-hover-border-color:           $widget2-link-border-color !default;
+$widget2-link-active-bg:                    $component-active-bg !default;
+$widget2-link-active-color:                 $component-active-color !default;
+$widget2-link-active-border-color:          $widget2-link-active-bg !default;
+
+$widget3-spacer:                            3rem !default;
+
+$widget3-title-color:                       var(--#{$prefix}text-level-2) !default;
+$widget3-title-font-size:                   4.6rem !default;
+$widget3-title-font-size-sm:                3.4rem !default;
+$widget3-title-font-weight:                 $font-weight-medium !default;
+
+$widget3-subtitle-color:                    var(--#{$prefix}text-level-1) !default;
+$widget3-subtitle-font-size:                $font-size-lg !default;
+$widget3-subtitle-font-size-sm:             $font-size-base !default;
+$widget3-subtitle-font-weight:              $font-weight-base !default;
+
+$widget4-group-spacer:                      $spacer * .5 !default;
+$widget4-content-spacer:                    $spacer * .25 !default;
+
+$widget4-title-color:                       var(--#{$prefix}text-level-3) !default;
+$widget4-title-font-size:                   $font-size-lg !default;
+$widget4-title-font-weight:                 $font-weight-medium !default;
+
+$widget4-subtitle-color:                    var(--#{$prefix}text-level-1) !default;
+$widget4-subtitle-font-size:                $font-size-base !default;
+$widget4-subtitle-font-weight:              $font-weight-base !default;
+
+$widget4-highlight-color:                   var(--#{$prefix}text-level-2) !default;
+$widget4-highlight-font-size:               1.8rem !default;
+$widget4-highlight-font-weight:             $font-weight-bold !default;
+
+$widget5-title-color:                       var(--#{$prefix}text-level-2) !default;
+$widget5-title-font-size:                   $font-size-base !default;
+$widget5-title-font-weight:                 $font-weight-medium !default;
+$widget5-title-spacer:                      $spacer * .5 !default;
+
+$widget5-info-color:                        var(--#{$prefix}text-level-3) !default;
+$widget5-info-font-size:                    $font-size-base !default;
+$widget5-info-font-weight:                  $font-weight-medium !default;
+
+$widget5-value-color:                       var(--#{$prefix}text-level-1) !default;
+$widget5-value-font-size:                   $font-size-base !default;
+$widget5-value-font-weight:                 $font-weight-base !default;
+
+$widget6-padding-y:                         $spacer !default;
+$widget6-padding-x:                         $spacer * .5 !default;
+$widget6-border-width:                      var(--#{$prefix}border-width) !default;
+$widget6-border-radius:                     var(--#{$prefix}border-radius) !default;
+$widget6-bg:                                $component-bg !default;
+$widget6-border-color:                      var(--#{$prefix}border-color) !default;
+$widget6-hover-bg:                          $component-hover-bg !default;
+$widget6-hover-border-color:                $widget6-border-color !default;
+
+$widget6-content-spacer:                    $spacer * .25 !default;
+
+$widget6-title-color:                       var(--#{$prefix}text-level-3) !default;
+$widget6-title-font-size:                   $font-size-lg !default;
+$widget6-title-font-weight:                 $font-weight-medium !default;
+
+$widget6-subtitle-color:                    var(--#{$prefix}text-level-1) !default;
+$widget6-subtitle-font-size:                $font-size-base !default;
+$widget6-subtitle-font-weight:              $font-weight-base !default;
+
+$widget7-text-color:                        var(--#{$prefix}text-level-2) !default;
+$widget7-text-font-size:                    $font-size-base !default;
+$widget7-text-font-weight:                  $font-weight-base !default;
+
+$widget7-time-color:                        var(--#{$prefix}text-level-1) !default;
+$widget7-time-font-size:                    $font-size-base !default;
+$widget7-time-font-weight:                  $font-weight-base !default;
+$widget7-time-spacer:                       $spacer * .5 !default;
+
+$widget8-content-y:                         $spacer * 1.75 !default;
+$widget8-content-x:                         $spacer !default;
+$widget8-content-spacer:                    $spacer * .25 !default;
+
+$widget8-avatar-font-size:                  2rem !default;
+$widget8-avatar-spacer:                     $spacer * 1.25 !default;
+
+$widget8-highlight-color:                   var(--#{$prefix}text-level-2) !default;
+$widget8-highlight-font-size:               3.6rem !default;
+$widget8-highlight-font-size-lg:            4.8rem !default;
+$widget8-highlight-font-weight:             $font-weight-bold !default;
+
+$widget8-title-color:                       var(--#{$prefix}text-level-1) !default;
+$widget8-title-font-size:                   $font-size-lg !default;
+$widget8-title-font-weight:                 $font-weight-bold !default;
+
+$widget8-subtitle-color:                    var(--#{$prefix}text-level-1) !default;
+$widget8-subtitle-font-size:                $font-size-lg !default;
+$widget8-subtitle-font-weight:              $font-weight-base !default;
+$widget8-subtitle-spacer:                   $spacer !default;
+
+$widget8-addon-padding-y:                   $spacer * .5 !default;
+$widget8-addon-padding-x:                   $widget8-addon-padding-y !default;
+
+$widget8-icon-size:                         1rem !default;
+$widget8-icon-color:                        $gray-400 !default;
+$widget8-icon-hover-color:                  var(--#{$prefix}text-level-1) !default;
+
+$widget9-display-font-size:                 3.6rem !default;
+$widget9-display-font-size-sm:              1.4rem !default;
+$widget9-display-padding-y:                 $spacer !default;
+
+$widget9-content-spacer:                    $spacer * .25 !default;
+
+$widget9-icon-size:                         90% !default;
+$widget9-icon-color:                        $gray-400 !default;
+
+$widget9-text-color:                        var(--#{$prefix}text-level-2) !default;
+$widget9-text-font-size:                    100% !default;
+
+$widget9-degree-font-size:                  70% !default;
+
+$widget9-group-padding-y:                   $spacer * .5 !default;
+$widget9-group-padding-x:                   $spacer !default;
+
+$widget9-grid-icon-dimension:               2rem !default;
+$widget9-grid-icon-size:                    $font-size-lg !default;
+$widget9-grid-icon-color:                   $gray-400 !default;
+$widget9-grid-icon-spacer:                  $spacer * .25 !default;
+
+$widget9-grid-text-color:                   var(--#{$prefix}text-level-1) !default;
+$widget9-grid-text-font-size:               $font-size-base !default;
+$widget9-grid-text-font-weight:             $font-weight-medium !default;
+
+$widget9-list-item-spacer:                  $spacer * .5 !default;
+
+$widget9-list-text-color:                   var(--#{$prefix}text-level-2) !default;
+$widget9-list-text-font-size:               $font-size-lg !default;
+$widget9-list-text-font-weight:             $font-weight-medium !default;
+
+$widget10-border-width:                     var(--#{$prefix}border-width) !default;
+$widget10-border-color:                     var(--#{$prefix}border-color) !default;
+
+$widget10-avatar-font-size:                 1.4rem !default;
+$widget10-content-spacer:                   $spacer * .25 !default;
+$widget10-addon-spacer:                     $spacer * .5 !default;
+$widget10-item-padding:                     $spacer * 1.5 !default;
+
+$widget10-title-color:                      var(--#{$prefix}text-level-2) !default;
+$widget10-title-font-size:                  2rem !default;
+$widget10-title-font-weight:                $font-weight-bolder !default;
+
+$widget10-subtitle-color:                   var(--#{$prefix}text-level-1) !default;
+$widget10-subtitle-font-size:               $font-size-base !default;
+$widget10-subtitle-font-weight:             $font-weight-base !default;
+
+$widget11-border-radius:                    $portlet-border-radius !default;
+
+$widget12-font-size:                        3.5rem !default;
+$widget12-font-size-sm:                     2rem !default;
+
+$widget13-padding:                          $spacer * .25 !default;
+$widget13-text-spacer:                      $spacer * .5 !default;
+
+$widget13-avatar-font-size:                 .8rem !default;
+
+$widget14-padding-y:                        $spacer * .5 !default;
+$widget14-padding-x:                        $widget14-padding-y !default;
+
+$widget14-icon-dimension:                   2rem !default;
+$widget14-icon-spacer:                      $spacer * .5 !default;
+$widget14-icon-size:                        1.4rem !default;
+
+$widget14-text-color:                       var(--#{$prefix}text-level-3) !default;
+$widget14-text-font-size:                   $font-size-base !default;
+$widget14-text-font-weight:                 $font-weight-base !default;
+
+$widget15-color:                            $primary !default;
+$widget15-font-size:                        14rem !default;
+$widget15-font-weight:                      $font-weight-bold !default;

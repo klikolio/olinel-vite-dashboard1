@@ -99,7 +99,7 @@ $swal2-progress-steps-distance:             2.5em !default;
 $swal2-progress-step-width:                 2em;
 $swal2-progress-step-height:                $swal2-progress-step-width;
 $swal2-progress-step-border-radius:         $swal2-progress-step-width;
-$swal2-progress-step-bg:                    rgba($primary, .1) !default;
+$swal2-progress-step-bg:                    var(--#{$prefix}primary-bg-subtle) !default;
 $swal2-progress-step-color:                 $primary !default;
 $swal2-active-step-bg:                      $primary !default;
 $swal2-active-step-color:                   color-contrast($swal2-active-step-bg) !default;
