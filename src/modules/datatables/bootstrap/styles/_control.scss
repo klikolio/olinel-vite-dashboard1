@@ -4,29 +4,21 @@
 
 	&:before {
 		display: inline-block;
-		content: $datatable-control-content-closed;
-		width: $datatable-control-dimension;
-		height: $datatable-control-dimension;
-		line-height: $datatable-control-line-height;
+		content: $datatables-control-content-closed;
+		width: $datatables-control-dimension;
+		height: $datatables-control-dimension;
+		line-height: $datatables-control-line-height;
 		text-align: center;
-		font-family: $datatable-control-font-family;
-		font-size: $datatable-control-font-size;
-		font-weight: $datatable-control-font-weight;
-		margin-right: $datatable-control-spacer;
-		@include border-radius($datatable-control-border-radius);
-	}
-
-	[data-bs-theme="light"] &:before {
-		color: $datatable-control-color-light;
-		background-color: $datatable-control-bg-light;
-	}
-
-	[data-bs-theme="dark"] &:before {
-		color: $datatable-control-color-dark;
-		background-color: $datatable-control-bg-dark;
+		color: $datatables-control-color;
+		background-color: $datatables-control-bg;
+		font-family: $datatables-control-font-family;
+		font-size: $datatables-control-font-size;
+		font-weight: $datatables-control-font-weight;
+		margin-right: $datatables-control-spacer;
+		@include border-radius($datatables-control-border-radius);
 	}
 
 	.dt-hasChild &:before {
-		content: $datatable-control-content-opened;
+		content: $datatables-control-content-opened;
 	}
 }

@@ -1,8 +1,8 @@
 // Reset table styling
 .dt-rowReorder-float {
-	background-color: rgba($white, $datatable-order-drag-opacity);
-	outline: $datatable-order-pointer-width solid $datatable-order-pointer-color;
-	outline-offset: -$datatable-order-pointer-width;
+	background-color: rgba($white, $datatables-order-drag-opacity);
+	outline: $datatables-order-pointer-width solid $datatables-order-pointer-color;
+	outline-offset: -$datatables-order-pointer-width;
 }
 
 // Draggable element
@@ -15,8 +15,8 @@
 
 // Row marker for positioning
 .dt-rowReorder-moving {
-	outline: $datatable-order-pointer-width solid $datatable-order-pointer-color;
-	outline-offset: -$datatable-order-pointer-width;
+	outline: $datatables-order-pointer-width solid $datatables-order-pointer-color;
+	outline-offset: -$datatables-order-pointer-width;
 }
 
 // Hide x-axis main scrollbar

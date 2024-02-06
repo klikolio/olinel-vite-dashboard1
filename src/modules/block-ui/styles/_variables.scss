@@ -1,12 +1,14 @@
 $blockui-backdrop-bg:             $backdrop-bg !default;
 $blockui-backdrop-opacity:        $backdrop-opacity !default;
 
-$blockui-message-padding-y:       $spacer * .5 !default;
-$blockui-message-padding-x:       $spacer !default;
-$blockui-message-bg:              $component-bg !default;
-$blockui-message-color:           var(--#{$prefix}heading-color) !default;
-$blockui-message-font-size:       $font-size-lg !default;
-$blockui-message-font-weight:     $font-weight-medium !default;
-$blockui-message-border-radius:   var(--#{$prefix}border-radius) !default;
+$blockui-message-padding-y:       $preload-message-padding-y !default;
+$blockui-message-padding-x:       $preload-message-padding-x !default;
+$blockui-message-bg:              $preload-message-bg !default;
+$blockui-message-color:           $preload-message-text-color !default;
+$blockui-message-font-size:       $preload-message-text-font-size !default;
+$blockui-message-font-weight:     $preload-message-text-font-weight !default;
+$blockui-message-border-width:		$preload-message-border-width !default;
+$blockui-message-border-color:		$preload-message-border-color !default;
+$blockui-message-border-radius:   $preload-message-border-radius !default;
 
 $blockui-spinner-spacer:          $spacer * .75 !default;

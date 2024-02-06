@@ -1,12 +1,12 @@
 .dataTable tbody {
 	.focus {
-		outline: $datatable-key-outline-width solid $datatable-key-outline-color;
-		outline-offset: $datatable-key-outline-width * -1;
+		outline: $datatables-key-outline-width solid $datatables-key-outline-color;
+		outline-offset: $datatables-key-outline-width * -1;
 
 		.dtk-focus-alt & {
-			outline: $datatable-key-outline-width solid
-				$datatable-key-outline-alt-color;
-			outline-offset: $datatable-key-outline-width * -1;
+			outline: $datatables-key-outline-width solid
+				$datatables-key-outline-alt-color;
+			outline-offset: $datatables-key-outline-width * -1;
 		}
 	}
 }

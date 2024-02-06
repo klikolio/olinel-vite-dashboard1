@@ -2,9 +2,9 @@ $quill-font-family-monospace:               $font-family-monospace !default;
 $quill-font-family-sans-serif:              $font-family-sans-serif !default;
 $quill-font-family:                         $font-family-base !default;
 $quill-font-size:                           $font-size-base !default;
-$quill-font-size-sm:                        .8rem !default;
-$quill-font-size-lg:                        1.6rem !default;
-$quill-font-size-xl:                        2.4rem !default;
+$quill-font-size-sm:                        $font-size-sm !default;
+$quill-font-size-lg:                        $font-size-lg !default;
+$quill-font-size-xl:                        $font-size-xl !default;
 
 $quill-link-color:                          $link-color !default;
 $quill-placeholder-color:                   $input-placeholder-color !default;
@@ -18,7 +18,7 @@ $quill-list-margin:                         .25em !default;
 $quill-list-width:                          1.25em !default;
 $quill-list-outer-width:                    $quill-list-width + $quill-list-margin !default;
 $quill-list-max-indent:                     9 !default;
-$quill-list-bullet-color:                   var(--#{$prefix}bg-level-2) !default;
+$quill-list-bullet-color:                   var(--#{$prefix}tertiary-bg) !default;
 
 $quill-list-styles: (
   decimal,
@@ -41,10 +41,10 @@ $quill-code-block-addon-offset:             $spacer * .5 !default;
 $quill-editor-line-height:                  $line-height-base !default;
 $quill-editor-padding-y:                    $spacer !default;
 $quill-editor-padding-x:                    $spacer * 1.25 !default;
-$quill-editor-tab-size:                     4 !default;
+$quill-editor-tab-size:                     2 !default;
 $quill-editor-border-width:                 var(--#{$prefix}border-width) !default;
 $quill-editor-border-color:                 var(--#{$prefix}border-color) !default;
-$quill-editor-border-radius:                $border-radius-lg !default;
+$quill-editor-border-radius:                var(--#{$prefix}border-radius-lg) !default;
 
 $quill-control-dimension:                   $input-height !default;
 $quill-control-wide-width:                  8rem !default;
@@ -112,7 +112,7 @@ $quill-snow-toolbar-padding-y:              $spacer * .5 !default;
 $quill-snow-toolbar-padding-x:              $spacer * .5 !default;
 $quill-snow-toolbar-border-width:           var(--#{$prefix}border-width) !default;
 $quill-snow-toolbar-border-color:           var(--#{$prefix}border-color) !default;
-$quill-snow-toolbar-border-radius:          $border-radius-lg !default;
+$quill-snow-toolbar-border-radius:          var(--#{$prefix}border-radius-lg) !default;
 
 $quill-bubble-link-tooltip-font-size:       $font-size-base !default;
 $quill-bubble-link-tooltip-font-weight:     $font-weight-base !default;

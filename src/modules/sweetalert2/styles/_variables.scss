@@ -1,10 +1,9 @@
-$zindex-swal2:                              $zindex-modal !default;
 $swal2-container-padding:                   $spacer * .75 !default;
 
 $swal2-width:                               32rem !default;
 $swal2-padding:                             $spacer !default;
 $swal2-bg:                                  $component-bg !default;
-$swal2-color:                               var(--#{$prefix}secondary-color) !default;
+$swal2-color:                               $modal-content-color !default;
 $swal2-font-family:                         $font-family-base !default;
 $swal2-font-size:                           $font-size-base !default;
 $swal2-border-width:                        $modal-content-border-width !default;
@@ -25,12 +24,12 @@ $swal2-icon-font-family:                    inherit !default;
 $swal2-icon-font-size:                      3.6rem !default;
 $swal2-icon-border-color:                   var(--#{$prefix}border-color) !default;
 $swal2-icon-zoom:                           null !default;
-$swal2-success:                             $success !default;
-$swal2-success-border-color:                rgba($swal2-success, .3) !default;
-$swal2-error:                               $danger !default;
-$swal2-warning:                             $warning !default;
-$swal2-info:                                $info !default;
-$swal2-question:                            $primary !default;
+$swal2-success:                             var(--#{$prefix}success) !default;
+$swal2-success-border-color:                rgba($success, .3) !default;
+$swal2-error:                               var(--#{$prefix}danger) !default;
+$swal2-warning:                             var(--#{$prefix}warning) !default;
+$swal2-info:                                var(--#{$prefix}info) !default;
+$swal2-question:                            var(--#{$prefix}primary) !default;
 
 $swal2-image-margin:                        $spacer * 1.25 auto !default;
 
@@ -100,12 +99,12 @@ $swal2-progress-step-width:                 2em;
 $swal2-progress-step-height:                $swal2-progress-step-width;
 $swal2-progress-step-border-radius:         $swal2-progress-step-width;
 $swal2-progress-step-bg:                    var(--#{$prefix}primary-bg-subtle) !default;
-$swal2-progress-step-color:                 $primary !default;
-$swal2-active-step-bg:                      $primary !default;
-$swal2-active-step-color:                   color-contrast($swal2-active-step-bg) !default;
+$swal2-progress-step-color:                 var(--#{$prefix}primary) !default;
+$swal2-active-step-bg:                      var(--#{$prefix}primary) !default;
+$swal2-active-step-color:                   color-contrast($primary) !default;
 
 $swal2-footer-font-size:                    $font-size-base !default;
-$swal2-footer-color:                        var(--#{$prefix}text-level-1) !default;
+$swal2-footer-color:                        var(--#{$prefix}body-color) !default;
 $swal2-footer-margin:                       $spacer * 1.25 0 0 !default;
 $swal2-footer-padding:                      $spacer 0 0 !default;
 $swal2-footer-border-width:                 var(--#{$prefix}border-width) !default;
@@ -133,7 +132,7 @@ $swal2-close-button-font-family:            inherit !default;
 $swal2-close-button-font-size:              2.4rem !default;
 
 $swal2-close-button-hover-bg:               transparent !default;
-$swal2-close-button-hover-color:            $danger !default;
+$swal2-close-button-hover-color:            var(--#{$prefix}danger) !default;
 $swal2-close-button-hover-transform:        none !default;
 
 $swal2-actions-flex-wrap:                   wrap !default;
@@ -154,22 +153,22 @@ $swal2-button-focus-outline:                none !default;
 $swal2-confirm-button-order:                null !default;
 $swal2-confirm-button-border:               0 !default;
 $swal2-confirm-button-border-radius:        $btn-border-radius !default;
-$swal2-confirm-button-bg:                   $primary !default;
-$swal2-confirm-button-color:                color-contrast($swal2-confirm-button-bg) !default;
+$swal2-confirm-button-bg:                   var(--#{$prefix}primary) !default;
+$swal2-confirm-button-color:                color-contrast($primary) !default;
 $swal2-confirm-button-font-size:            $btn-font-size !default;
 
 $swal2-deny-button-order:                   null !default;
 $swal2-deny-button-border:                  0 !default;
 $swal2-deny-button-border-radius:           $btn-border-radius !default;
-$swal2-deny-button-bg:                      $danger !default;
-$swal2-deny-button-color:                   color-contrast($swal2-deny-button-bg) !default;
+$swal2-deny-button-bg:                      var(--#{$prefix}danger) !default;
+$swal2-deny-button-color:                   color-contrast($danger) !default;
 $swal2-deny-button-font-size:               $btn-font-size !default;
 
 $swal2-cancel-button-order:                 null !default;
 $swal2-cancel-button-border:                0 !default;
 $swal2-cancel-button-border-radius:         $btn-border-radius !default;
-$swal2-cancel-button-bg:                    $secondary !default;
-$swal2-cancel-button-color:                 color-contrast($swal2-cancel-button-bg) !default;
+$swal2-cancel-button-bg:                    var(--#{$prefix}secondary) !default;
+$swal2-cancel-button-color:                 color-contrast($secondary) !default;
 $swal2-cancel-button-font-size:             $btn-font-size !default;
 
 $swal2-loader-align-items:                  center !default;
@@ -181,7 +180,7 @@ $swal2-loader-animation:                    swal2-rotate-loading $spinner-animat
 $swal2-loader-border-width:                 $spinner-border-width !default;
 $swal2-loader-border-style:                 solid !default;
 $swal2-loader-border-radius:                100% !default;
-$swal2-loader-border-color:                 $primary $primary $primary transparent !default;
+$swal2-loader-border-color:                 var(--#{$prefix}primary) var(--#{$prefix}primary) var(--#{$prefix}primary) transparent !default;
 
 $swal2-toast-show-animation:                swal2-toast-show 0.5s !default;
 $swal2-toast-hide-animation:                swal2-toast-hide 0.2s forwards !default;

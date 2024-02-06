@@ -2,7 +2,7 @@
 .dataTables_wrapper {
 	// Length menu containment
 	.dataTables_length {
-		margin-bottom: $datatable-input-spacer;
+		margin-bottom: $datatables-input-spacer;
 
 		label {
 			text-align: left;
@@ -13,14 +13,14 @@
 		select {
 			width: auto;
 			display: inline-block;
-			margin: 0 $datatable-input-spacer;
+			margin: 0 $datatables-input-spacer;
 		}
 	}
 
 	// Search input containment
 	.dataTables_filter {
 		text-align: right;
-		margin-bottom: $datatable-input-spacer;
+		margin-bottom: $datatables-input-spacer;
 
 		label {
 			text-align: left;
@@ -31,13 +31,13 @@
 		input {
 			width: auto;
 			display: inline-block;
-			margin-left: $datatable-input-spacer;
+			margin-left: $datatables-input-spacer;
 		}
 	}
 
 	// Display information of row number
 	.dataTables_info {
-		padding-top: $datatable-info-spacer;
+		padding-top: $datatables-info-spacer;
 		white-space: nowrap;
 	}
 
@@ -50,7 +50,7 @@
 		.pagination {
 			white-space: nowrap;
 			justify-content: flex-end;
-			margin: $datatable-spacer 0;
+			margin: $datatables-spacer 0;
 		}
 	}
 
@@ -82,7 +82,7 @@
 
 		.dataTables_paginate .pagination {
 			justify-content: center;
-			margin-top: $datatable-input-spacer;
+			margin-top: $datatables-input-spacer;
 		}
 	}
 }

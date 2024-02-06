@@ -22,7 +22,7 @@ $select2-dropdown-max-height:         15rem !default;
 $select2-dropdown-input-padding:      $spacer * .75 !default;
 
 $select2-group-bg:                    $select2-dropdown-bg !default;
-$select2-group-color:                 var(--#{$prefix}text-level-3) !default;
+$select2-group-color:                 var(--#{$prefix}heading-color) !default;
 $select2-group-font-size:             $font-size-base !default;
 $select2-group-font-weight:           $font-weight-medium !default;
 
@@ -37,12 +37,12 @@ $select2-item-hover-bg:               $dropdown-link-hover-bg !default;
 $select2-item-hover-color:            $dropdown-link-hover-color !default;
 $select2-item-active-bg:              $dropdown-link-active-bg !default;
 $select2-item-active-color:           $dropdown-link-active-color !default;
-$select2-item-disabled-bg:            $component-disabled-bg !default;
-$select2-item-disabled-color:         $component-disabled-color !default;
+$select2-item-disabled-bg:            transparent !default;
+$select2-item-disabled-color:         $dropdown-link-disabled-color !default;
 $select2-item-disabled-opacity:       $btn-disabled-opacity !default;
 
 $select2-choice-bg:                   var(--#{$prefix}secondary-bg) !default;
-$select2-choice-color:                var(--#{$prefix}body-color) !default;
+$select2-choice-color:                var(--#{$prefix}secondary-color) !default;
 $select2-choice-font-size:            $font-size-base !default;
 $select2-choice-font-weight:          $font-weight-base !default;
 $select2-choice-padding-x:            $spacer * .5 !default;

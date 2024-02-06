@@ -1,7 +1,7 @@
-$simplebar-width:                 1.25rem !default;
-$simplebar-spacer:               .4rem !default;
+$simplebar-width:                 1.4rem !default;
+$simplebar-spacer:                $spacer * .5 !default;
 $simplebar-bg:                    var(--#{$prefix}secondary-bg) !default;
 $simplebar-color:                 $gray-400 !default;
 $simplebar-opacity:               .65 !default;
-$simplebar-border-radius:         $border-radius-sm !default;
+$simplebar-border-radius:         var(--#{$prefix}border-radius) !default;
 $simplebar-transition:            opacity 1s linear !default;

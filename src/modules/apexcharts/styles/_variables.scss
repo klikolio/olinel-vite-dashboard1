@@ -8,9 +8,9 @@ $apexchart-toolbar-padding-x:         $spacer * .5 !default;
 
 $apexchart-icon-dimension:            2rem !default;
 $apexchart-icon-padding:              $spacer * .125 !default;
-$apexchart-icon-color:                $gray-400 !default;
-$apexchart-icon-hover-color:          var(--#{$prefix}text-level-1) !default;
-$apexchart-icon-active-color:         $primary !default;
+$apexchart-icon-color:                var(--#{$prefix}body-color) !default;
+$apexchart-icon-hover-color:          var(--#{$prefix}secondary-color) !default;
+$apexchart-icon-active-color:         var(--#{$prefix}primary) !default;
 
 $apexchart-menu-bg:                   $dropdown-bg !default;
 $apexchart-menu-min-width:            10rem !default;

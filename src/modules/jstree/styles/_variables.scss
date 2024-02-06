@@ -4,8 +4,8 @@ $jstree-stripe-bg:                    linear-gradient(to bottom, $gray-400 50%, 
 $jstree-border-radius:                var(--#{$prefix}border-radius) !default;
 $jstree-transition:                   $btn-transition !default;
 
-$jstree-line-width:                   2px !default;
-$jstree-line-color:                   var(--#{$prefix}bg-level-4) !default;
+$jstree-line-width:                   $timeline-line-width !default;
+$jstree-line-color:                   $timeline-line-color !default;
 
 $jstree-anchor-bg:                    $component-bg !default;
 $jstree-anchor-color:                 var(--#{$prefix}heading-color) !default;
@@ -13,7 +13,7 @@ $jstree-anchor-hover-bg:              $component-hover-bg !default;
 $jstree-anchor-hover-color:           $component-hover-color !default;
 $jstree-anchor-active-bg:             $component-active-bg !default;
 $jstree-anchor-active-color:          $component-active-color !default;
-$jstree-anchor-disabled-bg:           $component-disabled-bg !default;
+$jstree-anchor-disabled-bg:           transparent !default;
 $jstree-anchor-disabled-color:        $component-disabled-color !default;
 $jstree-anchor-disabled-opacity:      $component-disabled-opacity !default;
 $jstree-anchor-padding-x:             $spacer * .5;
@@ -35,7 +35,7 @@ $jstree-tool-icon-undetermined:       "\f146" !default;
 $jstree-tool-spinner-width:           2px !default;
 
 $jstree-menu-min-width:               12rem !default;
-$jstree-menu-sub-offset-y:        2.5rem !default;
+$jstree-menu-sub-offset-y:        		$spacer * 2.5 !default;
 $jstree-menu-bg:                      $dropdown-bg !default;
 $jstree-menu-padding-y:               $dropdown-padding-y !default;
 $jstree-menu-border-width:            $dropdown-border-width !default;
@@ -54,8 +54,8 @@ $jstree-menu-item-padding-x:          $dropdown-item-padding-x !default;
 $jstree-menu-item-color:              $dropdown-link-color !default;
 $jstree-menu-item-hover-bg:           $dropdown-link-hover-bg !default;
 $jstree-menu-item-hover-color:        $dropdown-link-hover-color !default;
-$jstree-menu-item-disabled-color:     $component-disabled-bg !default;
-$jstree-menu-item-disabled-bg:        $component-disabled-color !default;
+$jstree-menu-item-disabled-color:     transparent !default;
+$jstree-menu-item-disabled-bg:        $dropdown-link-disabled-color !default;
 $jstree-menu-item-disabled-opacity:   $component-disabled-opacity !default;
 
 $jstree-drag-marker-width:            .5rem !default;
@@ -70,7 +70,7 @@ $jstree-drag-label-border-color:      $tooltip-border-color !default;
 $jstree-drag-label-border-radius:     $tooltip-border-radius !default;
 
 $jstree-drag-label-icon-ok:           "\f00c" !default;
-$jstree-drag-label-icon-ok-color:     $success !default;
+$jstree-drag-label-icon-ok-color:     var(--#{$prefix}success) !default;
 $jstree-drag-label-icon-error:        "\f00d" !default;
-$jstree-drag-label-icon-error-color:  $danger !default;
+$jstree-drag-label-icon-error-color:  var(--#{$prefix}danger) !default;
 $jstree-drag-label-icon-spacer:       $spacer * .25 !default;

@@ -12,49 +12,49 @@
 	transform: translate(-50%, -50%);
 	text-align: center;
 	z-index: $zindex-datatable-btn-info;
-	width: $datatable-btn-info-width;
-	background-color: $datatable-btn-info-bg;
-	border: $datatable-btn-info-border-width solid
-		$datatable-btn-info-border-color;
-	@include border-radius($datatable-btn-info-border-radius);
+	width: $datatables-btn-info-width;
+	background-color: $datatables-btn-info-bg;
+	border: $datatables-btn-info-border-width solid
+		$datatables-btn-info-border-color;
+	@include border-radius($datatables-btn-info-border-radius);
 
 	h2,
 	> div {
-		padding: $datatable-btn-info-content-padding-y
-			$datatable-btn-info-content-padding-x;
+		padding: $datatables-btn-info-content-padding-y
+			$datatables-btn-info-content-padding-x;
 		margin: 0;
 	}
 
 	h2 {
-		color: $datatable-btn-info-title-color;
-		@include font-size($datatable-btn-info-title-font-size);
-		font-weight: $datatable-btn-info-title-font-weight;
-		border-bottom: $datatable-btn-info-border-width solid
-			$datatable-btn-info-border-color;
+		color: $datatables-btn-info-title-color;
+		@include font-size($datatables-btn-info-title-font-size);
+		font-weight: $datatables-btn-info-title-font-weight;
+		border-bottom: $datatables-btn-info-border-width solid
+			$datatables-btn-info-border-color;
 	}
 
 	> div {
-		color: $datatable-btn-info-body-color;
-		@include font-size($datatable-btn-info-body-font-size);
-		font-weight: $datatable-btn-info-body-font-weight;
+		color: $datatables-btn-info-body-color;
+		@include font-size($datatables-btn-info-body-font-size);
+		font-weight: $datatables-btn-info-body-font-weight;
 	}
 }
 
 .dtb-popover-close {
 	position: absolute;
-	top: $datatable-close-spacer;
-	right: $datatable-close-spacer;
-	width: $datatable-close-dimension;
-	height: $datatable-close-dimension;
-	color: $datatable-close-color;
-	background-color: $datatable-close-bg;
-	font-family: $datatable-close-font-family;
-	@include font-size($datatable-close-font-size);
-	font-weight: $datatable-close-font-weight;
+	top: $datatables-close-spacer;
+	right: $datatables-close-spacer;
+	width: $datatables-close-dimension;
+	height: $datatables-close-dimension;
+	color: $datatables-close-color;
+	background-color: $datatables-close-bg;
+	font-family: $datatables-close-font-family;
+	@include font-size($datatables-close-font-size);
+	font-weight: $datatables-close-font-weight;
 	text-align: center;
 	cursor: pointer;
 	z-index: 2003;
-	@include border-radius($datatable-close-border-radius);
+	@include border-radius($datatables-close-border-radius);
 }
 
 .dtb-hide-drop {
@@ -64,17 +64,17 @@
 // Button divider spacer
 .dt-button-spacer {
 	display: inline-block;
-	margin: $datatable-btn-divider-spacer;
+	margin: $datatables-btn-divider-spacer;
 	white-space: nowrap;
 
 	&.bar {
 		vertical-align: middle;
-		border-left: $datatable-btn-divider-width solid $datatable-btn-divider-color;
-		padding-left: $datatable-btn-divider-spacer;
+		border-left: $datatables-btn-divider-width solid $datatables-btn-divider-color;
+		padding-left: $datatables-btn-divider-spacer;
 
 		&:empty {
-			height: $datatable-btn-divider-font-size;
-			width: $datatable-btn-divider-width;
+			height: $datatables-btn-divider-font-size;
+			width: $datatables-btn-divider-width;
 			padding-left: 0;
 		}
 	}
@@ -85,13 +85,13 @@
 	position: absolute;
 	left: 0 !important;
 	right: auto !important;
-	padding: $datatable-btn-collection-padding-y
-		$datatable-btn-collection-padding-x;
+	padding: $datatables-btn-collection-padding-y
+		$datatables-btn-collection-padding-x;
 	z-index: $zindex-datatable-btn-collection;
-	background-color: $datatable-btn-collection-bg;
-	border: $datatable-btn-collection-border-width solid
-		$datatable-btn-collection-border-color;
-	@include border-radius($datatable-btn-collection-border-radius);
+	background-color: $datatables-btn-collection-bg;
+	border: $datatables-btn-collection-border-width solid
+		$datatables-btn-collection-border-color;
+	@include border-radius($datatables-btn-collection-border-radius);
 
 	.dt-button {
 		border-radius: 0;
@@ -102,12 +102,12 @@
 	}
 
 	.btn-group {
-		@include border-radius($datatable-btn-collection-border-radius);
+		@include border-radius($datatables-btn-collection-border-radius);
 
 		button {
 			&,
 			&:last-child:first-child {
-				@include border-radius($datatable-btn-collection-border-radius);
+				@include border-radius($datatables-btn-collection-border-radius);
 			}
 
 			&:last-child {
@@ -119,8 +119,8 @@
 		}
 
 		.dt-btn-split-drop:last-child {
-			border: $datatable-btn-collection-border-width solid
-				$datatable-btn-collection-border-color;
+			border: $datatables-btn-collection-border-width solid
+				$datatables-btn-collection-border-color;
 		}
 
 		.dt-btn-split-wrapper {
@@ -132,8 +132,8 @@
 	.dt-button-spacer {
 		width: 100%;
 		text-align: center;
-		@include font-size($datatable-btn-divider-font-size);
-		margin: $datatable-btn-divider-spacer 0;
+		@include font-size($datatables-btn-divider-font-size);
+		margin: $datatables-btn-divider-spacer 0;
 
 		&:empty {
 			height: 0;
@@ -142,8 +142,8 @@
 
 		&.bar {
 			border-left: none;
-			border-bottom: $datatable-btn-divider-width solid
-				$datatable-btn-divider-color;
+			border-bottom: $datatables-btn-divider-width solid
+				$datatables-btn-divider-color;
 			padding-left: 0;
 		}
 	}
@@ -178,19 +178,19 @@
 		}
 
 		&.two-column {
-			margin-left: -$datatable-btn-collection-2col-width;
+			margin-left: -$datatables-btn-collection-2col-width;
 		}
 		&.three-column {
-			margin-left: -$datatable-btn-collection-3col-width;
+			margin-left: -$datatables-btn-collection-3col-width;
 		}
 		&.four-column {
-			margin-left: -$datatable-btn-collection-4col-width;
+			margin-left: -$datatables-btn-collection-4col-width;
 		}
 	}
 
 	> :last-child {
 		display: block !important;
-		column-gap: $datatable-btn-collection-col-gap;
+		column-gap: $datatables-btn-collection-col-gap;
 
 		> * {
 			break-inside: avoid;
@@ -199,7 +199,7 @@
 
 	// Number of collumns classes
 	&.two-column {
-		width: $datatable-btn-collection-2col-width;
+		width: $datatables-btn-collection-2col-width;
 
 		> :last-child {
 			column-count: 2;
@@ -207,7 +207,7 @@
 	}
 
 	&.three-column {
-		width: $datatable-btn-collection-3col-width;
+		width: $datatables-btn-collection-3col-width;
 
 		> :last-child {
 			column-count: 3;
@@ -215,7 +215,7 @@
 	}
 
 	&.four-column {
-		width: $datatable-btn-collection-4col-width;
+		width: $datatables-btn-collection-4col-width;
 
 		> :last-child {
 			column-count: 4;
@@ -225,11 +225,11 @@
 
 // Button group title
 .dt-button-collection-title {
-	color: $datatable-btn-collection-title-color;
-	@include font-size($datatable-btn-collection-title-font-size);
-	font-weight: $datatable-btn-collection-title-font-weight;
-	padding: $datatable-btn-collection-title-padding-y
-		$datatable-btn-collection-title-padding-x;
+	color: $datatables-btn-collection-title-color;
+	@include font-size($datatables-btn-collection-title-font-size);
+	font-weight: $datatables-btn-collection-title-font-weight;
+	padding: $datatables-btn-collection-title-padding-y
+		$datatables-btn-collection-title-padding-x;
 	text-align: center;
 
 	&:empty {
@@ -258,25 +258,25 @@
 	// Loading state for button
 	.btn.processing {
 		position: relative;
-		color: $datatable-btn-collection-spinner-color;
+		color: $datatables-btn-collection-spinner-color;
 
 		// Spinner inside the button
 		&:after {
 			content: "";
 			position: absolute;
 			display: block;
-			width: $datatable-btn-collection-spinner-dimension;
-			height: $datatable-btn-collection-spinner-dimension;
-			margin-left: -#{$datatable-btn-collection-spinner-dimension * 0.5};
-			margin-top: -#{$datatable-btn-collection-spinner-dimension * 0.5};
-			border: $datatable-btn-collection-spinner-border-width solid
-				$datatable-btn-collection-spinner-border-color;
+			width: $datatables-btn-collection-spinner-dimension;
+			height: $datatables-btn-collection-spinner-dimension;
+			margin-left: -#{$datatables-btn-collection-spinner-dimension * 0.5};
+			margin-top: -#{$datatables-btn-collection-spinner-dimension * 0.5};
+			border: $datatables-btn-collection-spinner-border-width solid
+				$datatables-btn-collection-spinner-border-color;
 			border-left-color: transparent;
 			border-right-color: transparent;
 			border-radius: 50%;
 			top: 50%;
 			left: 50%;
-			animation: $datatable-btn-collection-spinner-animation;
+			animation: $datatables-btn-collection-spinner-animation;
 		}
 	}
 }
@@ -297,7 +297,7 @@
 		.btn-group {
 			&,
 			&:last-child:first-child {
-				@include border-radius($datatable-btn-collection-border-radius);
+				@include border-radius($datatables-btn-collection-border-radius);
 			}
 
 			&:last-child {
@@ -313,8 +313,8 @@
 		}
 
 		.dt-btn-split-drop:last-child {
-			border: $datatable-btn-collection-border-width solid
-				$datatable-btn-collection-border-color;
+			border: $datatables-btn-collection-border-width solid
+				$datatables-btn-collection-border-color;
 		}
 	}
 }

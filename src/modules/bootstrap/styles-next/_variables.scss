@@ -383,7 +383,7 @@ $escaped-characters: (
 
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
-$enable-shadows:              true !default;
+$enable-shadows:              false !default;
 $enable-gradients:            false !default;
 $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
@@ -710,7 +710,7 @@ $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
-$blockquote-footer-color:     $gray-600 !default;
+$blockquote-footer-color:     var(--#{$prefix}body-color) !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
 $hr-margin-y:                 $spacer !default;
@@ -718,7 +718,7 @@ $hr-color:                    inherit !default;
 
 $hr-border-color:             null !default; // Allows for inherited colors
 $hr-border-width:             var(--#{$prefix}border-width) !default;
-$hr-opacity:                  .25 !default;
+$hr-opacity:                  .1 !default;
 
 // scss-docs-start vr-variables
 $vr-border-width:             var(--#{$prefix}border-width) !default;
@@ -1143,7 +1143,6 @@ $form-validation-states: (
 // of components dependent on the z-axis and are designed to all work together.
 
 // scss-docs-start zindex-stack
-$zindex-dropdown:                   1000 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
 $zindex-header:                     1030 !default;
@@ -1153,9 +1152,10 @@ $zindex-offcanvas-backdrop:         1050 !default;
 $zindex-offcanvas:                  1055 !default;
 $zindex-modal-backdrop:             1060 !default;
 $zindex-modal:                      1065 !default;
-$zindex-btn-floating:               1070 !default;
-$zindex-popover:                    1080 !default;
-$zindex-tooltip:                    1080 !default;
+$zindex-dropdown:                   1070 !default;
+$zindex-btn-floating:               1080 !default;
+$zindex-popover:                    1090 !default;
+$zindex-tooltip:                    1090 !default;
 $zindex-toast:                      1090 !default;
 $zindex-preload:                    2000 !default;
 // scss-docs-end zindex-stack
@@ -1214,13 +1214,13 @@ $nav-underline-link-active-color:   $primary !default;
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-x:                0 !default;
 $dropdown-padding-y:                $spacer * .5 !default;
-$dropdown-spacer:                   .125rem !default;
+$dropdown-spacer:                   $spacer * .125 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       $component-bg !default;
+$dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-border-color:             var(--#{$prefix}border-color) !default;
 $dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
-$dropdown-border-width:             var(--#{$prefix}border-width) !default;
 $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default; // stylelint-disable-line function-disallowed-list
 $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .5 !default;
@@ -1405,7 +1405,7 @@ $accordion-button-active-icon:            url("data:image/svg+xml,<svg xmlns='ht
 // scss-docs-start tooltip-variables
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-max-width:                 17.5rem !default;
-$tooltip-color:                     var(--#{$prefix}body-color) !default;
+$tooltip-color:                     var(--#{$prefix}secondary-color) !default;
 $tooltip-bg:                        $component-bg !default;
 $tooltip-border-width:              var(--#{$prefix}border-width) !default;
 $tooltip-border-color:              var(--#{$prefix}border-color) !default;
@@ -1696,7 +1696,7 @@ $btn-close-width:            1em !default;
 $btn-close-height:           $btn-close-width !default;
 $btn-close-padding-x:        .25em !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;
-$btn-close-color:            $black !default;
+$btn-close-color:            var(--#{$prefix}danger) !default;
 $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-focus-shadow:     $focus-ring-box-shadow !default;
 $btn-close-opacity:          .5 !default;
@@ -1965,6 +1965,7 @@ $preload-bg:                        var(--#{$prefix}body-bg) !default;
 
 $preload-spinner-dimension:         4rem !default;
 
+$preload-message-bg:                $component-bg !default;
 $preload-message-padding-y:         $spacer * .5 !default;
 $preload-message-padding-x:         $spacer !default;
 $preload-message-border-width:      var(--#{$prefix}border-width) !default;
@@ -1973,7 +1974,7 @@ $preload-message-border-radius:     var(--#{$prefix}border-radius) !default;
 
 $preload-message-spinner-spacer:    $spacer * .75 !default;
 
-$preload-message-text-color:        var(--#{$prefix}text-level-3) !default;
+$preload-message-text-color:        var(--#{$prefix}heading-color) !default;
 $preload-message-text-font-size:    $font-size-base !default;
 $preload-message-text-font-weight:  $font-weight-medium !default;
 
@@ -1991,7 +1992,7 @@ $aside-border-color:                var(--#{$prefix}border-color) !default;
 $aside-transition:                  width $offcanvas-transition-duration ease-in-out, transform $offcanvas-transition-duration ease-in-out !default;
 
 $aside-body-padding-y:              $spacer * .5 !default;
-$aside-body-padding-x:              $spacer !default;
+$aside-body-padding-x:              $spacer * 1.25 !default;
 $aside-header-padding-y:            $spacer !default;
 $aside-header-padding-x:            $spacer * 1.75 !default;
 

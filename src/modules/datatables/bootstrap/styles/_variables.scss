@@ -1,30 +1,28 @@
-$datatable-spacer:                        $spacer * .5 !default;
+$datatables-spacer:                        $spacer * .5 !default;
 
-$datatable-sorting-spacer:                $spacer * 2 !default;
-$datatable-sorting-spacer-sm:             $datatable-sorting-spacer * .5 !default;
-$datatable-sorting-offset:                $spacer * .75 !default;
-$datatable-sorting-offset-sm:             $spacer * .25 !default;
-$datatable-sorting-color:                 var(--#{$prefix}text-level-1) !default;
+$datatables-sorting-spacer:                $spacer * 2 !default;
+$datatables-sorting-spacer-sm:             $datatables-sorting-spacer * .5 !default;
+$datatables-sorting-offset:                $spacer * .75 !default;
+$datatables-sorting-offset-sm:             $spacer * .25 !default;
+$datatables-sorting-color:                 var(--#{$prefix}secondary-color) !default;
 
-$datatable-input-spacer:                  $spacer * .5 !default;
-$datatable-info-spacer:                   $spacer * .75 !default;
+$datatables-input-spacer:                  $spacer * .5 !default;
+$datatables-info-spacer:                   $spacer * .75 !default;
 
-$datatable-control-content-closed:        "+" !default;
-$datatable-control-content-opened:        "-" !default;
-$datatable-control-dimension:             1.5em !default;
-$datatable-control-line-height:           1.4em !default;
-$datatable-control-font-family:           $font-family-monospace !default;
-$datatable-control-font-size:             $font-size-base !default;
-$datatable-control-font-weight:           $font-weight-medium !default;
-$datatable-control-color-light:           var(--#{$prefix}tertiary-color) !default;
-$datatable-control-color-dark:            var(--#{$prefix}tertiary-color) !default;
-$datatable-control-bg-light:              var(--#{$prefix}tertiary-bg) !default;
-$datatable-control-bg-dark:               var(--#{$prefix}tertiary-bg)dark !default;
-$datatable-control-spacer:                .5rem !default;
-$datatable-control-border-radius:         $border-radius-sm !default;
+$datatables-control-content-closed:        "+" !default;
+$datatables-control-content-opened:        "-" !default;
+$datatables-control-dimension:             1.5em !default;
+$datatables-control-line-height:           1.4em !default;
+$datatables-control-font-family:           $font-family-monospace !default;
+$datatables-control-font-size:             $font-size-base !default;
+$datatables-control-font-weight:           $font-weight-medium !default;
+$datatables-control-color:           			 var(--#{$prefix}tertiary-color) !default;
+$datatables-control-bg:              			 var(--#{$prefix}tertiary-bg) !default;
+$datatables-control-spacer:                $spacer * .5 !default;
+$datatables-control-border-radius:         var(--#{$prefix}border-radius-sm) !default;
 
-$datatable-process-width:                 12.5rem !default;
-$datatable-process-padding-y:             $spacer !default;
-$datatable-process-padding-x:             $datatable-process-padding-y !default;
-$datatable-process-indicator-color:       $primary !default;
-$datatable-process-animation-duration:    .6s !default;
+$datatables-process-width:                 12.5rem !default;
+$datatables-process-padding-y:             $spacer !default;
+$datatables-process-padding-x:             $datatables-process-padding-y !default;
+$datatables-process-indicator-color:       var(--#{$prefix}primary) !default;
+$datatables-process-animation-duration:    .6s !default;

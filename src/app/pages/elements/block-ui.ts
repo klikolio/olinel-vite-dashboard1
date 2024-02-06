@@ -4,16 +4,19 @@ import '@modules/block-ui/styles/block-ui.scss'
 import $ from 'jquery'
 
 const blockTarget = '#blockui-target' // Target element selector for BlockUI
-const defaultOptions = {
-	message: '<span class="blockUI blockTitle">Please wait...</span>',
-	css: {},
-	themedCSS: {},
-	overlayCSS: {},
-	growlCSS: {},
+
+if ($.blockUI?.defaults) {
+	$.blockUI.defaults = Object.assign($.blockUI.defaults as object, {
+		message: '<span class="blockUI blockTitle">Please wait...</span>',
+		css: {},
+		themedCSS: {},
+		overlayCSS: {},
+		growlCSS: {},
+	})
 }
 
 $('#blockui-trigger-1').on('click', () => {
-	$(blockTarget).block(defaultOptions)
+	$(blockTarget).block()
 })
 
 $('#blockui-trigger-2').on('click', () => {
@@ -22,14 +25,12 @@ $('#blockui-trigger-2').on('click', () => {
 
 $('#blockui-trigger-3').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		timeout: 1000,
 	})
 })
 
 $('#blockui-trigger-4').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		message: 'Custom text here...',
 		timeout: 1000,
 	})
@@ -37,7 +38,6 @@ $('#blockui-trigger-4').on('click', () => {
 
 $('#blockui-trigger-5').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		message: `
       <form class="py-2">
         <input type="email" class="form-control mb-3" placeholder="Email">
@@ -50,7 +50,6 @@ $('#blockui-trigger-5').on('click', () => {
 
 $('#blockui-trigger-6').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		overlayCSS: {
 			backgroundColor: '#29b6f6',
 		},
@@ -64,7 +63,6 @@ $('#blockui-trigger-6').on('click', () => {
 $('#blockui-trigger-7').on('click', () => {
 	if ($.blockUI) {
 		$.blockUI({
-			...defaultOptions,
 			timeout: 1000,
 		})
 	}
@@ -72,7 +70,6 @@ $('#blockui-trigger-7').on('click', () => {
 
 $('#blockui-trigger-8').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		message: `
       <div class="spinner-border text-primary"></div>
       <span class="blockUI blockTitle">Please wait...</span>
@@ -83,7 +80,6 @@ $('#blockui-trigger-8').on('click', () => {
 
 $('#blockui-trigger-9').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		message: `
       <div class="spinner-grow text-success"></div>
       <span class="blockUI blockTitle">Please wait...</span>
@@ -94,7 +90,6 @@ $('#blockui-trigger-9').on('click', () => {
 
 $('#blockui-trigger-10').on('click', () => {
 	$(blockTarget).block({
-		...defaultOptions,
 		message: '<div class="spinner-border text-primary m-0"></div>',
 		overlayCSS: {
 			backgroundColor: '#fff',

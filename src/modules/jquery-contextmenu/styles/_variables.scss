@@ -16,8 +16,8 @@ $context-menu-item-padding-x:           $dropdown-item-padding-x !default;
 $context-menu-item-color:               $dropdown-link-color !default;
 $context-menu-item-hover-bg:            $dropdown-link-hover-bg !default;
 $context-menu-item-hover-color:         $dropdown-link-hover-color !default;
-$context-menu-item-disabled-bg:         $component-disabled-bg !default;
-$context-menu-item-disabled-color:      $component-disabled-color !default;
+$context-menu-item-disabled-bg:         transparent !default;
+$context-menu-item-disabled-color:      $dropdown-link-disabled-color !default;
 $context-menu-item-disabled-opacity:    $component-disabled-opacity !default;
 
 $context-menu-icon-dimension:           $dropdown-icon-dimension !default;
@@ -25,7 +25,7 @@ $context-menu-icon-size:                $dropdown-icon-size !default;
 $context-menu-icon-spacer:              $spacer * .5 !default;
 $context-menu-icon-loading-duration:    .75s !default;
 
-$context-menu-divider-width:            var(--#{$prefix}border-width) !default;
+$context-menu-divider-width:            $context-menu-border-width !default;
 $context-menu-divider-color:            $dropdown-divider-bg !default;
 $context-menu-divider-spacer:           $dropdown-divider-margin-y !default;
 

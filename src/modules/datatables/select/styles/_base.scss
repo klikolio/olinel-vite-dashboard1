@@ -5,8 +5,8 @@
 			&,
 			td,
 			th {
-				color: $datatable-selected-color !important;
-				background-color: $datatable-selected-bg !important;
+				color: $datatables-selected-color !important;
+				background-color: $datatables-selected-bg !important;
 				box-shadow: none !important;
 			}
 		}
@@ -17,6 +17,6 @@
 .dataTables_wrapper {
 	.select-info,
 	.select-item {
-		margin-left: $datatable-info-spacer;
+		margin-left: $datatables-info-spacer;
 	}
 }

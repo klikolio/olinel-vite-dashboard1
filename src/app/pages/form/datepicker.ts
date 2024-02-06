@@ -11,8 +11,10 @@ const orientation: DatepickerOrientations = getPageIsRTL()
 // Set default plugin configuration
 const defaultOptions = {
 	orientation,
-	leftArrow: ' ',
-	rightArrow: ' ',
+	templates: {
+		leftArrow: ' ',
+		rightArrow: ' ',
+	},
 }
 
 $('#datepicker-1').datepicker({

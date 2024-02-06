@@ -4,7 +4,7 @@ $irs-disabled-opacity:            .35 !default;
 $irs-line-top:                    3rem !default;
 $irs-line-height:                 $form-range-track-height !default;
 $irs-line-color:                  $form-range-track-bg !default;
-$irs-line-active-color:           $primary !default;
+$irs-line-active-color:           $form-range-thumb-active-bg !default;
 $irs-line-border-radius:          $form-range-track-border-radius !default;
 
 $irs-handle-dimension:            $form-range-thumb-width !default;
@@ -19,13 +19,13 @@ $irs-tooltip-padding-x:           $tooltip-padding-x !default;
 $irs-tooltip-border-radius:       $tooltip-border-radius !default;
 
 $irs-tooltip-arrow-width:         .4rem !default;
-$irs-tooltip-arrow-color:         $primary !default;
+$irs-tooltip-arrow-color:         var(--#{$prefix}primary) !default;
 
 $irs-minmax-bg:                   var(--#{$prefix}tertiary-bg) !default;
-$irs-minmax-color:                var(--#{$prefix}body-color) !default;
+$irs-minmax-color:                var(--#{$prefix}tertiary-color) !default;
 
-$irs-label-bg:                    $primary !default;
-$irs-label-color:                 color-contrast($irs-label-bg) !default;
+$irs-label-bg:                    var(--#{$prefix}primary) !default;
+$irs-label-color:                 color-contrast($primary) !default;
 
 $irs-grid-height:                 2rem !default;
 $irs-grid-pol-width:              var(--#{$prefix}border-width) !default;

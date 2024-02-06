@@ -15,19 +15,19 @@
 	.dts_label {
 		display: none;
 		position: absolute;
-		@include font-size($datatable-scroller-label-font-size);
-		padding: $datatable-scroller-label-padding;
-		right: $datatable-scroller-label-offset;
-		color: $datatable-scroller-label-color;
-		background-color: $datatable-scroller-label-bg;
-		border: $datatable-scroller-label-border-width solid
-			$datatable-scroller-label-border-color;
+		@include font-size($datatables-scroller-label-font-size);
+		padding: $datatables-scroller-label-padding;
+		right: $datatables-scroller-label-offset;
+		color: $datatables-scroller-label-color;
+		background-color: $datatables-scroller-label-bg;
+		border: $datatables-scroller-label-border-width solid
+			$datatables-scroller-label-border-color;
 		z-index: 2;
-		@include border-radius($datatable-scroller-label-border-radius);
+		@include border-radius($datatables-scroller-label-border-radius);
 	}
 
 	.dataTables_scrollBody {
-		background: $datatable-fixed-element-bg;
+		background: $datatables-fixed-element-bg;
 
 		table {
 			z-index: 2;
@@ -41,5 +41,5 @@
 }
 
 .DTS .dataTables_scrollBody table {
-	background: $datatable-fixed-element-bg;
+	background: $datatables-fixed-element-bg;
 }

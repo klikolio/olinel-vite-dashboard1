@@ -52,6 +52,12 @@
 				color: $datepicker-cell-off-color;
 			}
 		}
+		
+		&.highlighted {
+			color: $datepicker-cell-highlight-color;
+			background: $datepicker-cell-highlight-bg;
+			@include border-radius(0);
+		}
 
 		&.today {
 			position: relative;
@@ -72,12 +78,6 @@
 				bottom: $datepicker-pick-offset;
 				right: $datepicker-pick-offset;
 			}
-		}
-
-		&.highlighted {
-			color: $datepicker-cell-highlight-color;
-			background: $datepicker-cell-highlight-bg;
-			@include border-radius(0);
 		}
 
 		&.range {

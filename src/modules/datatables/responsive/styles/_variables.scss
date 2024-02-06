@@ -1,14 +1,14 @@
-$datatable-responsive-list-padding-y:             $spacer !default;
-$datatable-responsive-list-padding-x:             $spacer * .5 !default;
-$datatable-responsive-list-spacer:                $spacer * .5 !default;
-$datatable-responsive-list-border-width:          var(--#{$prefix}border-width) !default;
-$datatable-responsive-list-border-color:          var(--#{$prefix}border-color) !default;
+$datatables-responsive-list-padding-y:             $spacer !default;
+$datatables-responsive-list-padding-x:             $spacer * .5 !default;
+$datatables-responsive-list-spacer:                $spacer * .5 !default;
+$datatables-responsive-list-border-width:          var(--#{$prefix}border-width) !default;
+$datatables-responsive-list-border-color:          var(--#{$prefix}border-color) !default;
 
-$datatable-responsive-list-title-min-width:       8rem !default;
-$datatable-responsive-list-title-color:           var(--#{$prefix}heading-color) !default;
-$datatable-responsive-list-title-font-size:       $font-size-base !default;
-$datatable-responsive-list-title-font-weight:     $font-weight-medium !default;
+$datatables-responsive-list-title-min-width:       8rem !default;
+$datatables-responsive-list-title-color:           var(--#{$prefix}heading-color) !default;
+$datatables-responsive-list-title-font-size:       $font-size-base !default;
+$datatables-responsive-list-title-font-weight:     $font-weight-medium !default;
 
-$datatable-responsive-list-data-color:            var(--#{$prefix}body-color) !default;
-$datatable-responsive-list-data-font-size:        $font-size-base !default;
-$datatable-responsive-list-data-font-weight:      $font-weight-base !default;
+$datatables-responsive-list-data-color:            var(--#{$prefix}body-color) !default;
+$datatables-responsive-list-data-font-size:        $font-size-base !default;
+$datatables-responsive-list-data-font-weight:      $font-weight-base !default;

@@ -3,8 +3,8 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: $datatable-process-width;
-	padding: $datatable-process-padding-y $datatable-process-padding-x;
+	width: $datatables-process-width;
+	padding: $datatables-process-padding-y $datatables-process-padding-x;
 
 	> div:last-child {
 		position: relative;
@@ -17,32 +17,32 @@
 			top: 0;
 			width: 13px;
 			height: 13px;
-			background-color: $datatable-process-indicator-color;
+			background-color: $datatables-process-indicator-color;
 			border-radius: 50%;
 			animation-timing-function: cubic-bezier(0, 1, 1, 0);
 		}
 
 		> div:nth-child(1) {
 			left: 8px;
-			animation: datatables-loader-1 $datatable-process-animation-duration
+			animation: datatables-loader-1 $datatables-process-animation-duration
 				infinite;
 		}
 
 		> div:nth-child(2) {
 			left: 8px;
-			animation: datatables-loader-2 $datatable-process-animation-duration
+			animation: datatables-loader-2 $datatables-process-animation-duration
 				infinite;
 		}
 
 		> div:nth-child(3) {
 			left: 32px;
-			animation: datatables-loader-2 $datatable-process-animation-duration
+			animation: datatables-loader-2 $datatables-process-animation-duration
 				infinite;
 		}
 
 		> div:nth-child(4) {
 			left: 56px;
-			animation: datatables-loader-3 $datatable-process-animation-duration
+			animation: datatables-loader-3 $datatables-process-animation-duration
 				infinite;
 		}
 	}

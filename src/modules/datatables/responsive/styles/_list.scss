@@ -1,7 +1,7 @@
 // List of data that was collapsed
 .dataTable > tbody > .child {
-	padding: $datatable-responsive-list-padding-y
-		$datatable-responsive-list-padding-x;
+	padding: $datatables-responsive-list-padding-y
+		$datatables-responsive-list-padding-x;
 
 	&:hover {
 		background: transparent !important;
@@ -15,15 +15,15 @@
 		padding: 0;
 
 		> li {
-			border-bottom: $datatable-responsive-list-border-width solid
-				$datatable-responsive-list-border-color;
+			border-bottom: $datatables-responsive-list-border-width solid
+				$datatables-responsive-list-border-color;
 
 			&:not(:first-child) {
-				padding-top: $datatable-responsive-list-spacer;
+				padding-top: $datatables-responsive-list-spacer;
 			}
 
 			&:not(:last-child) {
-				padding-bottom: $datatable-responsive-list-spacer;
+				padding-bottom: $datatables-responsive-list-spacer;
 			}
 
 			&:last-child {
@@ -34,16 +34,16 @@
 
 	.dtr-title {
 		display: inline-block;
-		min-width: $datatable-responsive-list-title-min-width;
-		color: $datatable-responsive-list-title-color;
-		@include font-size($datatable-responsive-list-title-font-size);
-		font-weight: $datatable-responsive-list-title-font-weight;
+		min-width: $datatables-responsive-list-title-min-width;
+		color: $datatables-responsive-list-title-color;
+		@include font-size($datatables-responsive-list-title-font-size);
+		font-weight: $datatables-responsive-list-title-font-weight;
 	}
 
 	.dtr-data {
 		display: inline-block;
-		color: $datatable-responsive-list-data-color;
-		@include font-size($datatable-responsive-list-data-font-size);
-		font-weight: $datatable-responsive-list-data-font-weight;
+		color: $datatables-responsive-list-data-color;
+		@include font-size($datatables-responsive-list-data-font-size);
+		font-weight: $datatables-responsive-list-data-font-weight;
 	}
 }

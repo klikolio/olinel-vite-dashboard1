@@ -1,16 +1,16 @@
 $typeahead-hint-color:                  $input-placeholder-color !default;
 
 $typeahead-menu-bg:                     $dropdown-bg !default;
-$typeahead-menu-border-width:           var(--#{$prefix}border-width) !default;
-$typeahead-menu-border-color:           $input-border-color !default;
+$typeahead-menu-border-width:           $dropdown-border-width !default;
+$typeahead-menu-border-color:           $dropdown-border-color !default;
+$typeahead-menu-border-radius:          $dropdown-border-radius !default;
 $typeahead-menu-active-border-color:    $input-focus-border-color !default;
-$typeahead-menu-border-radius:          $input-border-radius !default;
 
 $typeahead-menu-item-color:             var(--#{$prefix}body-color) !default;
-$typeahead-menu-item-hover-bg:          $component-hover-bg !default;
-$typeahead-menu-item-hover-color:       $component-hover-color !default;
+$typeahead-menu-item-hover-bg:          $dropdown-link-hover-bg !default;
+$typeahead-menu-item-hover-color:       $dropdown-link-hover-color !default;
 $typeahead-menu-item-active-bg:         var(--#{$prefix}tertiary-bg) !default;
-$typeahead-menu-item-active-color:      $typeahead-menu-item-hover-color !default;
+$typeahead-menu-item-active-color:      var(--#{$prefix}tertiary-color) !default;
 $typeahead-menu-item-disabled-bg:       $component-disabled-bg !default;
 $typeahead-menu-item-disabled-opacity:  $component-disabled-opacity !default;
 $typeahead-menu-item-font-size:         $font-size-base !default;
@@ -37,4 +37,4 @@ $typeahead-menu-header-color:           var(--#{$prefix}heading-color) !default;
 $typeahead-menu-header-font-size:       $font-size-base !default;
 $typeahead-menu-header-font-weight:     $font-weight-medium !default;
 
-$typeahead-menu-highlight-color:        $primary !default;
+$typeahead-menu-highlight-color:        var(--#{$prefix}primary) !default;

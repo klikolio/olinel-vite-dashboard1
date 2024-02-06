@@ -32,8 +32,8 @@
 
 		button {
 			display: block;
-			height: $slick-dot-dimension;
-			width: $slick-dot-dimension;
+			height: $slick-dot-item-dimension-sm;
+			width: $slick-dot-item-dimension-sm;
 			background: $slick-dot-item-bg;
 			color: transparent;
 			padding: 0;
@@ -47,6 +47,7 @@
 				background: $slick-dot-item-hover-bg;
 			}
 		}
+
 		// Active state
 		&.slick-active button {
 			width: 100%;

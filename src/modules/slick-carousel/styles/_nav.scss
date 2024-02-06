@@ -9,19 +9,21 @@
 	cursor: pointer;
 	@include icon-size($slick-nav-icon-size);
 }
+
 // Navigation defaults style
 .slick-next,
 .slick-prev {
-	bottom: $slick-nav-offset;
+	bottom: $slick-nav-offset-y;
 }
 
 .slick-prev {
-	left: $slick-nav-offset + $carousel-gutter;
+	left: $slick-nav-offset-x + $carousel-gutter;
 }
 
 .slick-next {
-	right: $slick-nav-offset + $carousel-gutter;
+	right: $slick-nav-offset-x + $carousel-gutter;
 }
+
 // Alternate navigation styles
 .slick-next-2,
 .slick-prev-2 {
@@ -47,16 +49,16 @@
 	justify-content: center;
 	height: $slick-nav3-dimension;
 	width: $slick-nav3-dimension;
-	bottom: $slick-nav-offset;
+	bottom: $slick-nav-offset-y;
 	padding: 0;
 }
 
 .slick-prev-3 {
 	right: calc(
-		#{$slick-nav3-dimension} + #{$slick-nav-offset + $slick-nav3-spacer + $carousel-gutter}
+		#{$slick-nav3-dimension} + #{$slick-nav-offset-x + $slick-nav3-spacer + $carousel-gutter}
 	);
 }
 
 .slick-next-3 {
-	right: $slick-nav-offset + $carousel-gutter;
+	right: $slick-nav-offset-x + $carousel-gutter;
 }

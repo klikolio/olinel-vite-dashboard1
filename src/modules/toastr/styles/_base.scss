@@ -75,11 +75,13 @@
 .toast {
 	@include toastr-variant($primary);
 }
+
 @each $color, $value in $toastr-colors {
 	.toast-#{$color} {
 		@include toastr-variant($value);
 	}
 }
+
 // Icon variants
 .toast {
 	@include icon {
