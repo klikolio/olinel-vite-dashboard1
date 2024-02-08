@@ -44,17 +44,17 @@ $mark-color-dark:                   color-contrast($mark-bg-dark) !default;
 // Forms
 //
 
-$form-select-indicator-color-dark:  $text-level-3-dark !default;
+$form-select-indicator-color-dark:  $body-color-dark !default;
 $form-select-indicator-dark:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
 
-$form-switch-color-dark:            $bg-level-3-dark !default;
+$form-switch-color-dark:            $bg-level-4-dark !default;
 $form-switch-bg-image-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color-dark}'/></svg>") !default;
 
 // scss-docs-start form-validation-colors-dark
-$form-valid-color-dark:             $green-300 !default;
-$form-valid-border-color-dark:      $green-300 !default;
-$form-invalid-color-dark:           $red-300 !default;
-$form-invalid-border-color-dark:    $red-300 !default;
+$form-valid-color-dark:             $green !default;
+$form-valid-border-color-dark:      $green !default;
+$form-invalid-color-dark:           $red !default;
+$form-invalid-border-color-dark:    $red !default;
 // scss-docs-end form-validation-colors-dark
 
 
@@ -62,7 +62,7 @@ $form-invalid-border-color-dark:    $red-300 !default;
 // Accordion
 //
 
-$accordion-icon-color-dark:         	$text-level-1-dark !default;
+$accordion-icon-color-dark:         	$body-color-dark !default;
 $accordion-icon-active-color-dark:  	$accordion-icon-active-color !default;
 
 $accordion-button-icon-dark:         	url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;

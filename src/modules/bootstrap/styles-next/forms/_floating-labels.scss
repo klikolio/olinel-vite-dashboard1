@@ -4,7 +4,10 @@
 	> label {
 		position: absolute;
 		color: $input-placeholder-color;
-		background: transparent;
+		@include font-size($input-font-size);
+		left: add($input-padding-x, $input-border-width);
+		top: add(add($input-line-height * .5em, $input-padding-y), $input-border-width);
+		background-color: transparent;
 		transform: translateY(-50%);
 		line-height: 1;
 		opacity: 1;
@@ -24,20 +27,12 @@
 		&:not(:placeholder-shown) {
 			+ label {
 				color: $input-placeholder-color;
-				background: $input-bg;
+				background-color: $input-bg;
+				@include font-size($input-font-size * $form-floating-font-size-scale);
 				padding: $form-floating-padding-y $form-floating-padding-x;
 				top: 0;
 			}
 		}
-	}
-
-	> .form-control,
-	> .form-select {
-		@include form-floating-sizing(
-			$input-font-size,
-			$input-padding-y,
-			$input-padding-x
-		);
 	}
 
 	> .form-control-lg,
