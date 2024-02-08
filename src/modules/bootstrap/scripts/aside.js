@@ -52,7 +52,7 @@ class Aside extends BaseComponent {
 		}
 
 		if (document.body.classList.contains(CLASS_DESKTOP_MINIMIZED)) {
-			document.querySelector(SELECTOR_MAIN).classList.add(CLASS_HOVER)
+			document.querySelector(SELECTOR_MAIN)?.classList.add(CLASS_HOVER)
 		}
 	}
 
@@ -85,11 +85,11 @@ class Aside extends BaseComponent {
 		)
 
 		if (isMaximized) {
-			mainElement.classList.remove(CLASS_HOVER)
+			mainElement?.classList.remove(CLASS_HOVER)
 			window.dispatchEvent(new Event('resize'))
 		} else {
 			setTimeout(() => {
-				mainElement.classList.add(CLASS_HOVER)
+				mainElement?.classList.add(CLASS_HOVER)
 				window.dispatchEvent(new Event('resize'))
 			}, TRANSITION_DURATION)
 		}
@@ -115,8 +115,8 @@ class Aside extends BaseComponent {
 			})
 		} else {
 			const backdropElement = document.querySelector(SELECTOR_BACKDROP)
-			backdropElement.classList.remove('show')
-			backdropElement.remove()
+			backdropElement?.classList.remove('show')
+			backdropElement?.remove()
 		}
 	}
 

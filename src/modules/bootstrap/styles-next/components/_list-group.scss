@@ -1,1 +1,13 @@
 @import "bootstrap/scss/list-group";
+
+@each $state in map-keys($theme-colors) {
+	.list-group-item-#{$state} {
+		--#{$prefix}list-group-active-bg: var(--#{$prefix}#{$state});
+		--#{$prefix}list-group-active-color: #{color-contrast(
+				map-get($theme-colors, $state)
+			)};
+		--#{$prefix}list-group-active-border-color: var(
+			--#{$prefix}list-group-active-bg
+		);
+	}
+}

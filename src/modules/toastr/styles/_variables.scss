@@ -16,7 +16,7 @@ $toastr-link-font-weight:         $font-weight-medium !default;
 
 $toastr-close-dimension:          $input-height-sm !default;
 $toastr-close-font-size:          $font-size-xl !default;
-$toastr-close-font-weight:        $font-weight-bold !default;
+$toastr-close-font-weight:        $font-weight-semibold !default;
 $toastr-close-offset:             $toastr-padding-x !default;
 
 $toastr-icon-dimension:           4rem !default;
@@ -29,10 +29,10 @@ $toastr-progress-opacity:         .65 !default;
 $toastr-colors: () !default;
 $toastr-colors: map-merge(
   (
-    "success": var(--#{$prefix}success),
-    "info": var(--#{$prefix}info),
-    "warning": var(--#{$prefix}warning),
-    "error": var(--#{$prefix}danger),
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "error": $danger,
   ),
   $toastr-colors
 );

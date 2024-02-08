@@ -14,6 +14,19 @@
 	margin-left: $dropdown-caret-spacer;
 }
 
+// Change toggle caret in dropstart class
+.dropstart {
+	.dropdown-toggle {
+		&::after {
+			display: none;
+		}
+
+		@include caret(start, before) {
+			margin-right: $dropdown-caret-spacer;
+		}
+	}
+}
+
 .dropdown-sub {
 	position: relative;
 
@@ -50,6 +63,7 @@
 	flex: 1;
 	min-width: var(--#{$prefix}dropdown-min-width);
 	padding: var(--#{$prefix}dropdown-col-padding);
+	text-wrap: wrap;
 
 	.dropdown-item {
 		@include border-radius(var(--#{$prefix}dropdown-border-radius));
@@ -69,6 +83,10 @@
 	font-weight: inherit;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.dropdown-header {
+	@include font-size(var(--#{$prefix}dropdown-font-size));
 }
 
 .dropdown-addon {
@@ -94,23 +112,29 @@
 
 .dropdown-bullet {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: var(--#{$prefix}dropdown-bullet-color);
 	height: calc(0.75 * var(--#{$prefix}dropdown-icon-dimension));
 	width: calc(0.75 * var(--#{$prefix}dropdown-icon-dimension));
-	min-width: calc(0.75 * var(--#{$prefix}dropdown-icon-dimension));
 	margin-right: calc(0.75 * var(--#{$prefix}dropdown-item-content-spacer));
 
 	&:before {
 		content: "";
 		display: block;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		width: var(--#{$prefix}dropdown-bullet-size);
 		height: var(--#{$prefix}dropdown-bullet-size);
 		border-radius: 50%;
 		background-color: currentColor;
+	}
+}
+
+.dropdown-menu-wide {
+	&,
+	.dropdown-col {
+		min-width: $dropdown-min-width-lg;
 	}
 }
 

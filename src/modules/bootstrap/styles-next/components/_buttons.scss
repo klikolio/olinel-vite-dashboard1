@@ -2,20 +2,38 @@
 
 .btn {
 	position: relative;
-  @include icon-size(var(--#{$prefix}btn-font-size));
+	@include icon-size(var(--#{$prefix}btn-font-size));
 }
 
-@each $color, $value in $theme-colors {
-	.btn-flat-#{$color} {
-		@include button-flat-variant($value);
+@each $state, $color in $theme-colors {
+	.btn-subtle-#{$state} {
+		@if $color == "light" {
+			@include button-subtle-variant(
+				$state,
+				$color,
+				$color,
+				$hover-background: shade-color($color, $btn-hover-bg-shade-amount),
+				$active-background: shade-color($color, $btn-active-bg-shade-amount)
+			);
+		} @else if $color == "dark" {
+			@include button-subtle-variant(
+				$state,
+				$color,
+				$color,
+				$hover-background: tint-color($color, $btn-hover-bg-tint-amount),
+				$active-background: tint-color($color, $btn-active-bg-tint-amount)
+			);
+		} @else {
+			@include button-subtle-variant($state, $color, $color);
+		}
 	}
 
-	.btn-subtle-#{$color} {
-		@include button-subtle-variant($color, $value);
+	.btn-flat-#{$state} {
+		@include button-flat-variant($state, $color);
 	}
 
-	.btn-text-#{$color} {
-		@include button-text-variant($color, $value);
+	.btn-text-#{$state} {
+		@include button-text-variant($state, $color);
 	}
 }
 
@@ -23,12 +41,13 @@
 	--#{$prefix}btn-icon-dimension: #{$input-height};
 	--#{$prefix}btn-icon-size: #{$btn-icon-size};
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	width: var(--#{$prefix}btn-icon-dimension);
 	height: var(--#{$prefix}btn-icon-dimension);
 	padding: 0;
+	@include icon-size(var(--#{$prefix}btn-icon-size));
 
 	&.btn-sm {
 		--#{$prefix}btn-icon-dimension: #{$input-height-sm};
@@ -39,4 +58,30 @@
 		--#{$prefix}btn-icon-dimension: #{$input-height-lg};
 		--#{$prefix}btn-icon-size: #{$btn-icon-size-lg};
 	}
+}
+
+// Button wide sizes
+.btn-wide {
+	--#{$prefix}btn-padding-x: #{$btn-wide-padding-x};
+}
+
+.btn-wider {
+	--#{$prefix}btn-padding-x: #{$btn-wider-padding-x};
+}
+
+.btn-widest {
+	--#{$prefix}btn-padding-x: #{$btn-widest-padding-x};
+}
+
+// Button tall sizes
+.btn-tall {
+	--#{$prefix}btn-padding-y: #{$btn-tall-padding-y};
+}
+
+.btn-taller {
+	--#{$prefix}btn-padding-y: #{$btn-taller-padding-y};
+}
+
+.btn-tallest {
+	--#{$prefix}btn-padding-y: #{$btn-tallest-padding-y};
 }

@@ -26,10 +26,10 @@ $swal2-icon-border-color:                   var(--#{$prefix}border-color) !defau
 $swal2-icon-zoom:                           null !default;
 $swal2-success:                             var(--#{$prefix}success) !default;
 $swal2-success-border-color:                rgba($success, .3) !default;
-$swal2-error:                               var(--#{$prefix}danger) !default;
-$swal2-warning:                             var(--#{$prefix}warning) !default;
-$swal2-info:                                var(--#{$prefix}info) !default;
-$swal2-question:                            var(--#{$prefix}primary) !default;
+$swal2-error:                               $danger !default;
+$swal2-warning:                             $warning !default;
+$swal2-info:                                $info !default;
+$swal2-question:                            $primary !default;
 
 $swal2-image-margin:                        $spacer * 1.25 auto !default;
 
@@ -39,7 +39,7 @@ $swal2-title-margin:                        0 !default;
 $swal2-title-padding:                       $spacer * .75 $spacer 0 !default;
 $swal2-title-color:                         var(--#{$prefix}heading-color) !default;
 $swal2-title-font-size:                     1.8rem !default;
-$swal2-title-font-weight:                   $font-weight-bold !default;
+$swal2-title-font-weight:                   $font-weight-semibold !default;
 $swal2-title-text-align:                    center !default;
 
 $swal2-html-container-justify-content:      center !default;
@@ -93,7 +93,7 @@ $swal2-progress-steps-max-width:            100% !default;
 $swal2-progress-steps-background:           inherit !default;
 $swal2-progress-steps-margin:               $spacer * 1.25 auto !default;
 $swal2-progress-steps-padding:              0 !default;
-$swal2-progress-steps-font-weight:          $font-weight-bold !default;
+$swal2-progress-steps-font-weight:          $font-weight-semibold !default;
 $swal2-progress-steps-distance:             2.5em !default;
 $swal2-progress-step-width:                 2em;
 $swal2-progress-step-height:                $swal2-progress-step-width;

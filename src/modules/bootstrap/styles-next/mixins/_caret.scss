@@ -49,15 +49,17 @@
 
 @mixin caret-transform-up {
 	transform: rotate(-135deg);
-	bottom: $caret-offset;
+	bottom: -0.5 * $caret-offset;
 }
 
 @mixin caret-transform-start {
 	transform: rotate(-225deg);
 	bottom: $caret-offset * 0.5;
+	left: $caret-offset;
 }
 
 @mixin caret-transform-end {
 	transform: rotate(-45deg);
 	bottom: $caret-offset * 0.5;
+	right: $caret-offset;
 }

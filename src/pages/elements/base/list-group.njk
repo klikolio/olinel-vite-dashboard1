@@ -16,17 +16,11 @@
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Variation</h3>
+					<h3 class="portlet-title">Basic</h3>
 				</div>
 				<div class="portlet-body">
-					<p>
-						List groups are a flexible and powerful component for displaying a series of content. Modify and extend them
-						to support just about any content within.
-					</p>
-					<p>
-						Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items
-						edge-to-edge in a parent container (e.g., cards).
-					</p>
+					<p>List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.</p>
+					<p>Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
 
 					<!-- BEGIN Row -->
 					<div class="row g-3">
@@ -123,13 +117,7 @@
 					<h3 class="portlet-title">Horizontal</h3>
 				</div>
 				<div class="portlet-body">
-					<p>
-						Add <code>.list-group-horizontal</code> to change the layout of list group items from vertical to horizontal
-						across all breakpoints. Alternatively, choose a responsive variant
-						<code>.list-group-horizontal-{sm|md|lg|xl|xxl}</code> to make a list group horizontal starting at that
-						breakpoint's <code>min-width</code>. Currently
-						<strong>horizontal list groups cannot be combined with flush list groups.</strong>
-					</p>
+					<p>Add <code>.list-group-horizontal</code> to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant <code>.list-group-horizontal-{sm|md|lg|xl|xxl}</code> to make a list group horizontal starting at that breakpoint’s <code>min-width</code>. Currently <strong>horizontal list groups cannot be combined with flush list groups.</strong></p>
 
 					<!-- BEGIN List Group -->
 					<ul class="list-group list-group-horizontal">
@@ -280,6 +268,49 @@
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Additional content</h3>
+				</div>
+				<div class="portlet-body">
+					<p>
+						Add nearly any HTML within, even for linked list groups like the one below, with the help of
+						<strong>flexbox utilities</strong>.
+					</p>
+
+					<!-- BEGIN List Group -->
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1">List group item heading</h5>
+								<small>3 days ago</small>
+							</div>
+							<p class="mb-1">Some placeholder content in a paragraph.</p>
+							<small>And some small print.</small>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1">List group item heading</h5>
+								<small class="text-muted">3 days ago</small>
+							</div>
+							<p class="mb-1">Some placeholder content in a paragraph.</p>
+							<small class="text-muted">And some muted small print.</small>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1">List group item heading</h5>
+								<small class="text-muted">3 days ago</small>
+							</div>
+							<p class="mb-1">Some placeholder content in a paragraph.</p>
+							<small class="text-muted">And some muted small print.</small>
+						</a>
+					</div>
+					<!-- END List Group -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+			
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">States</h3>
 				</div>
 				<div class="portlet-body">
@@ -298,30 +329,6 @@
 						<li class="list-group-item">A fourth item</li>
 						<li class="list-group-item">And a fifth one</li>
 					</ul>
-					<!-- END List Group -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Numbered</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						Add the <code>.list-group-numbered</code> modifier class (and optionally use an
-						<code>&lt;ol&gt;</code> element) to opt into numbered list group items. Numbers are generated via CSS (as
-						opposed to a <code>&lt;ol&gt;</code>s default browser styling) for better placement inside list group items
-						and to allow for better customization.
-					</p>
-
-					<!-- BEGIN List Group -->
-					<ol class="list-group list-group-numbered">
-						<li class="list-group-item">A list item</li>
-						<li class="list-group-item">A list item</li>
-						<li class="list-group-item">A list item</li>
-					</ol>
 					<!-- END List Group -->
 				</div>
 			</div>
@@ -361,41 +368,40 @@
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Additional content</h3>
+					<h3 class="portlet-title">Numbered</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						Add nearly any HTML within, even for linked list groups like the one below, with the help of
-						<strong>flexbox utilities</strong>.
+						Add the <code>.list-group-numbered</code> modifier class (and optionally use an
+						<code>&lt;ol&gt;</code> element) to opt into numbered list group items. Numbers are generated via CSS (as
+						opposed to a <code>&lt;ol&gt;</code>s default browser styling) for better placement inside list group items
+						and to allow for better customization.
 					</p>
 
 					<!-- BEGIN List Group -->
-					<div class="list-group">
-						<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-							<div class="d-flex w-100 justify-content-between">
-								<h5 class="mb-1">List group item heading</h5>
-								<small>3 days ago</small>
+					<ol class="list-group list-group-numbered">
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+								<div class="fw-semibold">Subheading</div>
+								Content for list item
 							</div>
-							<p class="mb-1">Some placeholder content in a paragraph.</p>
-							<small>And some small print.</small>
-						</a>
-						<a href="#" class="list-group-item list-group-item-action">
-							<div class="d-flex w-100 justify-content-between">
-								<h5 class="mb-1">List group item heading</h5>
-								<small class="text-muted">3 days ago</small>
+							<span class="badge bg-primary rounded-pill">14</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+								<div class="fw-semibold">Subheading</div>
+								Content for list item
 							</div>
-							<p class="mb-1">Some placeholder content in a paragraph.</p>
-							<small class="text-muted">And some muted small print.</small>
-						</a>
-						<a href="#" class="list-group-item list-group-item-action">
-							<div class="d-flex w-100 justify-content-between">
-								<h5 class="mb-1">List group item heading</h5>
-								<small class="text-muted">3 days ago</small>
+							<span class="badge bg-primary rounded-pill">14</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+								<div class="fw-semibold">Subheading</div>
+								Content for list item
 							</div>
-							<p class="mb-1">Some placeholder content in a paragraph.</p>
-							<small class="text-muted">And some muted small print.</small>
-						</a>
-					</div>
+							<span class="badge bg-primary rounded-pill">14</span>
+						</li>
+					</ol>
 					<!-- END List Group -->
 				</div>
 			</div>

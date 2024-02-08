@@ -14,24 +14,24 @@
 	.badge-#{$state} {
 		--#{$prefix}badge-bg: var(--#{$prefix}#{$state});
 		--#{$prefix}badge-color: #{color-contrast(map-get($theme-colors, $state))};
-		--#{$prefix}badge-border-color: var(--#{$prefix}badge-bg);
+		--#{$prefix}badge-border-color: transparent;
 	}
 
 	.badge-outline-#{$state} {
 		--#{$prefix}badge-bg: transparent;
-		--#{$prefix}badge-color: var(--#{$prefix}#{$state});
+		--#{$prefix}badge-color: var(--#{$prefix}#{$state}-text-emphasis);
 		--#{$prefix}badge-border-color: var(--#{$prefix}#{$state}-border-subtle);
 	}
 
 	.badge-subtle-#{$state} {
 		--#{$prefix}badge-bg: var(--#{$prefix}#{$state}-bg-subtle);
 		--#{$prefix}badge-color: var(--#{$prefix}#{$state}-text-emphasis);
-		--#{$prefix}badge-border-color: var(--#{$prefix}#{$state}-border-subtle);
+		--#{$prefix}badge-border-color: transparent;
 	}
 
 	.badge-text-#{$state} {
 		--#{$prefix}badge-bg: transparent;
-		--#{$prefix}badge-color: var(--#{$prefix}#{$state});
+		--#{$prefix}badge-color: var(--#{$prefix}#{$state}-text-emphasis);
 		--#{$prefix}badge-border-color: transparent;
 	}
 }

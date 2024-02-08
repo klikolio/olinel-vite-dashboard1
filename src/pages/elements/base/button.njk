@@ -16,15 +16,12 @@
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Variants</h3>
+					<h3 class="portlet-title">Basic</h3>
 				</div>
 				<div class="portlet-body pb-0">
-					<p>
-						The <code>.btn</code> classes are designed to be used with the <code>&lt;button&gt;</code> element. However,
-						you can also use these classes on <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some
-						browsers may apply a slightly different rendering).
-					</p>
-
+					<p>Bootstrap has a base <code>.btn</code> class that sets up basic styles such as padding and content alignment. By default, <code>.btn</code> controls have a transparent border and background color, and lack any explicit focus and hover styles.</p>
+					<p>The <code>.btn</code> classes are designed to be used with the <code>&lt;button&gt;</code> element. However, you can also use these classes on <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
+					
 					<!-- BEGIN Portlet -->
 					<div class="portlet">
 						<div class="portlet-header portlet-header-bordered">
@@ -156,28 +153,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-7">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Pill buttons</h3>
-				</div>
-				<div class="portlet-body">
-					<p>Extend button class with <code>.rounded-pill</code> to make the button more rounded.</p>
-
-					<!-- BEGIN Buttons -->
-					<button class="btn btn-subtle-primary rounded-pill">Primary</button>
-					<button class="btn btn-subtle-secondary rounded-pill">Secondary</button>
-					<button class="btn btn-outline-success rounded-pill">Success</button>
-					<button class="btn btn-outline-warning rounded-pill">Warning</button>
-					<button class="btn btn-flat-danger rounded-pill">Danger</button>
-					<button class="btn btn-flat-info rounded-pill">Info</button>
-					<button class="btn btn-dark rounded-pill">Dark</button>
-					<button class="btn btn-light rounded-pill">Light</button>
-					<!-- END Buttons -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-
+			
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
@@ -221,10 +197,32 @@
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
+					<h3 class="portlet-title">Pill buttons</h3>
+				</div>
+				<div class="portlet-body">
+					<p>Extend button class with <code>.rounded-pill</code> to make the button more rounded.</p>
+
+					<!-- BEGIN Buttons -->
+					<button class="btn btn-subtle-primary rounded-pill">Primary</button>
+					<button class="btn btn-subtle-secondary rounded-pill">Secondary</button>
+					<button class="btn btn-outline-success rounded-pill">Success</button>
+					<button class="btn btn-outline-warning rounded-pill">Warning</button>
+					<button class="btn btn-flat-danger rounded-pill">Danger</button>
+					<button class="btn btn-flat-info rounded-pill">Info</button>
+					<button class="btn btn-dark rounded-pill">Dark</button>
+					<button class="btn btn-light rounded-pill">Light</button>
+					<!-- END Buttons -->
+				</div>
+			</div>
+			<!-- END Portlet -->
+
+			<!-- BEGIN Portlet -->
+			<div class="portlet">
+				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Taller, wider and block</h3>
 				</div>
 				<div class="portlet-body pb-0">
-					<p>You can't use the classes below together with <code>.btn-icon</code></p>
+					<p>Make your button dimension more taller or wider with these modifier classes. you can't use the classes below together with <code>.btn-icon</code>.</p>
 
 					<!-- BEGIN Portlet -->
 					<div class="portlet">
@@ -266,13 +264,10 @@
 							<h3 class="portlet-title">Block</h3>
 						</div>
 						<div class="portlet-body">
-							<p>
-								Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our
-								display and gap utilities.
-							</p>
+							<p>Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.</p>
 
 							<!-- BEGIN Buttons -->
-							<div class="hstack gap-2">
+							<div class="vstack gap-2">
 								<button class="btn btn-primary">Block</button>
 								<button class="btn btn-subtle-primary">Block</button>
 							</div>
@@ -297,10 +292,7 @@
 							<h3 class="portlet-title">Square buttons</h3>
 						</div>
 						<div class="portlet-body">
-							<p>
-								If you need square button with an icon inside, you can use
-								<code>.btn-icon</code> and combine with button variant classes.
-							</p>
+							<p>If you need square button with an icon inside, you can use <code>.btn-icon</code> class.</p>
 
 							<!-- BEGIN Buttons -->
 							<button class="btn btn-secondary btn-icon">
@@ -338,10 +330,7 @@
 							<h3 class="portlet-title">Circle buttons</h3>
 						</div>
 						<div class="portlet-body">
-							<p>
-								Make your icon buttons circular by extending
-								<code>.btn-icon</code> with <code>.rounded-circle</code> modifier class.
-							</p>
+							<p>Make your icon buttons circular by extending <code>.btn-icon</code> with <code>.rounded-circle</code> modifier class.</p>
 
 							<!-- BEGIN Buttons -->
 							<button class="btn btn-secondary btn-icon rounded-circle">
@@ -379,10 +368,7 @@
 							<h3 class="portlet-title">Icon with text</h3>
 						</div>
 						<div class="portlet-body">
-							<p>
-								If you want to use icon with text, you don't need to apply
-								<code>.btn-icon</code>
-							</p>
+							<p>If you want to use icon with text, you don't need to apply <code>.btn-icon</code> class.</p>
 
 							<!-- BEGIN Buttons -->
 							<button class="btn btn-primary">
@@ -415,7 +401,7 @@
 					<h3 class="portlet-title">States</h3>
 				</div>
 				<div class="portlet-body">
-					<p>Add <code>.active</code> or <code>.disabled</code> for the active or inactive button appearance.</p>
+					<p>Add <code>.active</code> or <code>.disabled</code> classes for the active or inactive button appearance. Disabled buttons have pointer-events: none applied to, preventing hover and active states from triggering.</p>
 
 					<!-- BEGIN Buttons -->
 					<button class="btn btn-primary active">Active</button>

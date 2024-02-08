@@ -31,7 +31,7 @@ class Menu extends BaseComponent {
 		return NAME
 	}
 
-	asideDefaultDesktopMinimized
+	asideDefaultDesktopMinimized = false
 
 	constructor() {
 		super()
@@ -49,7 +49,7 @@ class Menu extends BaseComponent {
 		document.querySelectorAll(SELECTOR_TOGGLE).forEach((toggleElement) => {
 			toggleElement.addEventListener('click', () => {
 				const itemElement = toggleElement.parentElement
-				const isCollapsed = itemElement.getAttribute(DATA_COLLAPSED) === 'true'
+				const isCollapsed = itemElement?.getAttribute(DATA_COLLAPSED) === 'true'
 
 				this.toggleCollapse(itemElement, !isCollapsed)
 			})
