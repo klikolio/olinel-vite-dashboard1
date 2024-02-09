@@ -2,13 +2,13 @@
 	display: block;
 	text-align: center;
 	padding: $widget6-padding-y $widget6-padding-x;
-	background: $widget6-bg;
-	border: $widget6-border-width $border-style $widget6-border-color;
+	background-color: $widget6-bg;
+	border: $widget6-border-width solid $widget6-border-color;
 	cursor: pointer;
 	@include border-radius($widget6-border-radius);
 
 	&:hover {
-		background: $widget6-hover-bg;
+		background-color: $widget6-hover-bg;
 		border-color: $widget6-hover-border-color;
 	}
 }

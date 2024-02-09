@@ -1,9 +1,9 @@
 @import "bootstrap/scss/offcanvas";
 
 .offcanvas {
-	--#{$prefix}offcanvas-title-color: $offcanvas-title-color;
-	--#{$prefix}offcanvas-title-font-size: $offcanvas-title-font-size;
-	--#{$prefix}offcanvas-title-font-weight: $offcanvas-title-font-weight;
+	--#{$prefix}offcanvas-title-color: #{$offcanvas-title-color};
+	--#{$prefix}offcanvas-title-font-size: #{$offcanvas-title-font-size};
+	--#{$prefix}offcanvas-title-font-weight: #{$offcanvas-title-font-weight};
 }
 
 .offcanvas-title {

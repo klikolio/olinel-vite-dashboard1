@@ -126,7 +126,7 @@
 		position: absolute;
 		width: var(--#{$prefix}dropdown-bullet-size);
 		height: var(--#{$prefix}dropdown-bullet-size);
-		border-radius: 50%;
+		border-radius: var(--#{$prefix}dropdown-bullet-size);
 		background-color: currentColor;
 	}
 }

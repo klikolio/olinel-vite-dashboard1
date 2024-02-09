@@ -6,13 +6,12 @@
 	}
 
 	.nav-link {
-		border: $widget2-link-border-width $border-style $widget2-link-border-color;
-		@include border-radius($widget2-link-border-radius);
+		border: $widget2-link-border-width solid $widget2-link-border-color;
 
 		&:hover,
 		&:focus {
 			color: $widget2-link-hover-color;
-			background: $widget2-link-hover-bg;
+			background-color: $widget2-link-hover-bg;
 			border-color: $widget2-link-hover-border-color;
 		}
 	}
@@ -20,7 +19,7 @@
 	.nav-link.active,
   .nav-item.show .nav-link {
 		color: $widget2-link-active-color;
-		background: $widget2-link-active-bg;
+		background-color: $widget2-link-active-bg;
 		border-color: $widget2-link-active-border-color;
 	}
 }
