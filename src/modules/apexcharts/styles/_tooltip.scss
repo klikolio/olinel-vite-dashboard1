@@ -11,8 +11,7 @@
 	@include font-size($apexchart-tooltip-font-size); //
 	color: $apexchart-tooltip-color;
 	background: $apexchart-tooltip-bg;
-	border: $apexchart-tooltip-border-width solid
-		$apexchart-tooltip-border-color;
+	border: $apexchart-tooltip-border-width solid $apexchart-tooltip-border-color;
 	/* rtl:begin:ignore */
 	left: $apexchart-tooltip-offset;
 	top: $apexchart-tooltip-offset;
@@ -161,8 +160,7 @@
 	padding: $apexchart-tooltip-padding-y $apexchart-tooltip-padding-x;
 	color: $apexchart-tooltip-color;
 	background: $apexchart-tooltip-bg;
-	border: $apexchart-tooltip-border-width solid
-		$apexchart-tooltip-border-color;
+	border: $apexchart-tooltip-border-width solid $apexchart-tooltip-border-color;
 	text-align: center;
 	opacity: 0;
 	z-index: 10;

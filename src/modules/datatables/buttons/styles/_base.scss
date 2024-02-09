@@ -69,7 +69,8 @@
 
 	&.bar {
 		vertical-align: middle;
-		border-left: $datatables-btn-divider-width solid $datatables-btn-divider-color;
+		border-left: $datatables-btn-divider-width solid
+			$datatables-btn-divider-color;
 		padding-left: $datatables-btn-divider-spacer;
 
 		&:empty {

@@ -2,7 +2,7 @@
 	+ label {
 		@include font-size($font-size);
 		left: add($padding-x, $input-border-width);
-		top: add(add($input-line-height * .5em, $padding-y), $input-border-width);
+		top: add(add($input-line-height * 0.5em, $padding-y), $input-border-width);
 	}
 
 	&:focus,

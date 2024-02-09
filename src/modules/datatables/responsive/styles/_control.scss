@@ -15,7 +15,7 @@
 		.dtr-control {
 			cursor: pointer;
 			white-space: nowrap;
-			
+
 			&:before {
 				display: inline-block;
 				content: $datatables-control-content-closed;

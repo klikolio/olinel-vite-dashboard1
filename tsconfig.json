@@ -15,14 +15,14 @@
 		"allowJs": true,
 		"paths": {
 			"@app/*": ["./src/app/*"],
-			"@modules/*": ["./src/modules/*"],
+			"@modules/*": ["./src/modules/*"]
 		},
 
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true,
+		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["src", "globals.d.ts"],
+	"include": ["src", "globals.d.ts"]
 }
