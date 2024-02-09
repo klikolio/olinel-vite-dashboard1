@@ -15,17 +15,18 @@
 
 .sortable-ghost {
 	opacity: $sortable-drag-opacity;
+	overflow: hidden;
 }
 
 // SortableJS support
-.sortable.rich-list-bordered {
+.sortable.richlist-bordered {
 	.sortable,
 	.sortable-item:not(:first-of-type) {
 		margin-top: $richlist-item-spacer;
 	}
 }
 
-.sortable.rich-list-flush {
+.sortable.richlist-flush {
 	.sortable,
 	.sortable-item:not(:first-of-type) {
 		border-top: $richlist-border-width solid $richlist-border-color;

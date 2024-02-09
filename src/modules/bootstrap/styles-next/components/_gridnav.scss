@@ -9,16 +9,6 @@
 	--#{$prefix}gridnav-item-padding-y: #{$gridnav-item-padding-y};
 	--#{$prefix}gridnav-item-padding-x: #{$gridnav-item-padding-x};
 	--#{$prefix}gridnav-item-min-width: #{$gridnav-item-min-width};
-	--#{$prefix}gridnav-item-hover-bg: #{$gridnav-item-hover-bg};
-	--#{$prefix}gridnav-item-hover-color: #{$gridnav-item-hover-color};
-	--#{$prefix}gridnav-item-hover-border-color: #{$gridnav-item-hover-border-color};
-	--#{$prefix}gridnav-item-active-bg: #{$gridnav-item-active-bg};
-	--#{$prefix}gridnav-item-active-color: #{$gridnav-item-active-color};
-	--#{$prefix}gridnav-item-active-border-color: #{$gridnav-item-active-border-color};
-	--#{$prefix}gridnav-item-disabled-bg: #{$gridnav-item-disabled-bg};
-	--#{$prefix}gridnav-item-disabled-color: #{$gridnav-item-disabled-color};
-	--#{$prefix}gridnav-item-disabled-border-color: #{$gridnav-item-disabled-border-color};
-	--#{$prefix}gridnav-item-disabled-opacity: #{$gridnav-item-disabled-opacity};
 	--#{$prefix}gridnav-content-line-height: #{$gridnav-content-line-height};
 	--#{$prefix}gridnav-title-color: #{$gridnav-title-color};
 	@include rfs($gridnav-title-font-size, --#{$prefix}gridnav-title-font-size);
@@ -100,6 +90,17 @@
 
 // Make .gridnav-item behave like link with active and disabled states
 .gridnav-action {
+	--#{$prefix}gridnav-item-hover-bg: #{$gridnav-item-hover-bg};
+	--#{$prefix}gridnav-item-hover-color: #{$gridnav-item-hover-color};
+	--#{$prefix}gridnav-item-hover-border-color: #{$gridnav-item-hover-border-color};
+	--#{$prefix}gridnav-item-active-bg: #{$gridnav-item-active-bg};
+	--#{$prefix}gridnav-item-active-color: #{$gridnav-item-active-color};
+	--#{$prefix}gridnav-item-active-border-color: #{$gridnav-item-active-border-color};
+	--#{$prefix}gridnav-item-disabled-bg: #{$gridnav-item-disabled-bg};
+	--#{$prefix}gridnav-item-disabled-color: #{$gridnav-item-disabled-color};
+	--#{$prefix}gridnav-item-disabled-border-color: #{$gridnav-item-disabled-border-color};
+	--#{$prefix}gridnav-item-disabled-opacity: #{$gridnav-item-disabled-opacity};
+
 	.gridnav-item {
 		cursor: pointer;
 

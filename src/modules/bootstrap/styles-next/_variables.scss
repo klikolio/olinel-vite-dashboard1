@@ -747,8 +747,8 @@ $mark-color:                  color-contrast($mark-bg) !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        $spacer * .5 !default;
-$table-cell-padding-x:        $spacer * .75 !default;
+$table-cell-padding-y:        $spacer * .75 !default;
+$table-cell-padding-x:        $spacer !default;
 $table-cell-padding-y-sm:     $spacer * .25 !default;
 $table-cell-padding-x-sm:     $spacer * .5 !default;
 
@@ -1644,13 +1644,13 @@ $figure-caption-color:              var(--#{$prefix}secondary-color) !default;
 $marker-color:                      var(--#{$prefix}secondary-bg) !default;
 $marker-spacer:                     $spacer * .25 !default;
 $marker-base-dimension:             .75rem !default;
-$marker-base-dimension-lg:          $marker-base-dimension + .25rem !default;
-$marker-base-dimension-sm:          $marker-base-dimension - .25rem !default;
+$marker-base-dimension-lg:          add($marker-base-dimension, .25rem) !default;
+$marker-base-dimension-sm:          subtract($marker-base-dimension, .25rem) !default;
 
 $marker-outline-width:              2px !default;
 $marker-outline-color:              $component-bg !default;
 
-$marker-pill-width-ratio:           3 !default;
+$marker-pill-width-ratio:           2 !default;
 
 $marker-circle-bg:                  $component-bg !default;
 $marker-circle-border-ratio:        .35 !default;
@@ -1820,18 +1820,19 @@ $avatar-group-offset:               1em !default;
 
 $chat-spacer:                       $spacer * .5 !default;
 $chat-border-radius:                var(--#{$prefix}border-radius-lg) !default;
+$chat-max-width:                    subtract(100%, 5rem) !default;
 
-$chat-content-width:                75% !default;
 $chat-content-padding:              $spacer * .5 !default;
 
 $chat-image-max-width:              20rem !default;
 
+$chat-bubble-max-width:             35rem !default;
 $chat-bubble-opacity:               .1 !default;
 $chat-bubble-bg:                    rgba($bg-level-4, $chat-bubble-opacity) !default;
 $chat-bubble-color:                 var(--#{$prefix}secondary-color) !default;
 $chat-bubble-padding:               $spacer * .75 !default;
 
-$chat-author-color:                 var(--#{$prefix}text-level-3) !default;
+$chat-author-color:                 var(--#{$prefix}heading-color) !default;
 $chat-author-font-size:             $font-size-base !default;
 $chat-author-font-weight:           $font-weight-medium !default;
 
@@ -1850,7 +1851,7 @@ $chat-section-font-weight:          $font-weight-semibold !default;
 // Grid Nav
 
 $gridnav-bg:                        $component-bg !default;
-$gridnav-color:                     var(--#{$prefix}text-level-3) !default;
+$gridnav-color:                     var(--#{$prefix}body-color) !default;
 $gridnav-border-width:              var(--#{$prefix}border-width) !default;
 $gridnav-border-color:              var(--#{$prefix}border-color) !default;
 $gridnav-border-radius:             var(--#{$prefix}border-radius) !default;
@@ -1864,7 +1865,7 @@ $gridnav-item-hover-color:          $component-hover-color !default;
 $gridnav-item-hover-border-color:   $gridnav-border-color !default;
 $gridnav-item-active-bg:            $component-active-bg !default;
 $gridnav-item-active-color:         $component-active-color !default;
-$gridnav-item-active-border-color:  $gridnav-border-color !default;
+$gridnav-item-active-border-color:  $gridnav-item-active-bg !default;
 $gridnav-item-disabled-bg:          $component-disabled-bg !default;
 $gridnav-item-disabled-color:       $component-disabled-color !default;
 $gridnav-item-disabled-border-color:$gridnav-border-color !default;
@@ -1917,7 +1918,7 @@ $richlist-addon-spacer:             $spacer * .5 !default;
 // Timeline
 
 $timeline-line-width:               2px !default;
-$timeline-line-color:               var(--#{$prefix}bg-level-4) !default;
+$timeline-line-color:               var(--#{$prefix}tertiary-bg) !default;
 $timeline-line-border-radius:       var(--#{$prefix}border-radius) !default;
 
 $timeline-pin-width:                3rem !default;
@@ -1928,7 +1929,7 @@ $timeline-time-color:               var(--#{$prefix}body-color) !default;
 $timeline-time-font-size:           $font-size-lg !default;
 $timeline-time-font-weight:         $font-weight-semibold !default;
 
-$timeline-content-color:            var(--#{$prefix}text-level-3) !default;
+$timeline-content-color:            var(--#{$prefix}secondary-color) !default;
 $timeline-content-padding:          $spacer * .5 !default;
 
 // Menu

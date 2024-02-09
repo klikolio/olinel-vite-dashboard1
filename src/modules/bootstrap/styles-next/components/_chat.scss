@@ -3,12 +3,13 @@
 .chat {
 	--#{$prefix}chat-spacer: #{$chat-spacer};
 	--#{$prefix}chat-border-radius: #{$chat-border-radius};
-	--#{$prefix}chat-content-width: #{$chat-content-width};
+	--#{$prefix}chat-max-width: #{$chat-max-width};
 	--#{$prefix}chat-content-padding: #{$chat-content-padding};
 	--#{$prefix}chat-bubble-bg: #{$chat-bubble-bg};
 	--#{$prefix}chat-bubble-color: #{$chat-bubble-color};
 	--#{$prefix}chat-bubble-opacity: #{$chat-bubble-opacity};
 	--#{$prefix}chat-bubble-padding: #{$chat-bubble-padding};
+	--#{$prefix}chat-bubble-max-width: #{$chat-bubble-max-width};
 	--#{$prefix}chat-image-max-width: #{$chat-image-max-width};
 	--#{$prefix}chat-author-color: #{$chat-author-color};
 	@include rfs($chat-author-font-size, --#{$prefix}chat-author-font-size);
@@ -31,12 +32,12 @@
 .chat-item {
 	display: flex;
 	margin: var(--#{$prefix}chat-spacer) 0;
+	max-width: var(--#{$prefix}chat-max-width);
 }
 
 .chat-content {
 	display: flex;
 	flex-direction: column;
-	max-width: var(--#{$prefix}chat-content-width);
 }
 
 .chat-bubble {
@@ -45,6 +46,7 @@
 	color: var(--#{$prefix}chat-bubble-color);
 	background-color: var(--#{$prefix}chat-bubble-bg);
 	padding: var(--#{$prefix}chat-bubble-padding);
+	max-width: var(--#{$prefix}chat-bubble-max-width);
 	margin: 0;
 	@include border-radius(var(--#{$prefix}chat-border-radius));
 
@@ -62,6 +64,7 @@
 .chat-item-start {
 	text-align: left;
 	flex-direction: row;
+	align-self: flex-start;
 
 	.chat-content {
 		align-items: flex-start;
@@ -71,6 +74,7 @@
 .chat-item-end {
 	text-align: right;
 	flex-direction: row-reverse;
+	align-self: flex-end;
 
 	.chat-content {
 		align-items: flex-end;
@@ -78,9 +82,9 @@
 }
 
 // Chat bubble background color variants
-@each $color, $value in $theme-colors {
-	.chat-bubble-#{$color} {
-		background-color: rgba($value, $chat-bubble-opacity) !important;
+@each $state, $color in $theme-colors {
+	.chat-bubble-#{$state} {
+		background-color: var(--#{$prefix}#{$state}-bg-subtle);
 	}
 }
 
@@ -107,9 +111,9 @@
 
 .chat-time {
 	display: block;
-	color: var(--#{$prefix}chat-author-color);
-	@include font-size(var(--#{$prefix}chat-author-font-size));
-	font-weight: var(--#{$prefix}chat-author-font-weight);
+	color: var(--#{$prefix}chat-time-color);
+	@include font-size(var(--#{$prefix}chat-time-font-size));
+	font-weight: var(--#{$prefix}chat-time-font-weight);
 	padding: var(--#{$prefix}chat-content-padding);
 }
 

@@ -51,7 +51,7 @@
 					<h3 class="portlet-title">Circle version</h3>
 				</div>
 				<div class="portlet-body">
-					<p>Extend default avatar element with <code>.avatar-circle</code> to change its shape to be circular.</p>
+					<p>Extend default avatar element with <code>.avatar-circle</code> to change the shape to be circular.</p>
 
 					<!-- BEGIN Avatars -->
 					<div class="d-flex">
@@ -112,89 +112,48 @@
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Group</h3>
+					<h3 class="portlet-title">Addon</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						Wrap a series of avatar elements into <code>.avatar-group</code> to group the elements. Instead of applying
-						avatar sizing classes to every avatar in a group, just add <code>.avatar-group-{lg|sm}</code> to each
-						<code>.avatar-group</code>
+						You can add a counter or marker to avatar by using <a target="_blank" href="https://getbootstrap.com/docs/5.3/utilities/api">Bootstrap utility classes</a> and combine it with <a href="/elements/base/badge.html">badge</a> or
+						<a href="/elements/advanced/marker.html">marker</a> component.
 					</p>
 
-					<!-- BEGIN Avatar Group -->
-					<div class="avatar-group avatar-group-sm">
-						<div class="avatar avatar-circle avatar-primary">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
+					<!-- BEGIN Avatars -->
+					<div class="avatar avatar-primary">
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
+							<i class="marker marker-dot text-success"></i>
 						</div>
-						<div class="avatar avatar-circle avatar-secondary">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
-						</div>
-						<div class="avatar avatar-circle avatar-success">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
-						</div>
-						<div class="avatar avatar-circle avatar-danger">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
+						<div class="avatar-display">
+							<i class="fa fa-user"></i>
 						</div>
 					</div>
-					<!-- END Avatar Group -->
-
-					<!-- BEGIN Avatar Group -->
-					<div class="avatar-group">
-						<div class="avatar avatar-circle avatar-primary">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
+					<div class="avatar avatar-primary">
+						<div class="avatar-display">
+							<i class="fa fa-user"></i>
 						</div>
-						<div class="avatar avatar-circle avatar-secondary">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
-						</div>
-						<div class="avatar avatar-circle avatar-success">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
-						</div>
-						<div class="avatar avatar-circle avatar-danger">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
+						<div class="position-absolute translate-middle top-100 start-100 z-1">
+							<i class="marker marker-dot text-success"></i>
 						</div>
 					</div>
-					<!-- END Avatar Group -->
-
-					<!-- BEGIN Avatar Group -->
-					<div class="avatar-group avatar-group-lg">
-						<div class="avatar avatar-circle avatar-primary">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
+					<div class="avatar avatar-primary">
+						<div class="position-absolute translate-middle top-0 start-100 z-1">
+							<span class="badge badge-danger rounded-pill avatar-badge">9+</span>
 						</div>
-						<div class="avatar avatar-circle avatar-secondary">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
-						</div>
-						<div class="avatar avatar-circle avatar-success">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
-						</div>
-						<div class="avatar avatar-circle avatar-danger">
-							<div class="avatar-display">
-								<i class="fa fa-user"></i>
-							</div>
+						<div class="avatar-display">
+							<i class="fa fa-user"></i>
 						</div>
 					</div>
-					<!-- END Avatar Group -->
+					<div class="avatar avatar-primary">
+						<div class="avatar-display">
+							<i class="fa fa-user"></i>
+						</div>
+						<div class="position-absolute translate-middle top-100 start-100 z-1">
+							<span class="badge badge-success rounded-pill avatar-badge">9+</span>
+						</div>
+					</div>
+					<!-- END Avatars -->
 				</div>
 			</div>
 			<!-- END Portlet -->
@@ -324,54 +283,93 @@
 				</div>
 			</div>
 			<!-- END Portlet -->
-
+		
 			<!-- BEGIN Portlet -->
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Addon</h3>
+					<h3 class="portlet-title">Group</h3>
 				</div>
 				<div class="portlet-body">
 					<p>
-						Addon can be replaced to <strong>top-start</strong> or <strong>bottom-end</strong> of avatar element. Use
-						<code>.avatar-addon</code> and extend with <code>.avatar-addon-{top|bottom}</code> to set placement. You can
-						put <a href="/elements/base/badge.html">badge</a> or <a href="/elements/advanced/marker.html">marker</a> into
-						avatar addon.
+						Wrap a series of avatar elements into <code>.avatar-group</code> to group the elements. Instead of applying
+						avatar sizing classes to every avatar in a group, just add <code>.avatar-group-{lg|sm}</code> to each
+						<code>.avatar-group</code>
 					</p>
 
-					<!-- BEGIN Avatars -->
-					<div class="avatar avatar-primary">
-						<div class="position-absolute translate-middle top-0 start-100 z-1">
-							<i class="marker marker-dot text-success"></i>
+					<!-- BEGIN Avatar Group -->
+					<div class="avatar-group avatar-group-sm">
+						<div class="avatar avatar-circle avatar-primary">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
 						</div>
-						<div class="avatar-display">
-							<i class="fa fa-user"></i>
+						<div class="avatar avatar-circle avatar-secondary">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
 						</div>
-					</div>
-					<div class="avatar avatar-primary">
-						<div class="avatar-display">
-							<i class="fa fa-user"></i>
+						<div class="avatar avatar-circle avatar-success">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
 						</div>
-						<div class="position-absolute translate-middle top-100 start-100 z-1">
-							<i class="marker marker-dot text-success"></i>
-						</div>
-					</div>
-					<div class="avatar avatar-primary">
-						<div class="position-absolute translate-middle top-0 start-100 z-1">
-							<span class="badge badge-danger rounded-pill avatar-badge">9+</span>
-						</div>
-						<div class="avatar-display">
-							<i class="fa fa-user"></i>
+						<div class="avatar avatar-circle avatar-danger">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
 						</div>
 					</div>
-					<div class="avatar avatar-primary">
-						<div class="avatar-display">
-							<i class="fa fa-user"></i>
+					<!-- END Avatar Group -->
+
+					<!-- BEGIN Avatar Group -->
+					<div class="avatar-group">
+						<div class="avatar avatar-circle avatar-primary">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
 						</div>
-						<div class="position-absolute translate-middle top-100 start-100 z-1">
-							<span class="badge badge-success rounded-pill avatar-badge">9+</span>
+						<div class="avatar avatar-circle avatar-secondary">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+						<div class="avatar avatar-circle avatar-success">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+						<div class="avatar avatar-circle avatar-danger">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
 						</div>
 					</div>
-					<!-- END Avatars -->
+					<!-- END Avatar Group -->
+
+					<!-- BEGIN Avatar Group -->
+					<div class="avatar-group avatar-group-lg">
+						<div class="avatar avatar-circle avatar-primary">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+						<div class="avatar avatar-circle avatar-secondary">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+						<div class="avatar avatar-circle avatar-success">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+						<div class="avatar avatar-circle avatar-danger">
+							<div class="avatar-display">
+								<i class="fa fa-user"></i>
+							</div>
+						</div>
+					</div>
+					<!-- END Avatar Group -->
 				</div>
 			</div>
 			<!-- END Portlet -->

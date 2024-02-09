@@ -9,7 +9,7 @@ const direction = getPageIsRTL() ? 'left' : 'right'
 
 initDaterangepicker({
 	opens: direction, // Set direction
-	cancelButtonClasses: 'btn-subtle-danger',
+	cancelButtonClasses: 'btn-outline-danger',
 }).then(() => {
 	$('#daterangepicker-1').daterangepicker()
 

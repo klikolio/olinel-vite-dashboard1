@@ -25,14 +25,14 @@ $('#blockui-trigger-2').on('click', () => {
 
 $('#blockui-trigger-3').on('click', () => {
 	$(blockTarget).block({
-		timeout: 1000,
+		timeout: 3000,
 	})
 })
 
 $('#blockui-trigger-4').on('click', () => {
 	$(blockTarget).block({
 		message: 'Custom text here...',
-		timeout: 1000,
+		timeout: 3000,
 	})
 })
 
@@ -54,16 +54,19 @@ $('#blockui-trigger-6').on('click', () => {
 			backgroundColor: '#29b6f6',
 		},
 		css: {
+			color: '#424242',
 			backgroundColor: '#ffee58',
+			borderColor: '#ffee58',
 		},
-		timeout: 1000,
+		timeout: 3000,
 	})
 })
 
 $('#blockui-trigger-7').on('click', () => {
 	if ($.blockUI) {
 		$.blockUI({
-			timeout: 1000,
+			baseZ: 9999,
+			timeout: 3000,
 		})
 	}
 })
@@ -74,7 +77,7 @@ $('#blockui-trigger-8').on('click', () => {
       <div class="spinner-border text-primary"></div>
       <span class="blockUI blockTitle">Please wait...</span>
     `,
-		timeout: 1000,
+		timeout: 3000,
 	})
 })
 
@@ -84,7 +87,7 @@ $('#blockui-trigger-9').on('click', () => {
       <div class="spinner-grow text-success"></div>
       <span class="blockUI blockTitle">Please wait...</span>
     `,
-		timeout: 1000,
+		timeout: 3000,
 	})
 })
 
@@ -96,7 +99,8 @@ $('#blockui-trigger-10').on('click', () => {
 		},
 		css: {
 			backgroundColor: 'transparent',
+			border: 0,
 		},
-		timeout: 1000,
+		timeout: 3000,
 	})
 })

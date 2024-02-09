@@ -2,13 +2,20 @@ import 'jquery-contextmenu'
 import '@modules/jquery-contextmenu/styles/context-menu.scss'
 
 import $ from 'jquery'
-import { getPageIsRTL } from '@app/utilities/widget-helper'
+import { getPageIsRTL, getBrowserHeight } from '@app/utilities/widget-helper'
 
 const isRtl = getPageIsRTL()
 
 const positionProvider = (opt: any, x: any, y: any) => {
+	const browserHeight = getBrowserHeight() ?? 0
 	const menuWidth = opt.$menu.outerWidth() ?? 0
+	const menuHeight = opt.$menu.outerHeight() ?? 0
+	const maxHeight = browserHeight - menuHeight
 	const position = isRtl ? x - menuWidth : x
+
+	if (y >= maxHeight) {
+		y = maxHeight - 4
+	}
 
 	opt.$menu.css({
 		top: y,

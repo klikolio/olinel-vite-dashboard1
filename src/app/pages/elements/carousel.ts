@@ -15,7 +15,7 @@ const navIcons = {
 }
 
 const buttonTemplate = Handlebars.compile(
-	'<button class="btn btn-flat-primary {{extraClassName}}" type="button">{{content}}</button>',
+	'<button class="btn btn-info {{extraClassName}}" type="button">{{content}}</button>',
 	{ noEscape: true },
 )
 

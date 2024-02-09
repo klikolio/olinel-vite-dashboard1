@@ -35,6 +35,14 @@ export function getBrowserWidth(): number {
 	)
 }
 
+export function getBrowserHeight(): number {
+	return (
+		window.innerHeight ||
+		document.documentElement.clientHeight ||
+		document.body.clientHeight
+	)
+}
+
 export function getRandomNumber(min: number, max: number) {
 	return Math.floor(Math.random() * (max - min + 1)) + min
 }

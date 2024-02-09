@@ -28,7 +28,8 @@
 	min-width: $context-menu-min-width;
 	max-width: $context-menu-max-width;
 	padding: $context-menu-padding-y 0 !important;
-	list-style: none;
+	z-index: $zindex-context-menu !important;
+	@include list-unstyled();
 
 	@if $enable-transitions {
 		animation-name: contextMenuslideUp;
@@ -88,7 +89,7 @@
 	}
 }
 
-.context-menu-sub {
+.context-menu-submenu {
 	@include caret(end);
 }
 
