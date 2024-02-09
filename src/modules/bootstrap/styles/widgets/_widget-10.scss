@@ -10,7 +10,7 @@
 	align-items: center;
 	padding: $widget10-item-padding;
 
-	+ .widget10-item {
+	+ #{&} {
 		border-left: $widget10-border-width $border-style $widget10-border-color;
 	}
 }

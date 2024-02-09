@@ -1,15 +1,12 @@
 // Base styles
 
 .timeline {
-	--#{$variable-prefix}timeline-time-padding: #{$timeline-time-padding};
-	--#{$variable-prefix}timeline-time-color: #{$timeline-time-color};
-	@include rfs(
-		$timeline-time-font-size,
-		--#{$variable-prefix}timeline-time-font-size
-	);
-	--#{$variable-prefix}timeline-time-font-weight: #{$timeline-time-font-weight};
-	--#{$variable-prefix}timeline-content-color: #{$timeline-content-color};
-	--#{$variable-prefix}timeline-content-padding: #{$timeline-content-padding};
+	--#{$prefix}timeline-time-padding: #{$timeline-time-padding};
+	--#{$prefix}timeline-time-color: #{$timeline-time-color};
+	@include rfs($timeline-time-font-size, --#{$prefix}timeline-time-font-size);
+	--#{$prefix}timeline-time-font-weight: #{$timeline-time-font-weight};
+	--#{$prefix}timeline-content-color: #{$timeline-content-color};
+	--#{$prefix}timeline-content-padding: #{$timeline-content-padding};
 
 	display: flex;
 	flex-direction: column;
@@ -24,7 +21,7 @@
 		display: block;
 		height: 100%;
 		width: $timeline-line-width;
-		background: $timeline-line-color;
+		background-color: $timeline-line-color;
 		top: 0;
 		left: $timeline-pin-width * 0.5;
 		transform: translateX(-50%);
@@ -51,8 +48,8 @@
 
 .timeline-content {
 	width: 100%;
-	color: var(--#{$variable-prefix}timeline-content-color);
-	padding: var(--#{$variable-prefix}timeline-content-padding);
+	color: var(--#{$prefix}timeline-content-color);
+	padding: var(--#{$prefix}timeline-content-padding);
 }
 
 // Appear timeline for zigzag content
@@ -103,10 +100,10 @@
 		position: absolute;
 		width: $timeline-time-width;
 		left: -#{$timeline-time-width + $timeline-pin-width};
-		@include font-size(var(--#{$variable-prefix}timeline-time-font-size));
-		font-weight: var(--#{$variable-prefix}timeline-time-font-weight);
-		color: var(--#{$variable-prefix}timeline-time-color);
-		padding: var(--#{$variable-prefix}timeline-time-padding);
+		@include font-size(var(--#{$prefix}timeline-time-font-size));
+		font-weight: var(--#{$prefix}timeline-time-font-weight);
+		color: var(--#{$prefix}timeline-time-color);
+		padding: var(--#{$prefix}timeline-time-padding);
 		top: 50%;
 		transform: translateY(-50%);
 	}

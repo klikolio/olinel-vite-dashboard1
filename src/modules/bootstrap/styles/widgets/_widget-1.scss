@@ -11,22 +11,22 @@
 	min-height: $widget1-display-height;
 	padding: $widget1-content-padding;
 	@include border-radius($widget1-border-radius);
+}
 
-	&.widget1-display-top {
-		@include border-bottom-radius(0);
-	}
+.widget1-display-top {
+	@include border-bottom-radius(0);
+}
 
-	&.widget1-display-bottom {
-		@include border-top-radius(0);
-	}
+.widget1-display-bottom {
+	@include border-top-radius(0);
+}
 
-	&.widget1-display-lg {
-		min-height: $widget1-display-height-lg;
-	}
+.widget1-display-lg {
+	min-height: $widget1-display-height-lg;
+}
 
-	&.widget1-display-sm {
-		min-height: $widget1-display-height-sm;
-	}
+.widget1-display-sm {
+	min-height: $widget1-display-height-sm;
 }
 
 .widget1-group {
@@ -77,8 +77,8 @@
 	padding: $widget1-content-padding;
 	z-index: 1;
 	@include border-bottom-radius($widget1-border-radius);
+}
 
-	&.widget1-body-offset {
-		margin-top: -$widget1-body-offset;
-	}
+.widget1-body-offset {
+	margin-top: -$widget1-body-offset;
 }

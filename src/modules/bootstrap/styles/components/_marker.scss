@@ -1,62 +1,62 @@
 // Base styles
 
 .marker {
-	--#{$variable-prefix}marker-color: #{$marker-color};
-	--#{$variable-prefix}marker-spacer: #{$marker-spacer};
-	--#{$variable-prefix}marker-base-dimension: #{$marker-base-dimension};
-	--#{$variable-prefix}marker-outline-width: #{$marker-outline-width};
-	--#{$variable-prefix}marker-outline-color: #{$marker-outline-color};
-	--#{$variable-prefix}marker-pill-width-ratio: #{$marker-pill-width-ratio};
-	--#{$variable-prefix}marker-circle-bg: #{$marker-circle-bg};
-	--#{$variable-prefix}marker-circle-border-ratio: #{$marker-circle-border-ratio};
+	--#{$prefix}marker-color: #{$marker-color};
+	--#{$prefix}marker-spacer: #{$marker-spacer};
+	--#{$prefix}marker-base-dimension: #{$marker-base-dimension};
+	--#{$prefix}marker-outline-width: #{$marker-outline-width};
+	--#{$prefix}marker-outline-color: #{$marker-outline-color};
+	--#{$prefix}marker-pill-width-ratio: #{$marker-pill-width-ratio};
+	--#{$prefix}marker-circle-bg: #{$marker-circle-bg};
+	--#{$prefix}marker-circle-border-ratio: #{$marker-circle-border-ratio};
 
 	display: inline-block;
-	color: var(--#{$variable-prefix}marker-color);
-	margin: 0 var(--#{$variable-prefix}marker-spacer);
+	color: var(--#{$prefix}marker-color);
+	margin: 0 var(--#{$prefix}marker-spacer);
 
 	// Box shadow property is used for marker outline
-	box-shadow: 0 0 0 var(--#{$variable-prefix}marker-outline-width)
-		var(--#{$variable-prefix}marker-outline-color);
+	box-shadow: 0 0 0 var(--#{$prefix}marker-outline-width)
+		var(--#{$prefix}marker-outline-color);
 }
 
 // Marker variations
 .marker-dot {
-	width: var(--#{$variable-prefix}marker-base-dimension);
-	height: var(--#{$variable-prefix}marker-base-dimension);
+	width: var(--#{$prefix}marker-base-dimension);
+	height: var(--#{$prefix}marker-base-dimension);
 	background-color: currentColor;
 	border-radius: 50%;
 }
 
 .marker-pill {
 	width: calc(
-		var(--#{$variable-prefix}marker-base-dimension) *
-			var(--#{$variable-prefix}marker-pill-width-ratio)
+		var(--#{$prefix}marker-base-dimension) *
+			var(--#{$prefix}marker-pill-width-ratio)
 	);
-	height: var(--#{$variable-prefix}marker-base-dimension);
+	height: var(--#{$prefix}marker-base-dimension);
 	background-color: currentColor;
-	border-radius: calc(0.5 * var(--#{$variable-prefix}marker-base-dimension));
+	border-radius: calc(0.5 * var(--#{$prefix}marker-base-dimension));
 }
 
 .marker-circle {
 	width: calc(
-		var(--#{$variable-prefix}marker-base-dimension) *
-			var(--#{$variable-prefix}marker-circle-border-ratio) +
-			var(--#{$variable-prefix}marker-base-dimension)
+		var(--#{$prefix}marker-base-dimension) *
+			var(--#{$prefix}marker-circle-border-ratio) +
+			var(--#{$prefix}marker-base-dimension)
 	);
 	height: calc(
-		var(--#{$variable-prefix}marker-base-dimension) *
-			var(--#{$variable-prefix}marker-circle-border-ratio) +
-			var(--#{$variable-prefix}marker-base-dimension)
+		var(--#{$prefix}marker-base-dimension) *
+			var(--#{$prefix}marker-circle-border-ratio) +
+			var(--#{$prefix}marker-base-dimension)
 	);
-	background-color: var(--#{$variable-prefix}marker-circle-bg);
-	border: var(--#{$variable-prefix}marker-outline-width) solid currentColor;
+	background-color: var(--#{$prefix}marker-circle-bg);
+	border: var(--#{$prefix}marker-outline-width) solid currentColor;
 	border-radius: 50%;
 }
 
 // Sizing
 .marker-lg {
-	--#{$variable-prefix}marker-base-dimension: #{$marker-base-dimension-lg};
+	--#{$prefix}marker-base-dimension: #{$marker-base-dimension-lg};
 }
 .marker-sm {
-	--#{$variable-prefix}marker-base-dimension: #{$marker-base-dimension-sm};
+	--#{$prefix}marker-base-dimension: #{$marker-base-dimension-sm};
 }

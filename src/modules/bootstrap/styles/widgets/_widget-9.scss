@@ -6,11 +6,11 @@
 	width: 100%;
 	@include font-size($widget9-display-font-size);
 	padding: $widget9-display-padding-y 0;
+}
 
-	&.widget9-display-sm {
-		@include font-size($widget9-display-font-size-sm);
-		padding: 0;
-	}
+.widget9-display-sm {
+	@include font-size($widget9-display-font-size-sm);
+	padding: 0;
 }
 
 .widget9-icon {

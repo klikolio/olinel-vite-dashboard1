@@ -1,37 +1,19 @@
 .widget14 {
-	position: relative;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	padding: $widget14-padding-y $widget14-padding-x;
 }
 
-.widget14-avatar {
-	@include font-size($widget14-avatar-font-size);
-	margin-bottom: $widget14-avatar-spacer;
-}
-
-.widget14-subtitle,
-.widget14-title {
-	padding: $widget14-content-spacer 0;
-	margin: 0;
+.widget14-icon {
 	text-align: center;
+	width: $widget14-icon-dimension;
+	margin-right: $widget14-icon-spacer;
+	@include icon-size($widget14-icon-size);
 }
 
-.widget14-title {
-	color: $widget14-title-color;
-	@include font-size($widget14-title-font-size);
-	font-weight: $widget14-title-font-weight;
-}
-
-.widget14-subtitle {
-	color: $widget14-subtitle-color;
-	@include font-size($widget14-subtitle-font-size);
-	font-weight: $widget14-subtitle-font-weight;
-}
-
-.widget14-addon {
-	position: absolute;
-	top: 0;
-	right: 0;
+.widget14-text {
+	color: $widget14-text-color;
+	@include font-size($widget14-text-font-size);
+	font-weight: $widget14-text-font-weight;
 }

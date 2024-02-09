@@ -1,26 +1,32 @@
-@mixin table-variant($state, $background) {
+@mixin table-variant($state, $color) {
 	.table-#{$state} {
-		--#{$variable-prefix}table-bg: #{rgba($background, $table-bg-opacity)};
-		--#{$variable-prefix}table-striped-bg: #{rgba(
-				$background,
-				$table-striped-opacity
-			)};
-		--#{$variable-prefix}table-active-bg: #{rgba(
-				$background,
-				$table-active-opacity
-			)};
-		--#{$variable-prefix}table-hover-bg: #{rgba(
-				$background,
-				$table-hover-opacity
-			)};
-		--#{$variable-prefix}table-border-color: #{rgba(
-				$background,
-				$table-border-opacity
-			)};
-		--#{$variable-prefix}table-seperator-border-color: #{rgba(
-				$background,
-				$table-border-separator-opacity
-			)};
-		--#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-bg);
+		$hover-bg: rgba($color, $table-hover-bg-factor);
+		$striped-bg: rgba($color, $table-striped-bg-factor);
+		$active-bg: rgba($color, $table-active-bg-factor);
+
+		$table-border-color: null;
+
+		@if $state == "dark" {
+			$table-border-color: mix(
+				$color-contrast-light,
+				$gray-500,
+				percentage($table-border-factor)
+			);
+		} @else {
+			$table-border-color: mix(
+				$color-contrast-dark,
+				$color,
+				percentage($table-border-factor)
+			);
+		}
+
+		--#{$prefix}table-bg: #{var(--#{$prefix}#{$state}-bg-subtle)};
+		--#{$prefix}table-border-color: #{$table-border-color};
+		--#{$prefix}table-striped-bg: #{$striped-bg};
+		--#{$prefix}table-active-bg: #{$active-bg};
+		--#{$prefix}table-hover-bg: #{$hover-bg};
+
+		color: var(--#{$prefix}table-color);
+		border-color: var(--#{$prefix}table-border-color);
 	}
 }

@@ -18,7 +18,7 @@
 	}
 
 	.nav-link.active,
-	.show > .nav-link {
+  .nav-item.show .nav-link {
 		color: $widget2-link-active-color;
 		background: $widget2-link-active-bg;
 		border-color: $widget2-link-active-border-color;
