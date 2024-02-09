@@ -1988,12 +1988,12 @@ $widget8-content-spacer:                    $spacer * .25 !default;
 $widget8-avatar-font-size:                  2rem !default;
 $widget8-avatar-spacer:                     $spacer * 1.25 !default;
 
-$widget8-highlight-color:                   var(--#{$prefix}secondary-color) !default;
+$widget8-highlight-color:                   var(--#{$prefix}heading-color) !default;
 $widget8-highlight-font-size:               3.6rem !default;
 $widget8-highlight-font-size-lg:            4.8rem !default;
 $widget8-highlight-font-weight:             $font-weight-semibold !default;
 
-$widget8-title-color:                       var(--#{$prefix}heading-color) !default;
+$widget8-title-color:                       var(--#{$prefix}secondary-color) !default;
 $widget8-title-font-size:                   $font-size-lg !default;
 $widget8-title-font-weight:                 $font-weight-semibold !default;
 
@@ -2051,7 +2051,7 @@ $widget10-item-padding:                     $spacer * 1.5 !default;
 
 $widget10-title-color:                      var(--#{$prefix}heading-color) !default;
 $widget10-title-font-size:                  2rem !default;
-$widget10-title-font-weight:                $font-weight-bold !default;
+$widget10-title-font-weight:                $font-weight-semibold !default;
 
 $widget10-subtitle-color:                   var(--#{$prefix}body-color) !default;
 $widget10-subtitle-font-size:               $font-size-base !default;
