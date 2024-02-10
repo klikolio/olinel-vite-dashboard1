@@ -5,7 +5,7 @@ const bodyActiveClass = 'fullscreen-active'
 export function initFullscreenTrigger(triggerSelector: string) {
 	// Get elements
 	const bodyElement = document.querySelector(bodySelector)
-	const triggerElement = document.querySelector(triggerSelector)
+	const triggerElements = document.querySelectorAll(triggerSelector)
 
 	// Fullscreen change Listener for toggling body class
 	document.addEventListener('fullscreenchange', () => {
@@ -17,11 +17,13 @@ export function initFullscreenTrigger(triggerSelector: string) {
 	})
 
 	// Trigger listener for toggling fullscreen
-	triggerElement?.addEventListener('click', () => {
-		if (bodyElement?.classList.contains(bodyActiveClass)) {
-			document.exitFullscreen()
-		} else {
-			document.documentElement.requestFullscreen()
-		}
+	triggerElements.forEach((triggerElement) => {
+		triggerElement.addEventListener('click', () => {
+			if (bodyElement?.classList.contains(bodyActiveClass)) {
+				document.exitFullscreen()
+			} else {
+				document.documentElement.requestFullscreen()
+			}
+		})
 	})
 }

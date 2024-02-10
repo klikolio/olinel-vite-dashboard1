@@ -48,6 +48,7 @@
 	padding: var(--#{$prefix}chat-bubble-padding);
 	max-width: var(--#{$prefix}chat-bubble-max-width);
 	margin: 0;
+	text-wrap: wrap;
 	@include border-radius(var(--#{$prefix}chat-border-radius));
 
 	// Add space between the bubbles
