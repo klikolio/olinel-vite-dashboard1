@@ -2,7 +2,7 @@
 <!-- prettier-ignore-start -->
 {% set body_class = {
   "preload-active": enable_preload | default(defaults.enable_preload),
-  "aside-active": enable_preload | default(defaults.enable_aside),
+  "aside-active": enable_aside | default(defaults.enable_aside),
   "aside-mobile-minimized": enable_aside | default(defaults.enable_aside),
   "aside-desktop-minimized": enable_aside | default(defaults.enable_aside) and enable_minimized_aside | default(defaults.enable_minimized_aside),
   "aside-desktop-maximized": enable_aside | default(defaults.enable_aside) and not enable_minimized_aside | default(defaults.enable_minimized_aside)

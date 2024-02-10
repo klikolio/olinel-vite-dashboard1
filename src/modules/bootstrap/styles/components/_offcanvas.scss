@@ -6,6 +6,10 @@
 	--#{$prefix}offcanvas-title-font-weight: #{$offcanvas-title-font-weight};
 }
 
+.offcanvas-body {
+	height: 100%;
+}
+
 .offcanvas-title {
 	color: var(--#{$prefix}offcanvas-title-color);
 	@include font-size(var(--#{$prefix}offcanvas-title-font-size));
