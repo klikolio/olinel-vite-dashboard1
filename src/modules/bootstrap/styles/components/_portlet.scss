@@ -145,10 +145,11 @@
 }
 
 // Contextual portlet colors
-@each $color, $value in $theme-colors {
-	.portlet-#{$color} {
-		--#{$prefix}portlet-bg: #{$value};
-		--#{$prefix}portlet-color: #{color-contrast($value)};
+@each $state, $color in $theme-colors {
+	.portlet-#{$state} {
+		--#{$prefix}portlet-bg: #{$color};
+		--#{$prefix}portlet-color: #{color-contrast($color)};
+		--#{$prefix}portlet-border-color: var(--#{$prefix}#{$state}-border-subtle);
 
 		.portlet-icon,
 		.portlet-title {
