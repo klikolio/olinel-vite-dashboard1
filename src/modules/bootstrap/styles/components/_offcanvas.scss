@@ -23,4 +23,6 @@
 	color: var(--#{$prefix}offcanvas-brand-color);
 	@include font-size(var(--#{$prefix}offcanvas-brand-font-size));
 	font-weight: var(--#{$prefix}offcanvas-brand-font-weight);
+	margin: 0;
+	padding: 0;
 }
