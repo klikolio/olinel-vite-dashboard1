@@ -49,13 +49,13 @@ $('#datatables-2').DataTable({
 			buttons: [
 				{
 					text: 'Toggle start date',
-					action: (_e, dt, _node, _config) => {
+					action: (_e: any, dt: any, _node: any, _config: any) => {
 						dt.column(-2).visible(!dt.column(-2).visible())
 					},
 				},
 				{
 					text: 'Toggle salary',
-					action: (_e, dt, _node, _config) => {
+					action: (_e: any, dt: any, _node: any, _config: any) => {
 						dt.column(-1).visible(!dt.column(-1).visible())
 					},
 				},
@@ -66,5 +66,5 @@ $('#datatables-2').DataTable({
 				},
 			],
 		},
-	],
+	] as any,
 })

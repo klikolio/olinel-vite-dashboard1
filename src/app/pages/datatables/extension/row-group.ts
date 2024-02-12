@@ -51,7 +51,7 @@ $('#datatables-3').DataTable({
 		[3, 'asc'],
 	],
 	rowGroup: {
-		dataSrc: [4, 3], // Set the columns for row group
+		dataSrc: [4, 3] as any, // Set the columns for row group
 	},
 	columnDefs: [
 		{
