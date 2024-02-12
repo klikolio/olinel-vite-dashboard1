@@ -2,8 +2,11 @@
 
 .offcanvas {
 	--#{$prefix}offcanvas-title-color: #{$offcanvas-title-color};
-	--#{$prefix}offcanvas-title-font-size: #{$offcanvas-title-font-size};
+	@include rfs($offcanvas-title-font-size, --#{$prefix}offcanvas-title-font-size);
 	--#{$prefix}offcanvas-title-font-weight: #{$offcanvas-title-font-weight};
+	--#{$prefix}offcanvas-brand-color: #{$offcanvas-brand-color};
+	@include rfs($offcanvas-brand-font-size, --#{$prefix}offcanvas-brand-font-size);
+	--#{$prefix}offcanvas-brand-font-weight: #{$offcanvas-brand-font-weight};
 }
 
 .offcanvas-body {
@@ -14,4 +17,10 @@
 	color: var(--#{$prefix}offcanvas-title-color);
 	@include font-size(var(--#{$prefix}offcanvas-title-font-size));
 	font-weight: var(--#{$prefix}offcanvas-title-font-weight);
+}
+
+.offcanvas-brand {
+	color: var(--#{$prefix}offcanvas-brand-color);
+	@include font-size(var(--#{$prefix}offcanvas-brand-font-size));
+	font-weight: var(--#{$prefix}offcanvas-brand-font-weight);
 }
