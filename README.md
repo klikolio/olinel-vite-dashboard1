@@ -1,10 +1,10 @@
-# Olinel - Vite Bootstrap Admin Dashboard Template
+# Olinel - Vite Typescript Admin Dashboard Template
 
 ## Overview
 
 **Olinel** is a multipurpose admin dashboard template which leverages **Vite** as a development tool, providing an efficient development environment, ensuring optimized production builds and enabling modern JavaScript features. This template is also built upon robust and widely adopted **Bootstrap 5** which offers a seamless user experience across various browsers. Utilizes **SASS** for enabling modular and maintainable styles which make it easier to manage the visual aspects. **Nunjucks** as a templating engine simplifies HTML structure and enhances code reusability. For efficient DOM manipulation, this template also leverages **jQuery** library. Integration of **EsLint** and **Prettier**, ensuring code consistency and identifying potential issues early in the development process to improve code quality.
 
-**Olinel** showcases a modern design style that blends aesthetics with functionality and visually appealing interface ensures a delightful user experience. This template also provides a rich library of components that empowers you to build dynamic admin dashboard applications. This template also offering both practical examples and documentation from pre-built pages will accelerate your development process.
+**Olinel** has various layout styles and showcases a modern design that blends aesthetics with functionality and visually appealing interface, ensures a delightful user experience. This template also provides a rich library of components that empowers you to build dynamic admin dashboard applications. This template also offering both practical examples and documentation from pre-built pages will accelerate your development process.
 
 **Files Included**
 
