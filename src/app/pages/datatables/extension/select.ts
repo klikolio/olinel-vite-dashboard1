@@ -12,24 +12,24 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@app/utilities/datatables-helper'
 
 $('#datatables-1').DataTable({
-	data: DATATABLES_DATA,
-	responsive: true,
-	select: true, // Enable select extension with default configuration
+  data: DATATABLES_DATA,
+  responsive: true,
+  select: true, // Enable select extension with default configuration
 })
 
 $('#datatables-2').DataTable({
-	data: DATATABLES_DATA,
-	responsive: true,
-	select: {
-		style: 'multi', // Enable multiple selection
-	},
+  data: DATATABLES_DATA,
+  responsive: true,
+  select: {
+    style: 'multi', // Enable multiple selection
+  },
 })
 
 $('#datatables-3').DataTable({
-	data: DATATABLES_DATA,
-	responsive: true,
-	select: {
-		style: 'os',
-		items: 'cell', // Enable cell selection
-	},
+  data: DATATABLES_DATA,
+  responsive: true,
+  select: {
+    style: 'os',
+    items: 'cell', // Enable cell selection
+  },
 })

@@ -9,9 +9,9 @@ import $ from 'jquery'
 import { DATATABLES_DATA } from '@app/utilities/datatables-helper'
 
 $('#datatables-1').DataTable({
-	data: DATATABLES_DATA,
-	responsive: true,
+  data: DATATABLES_DATA,
+  responsive: true,
 
-	// Set custom pagination style
-	pagingType: 'numbers',
+  // Set custom pagination style
+  pagingType: 'numbers',
 })

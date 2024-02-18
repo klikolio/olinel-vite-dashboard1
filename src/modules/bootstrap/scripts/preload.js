@@ -22,57 +22,57 @@ const EVENT_SHOWN_KEY = `shown.${NAME}`
  */
 
 class Preload extends BaseComponent {
-	// Getters
-	static get NAME() {
-		return NAME
-	}
+  // Getters
+  static get NAME() {
+    return NAME
+  }
 
-	static get CLASS_NAMES() {
-		return { CLASS_ACTIVE, CLASS_HIDE }
-	}
+  static get CLASS_NAMES() {
+    return { CLASS_ACTIVE, CLASS_HIDE }
+  }
 
-	constructor() {
-		super()
+  constructor() {
+    super()
 
-		this.autoHide()
-	}
+    this.autoHide()
+  }
 
-	// Function for automatically hiding preload
-	autoHide() {
-		document.addEventListener('DOMContentLoaded', () => {
-			setTimeout(() => {
-				this.hide()
-			}, DELAY_DURATION)
-		})
+  // Function for automatically hiding preload
+  autoHide() {
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        this.hide()
+      }, DELAY_DURATION)
+    })
 
-		setTimeout(() => {
-			this.hide()
-		}, MAX_DURATION)
-	}
+    setTimeout(() => {
+      this.hide()
+    }, MAX_DURATION)
+  }
 
-	// Function for showing preload
-	show() {
-		if (document.body.classList.contains(CLASS_HIDE)) {
-			document.body.classList.add(CLASS_ACTIVE)
+  // Function for showing preload
+  show() {
+    if (document.body.classList.contains(CLASS_HIDE)) {
+      document.body.classList.add(CLASS_ACTIVE)
 
-			document.body.classList.remove(CLASS_HIDE)
+      document.body.classList.remove(CLASS_HIDE)
 
-			EventHandler.trigger(document, EVENT_SHOWN_KEY, {
-				relatedTarget: this._element,
-			})
-		}
-	}
+      EventHandler.trigger(document, EVENT_SHOWN_KEY, {
+        relatedTarget: this._element,
+      })
+    }
+  }
 
-	// Function for hiding preload
-	hide() {
-		if (!document.body.classList.contains(CLASS_HIDE)) {
-			document.body.classList.add(CLASS_HIDE)
+  // Function for hiding preload
+  hide() {
+    if (!document.body.classList.contains(CLASS_HIDE)) {
+      document.body.classList.add(CLASS_HIDE)
 
-			EventHandler.trigger(document, EVENT_HIDDEN_KEY, {
-				relatedTarget: this._element,
-			})
-		}
-	}
+      EventHandler.trigger(document, EVENT_HIDDEN_KEY, {
+        relatedTarget: this._element,
+      })
+    }
+  }
 }
 
 defineJQueryPlugin(Preload)

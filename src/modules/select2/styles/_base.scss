@@ -1,143 +1,143 @@
 .select2 {
-	width: 100% !important;
+  width: 100% !important;
 }
 // Toggle element
 .select2-selection {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	height: $select2-height;
-	color: $select2-color;
-	background: $select2-bg;
-	border: $select2-border-width solid $select2-border-color;
-	outline: 0;
-	user-select: none;
-	cursor: pointer;
-	@include border-radius($select2-border-radius);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: $select2-height;
+  color: $select2-color;
+  background: $select2-bg;
+  border: $select2-border-width solid $select2-border-color;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+  @include border-radius($select2-border-radius);
 }
 // Toggle content element
 .select2-selection__rendered {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: $select2-padding-y $select2-padding-x !important;
-	margin: 0;
-	list-style: none;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: $select2-padding-y $select2-padding-x !important;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 // Outer container
 .select2-container {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 // Search input element
 .select2-search__field {
-	display: block;
-	width: 100%;
-	padding: $input-padding-y $input-padding-x;
-	font-family: $input-font-family;
-	@include font-size($input-font-size);
-	font-weight: $input-font-weight;
-	line-height: $input-line-height;
-	color: $input-color;
-	background-color: $input-bg;
-	background-clip: padding-box;
-	border-width: $input-border-width;
-	border-style: solid;
-	border-color: $select2-border-color !important;
-	appearance: none; // Fix appearance for date inputs in Safari
+  display: block;
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  font-family: $input-font-family;
+  @include font-size($input-font-size);
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border-width: $input-border-width;
+  border-style: solid;
+  border-color: $select2-border-color !important;
+  appearance: none; // Fix appearance for date inputs in Safari
 
-	// Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-	@include border-radius($input-border-radius, 0);
-	@include transition($input-transition);
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($input-border-radius, 0);
+  @include transition($input-transition);
 
-	// Customize the `:focus` state to imitate native WebKit styles.
-	&:focus {
-		color: $input-focus-color;
-		background-color: $input-focus-bg;
-		border-color: $input-focus-border-color;
-		outline: 0;
-	}
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+  }
 
-	&::-webkit-date-and-time-value {
-		// Multiply line-height by 1em if it has no unit
-		height: if(
-			unit($input-line-height) == "",
-			$input-line-height * 1em,
-			$input-line-height
-		);
-	}
+  &::-webkit-date-and-time-value {
+    // Multiply line-height by 1em if it has no unit
+    height: if(
+      unit($input-line-height) == "",
+      $input-line-height * 1em,
+      $input-line-height
+    );
+  }
 
-	// Placeholder
-	&::placeholder {
-		color: $input-placeholder-color;
-		// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-		opacity: 1;
-	}
+  // Placeholder
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
 
-	&:disabled {
-		color: $input-disabled-color;
-		background-color: $input-disabled-bg;
-		border-color: $input-disabled-border-color;
-		// iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-		opacity: 1;
-	}
+  &:disabled {
+    color: $input-disabled-color;
+    background-color: $input-disabled-bg;
+    border-color: $input-disabled-border-color;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
 
-	// Search input inside toggle element
-	.select2-search--inline & {
-		height: auto;
-		background: transparent;
-		border: 0;
-		padding: 0;
-		margin: 0;
-	}
-	// Remove default clear button at input search on result container
-	&::-webkit-search-cancel-button {
-		-webkit-appearance: none;
-	}
+  // Search input inside toggle element
+  .select2-search--inline & {
+    height: auto;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  // Remove default clear button at input search on result container
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 }
 // Clear button to instead default
 .select2-selection__clear {
-	position: absolute;
-	color: $select2-clear-color;
-	@include font-size($select2-icon-size);
-	transform: translateY(-50%);
-	top: 50%;
-	cursor: pointer;
+  position: absolute;
+  color: $select2-clear-color;
+  @include font-size($select2-icon-size);
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
 
-	&:hover {
-		color: $select2-clear-hover-color;
-	}
+  &:hover {
+    color: $select2-clear-hover-color;
+  }
 }
 // Opened state class
 .select2-container--open {
-	.select2-selection {
-		border-color: $select2-active-border-color;
-	}
-	// Input style when dropdown orientation is top
-	&.select2-container--above .select2-selection {
-		@include border-top-radius(0);
-	}
-	// Input style when dropdown orientation is bottom
-	&.select2-container--below .select2-selection {
-		@include border-bottom-radius(0);
-	}
+  .select2-selection {
+    border-color: $select2-active-border-color;
+  }
+  // Input style when dropdown orientation is top
+  &.select2-container--above .select2-selection {
+    @include border-top-radius(0);
+  }
+  // Input style when dropdown orientation is bottom
+  &.select2-container--below .select2-selection {
+    @include border-bottom-radius(0);
+  }
 }
 // Disabled state class
 .select2-container--disabled {
-	.select2-selection {
-		color: $select2-disabled-color;
-		background: $select2-disabled-bg;
-		border-color: $select2-disabled-border-color;
-		opacity: $select2-disabled-opacity;
-		cursor: default;
-	}
+  .select2-selection {
+    color: $select2-disabled-color;
+    background: $select2-disabled-bg;
+    border-color: $select2-disabled-border-color;
+    opacity: $select2-disabled-opacity;
+    cursor: default;
+  }
 }
 // Class to hide default select element
 .select2-hidden-accessible {
-	display: none !important;
+  display: none !important;
 }

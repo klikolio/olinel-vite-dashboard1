@@ -11,46 +11,46 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/advanced/column-rendering.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/advanced/column-rendering.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Datatables column rendering</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						Each column has an optional rendering control called
-						<code>columns.render</code> which can be used to process the content of each cell before data is used. This
-						example show action buttons in the last column and render badges from number data in the status column.
-					</p>
-					<hr />
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Datatables column rendering</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            Each column has an optional rendering control called
+            <code>columns.render</code> which can be used to process the content of each cell before data is used. This
+            example show action buttons in the last column and render badges from number data in the status column.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-								<th>Status</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

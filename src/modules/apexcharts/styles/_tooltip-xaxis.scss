@@ -1,68 +1,68 @@
 .apexcharts-xaxistooltip {
-	// Class to show tooltip
-	&.apexcharts-active {
-		opacity: 1;
-		@include transition($apexchart-tooltip-transition);
-	}
+  // Class to show tooltip
+  &.apexcharts-active {
+    opacity: 1;
+    @include transition($apexchart-tooltip-transition);
+  }
 
-	// Tooltip arrow
-	&:after,
-	&:before {
-		content: "";
-		position: absolute;
-		width: 0;
-		height: 0;
-		left: 50%;
-		border-color: transparent;
-		border-style: solid;
-		pointer-events: none;
-	}
+  // Tooltip arrow
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    border-color: transparent;
+    border-style: solid;
+    pointer-events: none;
+  }
 
-	&:after {
-		border-width: $apexchart-tooltip-arrow-height;
-		margin-left: -$apexchart-tooltip-arrow-height;
-	}
+  &:after {
+    border-width: $apexchart-tooltip-arrow-height;
+    margin-left: -$apexchart-tooltip-arrow-height;
+  }
 
-	&:before {
-		border-width: calc(
-			#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}
-		);
-		margin-left: calc(
-			(#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}) *
-				-1
-		);
-	}
+  &:before {
+    border-width: calc(
+      #{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}
+    );
+    margin-left: calc(
+      (#{$apexchart-tooltip-arrow-height} + #{$apexchart-tooltip-border-width}) *
+        -1
+    );
+  }
 }
 
 /* rtl:begin:ignore */
 // Tooltip arrow positioning
 .apexcharts-xaxistooltip-bottom {
-	&:after,
-	&:before {
-		bottom: 100%;
-	}
+  &:after,
+  &:before {
+    bottom: 100%;
+  }
 
-	&:after {
-		border-bottom-color: $apexchart-tooltip-arrow-color;
-	}
+  &:after {
+    border-bottom-color: $apexchart-tooltip-arrow-color;
+  }
 
-	&:before {
-		border-bottom-color: $apexchart-tooltip-arrow-outer-color;
-	}
+  &:before {
+    border-bottom-color: $apexchart-tooltip-arrow-outer-color;
+  }
 }
 
 .apexcharts-xaxistooltip-top {
-	&:after,
-	&:before {
-		top: 100%;
-	}
+  &:after,
+  &:before {
+    top: 100%;
+  }
 
-	&:after {
-		border-top-color: $apexchart-tooltip-arrow-color;
-	}
+  &:after {
+    border-top-color: $apexchart-tooltip-arrow-color;
+  }
 
-	&:before {
-		border-top-color: $apexchart-tooltip-arrow-outer-color;
-	}
+  &:before {
+    border-top-color: $apexchart-tooltip-arrow-outer-color;
+  }
 }
 /* rtl:end:ignore */

@@ -11,48 +11,48 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/column-reorder.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/extension/column-reorder.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Datatables Column reorder extension</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						<strong>Column Reorder</strong> adds the ability for the end user to be able to reorder columns in a
-						Datatables through a click and drag operation. This can be useful when presenting data in a table, letting
-						the user move columns that they wish to compare next to each other for easier comparison.
-					</p>
-					<p>
-						<strong>Column Reorder</strong> can be initialized on a Datatables by using the <code>colReorder</code>
-						option in the Datatables options object.
-					</p>
-					<hr />
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Datatables Column reorder extension</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            <strong>Column Reorder</strong> adds the ability for the end user to be able to reorder columns in a
+            Datatables through a click and drag operation. This can be useful when presenting data in a table, letting
+            the user move columns that they wish to compare next to each other for easier comparison.
+          </p>
+          <p>
+            <strong>Column Reorder</strong> can be initialized on a Datatables by using the <code>colReorder</code>
+            option in the Datatables options object.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

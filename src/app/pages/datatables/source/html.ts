@@ -8,5 +8,5 @@ import '@modules/datatables/responsive/styles/responsive.scss'
 import $ from 'jquery'
 
 $('#datatables-1').DataTable({
-	responsive: true,
+  responsive: true,
 })

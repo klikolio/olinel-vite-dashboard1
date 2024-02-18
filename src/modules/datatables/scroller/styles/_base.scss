@@ -1,45 +1,45 @@
 .dts {
-	display: block !important;
+  display: block !important;
 
-	// Disable content wrapping
-	tbody td,
-	tbody th {
-		white-space: nowrap;
-	}
+  // Disable content wrapping
+  tbody td,
+  tbody th {
+    white-space: nowrap;
+  }
 
-	.dts_loading {
-		z-index: 1;
-	}
+  .dts_loading {
+    z-index: 1;
+  }
 
-	// Scroller loading label
-	.dts_label {
-		display: none;
-		position: absolute;
-		@include font-size($datatables-scroller-label-font-size);
-		padding: $datatables-scroller-label-padding;
-		right: $datatables-scroller-label-offset;
-		color: $datatables-scroller-label-color;
-		background-color: $datatables-scroller-label-bg;
-		border: $datatables-scroller-label-border-width solid
-			$datatables-scroller-label-border-color;
-		z-index: 2;
-		@include border-radius($datatables-scroller-label-border-radius);
-	}
+  // Scroller loading label
+  .dts_label {
+    display: none;
+    position: absolute;
+    @include font-size($datatables-scroller-label-font-size);
+    padding: $datatables-scroller-label-padding;
+    right: $datatables-scroller-label-offset;
+    color: $datatables-scroller-label-color;
+    background-color: $datatables-scroller-label-bg;
+    border: $datatables-scroller-label-border-width solid
+      $datatables-scroller-label-border-color;
+    z-index: 2;
+    @include border-radius($datatables-scroller-label-border-radius);
+  }
 
-	.dataTables_scrollBody {
-		background: $datatables-fixed-element-bg;
+  .dataTables_scrollBody {
+    background: $datatables-fixed-element-bg;
 
-		table {
-			z-index: 2;
-		}
-	}
-	// Hide length menu and pagination
-	.dataTables_length,
-	.dataTables_paginate {
-		display: none;
-	}
+    table {
+      z-index: 2;
+    }
+  }
+  // Hide length menu and pagination
+  .dataTables_length,
+  .dataTables_paginate {
+    display: none;
+  }
 }
 
 .DTS .dataTables_scrollBody table {
-	background: $datatables-fixed-element-bg;
+  background: $datatables-fixed-element-bg;
 }

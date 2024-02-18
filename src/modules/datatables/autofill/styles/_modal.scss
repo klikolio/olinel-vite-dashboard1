@@ -1,123 +1,123 @@
 // Modal for showing fill options
 .dt-autofill-list {
-	position: fixed;
-	width: $datatables-autofill-list-width;
-	max-width: calc(100% - #{$grid-gutter-width * 2});
-	padding: $datatables-autofill-list-padding;
-	padding-top: $datatables-autofill-list-padding +
-		$datatables-autofill-close-dimension + $datatables-autofill-close-spacer;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: $zindex-modal + 1;
-	background-color: $datatables-autofill-list-bg;
-	border: $datatables-autofill-list-border-width solid
-		$datatables-autofill-list-border-color;
-	@include border-radius($datatables-autofill-list-border-radius);
+  position: fixed;
+  width: $datatables-autofill-list-width;
+  max-width: calc(100% - #{$grid-gutter-width * 2});
+  padding: $datatables-autofill-list-padding;
+  padding-top: $datatables-autofill-list-padding +
+    $datatables-autofill-close-dimension + $datatables-autofill-close-spacer;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $zindex-modal + 1;
+  background-color: $datatables-autofill-list-bg;
+  border: $datatables-autofill-list-border-width solid
+    $datatables-autofill-list-border-color;
+  @include border-radius($datatables-autofill-list-border-radius);
 
-	// Close button
-	.dtaf-popover-close {
-		box-sizing: content-box;
-		position: absolute;
-		cursor: pointer;
-		top: $datatables-autofill-close-spacer;
-		right: $datatables-autofill-close-spacer;
-		width: $datatables-autofill-close-dimension;
-		height: $datatables-autofill-close-dimension;
-		color: $datatables-autofill-close-color;
-		font-family: $datatables-autofill-close-font-family;
-		font-size: $datatables-autofill-close-font-size;
-		font-weight: $datatables-autofill-close-font-weight;
-		line-height: $datatables-autofill-close-line-height;
-		padding: $datatables-autofill-close-padding-y
-			$datatables-autofill-close-padding-x;
-		text-align: center;
-	}
+  // Close button
+  .dtaf-popover-close {
+    box-sizing: content-box;
+    position: absolute;
+    cursor: pointer;
+    top: $datatables-autofill-close-spacer;
+    right: $datatables-autofill-close-spacer;
+    width: $datatables-autofill-close-dimension;
+    height: $datatables-autofill-close-dimension;
+    color: $datatables-autofill-close-color;
+    font-family: $datatables-autofill-close-font-family;
+    font-size: $datatables-autofill-close-font-size;
+    font-weight: $datatables-autofill-close-font-weight;
+    line-height: $datatables-autofill-close-line-height;
+    padding: $datatables-autofill-close-padding-y
+      $datatables-autofill-close-padding-x;
+    text-align: center;
+  }
 }
 
 // Options list
 .dt-autofill-list-items {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 
-	button {
-		display: block;
-		position: relative;
-		width: 100%;
-		border: 0;
-		text-align: left;
-		min-height: $datatables-autofill-list-item-min-height;
-		color: $datatables-autofill-list-item-color;
-		@include font-size($datatables-autofill-list-item-font-size);
-		font-weight: $datatables-autofill-list-item-font-weight;
-		background-color: $datatables-autofill-list-item-bg;
-		padding: $datatables-autofill-list-item-padding-y
-			$datatables-autofill-list-item-padding-x;
-		border-bottom: $datatables-autofill-list-item-border-width solid
-			$datatables-autofill-list-item-border-color;
+  button {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 0;
+    text-align: left;
+    min-height: $datatables-autofill-list-item-min-height;
+    color: $datatables-autofill-list-item-color;
+    @include font-size($datatables-autofill-list-item-font-size);
+    font-weight: $datatables-autofill-list-item-font-weight;
+    background-color: $datatables-autofill-list-item-bg;
+    padding: $datatables-autofill-list-item-padding-y
+      $datatables-autofill-list-item-padding-x;
+    border-bottom: $datatables-autofill-list-item-border-width solid
+      $datatables-autofill-list-item-border-color;
 
-		&:last-child {
-			border-bottom: 0;
-		}
+    &:last-child {
+      border-bottom: 0;
+    }
 
-		&:hover {
-			color: $datatables-autofill-list-item-hover-color;
-			background-color: $datatables-autofill-list-item-hover-bg;
-		}
+    &:hover {
+      color: $datatables-autofill-list-item-hover-color;
+      background-color: $datatables-autofill-list-item-hover-bg;
+    }
 
-		input[type="number"] {
-			display: inline-block;
-			width: $datatables-autofill-input-width;
-			margin: 0 $datatables-autofill-input-spacer;
-			padding: $input-padding-y $input-padding-x;
-			font-family: $input-font-family;
-			@include font-size($input-font-size);
-			font-weight: $input-font-weight;
-			line-height: $input-line-height;
-			color: $input-color;
-			background-color: $input-bg;
-			background-clip: padding-box;
-			border: $input-border-width solid $input-border-color;
-			appearance: none;
-			@include border-radius($input-border-radius, 0);
-			@include transition($input-transition);
+    input[type="number"] {
+      display: inline-block;
+      width: $datatables-autofill-input-width;
+      margin: 0 $datatables-autofill-input-spacer;
+      padding: $input-padding-y $input-padding-x;
+      font-family: $input-font-family;
+      @include font-size($input-font-size);
+      font-weight: $input-font-weight;
+      line-height: $input-line-height;
+      color: $input-color;
+      background-color: $input-bg;
+      background-clip: padding-box;
+      border: $input-border-width solid $input-border-color;
+      appearance: none;
+      @include border-radius($input-border-radius, 0);
+      @include transition($input-transition);
 
-			// Customize the `:focus` state to imitate native WebKit styles.
-			&:focus {
-				color: $input-focus-color;
-				background-color: $input-focus-bg;
-				border-color: $input-focus-border-color;
-				outline: 0;
-			}
+      // Customize the `:focus` state to imitate native WebKit styles.
+      &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+      }
 
-			// Placeholder
-			&::placeholder {
-				color: $input-placeholder-color;
-				// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-				opacity: 1;
-			}
-		}
+      // Placeholder
+      &::placeholder {
+        color: $input-placeholder-color;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+      }
+    }
 
-		.dt-autofill-button {
-			display: none;
-		}
+    .dt-autofill-button {
+      display: none;
+    }
 
-		.dt-autofill-input {
-			display: inline-block;
-			width: $datatables-autofill-input-width;
-			margin: 0 $datatables-autofill-input-spacer;
-		}
-	}
+    .dt-autofill-input {
+      display: inline-block;
+      width: $datatables-autofill-input-width;
+      margin: 0 $datatables-autofill-input-spacer;
+    }
+  }
 }
 
 // Modal backdrop
 .dt-autofill-background {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: $datatables-autofill-list-backdrop-bg;
-	opacity: $datatables-autofill-list-backdrop-opacity;
-	top: 0;
-	left: 0;
-	z-index: $zindex-modal;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: $datatables-autofill-list-backdrop-bg;
+  opacity: $datatables-autofill-list-backdrop-opacity;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal;
 }

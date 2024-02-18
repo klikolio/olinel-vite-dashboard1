@@ -1,105 +1,105 @@
 // Base styles
 .header {
-	--#{$prefix}header-zindex: #{$zindex-header};
-	--#{$prefix}header-bg: #{$header-bg};
-	--#{$prefix}header-border-width: #{$header-border-width};
-	--#{$prefix}header-border-color: #{$header-border-color};
-	--#{$prefix}header-container-spacer: #{$header-container-spacer};
-	--#{$prefix}header-title-color: #{$header-title-color};
-	@include rfs($header-title-font-size, --#{$prefix}header-title-font-size);
-	--#{$prefix}header-title-font-weight: #{$header-title-font-weight};
-	--#{$prefix}header-brand-color: #{$header-brand-color};
-	@include rfs($header-brand-font-size, --#{$prefix}header-brand-font-size);
-	--#{$prefix}header-brand-font-weight: #{$header-brand-font-weight};
+  --#{$prefix}header-zindex: #{$zindex-header};
+  --#{$prefix}header-bg: #{$header-bg};
+  --#{$prefix}header-border-width: #{$header-border-width};
+  --#{$prefix}header-border-color: #{$header-border-color};
+  --#{$prefix}header-container-spacer: #{$header-container-spacer};
+  --#{$prefix}header-title-color: #{$header-title-color};
+  @include rfs($header-title-font-size, --#{$prefix}header-title-font-size);
+  --#{$prefix}header-title-font-weight: #{$header-title-font-weight};
+  --#{$prefix}header-brand-color: #{$header-brand-color};
+  @include rfs($header-brand-font-size, --#{$prefix}header-brand-font-size);
+  --#{$prefix}header-brand-font-weight: #{$header-brand-font-weight};
 
-	position: relative;
-	display: block;
-	height: auto !important;
-	z-index: var(--#{$prefix}header-zindex);
+  position: relative;
+  display: block;
+  height: auto !important;
+  z-index: var(--#{$prefix}header-zindex);
 }
 
 .header-holder {
-	background-color: var(--#{$prefix}header-bg);
-	border-bottom: var(--#{$prefix}header-border-width) solid
-		var(--#{$prefix}header-border-color);
-	@include transition($header-transition);
+  background-color: var(--#{$prefix}header-bg);
+  border-bottom: var(--#{$prefix}header-border-width) solid
+    var(--#{$prefix}header-border-color);
+  @include transition($header-transition);
 }
 
 .header-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-	padding-top: var(--#{$prefix}header-container-spacer);
-	padding-bottom: var(--#{$prefix}header-container-spacer);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: var(--#{$prefix}header-container-spacer);
+  padding-bottom: var(--#{$prefix}header-container-spacer);
 }
 
 .header-wrap {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 // Fit wrapper to empty space
 .header-wrap-block {
-	flex: 1;
+  flex: 1;
 }
 
 .header-title {
-	color: var(--#{$prefix}header-title-color);
-	@include font-size(var(--#{$prefix}header-title-font-size));
-	font-weight: var(--#{$prefix}header-title-font-weight);
+  color: var(--#{$prefix}header-title-color);
+  @include font-size(var(--#{$prefix}header-title-font-size));
+  font-weight: var(--#{$prefix}header-title-font-weight);
 }
 
 .header-brand {
-	color: var(--#{$prefix}header-brand-color);
-	@include font-size(var(--#{$prefix}header-brand-font-size));
-	font-weight: var(--#{$prefix}header-brand-font-weight);
+  color: var(--#{$prefix}header-brand-color);
+  @include font-size(var(--#{$prefix}header-brand-font-size));
+  font-weight: var(--#{$prefix}header-brand-font-weight);
 }
 
 .header-title,
 .header-brand {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .header-divider {
-	width: 0;
-	height: $header-divider-height;
-	margin: 0 $header-divider-margin-x;
-	border-right: var(--#{$prefix}header-border-width) solid
-		var(--#{$prefix}header-border-color);
+  width: 0;
+  height: $header-divider-height;
+  margin: 0 $header-divider-margin-x;
+  border-right: var(--#{$prefix}header-border-width) solid
+    var(--#{$prefix}header-border-color);
 }
 
 // Breakpoints for hiding .header-holder-{desktop|mobile} element
 @include media-breakpoint-down($layout-breakpoint) {
-	.header-holder-desktop {
-		display: none;
-	}
+  .header-holder-desktop {
+    display: none;
+  }
 }
 
 @include media-breakpoint-up($layout-breakpoint) {
-	.header-holder-mobile {
-		display: none;
-	}
+  .header-holder-mobile {
+    display: none;
+  }
 }
 
 // Sticky JS support
 .sticky-wrapper {
-	.sticky-header {
-		width: auto !important;
-	}
+  .sticky-header {
+    width: auto !important;
+  }
 
-	&.is-sticky {
-		z-index: inherit;
+  &.is-sticky {
+    z-index: inherit;
 
-		.sticky-header {
-			right: 0;
-			left: 0;
-			z-index: 9999 !important;
-			@include transition($header-transition);
-		}
-	}
+    .sticky-header {
+      right: 0;
+      left: 0;
+      z-index: 9999 !important;
+      @include transition($header-transition);
+    }
+  }
 }

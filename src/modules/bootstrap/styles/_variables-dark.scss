@@ -35,8 +35,8 @@ $headings-color-dark: $text-level-3-dark !default;
 
 $link-color-dark: tint-color($primary, 40%) !default;
 $link-hover-color-dark: shift-color(
-	$link-color-dark,
-	-$link-shade-percentage
+  $link-color-dark,
+  -$link-shade-percentage
 ) !default;
 
 $code-color-dark: tint-color($code-color, 40%) !default;
@@ -75,7 +75,7 @@ $chat-bubble-bg-dark: rgba($bg-level-4-dark, $chat-bubble-opacity) !default;
 // Menu
 
 $menu-link-hover-bg-dark: rgba(
-	$bg-level-4-dark,
-	$menu-link-hover-bg-opacity
+  $bg-level-4-dark,
+  $menu-link-hover-bg-opacity
 ) !default;
 $menu-sub-bg-dark: rgba($bg-level-4-dark, $menu-sub-bg-opacity) !default;

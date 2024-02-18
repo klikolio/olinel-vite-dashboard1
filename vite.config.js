@@ -7,43 +7,43 @@ import { defineConfig } from 'vite'
 import { ViteMinifyPlugin as minify } from 'vite-plugin-minify'
 
 const nunjucksGlobals = {
-	env: {
-		PAGE_DIRECTION: process.env['PAGE_DIRECTION'] ?? 'ltr',
-	},
+  env: {
+    PAGE_DIRECTION: process.env['PAGE_DIRECTION'] ?? 'ltr',
+  },
 }
 
 const nunjucksFilters = {
-	classnames: (classNamesObj) => {
-		return Object.keys(classNamesObj)
-			.map((className) => (classNamesObj[className] ? className : null))
-			.filter((className) => className !== null)
-			.join(' ')
-	},
+  classnames: (classNamesObj) => {
+    return Object.keys(classNamesObj)
+      .map((className) => (classNamesObj[className] ? className : null))
+      .filter((className) => className !== null)
+      .join(' ')
+  },
 }
 
 export default defineConfig({
-	publicDir: 'public',
-	server: {
-		port: 4040,
-	},
-	preview: {
-		port: 3030,
-	},
-	resolve: {
-		alias: {
-			'@app': '/src/app',
-			'@modules': '/src/modules',
-		},
-	},
-	plugins: [
-		vituum(),
-		minify(),
-		eslint(),
-		legacy(),
-		nunjucks({
-			root: './src',
-			globals: nunjucksGlobals,
-			filters: nunjucksFilters,
-		}),
-	],
+  publicDir: 'public',
+  server: {
+    port: 4040,
+  },
+  preview: {
+    port: 3030,
+  },
+  resolve: {
+    alias: {
+      '@app': '/src/app',
+      '@modules': '/src/modules',
+    },
+  },
+  plugins: [
+    vituum(),
+    minify(),
+    eslint(),
+    legacy(),
+    nunjucks({
+      root: './src',
+      globals: nunjucksGlobals,
+      filters: nunjucksFilters,
+    }),
+  ],
 })

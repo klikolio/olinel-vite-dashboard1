@@ -1,77 +1,77 @@
 .dataTable {
-	// Inline collapse toggle
-	&.dtr-inline.collapsed > tbody > tr {
-		// Reset child and empty cell style
-		.child,
-		.dataTables_empty {
-			cursor: default !important;
+  // Inline collapse toggle
+  &.dtr-inline.collapsed > tbody > tr {
+    // Reset child and empty cell style
+    .child,
+    .dataTables_empty {
+      cursor: default !important;
 
-			&:before {
-				display: none !important;
-			}
-		}
+      &:before {
+        display: none !important;
+      }
+    }
 
-		// Responsive toggle
-		.dtr-control {
-			cursor: pointer;
-			white-space: nowrap;
+    // Responsive toggle
+    .dtr-control {
+      cursor: pointer;
+      white-space: nowrap;
 
-			&:before {
-				display: inline-block;
-				content: $datatables-control-content-closed;
-				width: $datatables-control-dimension;
-				height: $datatables-control-dimension;
-				color: $datatables-control-color;
-				background-color: $datatables-control-bg;
-				line-height: $datatables-control-line-height;
-				text-align: center;
-				font-family: $datatables-control-font-family;
-				font-size: $datatables-control-font-size;
-				font-weight: $datatables-control-font-weight;
-				margin-right: $datatables-control-spacer;
-				@include border-radius($datatables-control-border-radius);
-			}
-		}
+      &:before {
+        display: inline-block;
+        content: $datatables-control-content-closed;
+        width: $datatables-control-dimension;
+        height: $datatables-control-dimension;
+        color: $datatables-control-color;
+        background-color: $datatables-control-bg;
+        line-height: $datatables-control-line-height;
+        text-align: center;
+        font-family: $datatables-control-font-family;
+        font-size: $datatables-control-font-size;
+        font-weight: $datatables-control-font-weight;
+        margin-right: $datatables-control-spacer;
+        @include border-radius($datatables-control-border-radius);
+      }
+    }
 
-		// Change responsive toggle style when opened
-		&.parent .dtr-control:before {
-			content: $datatables-control-content-opened;
-		}
-	}
+    // Change responsive toggle style when opened
+    &.parent .dtr-control:before {
+      content: $datatables-control-content-opened;
+    }
+  }
 
-	// Column toggle
-	&.dtr-column > tbody > tr {
-		// Responsive toggle
-		.dtr-control,
-		.control {
-			cursor: pointer;
-			white-space: nowrap;
+  // Column toggle
+  &.dtr-column > tbody > tr {
+    // Responsive toggle
+    .dtr-control,
+    .control {
+      cursor: pointer;
+      white-space: nowrap;
 
-			&:before {
-				display: inline-block;
-				content: $datatables-control-content-closed;
-				width: $datatables-control-dimension;
-				height: $datatables-control-dimension;
-				color: $datatables-control-color;
-				background-color: $datatables-control-bg;
-				line-height: $datatables-control-line-height;
-				text-align: center;
-				font-family: $datatables-control-font-family;
-				font-size: $datatables-control-font-size;
-				font-weight: $datatables-control-font-weight;
-				margin-right: $datatables-control-spacer;
-				@include border-radius($datatables-control-border-radius);
-			}
-		}
+      &:before {
+        display: inline-block;
+        content: $datatables-control-content-closed;
+        width: $datatables-control-dimension;
+        height: $datatables-control-dimension;
+        color: $datatables-control-color;
+        background-color: $datatables-control-bg;
+        line-height: $datatables-control-line-height;
+        text-align: center;
+        font-family: $datatables-control-font-family;
+        font-size: $datatables-control-font-size;
+        font-weight: $datatables-control-font-weight;
+        margin-right: $datatables-control-spacer;
+        @include border-radius($datatables-control-border-radius);
+      }
+    }
 
-		// Change responsive toggle style when opened
-		&.parent {
-			.dtr-control,
-			.control {
-				&:before {
-					content: $datatables-control-content-opened;
-				}
-			}
-		}
-	}
+    // Change responsive toggle style when opened
+    &.parent {
+      .dtr-control,
+      .control {
+        &:before {
+          content: $datatables-control-content-opened;
+        }
+      }
+    }
+  }
 }

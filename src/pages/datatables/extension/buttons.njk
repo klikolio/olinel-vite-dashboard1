@@ -11,90 +11,90 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/buttons.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/extension/buttons.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Datatables buttons extension</h3>
-				</div>
-				<div class="portlet-body">
-					<p class="mb-0">
-						The <strong>Buttons</strong> library for Datatables provides a framework with common options and API that
-						can be used with Datatables, but is also very extensible, recognising that you will likely want to use
-						buttons which perform an action unique to your applications.
-					</p>
-				</div>
-			</div>
-			<!-- END Portlet -->
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Datatables buttons extension</h3>
+        </div>
+        <div class="portlet-body">
+          <p class="mb-0">
+            The <strong>Buttons</strong> library for Datatables provides a framework with common options and API that
+            can be used with Datatables, but is also very extensible, recognising that you will likely want to use
+            buttons which perform an action unique to your applications.
+          </p>
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Export buttons</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						As part of the Datatables constructor, the <code>buttons</code> option can be given as an array of the
-						button name.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Export buttons</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            As part of the Datatables constructor, the <code>buttons</code> option can be given as an array of the
+            button name.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Button collection</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						As of <strong>Buttons</strong> basic options for displaying a collection inside a collection is possible
-						simply by using a collection button in the <code>buttons</code> array for another collection.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Button collection</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            As of <strong>Buttons</strong> basic options for displaying a collection inside a collection is possible
+            simply by using a collection button in the <code>buttons</code> array for another collection.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-2" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

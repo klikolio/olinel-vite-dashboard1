@@ -11,126 +11,126 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/autofill.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/extension/autofill.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Datatables autofill extension</h3>
-				</div>
-				<div class="portlet-body">
-					<p class="mb-0">
-						Spreadsheets such as Excel and Google Docs have a very handy data duplication option of an
-						<strong>autofill</strong> tool. The <strong>autofill</strong> library for Datatables provides a similar
-						interface for Datatables and extends upon this interface paradigm to provide complex data interaction
-						options that the user can select between.
-					</p>
-				</div>
-			</div>
-			<!-- END Portlet -->
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Datatables autofill extension</h3>
+        </div>
+        <div class="portlet-body">
+          <p class="mb-0">
+            Spreadsheets such as Excel and Google Docs have a very handy data duplication option of an
+            <strong>autofill</strong> tool. The <strong>autofill</strong> library for Datatables provides a similar
+            interface for Datatables and extends upon this interface paradigm to provide complex data interaction
+            options that the user can select between.
+          </p>
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Basic initialisation</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						<strong>Autofill</strong> is enabled for a Datatables using the <code>autoFill</code> option, simply setting
-						that parameter to <code>true</code>
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Basic initialisation</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            <strong>Autofill</strong> is enabled for a Datatables using the <code>autoFill</code> option, simply setting
+            that parameter to <code>true</code>
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Click focus</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						The <em>click-to-drag</em> auto fill handle can be attached to the table using a number of different
-						triggers. This is set by the <code>autoFill.focus</code> option: <code>click|focus|hover</code>. The default
-						behavior is <code>hover</code>, unless <em>Keytable</em> is also initialised on the same table, in which
-						case <code>focus</code> is used.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Click focus</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            The <em>click-to-drag</em> auto fill handle can be attached to the table using a number of different
+            triggers. This is set by the <code>autoFill.focus</code> option: <code>click|focus|hover</code>. The default
+            behavior is <code>hover</code>, unless <em>Keytable</em> is also initialised on the same table, in which
+            case <code>focus</code> is used.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-2" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Disable horizontal fill</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						This example demonstrates Autofill's ability to fill vertically only through the
-						<code>autoFill.horizontal</code> option. There is also an <code>autoFill.vertical</code> option that can be
-						used to allow only horizontal filling.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Disable horizontal fill</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            This example demonstrates Autofill's ability to fill vertically only through the
+            <code>autoFill.horizontal</code> option. There is also an <code>autoFill.vertical</code> option that can be
+            used to allow only horizontal filling.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-3" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-3" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

@@ -10,73 +10,73 @@
 <!-- prettier-ignore-end -->
 
 {% if enable_container_fluid | default(defaults.enable_container_fluid) %}
-	{% set container_class = "container-fluid g-5" %}
+  {% set container_class = "container-fluid g-5" %}
 {% else %}
-	{% set container_class = "container g-5" %}
+  {% set container_class = "container g-5" %}
 {% endif %}
 
 <!doctype html>
 <html
-	lang="en"
-	id="{{ page_id | default('unknown') }}"
-	dir="{{ env['PAGE_DIRECTION'] }}"
-	data-bs-theme="{{ defaults.theme }}"
+  lang="en"
+  id="{{ page_id | default('unknown') }}"
+  dir="{{ defaults.direction }}"
+  data-bs-theme="{{ defaults.theme }}"
 >
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-		{% include 'components/heads/font-head.njk' %}
+    {% include 'components/heads/font-head.njk' %}
 
-		{% if enable_analytics | default(defaults.enable_analytics) %}
-			{% include 'components/heads/analytics-head.njk' %}
-		{% endif %}
+    {% if enable_analytics | default(defaults.enable_analytics) %}
+      {% include 'components/heads/analytics-head.njk' %}
+    {% endif %}
 
-		<link rel="shortcut icon" href="{{ defaults.favicon }}" />
-		<link rel="stylesheet" href="/src/modules/bootstrap/styles/bootstrap.scss" />
-		<title>{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}</title>
-	</head>
-	<body class="{{ body_class }}">
-		{% if enable_preload | default(defaults.enable_preload) %}
-			{% include defaults.components.preload %}
-		{% endif %}
+    <link rel="stylesheet" href="/src/modules/bootstrap/styles/bootstrap.scss" />
+    <link rel="shortcut icon" href="{{ defaults.favicon }}" />
+    <title>{{ page_title | default('Untitled') }} | {{ defaults.brand_name }}</title>
+  </head>
+  <body class="{{ body_class }}">
+    {% if enable_preload | default(defaults.enable_preload) %}
+      {% include defaults.components.preload %}
+    {% endif %}
 
-		<!-- BEGIN Page Holder -->
-		<div class="holder">
-			{% if enable_aside | default(defaults.enable_aside) %}
-				{% include defaults.components.aside %}
-			{% endif %}
+    <!-- BEGIN Page Holder -->
+    <div class="holder">
+      {% if enable_aside | default(defaults.enable_aside) %}
+        {% include defaults.components.aside %}
+      {% endif %}
 
-			<!-- BEGIN Page Wrapper -->
-			<div class="wrapper {{ content_wrapper_class }}">
-				{% if enable_header | default(defaults.enable_header) %}
-					{% include defaults.components.header %}
-				{% endif %}
+      <!-- BEGIN Page Wrapper -->
+      <div class="wrapper {{ content_wrapper_class }}">
+        {% if enable_header | default(defaults.enable_header) %}
+          {% include defaults.components.header %}
+        {% endif %}
 
-				<!-- BEGIN Page Content -->
-				<div class="content">
-					<div class="{{ container_class }}">{% block content %}{% endblock %}</div>
-				</div>
-				<!-- END Page Content -->
+        <!-- BEGIN Page Content -->
+        <div class="content">
+          <div class="{{ container_class }}">{% block content %}{% endblock %}</div>
+        </div>
+        <!-- END Page Content -->
 
-				{% if enable_footer | default(defaults.enable_footer) %}
-					{% include defaults.components.footer %}
-				{% endif %}
-			</div>
-			<!-- END Page Wrapper -->
-		</div>
-		<!-- END Page Holder -->
+        {% if enable_footer | default(defaults.enable_footer) %}
+          {% include defaults.components.footer %}
+        {% endif %}
+      </div>
+      <!-- END Page Wrapper -->
+    </div>
+    <!-- END Page Holder -->
 
-		{% for component in defaults.components.offcanvas %}
-			{% include component %}
-		{% endfor %}
+    {% for component in defaults.components.offcanvas %}
+      {% include component %}
+    {% endfor %}
 
-		{% block offcanvas %}
-		{% endblock %}
+    {% block offcanvas %}
+    {% endblock %}
 
-		<script type="module" src="/src/app/entry.ts"></script>
+    <script type="module" src="/src/app/entry.ts"></script>
 
-		{% block main_script %}
-		{% endblock %}
-	</body>
+    {% block main_script %}
+    {% endblock %}
+  </body>
 </html>

@@ -1,325 +1,325 @@
 @keyframes dtb-spinner {
-	100% {
-		transform: rotate(360deg);
-	}
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 // Popup info after button action
 .dt-button-info {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	z-index: $zindex-datatable-btn-info;
-	width: $datatables-btn-info-width;
-	background-color: $datatables-btn-info-bg;
-	border: $datatables-btn-info-border-width solid
-		$datatables-btn-info-border-color;
-	@include border-radius($datatables-btn-info-border-radius);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: $zindex-datatable-btn-info;
+  width: $datatables-btn-info-width;
+  background-color: $datatables-btn-info-bg;
+  border: $datatables-btn-info-border-width solid
+    $datatables-btn-info-border-color;
+  @include border-radius($datatables-btn-info-border-radius);
 
-	h2,
-	> div {
-		padding: $datatables-btn-info-content-padding-y
-			$datatables-btn-info-content-padding-x;
-		margin: 0;
-	}
+  h2,
+  > div {
+    padding: $datatables-btn-info-content-padding-y
+      $datatables-btn-info-content-padding-x;
+    margin: 0;
+  }
 
-	h2 {
-		color: $datatables-btn-info-title-color;
-		@include font-size($datatables-btn-info-title-font-size);
-		font-weight: $datatables-btn-info-title-font-weight;
-		border-bottom: $datatables-btn-info-border-width solid
-			$datatables-btn-info-border-color;
-	}
+  h2 {
+    color: $datatables-btn-info-title-color;
+    @include font-size($datatables-btn-info-title-font-size);
+    font-weight: $datatables-btn-info-title-font-weight;
+    border-bottom: $datatables-btn-info-border-width solid
+      $datatables-btn-info-border-color;
+  }
 
-	> div {
-		color: $datatables-btn-info-body-color;
-		@include font-size($datatables-btn-info-body-font-size);
-		font-weight: $datatables-btn-info-body-font-weight;
-	}
+  > div {
+    color: $datatables-btn-info-body-color;
+    @include font-size($datatables-btn-info-body-font-size);
+    font-weight: $datatables-btn-info-body-font-weight;
+  }
 }
 
 .dtb-popover-close {
-	position: absolute;
-	top: $datatables-close-spacer;
-	right: $datatables-close-spacer;
-	width: $datatables-close-dimension;
-	height: $datatables-close-dimension;
-	color: $datatables-close-color;
-	background-color: $datatables-close-bg;
-	font-family: $datatables-close-font-family;
-	@include font-size($datatables-close-font-size);
-	font-weight: $datatables-close-font-weight;
-	text-align: center;
-	cursor: pointer;
-	z-index: 2003;
-	@include border-radius($datatables-close-border-radius);
+  position: absolute;
+  top: $datatables-close-spacer;
+  right: $datatables-close-spacer;
+  width: $datatables-close-dimension;
+  height: $datatables-close-dimension;
+  color: $datatables-close-color;
+  background-color: $datatables-close-bg;
+  font-family: $datatables-close-font-family;
+  @include font-size($datatables-close-font-size);
+  font-weight: $datatables-close-font-weight;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2003;
+  @include border-radius($datatables-close-border-radius);
 }
 
 .dtb-hide-drop {
-	display: none !important;
+  display: none !important;
 }
 
 // Button divider spacer
 .dt-button-spacer {
-	display: inline-block;
-	margin: $datatables-btn-divider-spacer;
-	white-space: nowrap;
+  display: inline-block;
+  margin: $datatables-btn-divider-spacer;
+  white-space: nowrap;
 
-	&.bar {
-		vertical-align: middle;
-		border-left: $datatables-btn-divider-width solid
-			$datatables-btn-divider-color;
-		padding-left: $datatables-btn-divider-spacer;
+  &.bar {
+    vertical-align: middle;
+    border-left: $datatables-btn-divider-width solid
+      $datatables-btn-divider-color;
+    padding-left: $datatables-btn-divider-spacer;
 
-		&:empty {
-			height: $datatables-btn-divider-font-size;
-			width: $datatables-btn-divider-width;
-			padding-left: 0;
-		}
-	}
+    &:empty {
+      height: $datatables-btn-divider-font-size;
+      width: $datatables-btn-divider-width;
+      padding-left: 0;
+    }
+  }
 }
 
 // Button group
 .dt-button-collection {
-	position: absolute;
-	left: 0 !important;
-	right: auto !important;
-	padding: $datatables-btn-collection-padding-y
-		$datatables-btn-collection-padding-x;
-	z-index: $zindex-datatable-btn-collection;
-	background-color: $datatables-btn-collection-bg;
-	border: $datatables-btn-collection-border-width solid
-		$datatables-btn-collection-border-color;
-	@include border-radius($datatables-btn-collection-border-radius);
+  position: absolute;
+  left: 0 !important;
+  right: auto !important;
+  padding: $datatables-btn-collection-padding-y
+    $datatables-btn-collection-padding-x;
+  z-index: $zindex-datatable-btn-collection;
+  background-color: $datatables-btn-collection-bg;
+  border: $datatables-btn-collection-border-width solid
+    $datatables-btn-collection-border-color;
+  @include border-radius($datatables-btn-collection-border-radius);
 
-	.dt-button {
-		border-radius: 0;
-	}
+  .dt-button {
+    border-radius: 0;
+  }
 
-	.dt-btn-split-wrapper {
-		width: 100%;
-	}
+  .dt-btn-split-wrapper {
+    width: 100%;
+  }
 
-	.btn-group {
-		@include border-radius($datatables-btn-collection-border-radius);
+  .btn-group {
+    @include border-radius($datatables-btn-collection-border-radius);
 
-		button {
-			&,
-			&:last-child:first-child {
-				@include border-radius($datatables-btn-collection-border-radius);
-			}
+    button {
+      &,
+      &:last-child:first-child {
+        @include border-radius($datatables-btn-collection-border-radius);
+      }
 
-			&:last-child {
-				@include border-start-radius(0);
-			}
-			&:first-child {
-				@include border-end-radius(0);
-			}
-		}
+      &:last-child {
+        @include border-start-radius(0);
+      }
+      &:first-child {
+        @include border-end-radius(0);
+      }
+    }
 
-		.dt-btn-split-drop:last-child {
-			border: $datatables-btn-collection-border-width solid
-				$datatables-btn-collection-border-color;
-		}
+    .dt-btn-split-drop:last-child {
+      border: $datatables-btn-collection-border-width solid
+        $datatables-btn-collection-border-color;
+    }
 
-		.dt-btn-split-wrapper {
-			border: none;
-		}
-	}
+    .dt-btn-split-wrapper {
+      border: none;
+    }
+  }
 
-	// Button divider spacer
-	.dt-button-spacer {
-		width: 100%;
-		text-align: center;
-		@include font-size($datatables-btn-divider-font-size);
-		margin: $datatables-btn-divider-spacer 0;
+  // Button divider spacer
+  .dt-button-spacer {
+    width: 100%;
+    text-align: center;
+    @include font-size($datatables-btn-divider-font-size);
+    margin: $datatables-btn-divider-spacer 0;
 
-		&:empty {
-			height: 0;
-			width: 100%;
-		}
+    &:empty {
+      height: 0;
+      width: 100%;
+    }
 
-		&.bar {
-			border-left: none;
-			border-bottom: $datatables-btn-divider-width solid
-				$datatables-btn-divider-color;
-			padding-left: 0;
-		}
-	}
+    &.bar {
+      border-left: none;
+      border-bottom: $datatables-btn-divider-width solid
+        $datatables-btn-divider-color;
+      padding-left: 0;
+    }
+  }
 
-	// Reset default dropdown menu drom bootstrap
-	.dropdown-menu {
-		position: static;
-		display: block !important;
-		min-width: 100%;
-		background: transparent;
-		margin: 0;
-		padding: 0 !important;
-		border: 0 !important;
-		z-index: $zindex-datatable-btn-collection + 1;
+  // Reset default dropdown menu drom bootstrap
+  .dropdown-menu {
+    position: static;
+    display: block !important;
+    min-width: 100%;
+    background: transparent;
+    margin: 0;
+    padding: 0 !important;
+    border: 0 !important;
+    z-index: $zindex-datatable-btn-collection + 1;
 
-		.btn-group {
-			width: 100%;
-		}
-	}
+    .btn-group {
+      width: 100%;
+    }
+  }
 
-	// Modifier class to position dropdown to center of page
-	&.fixed {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		max-width: none;
-		transform: translate(-50%, -50%);
+  // Modifier class to position dropdown to center of page
+  &.fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: none;
+    transform: translate(-50%, -50%);
 
-		&::before,
-		&::after {
-			display: none;
-		}
+    &::before,
+    &::after {
+      display: none;
+    }
 
-		&.two-column {
-			margin-left: -$datatables-btn-collection-2col-width;
-		}
-		&.three-column {
-			margin-left: -$datatables-btn-collection-3col-width;
-		}
-		&.four-column {
-			margin-left: -$datatables-btn-collection-4col-width;
-		}
-	}
+    &.two-column {
+      margin-left: -$datatables-btn-collection-2col-width;
+    }
+    &.three-column {
+      margin-left: -$datatables-btn-collection-3col-width;
+    }
+    &.four-column {
+      margin-left: -$datatables-btn-collection-4col-width;
+    }
+  }
 
-	> :last-child {
-		display: block !important;
-		column-gap: $datatables-btn-collection-col-gap;
+  > :last-child {
+    display: block !important;
+    column-gap: $datatables-btn-collection-col-gap;
 
-		> * {
-			break-inside: avoid;
-		}
-	}
+    > * {
+      break-inside: avoid;
+    }
+  }
 
-	// Number of collumns classes
-	&.two-column {
-		width: $datatables-btn-collection-2col-width;
+  // Number of collumns classes
+  &.two-column {
+    width: $datatables-btn-collection-2col-width;
 
-		> :last-child {
-			column-count: 2;
-		}
-	}
+    > :last-child {
+      column-count: 2;
+    }
+  }
 
-	&.three-column {
-		width: $datatables-btn-collection-3col-width;
+  &.three-column {
+    width: $datatables-btn-collection-3col-width;
 
-		> :last-child {
-			column-count: 3;
-		}
-	}
+    > :last-child {
+      column-count: 3;
+    }
+  }
 
-	&.four-column {
-		width: $datatables-btn-collection-4col-width;
+  &.four-column {
+    width: $datatables-btn-collection-4col-width;
 
-		> :last-child {
-			column-count: 4;
-		}
-	}
+    > :last-child {
+      column-count: 4;
+    }
+  }
 }
 
 // Button group title
 .dt-button-collection-title {
-	color: $datatables-btn-collection-title-color;
-	@include font-size($datatables-btn-collection-title-font-size);
-	font-weight: $datatables-btn-collection-title-font-weight;
-	padding: $datatables-btn-collection-title-padding-y
-		$datatables-btn-collection-title-padding-x;
-	text-align: center;
+  color: $datatables-btn-collection-title-color;
+  @include font-size($datatables-btn-collection-title-font-size);
+  font-weight: $datatables-btn-collection-title-font-weight;
+  padding: $datatables-btn-collection-title-padding-y
+    $datatables-btn-collection-title-padding-x;
+  text-align: center;
 
-	&:empty {
-		display: none;
-	}
+  &:empty {
+    display: none;
+  }
 }
 
 // Backdrop for fixed button group
 .dt-button-background {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: $zindex-datatable-btn-collection - 1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: $zindex-datatable-btn-collection - 1;
 }
 
 .dt-buttons {
-	.btn-group > .btn {
-		@if $enable-rounded {
-			border-top-right-radius: $btn-border-radius !important;
-			border-bottom-right-radius: $btn-border-radius !important;
-		}
-	}
+  .btn-group > .btn {
+    @if $enable-rounded {
+      border-top-right-radius: $btn-border-radius !important;
+      border-bottom-right-radius: $btn-border-radius !important;
+    }
+  }
 
-	// Loading state for button
-	.btn.processing {
-		position: relative;
-		color: $datatables-btn-collection-spinner-color;
+  // Loading state for button
+  .btn.processing {
+    position: relative;
+    color: $datatables-btn-collection-spinner-color;
 
-		// Spinner inside the button
-		&:after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: $datatables-btn-collection-spinner-dimension;
-			height: $datatables-btn-collection-spinner-dimension;
-			margin-left: -#{$datatables-btn-collection-spinner-dimension * 0.5};
-			margin-top: -#{$datatables-btn-collection-spinner-dimension * 0.5};
-			border: $datatables-btn-collection-spinner-border-width solid
-				$datatables-btn-collection-spinner-border-color;
-			border-left-color: transparent;
-			border-right-color: transparent;
-			border-radius: 50%;
-			top: 50%;
-			left: 50%;
-			animation: $datatables-btn-collection-spinner-animation;
-		}
-	}
+    // Spinner inside the button
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: $datatables-btn-collection-spinner-dimension;
+      height: $datatables-btn-collection-spinner-dimension;
+      margin-left: -#{$datatables-btn-collection-spinner-dimension * 0.5};
+      margin-top: -#{$datatables-btn-collection-spinner-dimension * 0.5};
+      border: $datatables-btn-collection-spinner-border-width solid
+        $datatables-btn-collection-spinner-border-color;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      animation: $datatables-btn-collection-spinner-animation;
+    }
+  }
 }
 
 .dt-btn-split-wrapper {
-	.dt-btn-split-drop {
-		@if $enable-rounded {
-			border-top-right-radius: $btn-border-radius !important;
-			border-bottom-right-radius: $btn-border-radius !important;
-		}
-	}
+  .dt-btn-split-drop {
+    @if $enable-rounded {
+      border-top-right-radius: $btn-border-radius !important;
+      border-bottom-right-radius: $btn-border-radius !important;
+    }
+  }
 }
 
 .dataTables_wrapper {
-	position: relative;
+  position: relative;
 
-	.dt-buttons.btn-group {
-		.btn-group {
-			&,
-			&:last-child:first-child {
-				@include border-radius($datatables-btn-collection-border-radius);
-			}
+  .dt-buttons.btn-group {
+    .btn-group {
+      &,
+      &:last-child:first-child {
+        @include border-radius($datatables-btn-collection-border-radius);
+      }
 
-			&:last-child {
-				@include border-start-radius(0);
-			}
-			&:first-child {
-				@include border-end-radius(0);
-			}
+      &:last-child {
+        @include border-start-radius(0);
+      }
+      &:first-child {
+        @include border-end-radius(0);
+      }
 
-			.dt-btn-split-wrapper {
-				border: none;
-			}
-		}
+      .dt-btn-split-wrapper {
+        border: none;
+      }
+    }
 
-		.dt-btn-split-drop:last-child {
-			border: $datatables-btn-collection-border-width solid
-				$datatables-btn-collection-border-color;
-		}
-	}
+    .dt-btn-split-drop:last-child {
+      border: $datatables-btn-collection-border-width solid
+        $datatables-btn-collection-border-color;
+    }
+  }
 }
 
 .dt-button-spacer.bar:empty {
-	height: inherit;
+  height: inherit;
 }

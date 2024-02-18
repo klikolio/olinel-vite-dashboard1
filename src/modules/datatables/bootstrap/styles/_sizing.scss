@@ -1,14 +1,14 @@
 // Small datatable
 .dataTable.table-sm {
-	> thead > tr > th:not(.sorting_disabled) {
-		padding-right: $datatables-sorting-spacer-sm;
-	}
+  > thead > tr > th:not(.sorting_disabled) {
+    padding-right: $datatables-sorting-spacer-sm;
+  }
 
-	.sorting,
-	.sorting_asc,
-	.sorting_desc {
-		&:after {
-			right: $datatables-sorting-offset-sm;
-		}
-	}
+  .sorting,
+  .sorting_asc,
+  .sorting_desc {
+    &:after {
+      right: $datatables-sorting-offset-sm;
+    }
+  }
 }

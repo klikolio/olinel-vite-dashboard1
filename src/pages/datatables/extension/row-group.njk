@@ -11,128 +11,128 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/row-group.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/extension/row-group.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Datatables row group extension</h3>
-				</div>
-				<div class="portlet-body">
-					<p class="mb-0">
-						The ability to group rows in a table can let an end user quickly and easily see the structure of the data
-						shown, and also present them with summaries of the data shown in each group.
-						<strong>Row group</strong> adds this ability to customize the start and end grouping rows displayed in the
-						Datatables, letting you integrate the summarised data to fit perfectly in with your site.
-					</p>
-				</div>
-			</div>
-			<!-- END Portlet -->
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Datatables row group extension</h3>
+        </div>
+        <div class="portlet-body">
+          <p class="mb-0">
+            The ability to group rows in a table can let an end user quickly and easily see the structure of the data
+            shown, and also present them with summaries of the data shown in each group.
+            <strong>Row group</strong> adds this ability to customize the start and end grouping rows displayed in the
+            Datatables, letting you integrate the summarised data to fit perfectly in with your site.
+          </p>
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Basic initialisation</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						<strong>Row group</strong> can be initialised on a Datatables by using <code>rowGroup</code> option in the
-						Datatables option object. In most circumstances you will wish to also set the
-						<code>rowGroup.dataSrc</code> option to tell Datatables which data point in the data source to use for
-						initial grouping.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Basic initialisation</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            <strong>Row group</strong> can be initialised on a Datatables by using <code>rowGroup</code> option in the
+            Datatables option object. In most circumstances you will wish to also set the
+            <code>rowGroup.dataSrc</code> option to tell Datatables which data point in the data source to use for
+            initial grouping.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Group callback</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						It can often be useful to have grouping rows at the start and the end of a group to show different summary
-						information about the group. <strong>Row group</strong> provides two rendering options -
-						<code>rowGroup.startRender</code> and <code>rowGroup.endRender</code> - as the naming implies, one for the
-						group start and one for the group end, allowing them be configured independently
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Group callback</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            It can often be useful to have grouping rows at the start and the end of a group to show different summary
+            information about the group. <strong>Row group</strong> provides two rendering options -
+            <code>rowGroup.startRender</code> and <code>rowGroup.endRender</code> - as the naming implies, one for the
+            group start and one for the group end, allowing them be configured independently
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-2" class="table table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Multi level grouping</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						<strong>Row group</strong> provides the ability to group data a multiple levels. This example show the
-						<code>rowGroup.dataSrc</code> option being used as an array to specify the <em>Office</em> as the top level
-						group and <em>Position</em> as second level.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Multi level grouping</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            <strong>Row group</strong> provides the ability to group data a multiple levels. This example show the
+            <code>rowGroup.dataSrc</code> option being used as an array to specify the <em>Office</em> as the top level
+            group and <em>Position</em> as second level.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-3" class="table table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-3" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

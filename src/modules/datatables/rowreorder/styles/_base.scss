@@ -1,31 +1,31 @@
 // Reset table styling
 .dt-rowReorder-float {
-	background-color: rgba($white, $datatables-order-drag-opacity);
-	outline: $datatables-order-pointer-width solid $datatables-order-pointer-color;
-	outline-offset: -$datatables-order-pointer-width;
+  background-color: rgba($white, $datatables-order-drag-opacity);
+  outline: $datatables-order-pointer-width solid $datatables-order-pointer-color;
+  outline-offset: -$datatables-order-pointer-width;
 }
 
 // Draggable element
 .dt-rowReorder-float-parent {
-	table-layout: fixed;
-	z-index: 2001;
-	position: absolute !important;
-	overflow: hidden;
+  table-layout: fixed;
+  z-index: 2001;
+  position: absolute !important;
+  overflow: hidden;
 }
 
 // Row marker for positioning
 .dt-rowReorder-moving {
-	outline: $datatables-order-pointer-width solid $datatables-order-pointer-color;
-	outline-offset: -$datatables-order-pointer-width;
+  outline: $datatables-order-pointer-width solid $datatables-order-pointer-color;
+  outline-offset: -$datatables-order-pointer-width;
 }
 
 // Hide x-axis main scrollbar
 body.dt-rowReorder-noOverflow {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 // Drag handle
 .dataTable .reorder {
-	text-align: center;
-	cursor: move;
+  text-align: center;
+  cursor: move;
 }

@@ -1,37 +1,37 @@
 .dataTable {
-	.dtrg-group {
-		// Reset group styling
-		th {
-			text-align: left;
-			box-shadow: none !important;
-		}
+  .dtrg-group {
+    // Reset group styling
+    th {
+      text-align: left;
+      box-shadow: none !important;
+    }
 
-		// Styling root group
-		&.dtrg-level-0 th {
-			background-color: $datatables-group-bg-root;
-			@include font-size($datatables-group-font-size);
-			font-weight: $datatables-group-font-weight;
-		}
+    // Styling root group
+    &.dtrg-level-0 th {
+      background-color: $datatables-group-bg-root;
+      @include font-size($datatables-group-font-size);
+      font-weight: $datatables-group-font-weight;
+    }
 
-		// Styling child group
-		&.dtrg-level-1 th,
-		&.dtrg-level-2 th,
-		&.dtrg-level-3 th,
-		&.dtrg-level-4 th,
-		&.dtrg-level-5 th {
-			background-color: $datatables-group-bg;
-			padding-bottom: $datatables-group-padding-y-sm;
-			padding-top: $datatables-group-padding-y-sm;
-			@include font-size($datatables-group-font-size-sm);
-			font-weight: $datatables-group-font-weight-sm;
-		}
+    // Styling child group
+    &.dtrg-level-1 th,
+    &.dtrg-level-2 th,
+    &.dtrg-level-3 th,
+    &.dtrg-level-4 th,
+    &.dtrg-level-5 th {
+      background-color: $datatables-group-bg;
+      padding-bottom: $datatables-group-padding-y-sm;
+      padding-top: $datatables-group-padding-y-sm;
+      @include font-size($datatables-group-font-size-sm);
+      font-weight: $datatables-group-font-weight-sm;
+    }
 
-		// Calculate spacer on child group
-		@for $i from 1 through 5 {
-			&.dtrg-level-#{$i} th {
-				padding-left: $datatables-group-spacer +
-					($datatables-group-spacer-scale * $i);
-			}
-		}
-	}
+    // Calculate spacer on child group
+    @for $i from 1 through 5 {
+      &.dtrg-level-#{$i} th {
+        padding-left: $datatables-group-spacer +
+          ($datatables-group-spacer-scale * $i);
+      }
+    }
+  }
 }

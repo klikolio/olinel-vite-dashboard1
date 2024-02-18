@@ -1,11 +1,1 @@
-# production codes
-dist
-dist-ssr
-
-# source codes
 _variables.scss
-
-# additional files
-package.json
-package-lock.json
-pnpm-lock.yaml

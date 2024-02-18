@@ -1,24 +1,24 @@
 .dataTable .dt-control {
-	cursor: pointer;
-	white-space: nowrap;
+  cursor: pointer;
+  white-space: nowrap;
 
-	&:before {
-		display: inline-block;
-		content: $datatables-control-content-closed;
-		width: $datatables-control-dimension;
-		height: $datatables-control-dimension;
-		line-height: $datatables-control-line-height;
-		text-align: center;
-		color: $datatables-control-color;
-		background-color: $datatables-control-bg;
-		font-family: $datatables-control-font-family;
-		font-size: $datatables-control-font-size;
-		font-weight: $datatables-control-font-weight;
-		margin-right: $datatables-control-spacer;
-		@include border-radius($datatables-control-border-radius);
-	}
+  &:before {
+    display: inline-block;
+    content: $datatables-control-content-closed;
+    width: $datatables-control-dimension;
+    height: $datatables-control-dimension;
+    line-height: $datatables-control-line-height;
+    text-align: center;
+    color: $datatables-control-color;
+    background-color: $datatables-control-bg;
+    font-family: $datatables-control-font-family;
+    font-size: $datatables-control-font-size;
+    font-weight: $datatables-control-font-weight;
+    margin-right: $datatables-control-spacer;
+    @include border-radius($datatables-control-border-radius);
+  }
 
-	.dt-hasChild &:before {
-		content: $datatables-control-content-opened;
-	}
+  .dt-hasChild &:before {
+    content: $datatables-control-content-opened;
+  }
 }

@@ -11,97 +11,97 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/extension/row-reorder.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/extension/row-reorder.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Datatables row reorder extension</h3>
-				</div>
-				<div class="portlet-body">
-					<p class="mb-0">
-						Datatables is often used to show sequential data, and naturally from that comes the desire to be able to
-						reorder that data. It provides the end user with the ability to click and drag (or touch and drag on mobile
-						devices) a row in the table and change its position.
-					</p>
-				</div>
-			</div>
-			<!-- END Portlet -->
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Datatables row reorder extension</h3>
+        </div>
+        <div class="portlet-body">
+          <p class="mb-0">
+            Datatables is often used to show sequential data, and naturally from that comes the desire to be able to
+            reorder that data. It provides the end user with the ability to click and drag (or touch and drag on mobile
+            devices) a row in the table and change its position.
+          </p>
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Basic initialisation</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						<strong>Row reorder</strong> can be initialised on a Datatables by using the <code>rowReorder</code> option
-						in the Datatables options object.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Basic initialisation</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            <strong>Row reorder</strong> can be initialised on a Datatables by using the <code>rowReorder</code> option
+            in the Datatables options object.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
 
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Restricted ordering</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						This example shows the same information as the basic example, but in this case restricts the column sorting
-						that can be applied to the table to just the sequence number column. Generally this will be the
-						configuration that <strong>Row reorder</strong> will be used in, as ordering by other columns can make the
-						reordering potentially quite confusing for the end user.
-					</p>
-					<p>
-						The restriction to the first column only for ordering is applied through the
-						<code>columnDefs</code> option and <code>columns.orderable</code>. The <code>columnDefs</code> are applied
-						in descending priority order, so the first entry overrides the second for the first column.
-					</p>
-					<hr />
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Restricted ordering</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            This example shows the same information as the basic example, but in this case restricts the column sorting
+            that can be applied to the table to just the sequence number column. Generally this will be the
+            configuration that <strong>Row reorder</strong> will be used in, as ordering by other columns can make the
+            reordering potentially quite confusing for the end user.
+          </p>
+          <p>
+            The restriction to the first column only for ordering is applied through the
+            <code>columnDefs</code> option and <code>columns.orderable</code>. The <code>columnDefs</code> are applied
+            in descending priority order, so the first entry overrides the second for the first column.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-2" class="table table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-2" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

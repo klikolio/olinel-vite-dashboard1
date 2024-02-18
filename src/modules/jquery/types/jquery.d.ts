@@ -1,3 +1,3 @@
 declare interface Window {
-	jQuery?: JQueryStatic
+  jQuery?: JQueryStatic
 }

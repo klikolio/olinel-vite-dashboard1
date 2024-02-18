@@ -11,96 +11,96 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/form/typeahead.ts"></script>
+  <script type="module" src="/src/app/pages/form/typeahead.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Typeahead</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						<strong>TypeaheadJS</strong> is a flexible javascript library that provides a strong foundation for building
-						robust typeaheads. For more info please visit the
-						<a href="http://twitter.github.io/typeahead.ts" target="_blank">plugin's page</a>
-					</p>
-					<hr />
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Typeahead</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            <strong>TypeaheadJS</strong> is a flexible javascript library that provides a strong foundation for building
+            robust typeaheads. For more info please visit the
+            <a href="http://twitter.github.io/typeahead.ts" target="_blank">plugin's page</a>
+          </p>
+          <hr />
 
-					<!-- BEGIN Stack -->
-					<div class="vstack gap-3">
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Basic demo</label>
-							<div class="col-sm-5 col-lg-4">
-								<input type="text" class="form-control typeahead" id="typeahead-1" placeholder="Type here..." />
-							</div>
-						</div>
-						<!-- END Row -->
+          <!-- BEGIN Stack -->
+          <div class="vstack gap-3">
+            <!-- BEGIN Row -->
+            <div class="row">
+              <label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Basic demo</label>
+              <div class="col-sm-5 col-lg-4">
+                <input type="text" class="form-control typeahead" id="typeahead-1" placeholder="Type here..." />
+              </div>
+            </div>
+            <!-- END Row -->
 
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Suggestion engine (Bloodhound)</label>
-							<div class="col-sm-5 col-lg-4">
-								<div class="mb-2">
-									<input type="text" class="form-control typeahead" id="typeahead-2" placeholder="Type here..." />
-								</div>
-								<p class="mb-0">
-									Bloodhound offers advanced functionalities such as prefetching and backfilling with remote data
-								</p>
-							</div>
-						</div>
-						<!-- END Row -->
+            <!-- BEGIN Row -->
+            <div class="row">
+              <label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Suggestion engine (Bloodhound)</label>
+              <div class="col-sm-5 col-lg-4">
+                <div class="mb-2">
+                  <input type="text" class="form-control typeahead" id="typeahead-2" placeholder="Type here..." />
+                </div>
+                <p class="mb-0">
+                  Bloodhound offers advanced functionalities such as prefetching and backfilling with remote data
+                </p>
+              </div>
+            </div>
+            <!-- END Row -->
 
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Remote</label>
-							<div class="col-sm-5 col-lg-4">
-								<div class="mb-2">
-									<input type="text" class="form-control typeahead" id="typeahead-3" placeholder="Type here..." />
-								</div>
-								<p class="mb-0">Prefetch data is fetched and processed on initialization</p>
-							</div>
-						</div>
-						<!-- END Row -->
+            <!-- BEGIN Row -->
+            <div class="row">
+              <label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Remote</label>
+              <div class="col-sm-5 col-lg-4">
+                <div class="mb-2">
+                  <input type="text" class="form-control typeahead" id="typeahead-3" placeholder="Type here..." />
+                </div>
+                <p class="mb-0">Prefetch data is fetched and processed on initialization</p>
+              </div>
+            </div>
+            <!-- END Row -->
 
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Custom template</label>
-							<div class="col-sm-5 col-lg-4">
-								<div class="mb-2">
-									<input type="text" class="form-control typeahead" id="typeahead-4" placeholder="Type here..." />
-								</div>
-								<p class="mb-0">Custom templates give you full control over how suggestions get rendered</p>
-							</div>
-						</div>
-						<!-- END Row -->
+            <!-- BEGIN Row -->
+            <div class="row">
+              <label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Custom template</label>
+              <div class="col-sm-5 col-lg-4">
+                <div class="mb-2">
+                  <input type="text" class="form-control typeahead" id="typeahead-4" placeholder="Type here..." />
+                </div>
+                <p class="mb-0">Custom templates give you full control over how suggestions get rendered</p>
+              </div>
+            </div>
+            <!-- END Row -->
 
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Default suggestion</label>
-							<div class="col-sm-5 col-lg-4">
-								<input type="text" class="form-control typeahead" id="typeahead-5" placeholder="Type here..." />
-							</div>
-						</div>
-						<!-- END Row -->
+            <!-- BEGIN Row -->
+            <div class="row">
+              <label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Default suggestion</label>
+              <div class="col-sm-5 col-lg-4">
+                <input type="text" class="form-control typeahead" id="typeahead-5" placeholder="Type here..." />
+              </div>
+            </div>
+            <!-- END Row -->
 
-						<!-- BEGIN Row -->
-						<div class="row">
-							<label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Multiple datasets</label>
-							<div class="col-sm-5 col-lg-4">
-								<input type="text" class="form-control typeahead" id="typeahead-6" placeholder="Type here..." />
-							</div>
-						</div>
-						<!-- END Row -->
-					</div>
-					<!-- END Stack -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+            <!-- BEGIN Row -->
+            <div class="row">
+              <label class="col-sm-4 col-lg-3 col-form-label text-sm-end">Multiple datasets</label>
+              <div class="col-sm-5 col-lg-4">
+                <input type="text" class="form-control typeahead" id="typeahead-6" placeholder="Type here..." />
+              </div>
+            </div>
+            <!-- END Row -->
+          </div>
+          <!-- END Stack -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

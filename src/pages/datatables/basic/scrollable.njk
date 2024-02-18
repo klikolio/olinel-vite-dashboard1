@@ -11,66 +11,66 @@
 <!-- prettier-ignore-end -->
 
 {% block main_script %}
-	<script type="module" src="/src/app/pages/datatables/basic/scrollable.ts"></script>
+  <script type="module" src="/src/app/pages/datatables/basic/scrollable.ts"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="row">
-		<div class="col-12">
-			<!-- BEGIN Portlet -->
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Scrollable datatables</h3>
-				</div>
-				<div class="portlet-body">
-					<p>
-						In this example you can see Datatables doing both horizontal and vertical scrolling at the same time. To
-						enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you
-						want the container wrapper's height or width.
-					</p>
-					<hr />
+  <div class="row">
+    <div class="col-12">
+      <!-- BEGIN Portlet -->
+      <div class="portlet">
+        <div class="portlet-header portlet-header-bordered">
+          <h3 class="portlet-title">Scrollable datatables</h3>
+        </div>
+        <div class="portlet-body">
+          <p>
+            In this example you can see Datatables doing both horizontal and vertical scrolling at the same time. To
+            enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you
+            want the container wrapper's height or width.
+          </p>
+          <hr />
 
-					<!-- BEGIN Datatables -->
-					<table id="datatables-1" class="table table-bordered table-striped table-hover">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Phone</th>
-								<th>Email</th>
-								<th>Country</th>
-								<th>City</th>
-								<th>ZIP</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-						<tfoot>
-							<tr>
-								<th>ID</th>
-								<th>Card ID</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Phone</th>
-								<th>Email</th>
-								<th>Country</th>
-								<th>City</th>
-								<th>ZIP</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</tfoot>
-					</table>
-					<!-- END Datatables -->
-				</div>
-			</div>
-			<!-- END Portlet -->
-		</div>
-	</div>
+          <!-- BEGIN Datatables -->
+          <table id="datatables-1" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>ZIP</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>Card ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>ZIP</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <!-- END Datatables -->
+        </div>
+      </div>
+      <!-- END Portlet -->
+    </div>
+  </div>
 {% endblock %}

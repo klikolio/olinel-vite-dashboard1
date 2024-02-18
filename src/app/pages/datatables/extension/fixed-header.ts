@@ -13,25 +13,25 @@ import { DATATABLES_DATA } from '@app/utilities/datatables-helper'
 import { getBrowserWidth } from '@app/utilities/widget-helper'
 
 const headerOffset =
-	(getBrowserWidth() >= 1025
-		? document.querySelector('#sticky-header-desktop')?.clientHeight
-		: document.querySelector('#sticky-header-mobile')?.clientHeight) ?? 0
+  (getBrowserWidth() >= 1025
+    ? document.querySelector('#sticky-header-desktop')?.clientHeight
+    : document.querySelector('#sticky-header-mobile')?.clientHeight) ?? 0
 
 $('#datatables-1').DataTable({
-	data: DATATABLES_DATA,
-	responsive: true,
-	fixedHeader: {
-		header: true, // Float table header
-		headerOffset, // Fit table header with page header
-	},
+  data: DATATABLES_DATA,
+  responsive: true,
+  fixedHeader: {
+    header: true, // Float table header
+    headerOffset, // Fit table header with page header
+  },
 })
 
 $('#datatables-2').DataTable({
-	data: DATATABLES_DATA,
-	responsive: true,
-	fixedHeader: {
-		header: true,
-		footer: true,
-		headerOffset, // Fit table header with page header
-	},
+  data: DATATABLES_DATA,
+  responsive: true,
+  fixedHeader: {
+    header: true,
+    footer: true,
+    headerOffset, // Fit table header with page header
+  },
 })

@@ -1,6 +1,5 @@
-import 'dotenv/config'
 import rtlcss from 'postcss-rtlcss'
 
 export default {
-	plugins: [rtlcss({ mode: 'combined' })],
+  plugins: [rtlcss({ mode: 'combined' })],
 }

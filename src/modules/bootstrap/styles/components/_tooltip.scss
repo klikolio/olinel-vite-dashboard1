@@ -1,10 +1,10 @@
 @import "bootstrap/scss/tooltip";
 
 .tooltip {
-	--#{$prefix}tooltip-border-width: #{$tooltip-border-width};
-	--#{$prefix}tooltip-border-color: #{$tooltip-border-color};
+  --#{$prefix}tooltip-border-width: #{$tooltip-border-width};
+  --#{$prefix}tooltip-border-color: #{$tooltip-border-color};
 }
 .tooltip-inner {
-	border: var(--#{$prefix}tooltip-border-width) solid
-		var(--#{$prefix}tooltip-border-color);
+  border: var(--#{$prefix}tooltip-border-width) solid
+    var(--#{$prefix}tooltip-border-color);
 }

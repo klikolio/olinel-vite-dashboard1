@@ -1,13 +1,13 @@
 // Draggable element
 .DTCR_clonedTable.dataTable {
-	position: absolute !important;
-	background-color: rgba($white, $datatables-order-drag-opacity);
-	z-index: 202;
+  position: absolute !important;
+  background-color: rgba($white, $datatables-order-drag-opacity);
+  z-index: 202;
 }
 
 // Border mark to indicate drag position
 .DTCR_pointer {
-	width: $datatables-order-pointer-width;
-	background-color: $datatables-order-pointer-color;
-	z-index: 201;
+  width: $datatables-order-pointer-width;
+  background-color: $datatables-order-pointer-color;
+  z-index: 201;
 }

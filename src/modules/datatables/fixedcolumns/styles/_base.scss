@@ -1,48 +1,48 @@
 .dataTable {
-	thead > tr,
-	tfoot > tr {
-		.dtfc-fixed-left,
-		.dtfc-fixed-right {
-			top: 0;
-			bottom: 0;
-			z-index: 3;
-		}
-	}
+  thead > tr,
+  tfoot > tr {
+    .dtfc-fixed-left,
+    .dtfc-fixed-right {
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+  }
 
-	tbody > tr {
-		.dtfc-fixed-left,
-		.dtfc-fixed-right {
-			z-index: 1;
-		}
-	}
+  tbody > tr {
+    .dtfc-fixed-left,
+    .dtfc-fixed-right {
+      z-index: 1;
+    }
+  }
 }
 
 .dtfc-left-top-blocker,
 .dtfc-right-top-blocker,
 .dtfc-left-bottom-blocker,
 .dtfc-right-bottom-blocker {
-	background-color: $datatables-side-blocker-bg;
-	border-left: $datatables-blocker-border-width solid
-		$datatables-blocker-border-color;
+  background-color: $datatables-side-blocker-bg;
+  border-left: $datatables-blocker-border-width solid
+    $datatables-blocker-border-color;
 }
 
 .dtfc-left-top-blocker,
 .dtfc-right-top-blocker {
-	margin-top: $datatables-side-blocker-spacer;
+  margin-top: $datatables-side-blocker-spacer;
 }
 
 .dtfc-left-bottom-blocker,
 .dtfc-right-bottom-blocker {
-	margin-bottom: $datatables-side-blocker-spacer;
+  margin-bottom: $datatables-side-blocker-spacer;
 }
 
 .dtfc-fixed-right,
 .dataTables_scrollBody
-	.dataTables_scrollFootInner
-	.table-bordered
-	tr
-	th:first-child,
+  .dataTables_scrollFootInner
+  .table-bordered
+  tr
+  th:first-child,
 .dataTables_scrollHeadInner .table-bordered tr th:first-child {
-	border-left: $datatables-blocker-border-width solid
-		$datatables-blocker-border-color !important;
+  border-left: $datatables-blocker-border-width solid
+    $datatables-blocker-border-color !important;
 }

@@ -5,65 +5,65 @@ import $ from 'jquery'
 import { getPageIsRTL } from '@app/utilities/widget-helper'
 
 const orientation: DatepickerOrientations = getPageIsRTL()
-	? 'auto right'
-	: 'auto left'
+  ? 'auto right'
+  : 'auto left'
 
 // Set default plugin configuration
 const defaultOptions = {
-	orientation,
-	templates: {
-		leftArrow: ' ',
-		rightArrow: ' ',
-	},
+  orientation,
+  templates: {
+    leftArrow: ' ',
+    rightArrow: ' ',
+  },
 }
 
 $('#datepicker-1').datepicker({
-	...defaultOptions,
-	autoclose: true,
+  ...defaultOptions,
+  autoclose: true,
 })
 
 $('#datepicker-2').datepicker({
-	...defaultOptions,
-	todayHighlight: true,
+  ...defaultOptions,
+  todayHighlight: true,
 })
 
 $('#datepicker-3').datepicker({
-	...defaultOptions,
-	todayBtn: 'linked',
-	clearBtn: true,
-	todayHighlight: true,
+  ...defaultOptions,
+  todayBtn: 'linked',
+  clearBtn: true,
+  todayHighlight: true,
 })
 
 $('#datepicker-4').datepicker({
-	...defaultOptions,
-	multidate: true,
-	multidateSeparator: ', ',
-	todayHighlight: true,
+  ...defaultOptions,
+  multidate: true,
+  multidateSeparator: ', ',
+  todayHighlight: true,
 })
 
 $('#datepicker-5').datepicker({
-	...defaultOptions,
-	daysOfWeekDisabled: '0',
-	daysOfWeekHighlighted: '3,4',
-	todayHighlight: true,
+  ...defaultOptions,
+  daysOfWeekDisabled: '0',
+  daysOfWeekHighlighted: '3,4',
+  todayHighlight: true,
 })
 
 $('#datepicker-6').datepicker({
-	...defaultOptions,
-	calendarWeeks: true,
+  ...defaultOptions,
+  calendarWeeks: true,
 })
 
 $('.input-daterange').datepicker({
-	...defaultOptions,
-	todayHighlight: true,
+  ...defaultOptions,
+  todayHighlight: true,
 })
 
 $('#datepicker-7').datepicker({
-	...defaultOptions,
-	language: 'ru',
+  ...defaultOptions,
+  language: 'ru',
 })
 
 $('#datepicker-8').datepicker({
-	...defaultOptions,
-	todayHighlight: true,
+  ...defaultOptions,
+  todayHighlight: true,
 })

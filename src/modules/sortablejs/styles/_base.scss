@@ -1,34 +1,34 @@
 .sortable {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	.sortable {
-		padding-left: $sortable-menu-spacer;
-	}
+  .sortable {
+    padding-left: $sortable-menu-spacer;
+  }
 }
 
 .sortable-handle {
-	cursor: move;
-	padding: $sortable-handle-padding;
-	@include icon-size($sortable-handle-icon-size);
+  cursor: move;
+  padding: $sortable-handle-padding;
+  @include icon-size($sortable-handle-icon-size);
 }
 
 .sortable-ghost {
-	opacity: $sortable-drag-opacity;
-	overflow: hidden;
+  opacity: $sortable-drag-opacity;
+  overflow: hidden;
 }
 
 // SortableJS support
 .sortable.richlist-bordered {
-	.sortable,
-	.sortable-item:not(:first-of-type) {
-		margin-top: $richlist-item-spacer;
-	}
+  .sortable,
+  .sortable-item:not(:first-of-type) {
+    margin-top: $richlist-item-spacer;
+  }
 }
 
 .sortable.richlist-flush {
-	.sortable,
-	.sortable-item:not(:first-of-type) {
-		border-top: $richlist-border-width solid $richlist-border-color;
-	}
+  .sortable,
+  .sortable-item:not(:first-of-type) {
+    border-top: $richlist-border-width solid $richlist-border-color;
+  }
 }
