@@ -10,9 +10,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "format:check": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "lint": "eslint src",
+    "format:check": "prettier --check src",
+    "format:fix": "prettier --write src"
   },
   "devDependencies": {
     "@types/autosize": "^4.0.3",
