@@ -15,6 +15,14 @@
   --#{$prefix}offcanvas-brand-font-weight: #{$offcanvas-brand-font-weight};
 }
 
+.offcanvas-start {
+  border-right-style: $border-style !important;
+}
+
+.offcanvas-end {
+  border-left-style: $border-style !important;
+}
+
 .offcanvas-body {
   height: 100%;
 }

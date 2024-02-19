@@ -6,6 +6,18 @@
   --#{$prefix}modal-title-font-weight: #{$modal-title-font-weight};
 }
 
+.modal-content {
+  border-style: $border-style;
+}
+
+.modal-header {
+  border-bottom-style: $border-style;
+}
+
+.modal-footer {
+  border-top-style: $border-style;
+}
+
 // Title text within header
 .modal-title {
   margin-bottom: 0;

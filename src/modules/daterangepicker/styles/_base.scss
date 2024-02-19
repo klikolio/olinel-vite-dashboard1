@@ -7,7 +7,7 @@
   @include font-size($datepicker-font-size);
   color: $datepicker-color;
   background: $datepicker-bg;
-  border: $dropdown-border-width solid $dropdown-border-color;
+  border: $dropdown-border-width $border-style $dropdown-border-color;
   @include border-radius($datepicker-border-radius);
 
   .drp-calendar {
@@ -137,7 +137,7 @@
       background-position: $form-select-bg-position;
       background-image: escape-svg($form-select-indicator);
       background-size: $form-select-bg-size;
-      border: $form-select-border-width solid $form-select-border-color;
+      border: $form-select-border-width $border-style $form-select-border-color;
       @include border-radius($form-select-border-radius-sm, 0);
       @include transition($form-select-transition);
       appearance: none;
@@ -180,7 +180,7 @@
     text-align: right;
     padding: $datepicker-padding;
     clear: both;
-    border-top: $dropdown-border-width solid $dropdown-border-color;
+    border-top: $dropdown-border-width $border-style $dropdown-border-color;
 
     // Add space to button elements
     .btn {

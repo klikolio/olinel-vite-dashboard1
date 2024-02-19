@@ -60,7 +60,7 @@
 .gridnav-bordered,
 .gridnav-flush {
   .gridnav-item {
-    border: var(--#{$prefix}gridnav-border-width) solid
+    border: var(--#{$prefix}gridnav-border-width) $border-style
       var(--#{$prefix}gridnav-border-color);
   }
 }

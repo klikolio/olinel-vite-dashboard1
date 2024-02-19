@@ -23,7 +23,7 @@
   padding-right: $jstree-drag-label-padding-x;
   color: $jstree-drag-label-color;
   background: $jstree-drag-label-bg;
-  border: $jstree-drag-label-border-width solid $jstree-drag-label-border-color;
+  border: $jstree-drag-label-border-width $border-style $jstree-drag-label-border-color;
   margin: 0;
   @include border-radius($jstree-drag-label-border-radius);
 

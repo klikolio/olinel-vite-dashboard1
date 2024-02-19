@@ -73,8 +73,8 @@
         content: "";
         position: absolute;
         display: inline-block;
-        border-bottom: $datepicker-pick-width solid currentColor;
-        border-left: $datepicker-pick-width solid transparent;
+        border-bottom: $datepicker-pick-width $border-style currentColor;
+        border-left: $datepicker-pick-width $border-style transparent;
         bottom: $datepicker-pick-offset;
         right: $datepicker-pick-offset;
       }
@@ -215,7 +215,7 @@
 // Style for inline datepicker
 .datepicker-inline {
   width: fit-content;
-  border: $datepicker-border-width solid $datepicker-border-color;
+  border: $datepicker-border-width $border-style $datepicker-border-color;
 }
 
 // Change text alignment on input group

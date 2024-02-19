@@ -2,6 +2,7 @@
 
 .btn {
   position: relative;
+  border-style: $border-style;
   @include icon-size(var(--#{$prefix}btn-font-size));
 }
 

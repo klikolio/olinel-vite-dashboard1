@@ -1,6 +1,8 @@
 @import "bootstrap/scss/card";
 
 .card {
+  border-style: $border-style;
+
   --#{$prefix}card-title-font-size: #{$card-title-font-size};
   --#{$prefix}card-title-font-weight: #{$card-title-font-weight};
   --#{$prefix}card-subtitle-font-size: #{$card-subtitle-font-size};
@@ -9,6 +11,14 @@
   @include rfs($card-icon-size, --#{$prefix}card-icon-size);
   --#{$prefix}card-icon-dimension: #{$card-icon-dimension};
   --#{$prefix}card-icon-spacer: #{$card-icon-spacer};
+}
+
+.card-header {
+  border-bottom-style: $border-style;
+}
+
+.card-footer {
+  border-top-style: $border-style;
 }
 
 .card-title {

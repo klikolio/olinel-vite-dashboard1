@@ -5,6 +5,8 @@
   @include rfs($alert-icon-size, --#{$prefix}alert-icon-size);
   --#{$prefix}alert-icon-spacer: #{$alert-icon-spacer};
   --#{$prefix}alert-border-color: transparent;
+  --#{$prefix}alert-border: #{$alert-border-width} #{$border-style}
+    var(--#{$prefix}alert-border-color);
 
   display: flex;
   flex-direction: row;

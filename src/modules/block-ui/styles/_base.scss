@@ -16,7 +16,7 @@
     @include font-size($blockui-message-font-size);
     font-weight: $blockui-message-font-weight;
     padding: $blockui-message-padding-y $blockui-message-padding-x;
-    border: $blockui-message-border-width solid $blockui-message-border-color;
+    border: $blockui-message-border-width $border-style $blockui-message-border-color;
     @include border-radius($blockui-message-border-radius);
 
     .blockTitle {

@@ -6,6 +6,10 @@
   --#{$prefix}accordion-icon-spacer: #{$accordion-icon-spacer};
 }
 
+.accordion-item {
+  border-style: $border-style;
+}
+
 .accordion-icon {
   text-align: center;
   min-width: var(--#{$prefix}accordion-icon-width);

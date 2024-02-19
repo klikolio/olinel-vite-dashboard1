@@ -11,7 +11,7 @@
   padding: $widget10-item-padding;
 
   + #{&} {
-    border-left: $widget10-border-width solid $widget10-border-color;
+    border-left: $widget10-border-width $border-style $widget10-border-color;
   }
 }
 

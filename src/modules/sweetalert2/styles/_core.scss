@@ -132,7 +132,7 @@
   background: $swal2-bg;
   @include font-size($swal2-font-size);
   font-family: $swal2-font-family;
-  border: $swal2-border-width solid $swal2-border-color;
+  border: $swal2-border-width $border-style $swal2-border-color;
   @include border-radius($swal2-border-radius);
 
   &:focus {
@@ -260,7 +260,7 @@
   margin: $swal2-footer-margin;
   padding: $swal2-footer-padding;
   text-align: $swal2-footer-text-align;
-  border-top: $swal2-footer-border-width solid $swal2-footer-border-color;
+  border-top: $swal2-footer-border-width $border-style $swal2-footer-border-color;
 }
 
 .swal2-timer-progress-bar-container {

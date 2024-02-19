@@ -8,7 +8,7 @@
   width: 100%;
   color: var(--#{$prefix}footer-color);
   background-color: var(--#{$prefix}footer-bg);
-  border-top: var(--#{$prefix}footer-border-width) solid
+  border-top: var(--#{$prefix}footer-border-width) $border-style
     var(--#{$prefix}footer-border-color);
   padding: var(--#{$prefix}footer-padding-y) 0;
 }

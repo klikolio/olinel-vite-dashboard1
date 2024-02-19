@@ -26,7 +26,7 @@
   margin-bottom: var(--#{$prefix}portlet-spacer);
   color: var(--#{$prefix}portlet-color);
   background-color: var(--#{$prefix}portlet-bg);
-  border: var(--#{$prefix}portlet-border-width) solid
+  border: var(--#{$prefix}portlet-border-width) $border-style
     var(--#{$prefix}portlet-border-color);
   @include border-radius(var(--#{$prefix}portlet-border-radius));
 
@@ -72,7 +72,7 @@
   padding: var(--#{$prefix}portlet-component-padding);
 
   &.portlet-header-bordered {
-    border-bottom: var(--#{$prefix}portlet-border-width) solid
+    border-bottom: var(--#{$prefix}portlet-border-width) $border-style
       var(--#{$prefix}portlet-border-color);
 
     // Add padding to .portlet-body
@@ -105,7 +105,7 @@
   padding: var(--#{$prefix}portlet-component-padding);
 
   &.portlet-footer-bordered {
-    border-top: var(--#{$prefix}portlet-border-width) solid
+    border-top: var(--#{$prefix}portlet-border-width) $border-style
       var(--#{$prefix}portlet-border-color);
   }
 }
@@ -193,6 +193,10 @@
 // Fixing .nav element position inside .portlet-header
 .portlet-nav {
   margin: 0 !important;
+
+  &.nav-tabs {
+    border-bottom-color: transparent;
+  }
 
   &.nav-underline,
   &.nav-tabs {

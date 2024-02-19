@@ -1,13 +1,13 @@
 {% extends "components/template.njk" %}
 {% set page_title = "Register 1" %}
-{% set page_id = "pages.register.register-1" %}
+{% set page_id = "landing.register.register-1" %}
 {% set enable_container_fluid = true %}
 {% set enable_aside = false %}
 {% set enable_header = false %}
 {% set enable_footer = false %}
 
 {% block main_script %}
-  <script type="module" src="/src/app/pages/pages/register.ts"></script>
+  <script type="module" src="/src/app/pages/landing/register.ts"></script>
 {% endblock %}
 
 {% block content %}
@@ -128,7 +128,7 @@
 
             <!-- BEGIN Flex -->
             <div class="d-flex align-items-center justify-content-between">
-              <span>Already have an account? <a href="/pages/login/login-1.html">Login</a></span>
+              <span>Already have an account? <a href="/landing/login/login-1.html">Login</a></span>
               <button type="submit" class="btn btn-subtle-primary btn-lg btn-widest">Register</button>
             </div>
             <!-- END Flex -->

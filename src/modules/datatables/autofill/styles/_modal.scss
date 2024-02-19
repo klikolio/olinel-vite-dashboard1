@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   z-index: $zindex-modal + 1;
   background-color: $datatables-autofill-list-bg;
-  border: $datatables-autofill-list-border-width solid
+  border: $datatables-autofill-list-border-width $border-style
     $datatables-autofill-list-border-color;
   @include border-radius($datatables-autofill-list-border-radius);
 
@@ -53,7 +53,7 @@
     background-color: $datatables-autofill-list-item-bg;
     padding: $datatables-autofill-list-item-padding-y
       $datatables-autofill-list-item-padding-x;
-    border-bottom: $datatables-autofill-list-item-border-width solid
+    border-bottom: $datatables-autofill-list-item-border-width $border-style
       $datatables-autofill-list-item-border-color;
 
     &:last-child {
@@ -77,7 +77,7 @@
       color: $input-color;
       background-color: $input-bg;
       background-clip: padding-box;
-      border: $input-border-width solid $input-border-color;
+      border: $input-border-width $border-style $input-border-color;
       appearance: none;
       @include border-radius($input-border-radius, 0);
       @include transition($input-transition);

@@ -20,7 +20,7 @@
 
 .header-holder {
   background-color: var(--#{$prefix}header-bg);
-  border-bottom: var(--#{$prefix}header-border-width) solid
+  border-bottom: var(--#{$prefix}header-border-width) $border-style
     var(--#{$prefix}header-border-color);
   @include transition($header-transition);
 }
@@ -69,7 +69,7 @@
   width: 0;
   height: $header-divider-height;
   margin: 0 $header-divider-margin-x;
-  border-right: var(--#{$prefix}header-border-width) solid
+  border-right: var(--#{$prefix}header-border-width) $border-style
     var(--#{$prefix}header-border-color);
 }
 

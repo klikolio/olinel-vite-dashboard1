@@ -3,7 +3,7 @@
   text-align: center;
   padding: $widget6-padding-y $widget6-padding-x;
   background-color: $widget6-bg;
-  border: $widget6-border-width solid $widget6-border-color;
+  border: $widget6-border-width $border-style $widget6-border-color;
   cursor: pointer;
   @include border-radius($widget6-border-radius);
 

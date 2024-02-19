@@ -21,7 +21,7 @@
   height: 100%;
   width: var(--#{$prefix}aside-width);
   background-color: var(--#{$prefix}aside-bg);
-  border-right: var(--#{$prefix}aside-border-width) solid
+  border-right: var(--#{$prefix}aside-border-width) $border-style
     var(--#{$prefix}aside-border-color);
   top: 0;
   left: 0;

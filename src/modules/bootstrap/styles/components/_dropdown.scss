@@ -4,6 +4,14 @@
   --#{$prefix}dropdown-col-padding: #{$dropdown-col-padding};
 }
 
+.dropdown-menu {
+  border-style: $border-style;
+}
+
+.dropdown-divider {
+  border-top-style: $border-style;
+}
+
 // Add spacer to caret element
 .dropdown-toggle::after {
   margin-left: $dropdown-caret-spacer;

@@ -47,6 +47,18 @@
 }
 
 //
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom-style: $border-style;
+
+  .nav-link {
+    border-style: $border-style;
+  }
+}
+
+//
 // Pills
 //
 
