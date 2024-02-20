@@ -1,17 +1,4 @@
-# Olinel - Vite TypeScript Admin Dashboard Template
-
-## Overview
-
-**Olinel** is a multipurpose admin dashboard template which leverages **Vite** as a development tool, providing an efficient development environment, ensuring optimized production builds and enabling modern JavaScript features. All application logics are written in **TypeScript** for type-safe and maintainable codebase. This template is also built upon robust and widely adopted **Bootstrap** which offers a seamless user experience across various browsers. Utilizes **SASS** for enabling modular and maintainable styles which make it easier to manage the visual aspects. **Nunjucks** as a templating engine simplifies HTML structure and enhances code reusability. Integration of **EsLint** and **Prettier**, ensuring code consistency and identifying potential issues early in the development process to improve code quality.
-
-**Olinel** has various layout styles and showcases a modern design that blends aesthetics with functionality and visually appealing interface, ensures a delightful user experience. This template also provides a rich library of components that empowers you to build dynamic admin dashboard applications. This template also offering both practical examples and documentation from pre-built pages will accelerate your development process.
-
-**Files Included**
-
-- Nunjucks
-- SCSS
-- TypeScript
-- Supporting assets
+# Olinel - Vite Bootstrap Admin Dashboard Template
 
 ## Editor Set Up
 
@@ -37,10 +24,9 @@ This template also comes with **EsLint** and **Prettier**, you can optionally in
 │  ├─ modules/       - contains custom vendor modules
 │  ├─ components/    - contains Nunjucks components
 │  └─ pages/         - contains Nunjucks pages
-├─ .browserslistrc   - browser list for build
+├─ .browserslistrc   - browser list for build target
 ├─ .env.example      - example of environment variables
-├─ .eslintrc.json    - Eslint configuration
-├─ .gitattributes    - Git attributes configuration
+├─ .eslintrc.json    - EsLint configuration
 ├─ .gitignore        - ignore file for Git
 ├─ .prettierignore   - ignore file for Prettier
 ├─ .prettierrc       - Prettier configuration
