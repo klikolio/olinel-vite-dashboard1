@@ -5,7 +5,8 @@
     padding: $quill-tooltip-padding-y $quill-tooltip-padding-x;
     color: $quill-tooltip-color;
     background: $quill-tooltip-bg;
-    border: $quill-tooltip-border-width $border-style $quill-tooltip-border-color;
+    border: $quill-tooltip-border-width $border-style
+      $quill-tooltip-border-color;
     @include border-radius($quill-tooltip-border-radius);
 
     // Tooltip arrow directions

@@ -119,7 +119,8 @@
 
 .richlist-bordered {
   .richlist-item {
-    border: var(--#{$prefix}richlist-border-width, $richlist-border-width) $border-style
+    border: var(--#{$prefix}richlist-border-width, $richlist-border-width)
+      $border-style
       var(--#{$prefix}richlist-border-color, $richlist-border-color);
     @include border-radius(
       var(--#{$prefix}richlist-border-radius, $richlist-border-radius)

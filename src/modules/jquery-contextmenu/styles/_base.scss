@@ -96,7 +96,8 @@
 // Menu item divider
 .context-menu-separator {
   height: 0;
-  border-bottom: $context-menu-divider-width $border-style $context-menu-divider-color;
+  border-bottom: $context-menu-divider-width $border-style
+    $context-menu-divider-color;
   margin: $context-menu-divider-spacer 0;
   padding: 0;
 }

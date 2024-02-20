@@ -12,7 +12,8 @@
     cursor: default;
     color: $select2-choice-color;
     background: $select2-choice-bg;
-    border: $select2-choice-border-width $border-style $select2-choice-border-color;
+    border: $select2-choice-border-width $border-style
+      $select2-choice-border-color;
     @include border-radius($select2-border-radius);
   }
   // Choice remove button

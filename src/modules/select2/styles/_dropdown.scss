@@ -4,7 +4,8 @@
   width: 100%;
   z-index: $zindex-select2;
   background: $select2-dropdown-bg;
-  border: $select2-dropdown-border-width $border-style $select2-dropdown-border-color;
+  border: $select2-dropdown-border-width $border-style
+    $select2-dropdown-border-color;
   @include border-radius($select2-border-radius);
 }
 // Result container

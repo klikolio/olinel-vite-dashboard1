@@ -260,7 +260,8 @@
   margin: $swal2-footer-margin;
   padding: $swal2-footer-padding;
   text-align: $swal2-footer-text-align;
-  border-top: $swal2-footer-border-width $border-style $swal2-footer-border-color;
+  border-top: $swal2-footer-border-width $border-style
+    $swal2-footer-border-color;
 }
 
 .swal2-timer-progress-bar-container {

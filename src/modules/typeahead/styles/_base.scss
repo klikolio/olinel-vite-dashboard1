@@ -13,7 +13,8 @@
   width: 100%;
   overflow: hidden;
   background: $typeahead-menu-bg;
-  border: $typeahead-menu-border-width $border-style $typeahead-menu-border-color;
+  border: $typeahead-menu-border-width $border-style
+    $typeahead-menu-border-color;
   border-top-color: $typeahead-menu-active-border-color;
   @include border-bottom-radius($typeahead-menu-border-radius);
 }
