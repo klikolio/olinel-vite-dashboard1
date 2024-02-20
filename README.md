@@ -25,6 +25,7 @@ This template also comes with **EsLint** and **Prettier**, you can optionally in
 │  ├─ components/    - contains Nunjucks components
 │  └─ pages/         - contains Nunjucks pages
 ├─ .browserslistrc   - browser list for build target
+├─ .editorconfig     - General editor configuration
 ├─ .env.example      - example of environment variables
 ├─ .eslintrc.json    - EsLint configuration
 ├─ .gitignore        - ignore file for Git
