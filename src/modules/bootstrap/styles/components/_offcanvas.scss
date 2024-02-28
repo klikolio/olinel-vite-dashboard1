@@ -23,6 +23,10 @@
   border-left-style: $border-style !important;
 }
 
+.offcanvas-header {
+  justify-content: space-between;
+}
+
 .offcanvas-body {
   height: 100%;
 }

@@ -1641,7 +1641,7 @@ $avatar-font-size-lg:               $font-size-lg !default;
 $avatar-dimension:                  3.25em !default;
 $avatar-outline-width:              $marker-outline-width !default;
 $avatar-outline-color:              $marker-outline-color !default;
-$avatar-border-radius:              var(--#{$prefix}border-radius) !default;
+$avatar-border-radius:              .35em !default;
 $avatar-spacer:                     .25em !default;
 
 $avatar-display-font-size:          1.35em !default;
@@ -1757,7 +1757,7 @@ $richlist-addon-spacer:             $spacer * .5 !default;
 // Timeline
 
 $timeline-line-width:               2px !default;
-$timeline-line-color:               var(--#{$prefix}tertiary-bg) !default;
+$timeline-line-color:               $gray-400 !default;
 $timeline-line-border-radius:       var(--#{$prefix}border-radius) !default;
 
 $timeline-pin-width:                3rem !default;
