@@ -529,8 +529,8 @@ $border-widths: (
   4: 4px,
   5: 5px
 ) !default;
-$border-style:                dashed !default;
-$border-color:                $bg-level-4 !default;
+$border-style:                solid !default;
+$border-color:                $bg-level-2 !default;
 $border-color-translucent:    rgba($border-color, .25) !default;
 
 $border-radius:               .5rem !default;
